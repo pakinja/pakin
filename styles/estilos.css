@@ -548,6 +548,7 @@ img.chile {
 		margin-top: 10px;
 		border-radius: 3px;
     border: 0.5px solid #000000;
+    z-index: 10000 !important;
 	}
 
 	img.negrito {
