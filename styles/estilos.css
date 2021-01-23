@@ -856,6 +856,7 @@ div.adRightM {
   height: 600px;
   width: 160px;
   float: right;
+  margin-right: 0 !important;
 }
 
 /*************************************/
