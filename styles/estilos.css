@@ -876,9 +876,19 @@ div.adRightM {
 
 /************************************/
 
+@media (min-width: 767px) {
+.mobile {
+  display: none;
+}
+}
+
 @media (min-width: 0px) and (max-width: 480px) {
 
 /*MOBILE PORTRAIT*/
+
+.web {
+  display: none;
+}
 
 #form {
   margin: auto !important;
@@ -1146,6 +1156,10 @@ div.adRightM {
 
 /*TABLET MOBILE LANDSCAPE*/
 
+  .web {
+    display: none;
+  }
+
   .topnavNewIn {
   	height: 50px;
   }
@@ -1335,6 +1349,15 @@ div.adRightM {
 .svg-container {
   margin-top: 3% !important; #plotly pages
 }
+
+
+/*MOBILE PORTRAIT*/
+
+/* .mobile {
+  display: inline-block;
+} */
+
+
 
 /******************** AD MANAGER ADS ************/
 
