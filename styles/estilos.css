@@ -48,6 +48,9 @@ video {
   border: 2px solid #B22222;
   border-radius: 5px;
 }
+
+
+
 /***************************/
 
 /* #form {
@@ -1366,7 +1369,13 @@ div.adRightM {
   margin-top: 3% !important; #plotly pages
 }
 
+td,th {
+text-align: center;
+}
 
+th {
+text-align: center;
+}
 /*MOBILE PORTRAIT*/
 
 /* .mobile {
