@@ -1370,12 +1370,14 @@ div.adRightM {
 }
 
 td,th {
+text-align: center !important;
+}
+/* tbody th, tbody td {
 text-align: center;
 }
-
-th {
+tfoot th, tfoot td {
 text-align: center;
-}
+} */
 /*MOBILE PORTRAIT*/
 
 /* .mobile {
