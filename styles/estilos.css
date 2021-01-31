@@ -842,6 +842,13 @@ div.adRightW {
   float: right;
 }
 
+div.adLeftW {
+  height: 600px;
+  width: 300px;
+  margin-left: 0;
+  float: left;
+}
+
 div.right {
   margin-right: 0;
   float: right;
@@ -1264,6 +1271,10 @@ div.adRightM {
   div.adRightW {
     display: none;
   }
+  div.adLeftW {
+    display: none;
+  }
+
   aside.L {
     display: none;
 
@@ -1304,6 +1315,9 @@ div.adRightM {
 
   div.adRightW {
     padding-right: 5%;
+  }
+  div.adleftW {
+    padding-left: 5%;
   }
   .ls ul, .ls li {
     padding-left: 5%;
