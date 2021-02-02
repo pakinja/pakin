@@ -517,7 +517,7 @@ img.chile {
   margin-top: 69px;
   display: none;
   position: fixed;
-  background-color: #B22222;
+  background-color: #3D3C3A;
   /* min-width: 100px; */
   max-width: 230px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -526,9 +526,9 @@ img.chile {
 
 .dropdown-content a {
   /* border-top: solid 1px #000000; */
-  border-bottom: solid 1px #000000;
-  border-left: solid 1px #000000;
-  border-right: solid 1px #000000;
+  border-bottom: solid 2px #B22222;
+  border-left: solid 2px #B22222;
+  border-right: solid 2px #B22222;
   color: white;
   /* padding-left: 15px; */
   padding: 10px 10px;
@@ -540,7 +540,7 @@ img.chile {
 
 .dropdown-content a:hover {
   /* background-color: #f1f1f1 */
-  color: black;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
