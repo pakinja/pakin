@@ -532,7 +532,7 @@ img.chile {
   color: white;
   /* padding-left: 15px; */
   padding: 10px 10px;
-  font-size: 18px;
+  font-size: 100%;
   text-decoration: none;
   text-align: left;
   display: block;
