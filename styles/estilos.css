@@ -532,7 +532,7 @@ img.chile {
   color: white;
   /* padding-left: 15px; */
   padding: 10px 10px;
-  font-size: 110%;
+  font-size: 100%;
   text-decoration: none;
   text-align: left;
   display: block;
@@ -963,6 +963,7 @@ div.adRightM {
   }
   .dropdown-content a {
     padding: 5px 5px;
+    font-size: 100%;
   }
 
   p.par {
