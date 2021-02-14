@@ -898,6 +898,9 @@ div.adRightM {
 .mobile {
   display: none;
 }
+div.adRightM {
+  display: none;
+}
 }
 
 @media (min-width: 0px) and (max-width: 480px) {
@@ -908,9 +911,9 @@ div.adRightM {
   display: none;
 }
 
-/* div.adRightW {
+div.adRightW {
   display: none;
-} */
+}
 
 #form {
   margin: auto !important;
@@ -1283,9 +1286,9 @@ div.adRightM {
   div.output_area .rendered_html table {
     margin: auto !important;
   }
-  /* div.adRightW {
+  div.adRightW {
     display: none;
-  } */
+  }
   /* div.adLeftW {
     display: none;
   } */
@@ -1313,14 +1316,6 @@ div.adRightM {
 
 }
 
-@media (max-width: 480px) {
-
-  div.adRightM {
-    display: none;
-  }
-
-}
-
 @media (min-width: 767px) {
 
   h1.titulo {
@@ -1336,12 +1331,6 @@ div.adRightM {
 
   }
 
-  /* div.adRightW {
-    padding-right: 5%;
-  } */
-  /* div.adleftW {
-    padding-left: 5%;
-  } */
   .ls ul, .ls li {
     padding-left: 5%;
     padding-right: 5%;
@@ -1405,12 +1394,12 @@ text-align: center;
 
 /******************** AD MANAGER ADS ************/
 
-/* @media (max-width: 920px) {
+/* @media (max-width: 767px) {
   .PHTWAdd {
     display: none;
   }
-}
-@media (min-width: 600px) {
+} */
+/* @media (min-width: 600px) {
   .PHTMAdd {
     display: none;
   }
