@@ -1355,9 +1355,9 @@ div.adRightM {
   div.output_area .rendered_html table {
     margin: auto !important;
   }
-  div.adRightM {
+  /* div.adRightM {
     display: none;
-  }
+  } */
   div.admovil {
     display: none;
   }
