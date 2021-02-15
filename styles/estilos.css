@@ -870,8 +870,8 @@ div.left {
 }
 
 div.adRightM {
-  height: 600px;
-  width: 160px;
+  height: 200px;
+  width: 200px;
   float: right;
   margin-right: 0 !important;
 }
@@ -1061,13 +1061,15 @@ div.adRightW {
 	}
 
 	.inav {
-		font-size: 19px;
-		line-height: 40px;
+		font-size: 14px;
+		line-height: 39px;
 		font-weight: bold;
 	}
 
   .inav a {
-  	 padding: 4px;
+  	 padding: 6px;
+     padding right: 8px;
+     padding-left: 8px;
   	 /* border-radius: 5px;
   	 background-color: #B22222;
   	 border-left: 5px solid #000000; */
