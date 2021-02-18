@@ -1109,6 +1109,14 @@ div.adRightW {
     font-size: 3vw !important;
     border: 1px solid !important;
   }
+
+  /* .rendered_html tr, .rendered_html th, .rendered_html td {
+
+    padding: 0.7em 0.1em;
+
+  } */
+
+
   div.output_area .rendered_html table {
     margin: auto !important;
   }
