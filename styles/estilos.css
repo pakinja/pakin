@@ -10,16 +10,16 @@ body {
 	background: white;
 }
 
-.R {
+aside.R {
   float: right !important;
   margin-right: 0px !important;
-  position: absolute !important;
+  /* position: absolute !important; */
 }
 
-.L {
+aside.L {
   float: left !important;
   margin-left: 0px !important;
-  position: absolute !important;
+  /* position: absolute !important; */
 }
 
 p {
