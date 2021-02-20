@@ -647,8 +647,8 @@ img.chile {
 /************ADS*****************/
 
 .mobileHideM {
-	width: 300px !important;
-	height: 600px !important;
+	width: 300px;
+	height: 1050px;
   /* position: absolute !important; */
 }
 
