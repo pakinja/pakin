@@ -647,12 +647,13 @@ img.chile {
 .mobileHideM {
 	width: 300px !important;
 	height: 250px !important;
-  position: absolute !important;
+  /* position: absolute !important; */
 }
 
 .mobileHideMR {
 	width: 160px;
 	height: 600px;
+  /* position: absolute !important; */
 }
 
 .mobileHideChecador {
