@@ -74,6 +74,7 @@ section.encabezado {
 
 hr.abs  {
 	border: 1px solid #D1D0CE;
+  line-height: 3vh;
 }
 
 p.contacto {
@@ -1166,6 +1167,11 @@ div.adRightW {
   .mobileHideM {
   	display: none;
   }
+
+  .mobileHideHR {
+  	display: none;
+  }
+
   .mobileHideMR {
   	display: none;
   }
