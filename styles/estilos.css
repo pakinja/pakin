@@ -74,7 +74,7 @@ section.encabezado {
 
 hr.abs  {
 	border: 1px solid #D1D0CE;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 
 p.contacto {
@@ -364,6 +364,10 @@ div.output_area pre{
 /* ol.inav {
 	margin-left: 10% !important;
 } */
+
+.parback {
+  margin-top: 7vh;
+}
 
 p.parback {
 	font-size: 25px !important;
@@ -910,6 +914,15 @@ div.adRightM {
 @media (min-width: 0px) and (max-width: 480px) {
 
 /*MOBILE PORTRAIT*/
+
+.parback {
+  margin-top: 2vh;
+}
+
+hr.abs  {
+	border: 1px solid #D1D0CE;
+  margin-top: 2vh;
+}
 
 .web {
   display: none;
