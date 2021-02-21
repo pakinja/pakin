@@ -38,6 +38,9 @@ aside.Lpush {
   left: 0;
 }
 
+div.ps {
+  position: static;
+}
 
 p {
 	font-size: 3vh !important;
