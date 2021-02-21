@@ -13,7 +13,7 @@ body {
 aside.R {
   /* float: right !important; */
   position: absolute !important;
-  right: 0
+  right: 0;
   /* margin-right: 0px !important; */
 }
 
@@ -23,6 +23,21 @@ aside.L {
   position: absolute !important;
   left: 0;
 }
+
+aside.Rpush {
+  /* float: right !important; */
+  /* position: absolute !important; */
+  right: 0;
+  /* margin-right: 0px !important; */
+}
+
+aside.Lpush {
+  /* float: left !important; */
+  /* margin-left: 0px !important; */
+  /* position: absolute !important; */
+  left: 0;
+}
+
 
 p {
 	font-size: 3vh !important;
