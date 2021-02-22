@@ -72,6 +72,11 @@ section.encabezado {
 }
 
 
+hr.hrhead  {
+	border: 2px solid #00000;
+}
+
+
 hr.abs  {
 	border: 1px solid #D1D0CE;
   margin-top: 10vh;
