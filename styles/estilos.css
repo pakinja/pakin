@@ -75,6 +75,7 @@ section.encabezado {
 hr.abs  {
 	border: 1px solid #D1D0CE;
   margin-top: 10vh;
+  margin-bottom: 5vh;
 }
 
 p.contacto {
