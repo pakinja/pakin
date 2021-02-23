@@ -84,6 +84,11 @@ hr.abs  {
   margin-bottom: 5vh;
 }
 
+div.web {
+  margin-top: 12vh;
+  /* margin-bottom: 1vh; */
+}
+
 p.contacto {
 	font-size: 1.2em;
 	margin: auto;
