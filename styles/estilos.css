@@ -80,12 +80,12 @@ hr.hrhead  {
 
 hr.abs  {
 	border: 1px solid #D1D0CE;
-  margin-top: 10vh;
-  margin-bottom: 5vh;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 }
 
 div.web {
-  margin-top: 12vh;
+  margin-top: 3vw;
   /* margin-bottom: 1vh; */
 }
 
