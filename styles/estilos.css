@@ -81,7 +81,7 @@ hr.hrhead  {
 hr.abs  {
 	border: 1px solid #D1D0CE;
   margin-top: 10vw;
-  margin-bottom: 3vw;
+  /* margin-bottom: 3vw; */
 }
 
 div.web {
