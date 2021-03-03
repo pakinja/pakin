@@ -25,7 +25,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-03-02 22:46",
+  "dateModified": "2021-03-02 23:12",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13200,6 +13200,79 @@ div.prompt {display:none}
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">datach</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Chispazo.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datach</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datach</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">datach</span> <span class="o">=</span> <span class="n">datach</span><span class="p">[(</span><span class="n">datach</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;2005-04-01&#39;</span><span class="p">)]</span>
+
+<span class="n">nsorteoch</span> <span class="o">=</span> <span class="n">datach</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">####################################################################################</span>
+
+<span class="n">datare</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Melate-Retro.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datare</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datare</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">nsorteore</span> <span class="o">=</span> <span class="n">datare</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">are</span> <span class="o">=</span> <span class="n">datare</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;BOLSA&#39;</span><span class="p">]</span>
+
+<span class="c1">####################################################################################</span>
+
+
+<span class="n">datatr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Tris.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datatr</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datatr</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> 
+
+<span class="n">datatr</span> <span class="o">=</span> <span class="n">datatr</span><span class="p">[(</span><span class="n">datatr</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;2007-09-03&#39;</span><span class="p">)]</span>
+
+<span class="n">nsorteotr</span> <span class="o">=</span> <span class="n">datatr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">####################################################################################</span>
+
+<span class="n">datame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Melate.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datame</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datame</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">datame</span> <span class="o">=</span> <span class="n">datame</span><span class="p">[(</span><span class="n">datame</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;2007-12-01&#39;</span><span class="p">)]</span>
+
+<span class="n">ame</span> <span class="o">=</span> <span class="n">datame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;BOLSA&#39;</span><span class="p">]</span>
+
+<span class="n">nsorteome</span> <span class="o">=</span> <span class="n">datame</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">####################################################################################</span>
+
+<span class="n">datarev</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Revancha.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datarev</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datarev</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">datarev</span> <span class="o">=</span> <span class="n">datarev</span><span class="p">[(</span><span class="n">datarev</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;2007-12-01&#39;</span><span class="p">)]</span>
+
+<span class="n">arev</span> <span class="o">=</span> <span class="n">datarev</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;BOLSA&#39;</span><span class="p">]</span>
+
+<span class="n">nsorteorev</span> <span class="o">=</span> <span class="n">datarev</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">####################################################################################</span>
+
+<span class="n">datari</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/pakin/Documents/desarrolloWeb/PakinV5/me/Revanchita.csv&#39;</span><span class="p">)</span>
+
+<span class="n">datari</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">datari</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">datari</span> <span class="o">=</span> <span class="n">datari</span><span class="p">[(</span><span class="n">datari</span><span class="p">[</span><span class="s1">&#39;FECHA&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s1">&#39;2007-12-01&#39;</span><span class="p">)]</span>
+
+<span class="n">ari</span> <span class="o">=</span> <span class="n">datari</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;BOLSA&#39;</span><span class="p">]</span>
+
+<span class="n">nsorteori</span> <span class="o">=</span> <span class="n">datari</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;CONCURSO&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -13212,6 +13285,30 @@ div.prompt {display:none}
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">columnas</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Chispazo&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;Tipo de Sorteo:&#39;</span><span class="p">,</span> <span class="s1">&#39;Tamaño de Espacio Muestral:&#39;</span><span class="p">,</span> <span class="s1">&#39;Número Adicional:&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Sorteos Realizados:&#39;</span><span class="p">,</span> <span class="s1">&#39;Sorteos Realizados Formato Actual:&#39;</span><span class="p">,</span> <span class="s1">&#39;Bolsa Actual:&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;Combinaciones de 28 en 5&#39;</span><span class="p">,</span> <span class="s1">&#39;98,280&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">,</span>
+        <span class="n">nsorteoch</span><span class="o">-</span><span class="mi">1</span> <span class="p">,</span> <span class="n">datach</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="s1">&#39;Variable&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+<span class="n">dfch</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">columnas</span><span class="p">)</span>
+
+<span class="n">dfch</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfch</span>
+<span class="n">dfch</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide_index</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 <div class="output_wrapper">
 <div class="output">
@@ -13219,35 +13316,36 @@ div.prompt {display:none}
 
 <div class="output_area">
 
-    <div class="prompt"> </div>
+    <div class="prompt output_prompt">Out[4]:</div>
+
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Chispazo</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Chispazo</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Combinaciones de 28 en 5</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Combinaciones de 28 en 5</td>
             </tr>
             <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >98,280</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >98,280</td>
             </tr>
             <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >Número Adicional:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >No</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >No</td>
             </tr>
             <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >8208</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >8208</td>
             </tr>
             <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >6846</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >6846</td>
             </tr>
             <tr>
-                                <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >Bolsa Actual:</td>
-                        <td id="T_5ca24752_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >Variable</td>
+                                <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb8c015c_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >Variable</td>
             </tr>
     </tbody></table>
 </div>
@@ -13290,30 +13388,30 @@ div.prompt {display:none}
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Melate</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Melate</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Combinaciones de 56 en 6</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Combinaciones de 56 en 6</td>
             </tr>
             <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >32,468,436</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >32,468,436</td>
             </tr>
             <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >Número Adicional:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >Si</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >Si</td>
             </tr>
             <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >3436</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >3436</td>
             </tr>
             <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >1351</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >1351</td>
             </tr>
             <tr>
-                                <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >Bolsa Actual:</td>
-                        <td id="T_5ca3ff02_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >$186,400,000 MXN</td>
+                                <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb8dc730_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >$41,300,000 MXN</td>
             </tr>
     </tbody></table>
 </div>
@@ -13356,30 +13454,30 @@ div.prompt {display:none}
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Melate Retro</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Melate Retro</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Combinaciones de 39 en 6</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Combinaciones de 39 en 6</td>
             </tr>
             <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >3,262,623</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >3,262,623</td>
             </tr>
             <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >Número Adicional:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >Si</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >Si</td>
             </tr>
             <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >1090</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >1090</td>
             </tr>
             <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >1090</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >1090</td>
             </tr>
             <tr>
-                                <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >Bolsa Actual:</td>
-                        <td id="T_5ca55992_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >$186,400,000 MXN</td>
+                                <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb8f1aea_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >$5,000,000 MXN</td>
             </tr>
     </tbody></table>
 </div>
@@ -13422,30 +13520,96 @@ div.prompt {display:none}
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Revancha</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Revancha</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Combinaciones de 56 en 6</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Combinaciones de 56 en 6</td>
             </tr>
             <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >32,468,436</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >32,468,436</td>
             </tr>
             <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >Número Adicional:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >No</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >No</td>
             </tr>
             <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >3436</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >3436</td>
             </tr>
             <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >1351</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >1351</td>
             </tr>
             <tr>
-                                <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >Bolsa Actual:</td>
-                        <td id="T_5ca69956_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >$186,400,000 MXN</td>
+                                <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb9079da_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >$186,400,000 MXN</td>
+            </tr>
+    </tbody></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div id = "revanchita">
+    <p id = "alertas" class = "parback"><a href="https://www.pakin.lat/revancha">Volver a Revancha</a></p>
+    <hr class = "abs">
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div>
+    <h1 class = "titulo">Revanchita</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"> </div>
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style  type="text/css" >
+</style><table id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Revanchita</th>        <th class="col_heading level0 col1" >_</th>    </tr></thead><tbody>
+                <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Combinaciones de 56 en 6</td>
+            </tr>
+            <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >32,468,436</td>
+            </tr>
+            <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >No</td>
+            </tr>
+            <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >3436</td>
+            </tr>
+            <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >1066</td>
+            </tr>
+            <tr>
+                                <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb91b1ec_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >$10,400,000 MXN</td>
             </tr>
     </tbody></table>
 </div>
@@ -13460,7 +13624,7 @@ div.prompt {display:none}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div id = "tris">
-    <p id = "alertas" class = "parback"><a href="https://www.pakin.lat/revancha">Volver a Revancha</a></p>
+    <p id = "alertas" class = "parback"><a href="https://www.pakin.lat/revanchita">Volver a Revanchita</a></p>
     <hr class = "abs">
 </div>
 </div>
@@ -13488,30 +13652,30 @@ div.prompt {display:none}
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Tris</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Tris</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Muestreo 0-9 en 5 posiciones</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >Tipo de Sorteo:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Muestreo 0-9 en 5 posiciones</td>
             </tr>
             <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >100,000</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >Tamaño de Espacio Muestral:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >100,000</td>
             </tr>
             <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >Número Adicional:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >No</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >Número Adicional:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >No</td>
             </tr>
             <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >26527</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >Sorteos Realizados:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >26527</td>
             </tr>
             <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >15495</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >Sorteos Realizados Formato Actual:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >15495</td>
             </tr>
             <tr>
-                                <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >Bolsa Actual:</td>
-                        <td id="T_5ca820a0_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >Modalidad / Inversión</td>
+                                <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >Bolsa Actual:</td>
+                        <td id="T_fb9317da_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >Modalidad / Inversión</td>
             </tr>
     </tbody></table>
 </div>
@@ -13554,54 +13718,54 @@ div.prompt {display:none}
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-</style><table id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8" ><thead>    <tr>        <th class="col_heading level0 col0" >Nombre</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
+</style><table id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32" ><thead>    <tr>        <th class="col_heading level0 col0" >Nombre</th>        <th class="col_heading level0 col1" ></th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row0_col0" class="data row0 col0" >MEDIA:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row0_col1" class="data row0 col1" >Promedio</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row0_col0" class="data row0 col0" >MEDIA:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row0_col1" class="data row0 col1" >Promedio</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row1_col0" class="data row1 col0" >PRIMOS:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row1_col1" class="data row1 col1" >Cantidad de números primos</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row1_col0" class="data row1 col0" >PRIMOS:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row1_col1" class="data row1 col1" >Cantidad de números primos</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row2_col0" class="data row2 col0" >REPETIDOS:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row2_col1" class="data row2 col1" >Cantidad números repetidos resultados consecutivos</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row2_col0" class="data row2 col0" >REPETIDOS:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row2_col1" class="data row2 col1" >Cantidad números repetidos resultados consecutivos</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row3_col0" class="data row3 col0" >DISTRIBUCIÓN:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row3_col1" class="data row3 col1" >Porcentaje histórico</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row3_col0" class="data row3 col0" >DISTRIBUCIÓN:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row3_col1" class="data row3 col1" >Porcentaje histórico</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row4_col0" class="data row4 col0" >P100:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row4_col1" class="data row4 col1" >Porcentaje a 100 sorteos</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row4_col0" class="data row4 col0" >P100:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row4_col1" class="data row4 col1" >Porcentaje a 100 sorteos</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row5_col0" class="data row5 col0" >BALANZA:</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row5_col1" class="data row5 col1" >Diferencia porcentaje histórico y 100 sorteos</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row5_col0" class="data row5 col0" >BALANZA:</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row5_col1" class="data row5 col1" >Diferencia porcentaje histórico y 100 sorteos</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row6_col0" class="data row6 col0" >UAP</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row6_col1" class="data row6 col1" >Última aparición</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row6_col0" class="data row6 col0" >UAP</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row6_col1" class="data row6 col1" >Última aparición</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row7_col0" class="data row7 col0" >50_PER</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row7_col1" class="data row7 col1" >50 percentil</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row7_col0" class="data row7 col0" >50_PER</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row7_col1" class="data row7 col1" >50 percentil</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row8_col0" class="data row8 col0" >80_PER</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row8_col1" class="data row8 col1" >80 percentil</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row8_col0" class="data row8 col0" >80_PER</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row8_col1" class="data row8 col1" >80 percentil</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row9_col0" class="data row9 col0" >MAX</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row9_col1" class="data row9 col1" >Tiempo más alto de aparición</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row9_col0" class="data row9 col0" >MAX</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row9_col1" class="data row9 col1" >Tiempo más alto de aparición</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row10_col0" class="data row10 col0" >UTA</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row10_col1" class="data row10 col1" >Último tiempo de aparición</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row10_col0" class="data row10 col0" >UTA</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row10_col1" class="data row10 col1" >Último tiempo de aparición</td>
             </tr>
             <tr>
-                                <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row11_col0" class="data row11 col0" >CONSPOS</td>
-                        <td id="T_5ca9ac18_7bdb_11eb_ba29_ab13c67d94d8row11_col1" class="data row11 col1" >Cantidad posiciones consecutivas</td>
+                                <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row11_col0" class="data row11 col0" >CONSPOS</td>
+                        <td id="T_fb950b62_7bde_11eb_b4ea_75b9d4a24d32row11_col1" class="data row11 col1" >Cantidad posiciones consecutivas</td>
             </tr>
     </tbody></table>
 </div>
