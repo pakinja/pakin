@@ -598,12 +598,15 @@ img.chile {
 
   section.empticons  {
   	text-align: center !important;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
-  .col {
+  div.col {
     display: inline-block !important;
     /* width: 25%; */
-    padding: 20px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
 
   /* Clearfix (clear floats) */
