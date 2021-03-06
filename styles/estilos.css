@@ -613,6 +613,11 @@ img.chile {
   img.in {
     width: 70px;
   }
+  
+  img.fb {
+    width: 60px;
+  }
+
 
   /* Clearfix (clear floats) */
   .row::after {
