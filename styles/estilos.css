@@ -338,7 +338,6 @@ div.output_area pre{
 /**************************/
 
 .inav {
-  margin-top: 0px;
 	font-size: 28px;
 	line-height: 60px;
 	font-weight: bold;
@@ -609,6 +608,11 @@ img.chile {
     /* width: 25%; */
     padding-right: 80px !important;
     padding-left: 80px !important;
+  }
+
+  .emticons, .row, .col img {
+
+    width: 70px;
   }
 
   /* Clearfix (clear floats) */
