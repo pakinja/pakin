@@ -605,8 +605,8 @@ img.chile {
   div.col {
     display: inline-block !important;
     /* width: 25%; */
-    padding-right: 20px !important;
-    padding-left: 20px !important;
+    padding-right: 80px !important;
+    padding-left: 80px !important;
   }
 
   /* Clearfix (clear floats) */
@@ -930,6 +930,10 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
+section.empticons  {
+  display: none;
+}
+
 .parback {
   margin-top: 2vh;
 }
@@ -1230,6 +1234,11 @@ div.adRightW {
 @media (min-width: 481px) and (max-width: 767px) {
 
 /*TABLET MOBILE LANDSCAPE*/
+
+div.col {
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+}
 
   .web {
     display: none;
