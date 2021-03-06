@@ -338,6 +338,7 @@ div.output_area pre{
 /**************************/
 
 .inav {
+  margin-top: 0px;
 	font-size: 28px;
 	line-height: 60px;
 	font-weight: bold;
