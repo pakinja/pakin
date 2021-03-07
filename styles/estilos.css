@@ -613,7 +613,7 @@ img.chile {
   img.in {
     width: 70px;
   }
-  
+
   img.fb {
     width: 60px;
   }
@@ -1244,6 +1244,11 @@ div.adRightW {
 @media (min-width: 481px) and (max-width: 767px) {
 
 /*TABLET MOBILE LANDSCAPE*/
+
+
+.empticons {
+  display: none;
+}
 
 div.col {
   padding-right: 30px !important;
