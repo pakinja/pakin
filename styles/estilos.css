@@ -688,10 +688,9 @@ img.chile {
   /* position: absolute !important; */
 }
 
-.mobileHideT {
-	width: 200px;
-	height: 200px;
-  /* position: absolute !important; */
+div.mobileHideT {
+	width: 200px !important;
+	height: 200px !important;
 }
 
 .mobileHideChecador {
@@ -1223,7 +1222,7 @@ div.adRightW {
   .mobileHideMR {
   	display: none;
   }
-  .mobileHideT {
+  div.mobileHideT {
     display: none;
   }
 
