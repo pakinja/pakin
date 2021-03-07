@@ -688,6 +688,12 @@ img.chile {
   /* position: absolute !important; */
 }
 
+.mobileHideT {
+	width: 200px;
+	height: 200px;
+  /* position: absolute !important; */
+}
+
 .mobileHideChecador {
 	width: 300px;
 	height: 250px;
@@ -1217,9 +1223,10 @@ div.adRightW {
   .mobileHideMR {
   	display: none;
   }
-  /* .mobileHideChecador {
+  .mobileHideT {
     display: none;
-  }   */
+  }
+
   .mobileHideMRC {
     display: none;
   }
