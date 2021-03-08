@@ -81,7 +81,7 @@ hr.hrhead  {
 
 hr.abs  {
 	border: 1px solid #D1D0CE;
-  margin-top: 10vw;
+  margin-top: 15vw;
   /* margin-bottom: 3vw; */
 }
 
@@ -686,15 +686,10 @@ img.chile {
 	height: 600px;
 }
 
-.mobileHideT div{
-	width: 200px;
-	height: 200px;
-}
-
-.mobileHideChecador {
+/* .mobileHideChecador {
 	width: 300px;
 	height: 250px;
-}
+} */
 
 .mobileHideMRC {
 	width: 300px !important;
@@ -1219,10 +1214,6 @@ div.adRightW {
 
   .mobileHideMR {
   	display: none;
-  }
-
-  .mobileHideT {
-    display: none;
   }
 
   .mobileHideMRC {
