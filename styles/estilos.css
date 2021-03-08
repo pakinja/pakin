@@ -686,10 +686,10 @@ img.chile {
 	height: 600px;
 }
 
-/* .mobileHideChecador {
-	width: 300px;
-	height: 250px;
-} */
+.mobileHideT {
+	width: 200px;
+	height: 200px;
+}
 
 .mobileHideMRC {
 	width: 300px !important;
