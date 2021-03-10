@@ -85,6 +85,11 @@ hr.abs  {
   /* margin-bottom: 3vw; */
 }
 
+hr.desc  {
+	border: 1px solid #000000;
+  width:50%;
+}
+
 div.web {
   margin-top: 10vw;
   /* margin-bottom: 1vh; */
