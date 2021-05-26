@@ -267,7 +267,15 @@ img.imcard {
 	border-radius: 10px;
 }
 
-
+div.fcfim {
+   position: absolute;
+   top: 50% !important;
+   left: 50% !important;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width*/
+}
 
 
 /************************************************/
