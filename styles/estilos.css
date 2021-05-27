@@ -269,7 +269,7 @@ img.imcard {
 
 div.fcfim {
    position: absolute;
-   top: 50% !important;
+   top: 70% !important;
    left: 50% !important;
    width: 500px;
    height: 500px;
@@ -277,10 +277,11 @@ div.fcfim {
    margin-left: -250px; /* Half the width*/
 }
 
-.fcft h2 {
+div.fcft {
+   margin-top: 150px;
    text-align: center;
+   font-size: 2vw;
 }
-
 
 /************************************************/
 .ifra {
