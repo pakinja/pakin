@@ -169,7 +169,7 @@ h1.tithome {
 
 h2.h2card {
 	/* text-align: center; */
-	font-size: 3.3vw !important;
+	font-size: 1.8vw !important;
 	/* margin-top: 30px !important;
   padding-top: 0px !important;
   margin-bottom: 10px; */
@@ -260,7 +260,7 @@ p.price {
   padding: 7px;
   color: white;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 33px;
   background-color: #B22222;
   text-align: center;
   cursor: pointer;
@@ -881,6 +881,14 @@ div.adRightM {
 h1.tithome {
   margin-top: 10px;
 	font-size: 9vw !important;
+}
+
+h2.h2card {
+	/* text-align: center; */
+	font-size: 6vw !important;
+	/* margin-top: 30px !important;
+  padding-top: 0px !important;
+  margin-bottom: 10px; */
 }
 
 section.empticons  {
