@@ -169,7 +169,7 @@ h1.tithome {
 
 h2.h2card {
 	/* text-align: center; */
-	font-size: 1.8vw !important;
+	font-size: 1.6vw !important;
 	/* margin-top: 30px !important;
   padding-top: 0px !important;
   margin-bottom: 10px; */
@@ -222,8 +222,8 @@ section.ticons  {
 
 .column {
   width: auto;
-	padding-left: 2.4vw;
-	padding-right: 2.4vw;
+	padding-left: 2.3vw;
+	padding-right: 2.3vw;
 	padding-bottom: 3vw;
 	display: inline-block !important;
 }
