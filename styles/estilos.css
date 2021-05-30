@@ -579,8 +579,15 @@ img.chile {
 
   div.col {
     display: inline-block !important;
-    padding-right: 80px !important;
-    padding-left: 80px !important;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+  }
+
+  .col a {
+    line-height: 35px;
+    color: #000000;
+    font-size: 30px;
+    text-decoration: none !important;
   }
 
   img.in {
