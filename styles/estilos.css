@@ -163,6 +163,7 @@ h1.titulo {
 }
 
 h1.tithome {
+  line-height: 4vh;
 	text-align: center !important;
 	font-size: 3.3vw !important;
 }
@@ -222,8 +223,8 @@ section.ticons  {
 
 .column {
   width: auto;
-	padding-left: 2.3vw;
-	padding-right: 2.3vw;
+	padding-left: 1.2vw;
+	padding-right: 1.2vw;
 	padding-bottom: 3vw;
 	display: inline-block !important;
 }
@@ -891,7 +892,8 @@ div.adRightM {
 /*MOBILE PORTRAIT*/
 
 h1.tithome {
-  margin-top: 10px;
+  line-height: 0vh;
+  /* margin-top: 10px; */
 	font-size: 9vw !important;
 }
 
