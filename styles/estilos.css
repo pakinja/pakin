@@ -64,7 +64,7 @@ section.encabezado {
 
 hr.hrhead  {
   margin: 0px;
-	border: 1px solid #000000;
+	border: 1px solid #B22222;
 }
 
 
@@ -364,7 +364,7 @@ div.output_area pre{
 	 padding: 10px;
    padding-top: 10px;
 	 border-radius: 5px;
-   background: #3D3C3A;
+   background: #000000;
 	 border-left: 5px solid #B22222;
    border-top: 1px solid #B22222;
    border-right: 1px solid #B22222;
@@ -578,7 +578,7 @@ img.chile {
   }
 
   section.empticons  {
-    background-color: #3D3C3A;
+    background-color: #000000;
   	text-align: center !important;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -592,7 +592,7 @@ img.chile {
 
   .col a {
     font-weight: 500;
-    line-height: 3vw;
+    line-height: 2.5vw;
     color: #FFFFFF;
     font-size: 1.7vw;
     text-decoration: none !important;
@@ -921,7 +921,7 @@ h2.h2card {
 } */
 
 .col a {
-  line-height: 6vh !important;
+  line-height: 5vh !important;
   font-size: 5vw;
 }
 
