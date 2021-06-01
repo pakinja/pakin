@@ -911,9 +911,9 @@ h2.h2card {
 
 .col a {
   /* font-weight: 600; */
-  /* line-height: 3vw; */
+  line-height: 6vh !important;
   /* color: #3D3C3A; */
-  font-size: 4vw;
+  font-size: 5vw;
   /* text-decoration: none !important; */
 }
 
@@ -925,11 +925,11 @@ section.empticons  {
 
 div.col {
   display: inline-block !important;
-  padding-right: 1.3vw !important;
-  padding-left: 1.3vw !important;
+  padding-right: 2.3vw !important;
+  padding-left: 2.3vw !important;
 }
 
-#colhide div{
+div.colhide {
   display: none !important;
 }
 
