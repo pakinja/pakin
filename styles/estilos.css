@@ -64,7 +64,7 @@ section.encabezado {
 
 hr.hrhead  {
   margin: 0px;
-	border: 1px solid #D1D0CE;
+	border: 1px solid #000000;
 }
 
 
@@ -159,28 +159,26 @@ h2.atract {
 h1.titulo {
 	text-align: center;
 	font-size: 4vw !important;
-	margin-top: 0px !important;
+	margin-top: 0 !important;
 }
 
-div.tithome {
-  /* line-height: 5vw; */
-  padding-top: 5vh;
-  padding-bottom: 0vh;
-}
-
-.tithome h1 {
+h1.tithome {
   text-align: center !important;
-  font-size: 3.3vw !important;
+  font-size: 0vw !important;
+  padding-top: 0;
+  /* margin-bottom: 0 !important; */
+}
+
+h2.sloganhome {
+	text-align: center;
+	font-size: 0vw !important;
+   margin-top: 0 !important;
+  /* color: #666362; */
 }
 
 h2.h2card {
-	/* text-align: center; */
 	font-size: 1.6vw !important;
-	/* margin-top: 30px !important;
-  padding-top: 0px !important;
-  margin-bottom: 10px; */
 }
-
 
 .slogan {
 	text-align: center;
@@ -188,6 +186,8 @@ h2.h2card {
 	margin-top: 20px !important;
   color: #666362;
 }
+
+
 
 h2.subtitulo {
 	text-align: center;
@@ -228,8 +228,8 @@ section.ticons  {
 
 .column {
   width: auto;
-	padding-left: 1.5vw;
-	padding-right: 1.5vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
 	padding-bottom: 3vw;
 	display: inline-block !important;
 }
@@ -578,6 +578,7 @@ img.chile {
   }
 
   section.empticons  {
+    background-color: #3D3C3A;
   	text-align: center !important;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -590,15 +591,16 @@ img.chile {
   }
 
   .col a {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3vw;
-    color: #3D3C3A;
+    color: #FFFFFF;
     font-size: 1.7vw;
     text-decoration: none !important;
   }
 
   .col a:hover {
-  color: #B22222;
+  /* font-weight: bold; */
+  color: grey;
 }
 
   img.in {
@@ -896,12 +898,14 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
-div.tithome {
-  padding-top: 6vh;
+h1.tithome {
+  padding-top: 0vh !important;
+  font-size: 0vh !important;
 }
 
-.tithome h1 {
-  font-size: 5vh !important;
+h2.sloganhome {
+	font-size: 0vh !important;
+  margin-top: 0 !important;
 }
 
 h2.h2card {
@@ -1214,12 +1218,15 @@ div.adRightW {
 /*TABLET MOBILE LANDSCAPE*/
 
 
-div.tithome {
-  padding-top: 3vw;
+h1.tithome {
+  padding-top: 0vw;
+  font-size: 0vw !important;
 }
 
-.tithome h1 {
-  font-size: 7vw !important;
+h2.sloganhome {
+	font-size: 0vw !important;
+  /* margin-top: 0 !important;
+  color: #666362; */
 }
 
 .empticons {
