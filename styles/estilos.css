@@ -917,23 +917,18 @@ h2.h2card {
 } */
 
 .col a {
-  /* font-weight: 600; */
   line-height: 6vh !important;
-  /* color: #3D3C3A; */
   font-size: 5vw;
-  /* text-decoration: none !important; */
 }
 
 section.empticons  {
-  /* text-align: center !important; */
   margin-top: 0px;
-  /* margin-bottom: 0px; */
 }
 
 div.col {
   display: inline-block !important;
-  padding-right: 2.3vw !important;
-  padding-left: 2.3vw !important;
+  padding-right: 1.5vw !important;
+  padding-left: 1.5vw !important;
 }
 
 div.colhide {
