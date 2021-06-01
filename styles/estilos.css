@@ -909,6 +909,30 @@ h2.h2card {
   display: none;
 } */
 
+.col a {
+  /* font-weight: 600; */
+  /* line-height: 3vw; */
+  /* color: #3D3C3A; */
+  font-size: 4vw;
+  /* text-decoration: none !important; */
+}
+
+section.empticons  {
+  /* text-align: center !important; */
+  margin-top: 0px;
+  /* margin-bottom: 0px; */
+}
+
+div.col {
+  display: inline-block !important;
+  padding-right: 1.3vw !important;
+  padding-left: 1.3vw !important;
+}
+
+#colhide {
+  display: none;
+}
+
 .parback {
   margin-top: 2vh;
 }
@@ -1145,6 +1169,7 @@ div.adRightW {
   .cmi {
     display:none;
   }
+
   .ifrasurf {
   	width: 100%;
   }
