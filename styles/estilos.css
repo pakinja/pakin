@@ -162,10 +162,15 @@ h1.titulo {
 	margin-top: 0px !important;
 }
 
-h1.tithome {
-  line-height: 4vh;
-	text-align: center !important;
-	font-size: 3.3vw !important;
+div.tithome {
+  /* line-height: 5vw; */
+  padding-top: 5vh;
+  padding-bottom: 0vh;
+}
+
+.tithome h1 {
+  text-align: center !important;
+  font-size: 3.3vw !important;
 }
 
 h2.h2card {
@@ -891,10 +896,12 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
-h1.tithome {
-  line-height: 0vh;
-  /* margin-top: 10px; */
-	font-size: 9vw !important;
+div.tithome {
+  padding-top: 6vh;
+}
+
+.tithome h1 {
+  font-size: 5vh !important;
 }
 
 h2.h2card {
@@ -1212,9 +1219,12 @@ div.adRightW {
 /*TABLET MOBILE LANDSCAPE*/
 
 
-h1.tithome {
-  margin-top: 0px;
-	font-size: 7vw !important;
+div.tithome {
+  padding-top: 3vw;
+}
+
+.tithome h1 {
+  font-size: 7vw !important;
 }
 
 .empticons {
