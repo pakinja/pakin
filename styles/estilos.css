@@ -929,8 +929,8 @@ div.col {
   padding-left: 1.3vw !important;
 }
 
-#colhide div {
-  display: none;
+#colhide div{
+  display: none !important;
 }
 
 .parback {
