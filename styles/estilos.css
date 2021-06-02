@@ -160,6 +160,7 @@ h1.titulo {
 	text-align: center;
 	font-size: 4vw !important;
 	margin-top: 0 !important;
+  padding-top: 0;
 }
 
 h1.tithome {
@@ -223,13 +224,14 @@ table.t {
 }
 
 section.ticons  {
+  padding-top: 30px;
 	text-align: center !important;
 }
 
 .column {
   width: auto;
-	padding-left: 2vw;
-	padding-right: 2vw;
+	padding-left: 2.6vw;
+	padding-right: 2.6vw;
 	padding-bottom: 3vw;
 	display: inline-block !important;
 }
@@ -1066,7 +1068,7 @@ div.adRightW {
 
 	h1.titulo {
 		font-size: 10vw !important;
-		margin-top: 20px !important;
+		margin-top: 6px !important;
 	}
   h2.subtitulo {
     font-size: 6vw !important;
