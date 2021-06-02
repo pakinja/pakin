@@ -901,6 +901,11 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
+section.ticons  {
+  padding-top: 5px !important;
+}
+
+
 h1.tithome {
   padding-top: 0vh !important;
   font-size: 0vh !important;
@@ -1018,9 +1023,9 @@ div.adRightW {
   }
 
   p.par {
-  	font-size: 6vw !important;
-  	line-height: 1.5;
-  	text-align: left;
+  	font-size: 6.5vw !important;
+  	line-height: 8vw;
+  	/* text-align: left; */
   }
 
   .parPHP {
@@ -1078,12 +1083,12 @@ div.adRightW {
 
   h2.subtituloAlertas {
   	text-align: center;
-  	font-size: 6vw !important;
+  	font-size: 5.3vh !important;
   	margin-top: 2vw !important;
   }
 
   h3.subsubtitulo {
-  	font-size: 5vw !important;
+  	font-size: 4vh !important;
     margin-top: 10px !important;
   }
 	.slogan {
