@@ -384,7 +384,7 @@ div.output_area pre{
 
 
 .parback {
-  margin-top: 3vh;
+  margin-top: 2.5vh;
 }
 
 p.parback {
@@ -394,20 +394,23 @@ p.parback {
 }
 
 .parback a {
-	color: white;
+	color: #000000;
 	font-weight: bold;
 	text-decoration: none !important;
-	border-radius: 5px;
+  border-radius: 5px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 	padding: 10px;
-	background-color: #B22222;
 	display: inline-block;
 }
 
 .parback a:hover {
-  background-color: #85BB65;
-  color: #FFFFFF;
-	border-radius: 5px;
-	padding: 10px;
+  /* background-color: #85BB65; */
+  color: #C0C0C0;
+	/* border-radius: 5px;
+	padding: 10px; */
 }
 
 /***************************/
