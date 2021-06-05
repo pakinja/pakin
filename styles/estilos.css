@@ -4,15 +4,6 @@ html,body{
    min-height:100%;
 }
 
-/* @font-face {
-  font-family: 'Pacifico';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
-  font-display: swap;
-} */
-
-
 body {
   width 100%;
 	font-family: sans-serif, Arial, Verdana, Helvetica;
@@ -167,14 +158,12 @@ h1.tithome {
   text-align: center !important;
   font-size: 0vw !important;
   padding-top: 0;
-  /* margin-bottom: 0 !important; */
 }
 
 h2.sloganhome {
 	text-align: center;
 	font-size: 0vw !important;
    margin-top: 0 !important;
-  /* color: #666362; */
 }
 
 h2.h2card {
@@ -366,7 +355,6 @@ div.output_area pre{
 	 padding: 10px;
    padding-top: 10px;
 	 border-radius: 5px;
-   /* background: #3D3C3A; */
 	 border-left: 5px solid #000000;
    border-top: 1px solid #000000;
    border-right: 1px solid #000000;
@@ -407,10 +395,7 @@ p.parback {
 }
 
 .parback a:hover {
-  /* background-color: #85BB65; */
   color: #C0C0C0;
-	/* border-radius: 5px;
-	padding: 10px; */
 }
 
 /***************************/
@@ -456,7 +441,6 @@ img.fb {
   overflow: hidden;
 	background: #B22222;
 	border-bottom: 0.5px solid black;
-  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1); */
 	right: 0px;
 	top: 0px;
 	width: 100%;
@@ -501,66 +485,7 @@ img.fb {
 	line-height: 25px;
 }
 
-/*********Dropdown*************************/
-img.chile {
-  width: 85px;
-  height: 100%;
-  transform: rotate(15deg);
-}
 
-.dropbtn {
-  background-color: #B22222;
-  color: white;
-  padding-right: 70px;
-  font-size: 16px;
-  border: none;
-  outline:none;
-  cursor: pointer;
-}
-
-.dropdown {
-  margin-top: 5px;
-  float: right;
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  right: 0;
-  margin-right: 0px;
-  margin-top: 69px;
-  display: none;
-  position: fixed;
-  background-color: #3D3C3A;
-  max-width: 230px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  border-bottom: solid 2px #B22222;
-  border-left: solid 2px #B22222;
-  border-right: solid 2px #B22222;
-  color: white;
-  padding: 10px 10px;
-  font-size: 100%;
-  text-decoration: none;
-  text-align: left;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: white;
-}
-
-.dropdown:hover .dropdown-content {
-
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #B22222;
-}
 /*****************************************/
 
 	img.logoN {
@@ -584,7 +509,6 @@ img.chile {
   }
 
   section.empticons  {
-    /* background-color: #000000; */
   	text-align: center !important;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -605,7 +529,6 @@ img.chile {
   }
 
   .col a:hover {
-  /* font-weight: bold; */
   color: grey;
 }
 
@@ -703,8 +626,6 @@ img.chile {
 	z-index: 300;
 	padding-top: 10px !important;
 }
-
-
 
 /* Flash class and keyframe animation */
 .flashit{
@@ -920,16 +841,8 @@ h2.sloganhome {
 }
 
 h2.h2card {
-	/* text-align: center; */
 	font-size: 6vw !important;
-	/* margin-top: 30px !important;
-  padding-top: 0px !important;
-  margin-bottom: 10px; */
 }
-
-/* section.empticons  {
-  display: none;
-} */
 
 .col a {
   line-height: 5vh !important;
@@ -1011,24 +924,10 @@ div.adRightW {
     width: 65px;
     transform: rotate(15deg);
   }
-  .dropbtn {
-    padding-right: 30px;
-  }
-
-  .dropdown-content {
-    margin-top: 56px;
-    margin-right: 1px;
-    max-width: 180px;
-  }
-  .dropdown-content a {
-    padding: 5px 5px;
-    font-size: 100%;
-  }
 
   p.par {
   	font-size: 6.5vw !important;
   	line-height: 8vw;
-  	/* text-align: left; */
   }
 
   .parPHP {
@@ -1236,8 +1135,6 @@ h1.tithome {
 
 h2.sloganhome {
 	font-size: 0vw !important;
-  /* margin-top: 0 !important;
-  color: #666362; */
 }
 
 .empticons {
@@ -1276,17 +1173,7 @@ div.col {
   .dropbtn {
     font-size: 14px;
   }
-  .dropdown {
-    margin-top: 0px;
-  }
-  .dropdown-content {
-    margin-top: 49px;
-    margin-right: 1px;
-    max-width: 180px;
-  }
-  .dropdown-content a {
-    padding: 5px 5px;
-  }
+
   h1.titulo {
   	font-size: 5vw !important;
   	margin-top: 0 !important;
