@@ -1313,15 +1313,14 @@ text-align: center !important;
 
 
 .preloader {
-  width: 70px;
-  height: 70px;
-  border: 10px solid #eee;
+  width: 140px;
+  height: 140px;
+  border: 10px solid red;
   border-top: 10px solid #666;
   border-radius: 50%;
   animation-name: girar;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 @keyframes girar {
   from {
