@@ -1322,9 +1322,9 @@ text-align: center !important;
   animation-duration:2s;
   animation-iteration-count: infinite;
   position:absolute;
-  margin: auto;
-  display: block;
-  /* padding:0px; */
+  top:30%;
+  left:45%;
+  padding:0px;
   z-index:300;
 }
 @keyframes girar {
