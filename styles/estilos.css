@@ -1347,8 +1347,8 @@ text-align: center !important;
   animation-duration:2s;
   animation-iteration-count: infinite;
   position:absolute;
-  top:5%;
-  left:47%;
+  top:0%;
+  left:70%;
   padding:0px;
   z-index:500;
 }
