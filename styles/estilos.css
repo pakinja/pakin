@@ -1336,6 +1336,13 @@ text-align: center !important;
   padding:0px;
   z-index:300;
 }
+
+.preloaderb {
+  top:0% !important;
+  left:60% !important;
+}
+
+
 @keyframes girar {
   from {
     transform: rotate(0deg);
