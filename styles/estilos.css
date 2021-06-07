@@ -826,8 +826,8 @@ div.adRightM {
 /*MOBILE PORTRAIT*/
 
 .preloader {
-  top:40% !important;
-  left:60% !important;
+  top: 40% !important;
+  left: 80% !important;
 }
 
 section.ticons  {
@@ -1329,7 +1329,7 @@ text-align: center !important;
   position:absolute;
   top:35%;
   left:47%;
-  padding:0px;
+  /* padding:0px; */
   z-index:300;
 }
 
