@@ -273,7 +273,7 @@ p.price {
 
 
 img.imcard {
-	width: 100%;
+	max-width: 100%;
   height: auto;
 	border-radius: 10px;
 }
@@ -1066,7 +1066,7 @@ div.adRightW {
     margin: auto !important;
   }
 
-  .rendered_html tr, .rendered_html th, .rendered_html td {
+  /* .rendered_html tr, .rendered_html th, .rendered_html td {
       /* text-align: right;
       vertical-align: middle; */
       /* padding: 0.2em !important; */
@@ -1074,7 +1074,7 @@ div.adRightW {
       white-space: normal;
       max-width: none;
       border: none; */
-  }
+  } */
 
 
   p.parback {
@@ -1148,6 +1148,9 @@ div.adRightW {
 
 /*TABLET MOBILE LANDSCAPE*/
 
+h2.h2card {
+	font-size: 1.5vw !important;
+}
 
 h1.tithome {
   padding-top: 0vw;
