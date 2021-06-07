@@ -319,10 +319,11 @@ div.output_area pre{
 }
 
 .rendered_html table {
-	font-size: 1.3vw !important;
+	font-size: 1.4vw !important;
 	border: solid !important;
   background-color: rgba(229,228,226) !important;
 }
+
 
 .rendered_html thead {
     background-color: white;
@@ -828,8 +829,10 @@ div.adRightM {
 .preloader {
   width: 70px !important;
   height: 70px !important;
-  margin-top:15% !important;
-  margin-left:30% !important;
+  margin-top: 1% !important;
+  margin-left: 30% !important;
+  border: 10px solid red !important;
+  border-top: 10px solid #3D3C3A !important;
 }
 
 section.ticons  {
@@ -1059,10 +1062,21 @@ div.adRightW {
     border: 1px solid !important;
   }
 
-
   div.output_area .rendered_html table {
     margin: auto !important;
   }
+
+  .rendered_html tr, .rendered_html th, .rendered_html td {
+      /* text-align: right;
+      vertical-align: middle; */
+      /* padding: 0.2em !important; */
+      /* line-height: normal;
+      white-space: normal;
+      max-width: none;
+      border: none; */
+  }
+
+
   p.parback {
   	font-size: 16px !important;
   }
