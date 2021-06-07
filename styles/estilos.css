@@ -826,8 +826,10 @@ div.adRightM {
 /*MOBILE PORTRAIT*/
 
 .preloader {
-  top: 40% !important;
-  left: 80% !important;
+  width: 70px !important;
+  height: 70px !important;
+  margin-top:15% !important;
+  margin-left:30% !important;
 }
 
 section.ticons  {
@@ -1327,7 +1329,7 @@ text-align: center !important;
   animation-duration:2s;
   animation-iteration-count: infinite;
   position:absolute;
-  top:35%;
+  top:15%;
   left:47%;
   /* padding:0px; */
   z-index:300;
