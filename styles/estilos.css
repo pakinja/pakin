@@ -5,7 +5,7 @@ html,body{
 }
 
 body {
-  width 100%;
+  /* width: 100%; */
 	font-family: sans-serif, Arial, Verdana, Helvetica;
 	background: white;
 }
@@ -130,7 +130,6 @@ div.butt-l {
 div.butt-r {
 	float: right;
 	margin-right: 150px;
-	zoom: 1.5 !important;
 }
 
 h2.cen {
@@ -635,11 +634,11 @@ img.fb {
 	-webkit-animation: flash linear 1s infinite;
 	animation: flash linear 1s infinite;
 }
-@-webkit-keyframes flash {
+/* @-webkit-keyframes flash {
 	0% { opacity: 1; }
 	50% { opacity: .1; }
 	100% { opacity: 1; }
-}
+} */
 @keyframes flash {
 	0% { opacity: 1; }
 	50% { opacity: .1; }
@@ -720,7 +719,7 @@ div.but-wrapper {
 }
 
 /************Botón buscador******/
-@-webkit-keyframes bounce {
+/* @-webkit-keyframes bounce {
         0% {
     transform: scale(1,1) translate(0px, 0px);
   }
@@ -729,7 +728,7 @@ div.but-wrapper {
     transform: scale(1,0.8) translate(0px, 10px);
   }
 
-}
+} */
 
 /***** Buscadr loading *****/
 
@@ -1331,7 +1330,7 @@ div.col {
 }
 
 .svg-container {
-  margin-top: 3% !important; #plotly pages
+  margin-top: 3% !important;
 }
 
 td,th {
@@ -1362,4 +1361,8 @@ text-align: center !important;
   to {
     transform: rotate(360deg);
   }
+}
+
+div.ads {
+  text-align: center !important;
 }
