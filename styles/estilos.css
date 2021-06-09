@@ -780,7 +780,7 @@ div.output_area {
   position: fixed;
   bottom:0;
   left:0;
-	z-index: 100;
+	z-index: 500;
 	opacity: 80%;
 	border-radius: 3px;
 }
@@ -995,12 +995,12 @@ div.adRightW {
 
   h2.subtituloAlertas {
   	text-align: center;
-  	font-size: 5.3vh !important;
+  	font-size: 10vw !important;
   	margin-top: 2vw !important;
   }
 
   h3.subsubtitulo {
-  	font-size: 4vh !important;
+  	font-size: 8vw !important;
     margin-top: 10px !important;
   }
 	.slogan {
