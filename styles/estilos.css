@@ -1133,6 +1133,7 @@ div.adRightW {
   	padding-top: 2px;
   	padding-bottom:2px;
   	opacity: 80%;
+    z-index: 500;
   }
 	#notebook-container {
 		padding-left: 0px !important;
