@@ -1113,6 +1113,10 @@ div.adRightW {
   	width: 100%;
   }
 
+  .footerHide {
+  	display: none;
+  }
+
   .mobileHideM {
   	display: none;
   }
