@@ -1113,8 +1113,8 @@ div.adRightW {
   	width: 100%;
   }
 
-  .footerHide {
-  	display: none;
+  #sticky {
+  	display: none !important;
   }
 
   .mobileHideM {
