@@ -409,13 +409,13 @@ img.smayor {
 }
 
 .cmi img{
-	width: auto;
+  max-width: 100%;
   height: auto;
 	border-radius: 3px;
 }
 
 .cmim img{
-	width: auto;
+  max-width: 100%;
   height: auto;
 	border-radius: 3px;
 }
