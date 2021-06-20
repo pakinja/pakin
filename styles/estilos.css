@@ -12,12 +12,12 @@ body {
 
 aside.R {
   position: absolute !important;
-  right: 0;
+  right: 0 !important;
 }
 
 aside.L {
   position: absolute !important;
-  left: 0;
+  left: 0 !important;
 }
 
 p {
@@ -581,7 +581,7 @@ img.fb {
 }
 
 #display {
-	background-color: #B1FB17;
+	/* background-color: #B1FB17; */
 	border-radius:6px;
 	border: 4px !important;
 	border-color: #000000;
@@ -612,7 +612,7 @@ img.fb {
 }
 
 .mobileHideMRC {
-	width: 300px !important;
+	width: 250px !important;
 	height: 250px !important;
 }
 
