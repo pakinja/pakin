@@ -11,11 +11,15 @@ body {
 }
 
 aside.R {
+  margin-right: 0;
+  float: right;
   position: absolute !important;
   right: 0 !important;
 }
 
 aside.L {
+  margin-left: 0;
+  float: left;
   position: absolute !important;
   left: 0 !important;
 }
@@ -612,8 +616,8 @@ img.fb {
 }
 
 div.mobileHideMRC {
-	width: 250px !important;
-	height: 250px !important;
+	width: 250px;
+	height: 250px;
 }
 
 /***************************/
