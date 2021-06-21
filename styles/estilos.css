@@ -1072,15 +1072,9 @@ div.adRightW {
     margin: auto !important;
   }
 
-  /* .rendered_html tr, .rendered_html th, .rendered_html td {
-      text-align: right;
-      vertical-align: middle;
-      padding: 0.2em !important;
-      line-height: normal;
-      white-space: normal;
-      max-width: none;
-      border: none;
-  } */
+  .rendered_html tr, .rendered_html th, .rendered_html td {
+          padding: 0.23em 0.13em 0.23em 0.13 !important;
+  }
 
 
   p.parback {
