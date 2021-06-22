@@ -1072,8 +1072,17 @@ div.adRightW {
     margin: auto !important;
   }
 
-  .rendered_html tr, .rendered_html th, .rendered_html td {
-          padding: 0.23em 0.11em 0.23em 0.11 !important;
+  /* .rendered_html tr,
+  .rendered_html th, */
+  .rendered_html tr
+   {
+     font-size: 3.4vw !important;
+  }
+
+  .rendered_html td
+   {
+     font-size: 3.3vw !important;
+     padding: 0.23em 0.11em 0.23em 0.11 !important;
   }
 
 
