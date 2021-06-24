@@ -832,6 +832,7 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
+
 .preloader {
   width: 70px !important;
   height: 70px !important;
@@ -1057,7 +1058,7 @@ div.adRightW {
   }
 
   div.output_area pre{
-  	font-size: 4vw !important;
+  	font-size: 3vh !important;
   }
   .math span{
   	font-size: 4.5vw ;
