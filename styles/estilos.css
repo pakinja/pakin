@@ -1065,7 +1065,7 @@ div.adRightW {
   }
 
   .rendered_html table {
-    font-size: 3.7vw !important;
+    font-size: 3.9vw !important;
     border: 1px solid !important;
   }
 
@@ -1080,11 +1080,10 @@ div.adRightW {
      font-size: 5vw !important;
   } */
 
-  /* .rendered_html td
+ .rendered_html td
    {
-     font-size: 3.5vw !important;
-     padding: 0.23em 0em 0.23em 0em !important;
-  } */
+     padding: 0.3em 0.4em 0.3em 0.4em !important;
+  }
 
 
   p.parback {
