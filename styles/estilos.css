@@ -204,7 +204,7 @@ h3.subsubtitulo {
 
 
 table.t {
-	table-layout: fixed;
+	table-layout: auto;
  	width: 100%;
 }
 
@@ -1074,17 +1074,17 @@ div.adRightW {
   }
 
   /* .rendered_html tr,
-  .rendered_html th, */
-  .rendered_html tr
+  .rendered_html th,
+  .rendered_html th
    {
-     font-size: 3.7vw !important;
-  }
+     font-size: 5vw !important;
+  } */
 
-  .rendered_html td
+  /* .rendered_html td
    {
      font-size: 3.5vw !important;
-     padding: 0.23em 0.8em 0.23em 0.8em !important;
-  }
+     padding: 0.23em 0em 0.23em 0em !important;
+  } */
 
 
   p.parback {
