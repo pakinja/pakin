@@ -1077,13 +1077,13 @@ div.adRightW {
   .rendered_html th, */
   .rendered_html tr
    {
-     font-size: 3.5vw !important;
+     font-size: 3.7vw !important;
   }
 
   .rendered_html td
    {
-     font-size: 3.4vw !important;
-     padding: 0.23em 0.4em 0.23em 0.4em !important;
+     font-size: 3.5vw !important;
+     padding: 0.23em 0.8em 0.23em 0.8em !important;
   }
 
 
