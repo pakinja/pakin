@@ -1378,3 +1378,7 @@ text-align: center !important;
 div.ads {
   text-align: center !important;
 }
+
+label.chec {
+  font-size: 0;
+}
