@@ -584,7 +584,7 @@ img.fb {
 	margin: 15px;
 }
 
-#display {
+#display, #displayb {
 	/* background-color: #B1FB17; */
 	border-radius:6px;
 	border: 4px !important;
@@ -598,7 +598,7 @@ img.fb {
 }
 
 
-#display:active {
+#display:active, #displayb:active {
 	background:red;
 	box-shadow: inset 0 0 0 3px #000000;
   transform: translateY(4px);
