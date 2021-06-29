@@ -581,15 +581,19 @@ img.fb {
 .buscar {
 	display: block;
 	text-align: center;
-	margin-top: 15px;
-  margin-bottom: 2px;
+	margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #display, #displayb {
 	/* background-color: #B1FB17; */
 	border-radius:6px;
-	border: 4px !important;
-	border-color: #000000;
+  border-radius: 5px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+	/* border-color: #000000; */
   color: #000000;
   font-size: 35px;
   text-decoration: none;
