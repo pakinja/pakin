@@ -903,13 +903,14 @@ div.adRightW {
 }
 
 #form input {
-  font-size: 14px;
+  font-size: 5vw;
   display: inline-block;
-  width: 50px;
+  width: 55px;
   border: 1px solid #B22222;
   border-radius: 5px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  margin-right: 2px;
+  /* padding-top: 4px;
+  padding-bottom: 4px; */
 }
 
 #wait {
@@ -1378,7 +1379,3 @@ text-align: center !important;
 div.ads {
   text-align: center !important;
 }
-
-/* label {
-  display: block;
-} */
