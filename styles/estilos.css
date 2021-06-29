@@ -381,7 +381,7 @@ div.output_area pre{
 }
 
 p.parback {
-	font-size: 25px !important;
+	font-size: 28px !important;
 	line-height: 1;
 	text-align: center !important;
 }
@@ -582,7 +582,7 @@ img.fb {
 	display: block;
 	text-align: center;
 	margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 #display, #displayb {
@@ -595,11 +595,11 @@ img.fb {
   border-bottom: 1px solid #000000;
 	/* border-color: #000000; */
   color: #000000;
-  font-size: 35px;
+  font-size: 25px;
   text-decoration: none;
 	font-weight: bold;
   cursor: pointer;
-	padding: 15px 20px 15px 20px;
+	padding: 11px 15px 11px 15px;
 }
 
 
@@ -1092,7 +1092,7 @@ div.adRightW {
   }
 
   p.parback {
-  	font-size: 16px !important;
+  	font-size: 19px !important;
   }
 
   .parback a {
