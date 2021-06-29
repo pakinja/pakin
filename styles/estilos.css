@@ -581,7 +581,7 @@ img.fb {
 .buscar {
 	display: block;
 	text-align: center;
-	margin: 15px;
+	/* margin: 15px; */
 }
 
 #display, #displayb {
@@ -903,7 +903,7 @@ div.adRightW {
 }
 
 #form input {
-  font-size: 6vw;
+  font-size: 6.3vw;
   display: inline-block;
   width: 55px;
   border: 1px solid #B22222;
