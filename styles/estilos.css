@@ -1382,6 +1382,8 @@ text-align: center !important;
 }
 
 div.ads {
+  width: 100%;
+  height: auto;
   text-align: center !important;
 }
 
@@ -1395,8 +1397,8 @@ p.chec {
     max-width: fit-content;
 }
 
-.webHide div {
-  width: 300px !important;
-  /* height: 100px !important; */
-  text-align: center !important;
+div.webHide {
+  width: 100% ;
+  height: auto;
+  text-align: center;
 }
