@@ -5,7 +5,6 @@ html,body{
 }
 
 body {
-  /* width: 100%; */
 	font-family: sans-serif, Arial, Verdana, Helvetica;
 	background: white;
 }
@@ -1086,10 +1085,10 @@ div.adRightW {
      font-size: 5vw !important;
   } */
 
- .rendered_html td
+ /* .rendered_html td
    {
      padding: 0.2em 0.3em 0.2em 0.3em !important;
-  }
+  } */
 
   p.parback {
   	font-size: 19px !important;
@@ -1387,4 +1386,10 @@ div.ads {
 
 p.chec {
   font-size: 0px !important;
+}
+
+.text_cell.rendered .rendered_html tr,
+ .text_cell.rendered .rendered_html th,
+  .text_cell.rendered .rendered_html td {
+    max-width: fit-content;
 }
