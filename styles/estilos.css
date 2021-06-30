@@ -1395,7 +1395,8 @@ p.chec {
     max-width: fit-content;
 }
 
-div.webHide{
-  width: 300px;
-  height: 100px;
+.webHide div {
+  width: 300px !important;
+  height: 100px !important;
+  text-align: center !important;
 }
