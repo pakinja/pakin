@@ -1397,6 +1397,6 @@ p.chec {
 
 .webHide div {
   width: 300px !important;
-  height: 100px !important;
+  /* height: 100px !important; */
   text-align: center !important;
 }
