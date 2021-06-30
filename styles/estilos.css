@@ -611,17 +611,17 @@ img.fb {
 
 .mobileHideM {
 	width: 300px;
-	height: 600px;
+	height: auto;
 }
 
 .mobileHideMR {
 	width: 160px;
-	height: 600px;
+	height: auto;
 }
 
 .mobileHideMRC {
 	width: 250px;
-	height: 250px;
+	height: auto;
 }
 
 /***************************/
@@ -797,7 +797,7 @@ div.output_area {
 
 div.adRightW {
   width: 300px;
-  height: 1050px;
+  height: auto;
   margin-right: 0;
   float: right;
 }
@@ -814,8 +814,8 @@ div.left {
 }
 
 div.adRightM {
-  height: 200px;
   width: 200px;
+  height: auto;
   float: right;
   margin-right: 0 !important;
 }
