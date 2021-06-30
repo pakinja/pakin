@@ -1085,10 +1085,11 @@ div.adRightW {
      font-size: 5vw !important;
   } */
 
- /* .rendered_html td
+ .rendered_html td
    {
-     padding: 0.2em 0.3em 0.2em 0.3em !important;
-  } */
+     padding-top: 0.2em !important;
+     padding-bottom: 0.2em !important;
+  }
 
   p.parback {
   	font-size: 19px !important;
@@ -1392,4 +1393,9 @@ p.chec {
  .text_cell.rendered .rendered_html th,
   .text_cell.rendered .rendered_html td {
     max-width: fit-content;
+}
+
+div.webHide{
+  width: 300px;
+  height: 100px;
 }
