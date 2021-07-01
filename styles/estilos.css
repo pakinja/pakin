@@ -42,9 +42,9 @@ video {
 }
 
 #form input {
-  font-size: 23px;
+  font-size: 2.6vw;
   text-align: center;
-  width: 7%;
+  width: 8%;
   display: inline-block;
   border: 2px solid #B22222;
   border-radius: 5px;
@@ -907,12 +907,12 @@ div.adRightW {
 }
 
 #form input {
-  font-size: 5vw;
+  font-size: 6.3vw;
   display: inline-block;
-  width: 43px;
+  width: 13%;
   border: 1px solid #B22222;
   border-radius: 5px;
-  margin-right: 2px;
+  margin: auto;
   /* padding-top: 4px;
   padding-bottom: 4px; */
 }
