@@ -202,9 +202,9 @@ h3.subsubtitulo {
 }
 
 
-table.t {
-	table-layout: auto;
- 	width: 100%;
+table {
+	table-layout: auto !important;
+ 	/* width: 100% !important; */
 }
 
 /**************CARD*********************************/
@@ -1085,11 +1085,13 @@ div.adRightW {
      font-size: 5vw !important;
   } */
 
- .rendered_html td
+ /* .rendered_html td
    {
+     padding-left: 0.4em !important;
+     padding-right: 0.4em !important;
      padding-top: 0.2em !important;
      padding-bottom: 0.2em !important;
-  }
+  } */
 
   p.parback {
   	font-size: 19px !important;
@@ -1391,11 +1393,12 @@ p.chec {
   font-size: 0px !important;
 }
 
-.text_cell.rendered .rendered_html tr,
+/* .text_cell.rendered .rendered_html tr,
  .text_cell.rendered .rendered_html th,
   .text_cell.rendered .rendered_html td {
+   min-width: fit-content;
     max-width: fit-content;
-}
+} */
 
 div.webHide {
   width: 100% ;
