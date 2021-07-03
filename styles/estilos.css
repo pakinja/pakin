@@ -1431,7 +1431,7 @@ div.p_3 {
 } */
 .Content
 {
-  margin: 0 auto;
+  margin: auto;
   height:500px;
   width:40%;
   overflow:auto;
