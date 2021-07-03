@@ -26,7 +26,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-07-02 23:28",
+  "dateModified": "2021-07-02 23:40",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13254,11 +13254,8 @@ div.prompt {display:none}
    <div>
     <h1 align="center">CSV File to HTML Table Using AJAX jQuery</h1>
     <br />
-<!--     <div align="center">
+    <div align="center">
      <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
-    </div> -->
-    <div class = "buscar">
-    <button id="display" class="cargah">Cargar Histórico</button>
     </div>
     <br />
        <div id="wait1" class="preloader" style="display:none;"></div>
@@ -13274,7 +13271,7 @@ div.prompt {display:none}
 <div class="text_cell_render border-box-sizing rendered_html">
 <script>
 $(document).ready(function(){
- $('.cargah').click(function(){
+ $('#display').click(function(){
     $('#wait1').css('display', 'block');
   $.ajax({
    url:"HTris.csv",
