@@ -1421,16 +1421,11 @@ div.p_3 {
   overflow: hidden !important;
 }
 
-/* .FixedHeightContainer
-{
-  float:right;
-  height: 250px;
-  width:250px;
-  padding:3px;
-  background:#f00;
-} */
-div.Content
-{
+.hist table {
+	font-size: 0.1vw !important;
+}
+
+div.Content {
   margin: auto;
   height:500px;
   width:50%;
