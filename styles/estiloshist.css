@@ -136,7 +136,7 @@ color: grey;
   border-radius: 50%;
   animation-name: girar;
   animation-duration:1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   position:absolute;
   /* top:15%;
   left:47%; */
