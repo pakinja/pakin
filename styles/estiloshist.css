@@ -116,10 +116,17 @@ color: grey;
   transform: translateY(4px);
 } */
 
-/* #wait1 {
-  left: 10% !important;
+#wait1 {
+  left: 50% !important;
   top: 10% !important;
-} */
+}
+
+/* Flash class and keyframe animation */
+.flashit{
+  color: #800000;
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
 
 .preloader {
   width: 110px;
