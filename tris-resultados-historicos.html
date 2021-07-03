@@ -26,7 +26,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-07-03 12:41",
+  "dateModified": "2021-07-03 17:39",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13207,64 +13207,32 @@ div.prompt {display:none}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRKmu3hMcOWcwFzvBsxL0pPSCCOKRRHk2pyyxiSKzm-vjLv2jL2XvKeSSWJOsNPCw/pubhtml?widget=true&amp;headers=false"></iframe>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<!-- <div>
     <h2 class = "subtituloAlertas">¡Alerta alto uso de datos!</h2>
 </div>    
 <div class = "buscar">
 <button id="display" class="ChecadorTris">Resultados Históricos Tris</button>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div id="wait1" class="preloader" style="display:none;"></div>
-<div class="Content" id="employee_table"></div>
+</div> -->
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<script>
-$(document).ready(function(){
- $('#display').click(function(){
-    $('#wait1').css('display', 'block');
-  $.ajax({
-   url:"HTris.csv",
-   dataType:"text",
-   success:function(data)
-   {
-    var employee_data = data.split(/\r?\n|\r/);
-    var table_data = '<table class="table table-bordered table-striped">';
-    for(var count = 0; count<employee_data.length; count++)
-    {
-     var cell_data = employee_data[count].split(",");
-     table_data += '<tr>';
-     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-     {
-      if(count === 0)
-      {
-       table_data += '<th>'+cell_data[cell_count]+'</th>';
-      }
-      else
-      {
-       table_data += '<td>'+cell_data[cell_count]+'</td>';
-      }
-     }
-     table_data += '</tr>';
-    }
-    table_data += '</table>';
-    $('#employee_table').html(table_data);
-    $('#wait1').css('display', 'none');
-   }
-  });
- });
-});
-</script>
+<!-- <div id="wait1" class="preloader" style="display:none;"></div>
+<div class="Content" id="employee_table"></div> -->
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+
 </div>
     </div>
   </div>
