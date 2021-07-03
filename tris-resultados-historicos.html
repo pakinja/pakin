@@ -26,7 +26,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-07-02 22:57",
+  "dateModified": "2021-07-02 23:00",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13257,18 +13257,15 @@ div.prompt {display:none}
 <!--     <div align="center">
      <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
     </div> -->
-
     <div class = "buscar">
     <button id="display" class="ChecadorTris">Revisar</button>
     </div>
-<pre><code>&lt;br /&gt;
-   &lt;div id="wait1" class="preloader" style="display:none;"&gt;&lt;/div&gt;
-&lt;div class="Content" id="employee_table"&gt;
-&lt;/div&gt;
-</code></pre>
-<p>&lt;/div&gt;
-  &lt;/div&gt;</p>
-
+    <br />
+       <div id="wait1" class="preloader" style="display:none;"></div>
+    <div class="Content" id="employee_table">
+    </div>
+   </div>
+  </div>
 </div>
 </div>
 </div>
@@ -13278,7 +13275,7 @@ div.prompt {display:none}
 <script>
 $(document).ready(function(){
  $('#display').click(function(){
-    $("#wait1").css("display", "block");
+    $('#wait1').css('display', 'block');
   $.ajax({
    url:"HTris.csv",
    dataType:"text",
@@ -13305,7 +13302,7 @@ $(document).ready(function(){
     }
     table_data += '</table>';
     $('#employee_table').html(table_data);
-    $("#wait1").css("display", "none");
+    $('#wait1').css('display', 'none');
    }
   });
  });
