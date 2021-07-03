@@ -1433,22 +1433,7 @@ div.Content
 {
   margin: auto;
   height:500px;
-  width:70%;
+  width:50%;
   overflow:auto;
   /* background:#fff; */
-}
-
-.Container {
-  margin:auto;
-  position: relative;
-  width: 50%;
-  overflow: hidden;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-}
-
-.responsive-iframe {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  border: none;
 }
