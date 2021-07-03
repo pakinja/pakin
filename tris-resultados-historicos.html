@@ -26,7 +26,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-07-03 00:02",
+  "dateModified": "2021-07-03 00:11",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13272,9 +13272,8 @@ div.prompt {display:none}
 <script>
 $(document).ready(function(){
  $('#load_data').click(function(){
-    $('#wait1').css('display', 'block');
   $.ajax({
-   url:"HTris.csv",
+   url:"employee.csv",
    dataType:"text",
    success:function(data)
    {
@@ -13299,7 +13298,6 @@ $(document).ready(function(){
     }
     table_data += '</table>';
     $('#employee_table').html(table_data);
-    $('#wait1').css('display', 'none');
    }
   });
  });
