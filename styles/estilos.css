@@ -1413,17 +1413,19 @@ div.p_3 {
   overflow: hidden !important;
 }
 
-.FixedHeightContainer
+/* .FixedHeightContainer
 {
   float:right;
   height: 250px;
   width:250px;
   padding:3px;
-    background:#f00;
-}
+  background:#f00;
+} */
 .Content
 {
-  height:224px;
-   overflow:auto;
-    background:#fff;
+  margin: 0 auto;
+  height:500px;
+  width:30%;
+  overflow:auto;
+  /* background:#fff; */
 }
