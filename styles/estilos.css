@@ -836,13 +836,17 @@ div.adRightM {
 
 /*MOBILE PORTRAIT*/
 
-.Content
-{
-  margin: 0 auto;
-  height:200px;
-  width: auto !important;
-  overflow: auto;
-  /* background:#fff; */
+
+.aldata {
+  font-size: 5vw !important;
+}
+
+
+.Content {
+  margin: auto;
+  height: 260px;
+  width: 60%;
+  overflow:auto;
 }
 
 .preloader {
