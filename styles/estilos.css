@@ -1471,6 +1471,9 @@ table.hist {
 	transition: all 0.4s ease 0s;
 }
 
-p.aldata {
-  font-size: 0.5vw;
+.aldata {
+  color: red;
+  padding-top: 0px !important;
+  text-align: center !important;
+  font-size: 0.9vw !important;
 }
