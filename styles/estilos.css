@@ -275,7 +275,7 @@ div.p_3 {
 }
 
 table.hist {
-	font-size: 0.5vw !important;
+	font-size: 1px !important;
 }
 
 .Content {
@@ -301,9 +301,9 @@ table.hist {
 .example_a:hover {
 	background: #434343;
 	letter-spacing: 1px;
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	-webkit-box-shadow: 0px 5px 40px 10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px 10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px 10px rgba(0,0,0,0.57);
 	transition: all 0.4s ease 0s;
 }
 
@@ -950,7 +950,7 @@ div.adRightM {
 
 
 table.hist {
-	font-size: 0.5vw !important;
+	font-size: 10px !important;
 }
 
 .aldata {
@@ -962,7 +962,7 @@ table.hist {
 .Content {
   margin: auto;
   height: 200px !important;
-  width: 100% !important;
+  width: 10% !important;
   overflow: auto;
 }
 
