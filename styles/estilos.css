@@ -202,10 +202,10 @@ h3.subsubtitulo {
 }
 
 
-table {
+/* table {
 	table-layout: auto !important;
- 	/* width: 100% !important; */
-}
+ 	 width: 100% !important;
+} */
 /****************RECIENTES*******************/
 
 .preloader {
@@ -275,7 +275,7 @@ div.p_3 {
 }
 
 table.hist {
-	font-size: 1.3vw !important;
+	font-size: 0.5vw !important;
 }
 
 .Content {
@@ -950,7 +950,7 @@ div.adRightM {
 
 
 table.hist {
-	font-size: 1.5vw !important;
+	font-size: 0.5vw !important;
 }
 
 .aldata {
@@ -962,7 +962,7 @@ table.hist {
 .Content {
   margin: auto;
   height: 200px !important;
-  width: 95% !important;
+  width: 100% !important;
   overflow: auto;
 }
 
