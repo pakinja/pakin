@@ -1439,13 +1439,13 @@ div.p_3 {
 }
 
 table.hist {
-	font-size: 1vw !important;
+	font-size: 1.3vw !important;
 }
 
 .Content {
   margin: auto;
   height: 510px;
-  width: 30%;
+  width: 40%;
   overflow:auto;
   /* background:#fff; */
 }
