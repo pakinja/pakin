@@ -1421,14 +1421,14 @@ div.p_3 {
   overflow: hidden !important;
 }
 
-.hist table {
-	font-size: 0.1vw !important;
+table.hist {
+	font-size: 0.9vw !important;
 }
 
-div.Content {
+.Content {
   margin: auto;
-  height:500px;
-  width:50%;
+  height: 440px;
+  width: 30%;
   overflow:auto;
   /* background:#fff; */
 }
