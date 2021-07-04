@@ -581,7 +581,7 @@ img.fb {
 	display: block;
 	text-align: center;
 	margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #display, #displayb {
@@ -1427,7 +1427,7 @@ table.hist {
 
 .Content {
   margin: auto;
-  height: 440px;
+  height: 510px;
   width: 30%;
   overflow:auto;
   /* background:#fff; */
