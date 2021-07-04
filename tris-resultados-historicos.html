@@ -26,7 +26,7 @@
     "https://www.pakin.lat/images/pakin-logo2.png"
    ],
   "datePublished": "2019-04-03 00:35",
-  "dateModified": "2021-07-03 21:25",
+  "dateModified": "2021-07-03 21:32",
   "author": {
     "@type": "Person",
     "name": "Francisco Jaramillo A."
@@ -13235,7 +13235,7 @@ div.prompt {display:none}
     <button id="display" class="HistoricoTris">Mostrar Histórico Tris</button>
 </div>
 <br>
-<div class="Content" id="employee_table"></div>
+<div class="Content" id="tris_table"></div>
 <div id="wait1" class="preloaderH" style="display:none;"></div>
 </div>
 </div>
@@ -13252,11 +13252,11 @@ $(document).ready(function(){
    dataType:"text",
    success:function(data)
    {
-    var employee_data = data.split(/\r?\n|\r/);
+    var tris_data = data.split(/\r?\n|\r/);
     var table_data = '<table class="hist">';
-    for(var count = 0; count<employee_data.length; count++)
+    for(var count = 0; count<tris_data.length; count++)
     {
-     var cell_data = employee_data[count].split(",");
+     var cell_data = tris_data[count].split(",");
      table_data += '<tr>';
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
      {
@@ -13272,7 +13272,7 @@ $(document).ready(function(){
      table_data += '</tr>';
     }
     table_data += '</table>';
-    $('#employee_table').html(table_data);
+    $('#tris_table').html(table_data);
     $('#wait1').css('display', 'none');
    }
   });
