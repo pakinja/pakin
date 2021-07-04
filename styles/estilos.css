@@ -1452,7 +1452,7 @@ table.hist {
 .example_a {
 	color: #fff !important;
 	text-transform: uppercase;
-	text-decoration: none;
+	text-decoration: none !important;
 	background: #ed3330;
 	padding: 20px;
 	border-radius: 5px;
