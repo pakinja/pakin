@@ -274,16 +274,6 @@ div.p_3 {
   overflow: hidden !important;
 }
 
-table.hist {
-	font-size: 1px !important;
-}
-
-.Content {
-  margin: auto;
-  height: 510px;
-  width: 10%;
-  overflow:auto;
-}
 
 .example_a {
 	color: #fff !important;
@@ -950,7 +940,7 @@ div.adRightM {
 
 
 table.hist {
-	font-size: 10px !important;
+	font-size: 10px;
 }
 
 .aldata {
@@ -1491,4 +1481,15 @@ div.col {
 
 td,th {
 text-align: center !important;
+}
+
+.Content {
+  margin: auto;
+  height: 510px;
+  width: 10%;
+  overflow:auto;
+}
+
+table.hist{
+	font-size: 1px;
 }
