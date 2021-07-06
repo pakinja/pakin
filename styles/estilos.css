@@ -288,6 +288,10 @@ div.p_3 {
   overflow: hidden !important;
 }
 
+a.example_a {
+  font-size: 2vw;
+}
+
 
 .example_a {
 	color: #fff !important;
@@ -305,18 +309,18 @@ div.p_3 {
 .example_a:hover {
 	background: #434343;
 	letter-spacing: 1px;
-	-webkit-box-shadow: 0px 5px 40px 10px rgba(0,0,0,0.57);
-	-moz-box-shadow: 0px 5px 40px 10px rgba(0,0,0,0.57);
-	box-shadow: 5px 40px 10px rgba(0,0,0,0.57);
+	/* -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57); */
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 	transition: all 0.4s ease 0s;
 }
 
-.aldata {
+/* .aldata {
   color: red;
   padding-top: 0px !important;
   text-align: center !important;
   font-size: 0.9vw !important;
-}
+} */
 
 
 
@@ -972,10 +976,14 @@ pre.historicos {
 	font-size: 10px;
 } */
 
-.aldata {
+/* .aldata {
   margin-top: 0px;
   padding-top: 0px;
   font-size: 6vw !important;
+} */
+
+a.example_a {
+  font-size: 5vw;
 }
 
 .Content {
