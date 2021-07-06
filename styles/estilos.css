@@ -16,8 +16,22 @@ aside.R {
   right: 0 !important;
 }
 
+aside.RH {
+  margin-right: 50px;
+  float: right;
+  position: absolute !important;
+  right: 0 !important;
+}
+
 aside.L {
   margin-left: 0;
+  float: left;
+  position: absolute !important;
+  left: 0 !important;
+}
+
+aside.LH {
+  margin-left: 50px;
   float: left;
   position: absolute !important;
   left: 0 !important;
@@ -934,14 +948,29 @@ div.adRightM {
 }
 }
 
+
+.Content {
+  margin: auto;
+  height:600px;
+  width: 23%;
+  overflow:auto;
+}
+
+pre.historicos {
+	font-size: 1.2vw !important;
+}
+
+
+
+
 @media (min-width: 0px) and (max-width: 480px) {
 
 /*MOBILE PORTRAIT*/
 
 
-table.hist {
+/* table.hist {
 	font-size: 10px;
-}
+} */
 
 .aldata {
   margin-top: 0px;
@@ -952,8 +981,13 @@ table.hist {
 .Content {
   margin: auto;
   height: 200px !important;
-  width: 10% !important;
+  width: 90% !important;
   overflow: auto;
+}
+
+pre.historicos {
+  padding-left: 10%;
+	font-size: 3.7vw !important;
 }
 
 .preloader {
@@ -1419,6 +1453,15 @@ div.col {
   aside.R {
     display: none;
   }
+
+  aside.LH {
+    display: none;
+  }
+  aside.RH {
+    display: none;
+  }
+
+
   .cmim {
     display: none;
   }
@@ -1481,15 +1524,4 @@ div.col {
 
 td,th {
 text-align: center !important;
-}
-
-.Content {
-  margin: auto;
-  height:650px;
-  width: 23%;
-  overflow:auto;
-}
-
-table.hist{
-	font-size: 1px;
 }
