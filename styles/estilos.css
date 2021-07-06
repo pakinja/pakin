@@ -952,12 +952,12 @@ div.adRightM {
 .Content {
   margin: auto;
   height:600px;
-  width: 23%;
+  width: 26%;
   overflow:auto;
 }
 
 pre.historicos {
-	font-size: 1.2vw !important;
+	font-size: 1.4vw !important;
 }
 
 
