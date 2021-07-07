@@ -276,9 +276,10 @@ p.chec {
 
 
 div.webHide {
-  max-width: 320px !important;
-  max-height: 100px !important;
+  /* width: 320px !important;
+  height: 100px !important; */
   text-align: center;
+  margin-bottom: 10px
 }
 
 
@@ -990,7 +991,7 @@ a.example_a {
 
 .Content {
   margin: auto;
-  height: 200px !important;
+  height: 230px !important;
   width: 90% !important;
   overflow: auto;
 }
