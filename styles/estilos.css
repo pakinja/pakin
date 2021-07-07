@@ -991,14 +991,14 @@ a.example_a {
 
 .Content {
   margin: auto;
-  height: 230px !important;
+  height: 260px !important;
   width: 90% !important;
   overflow: auto;
 }
 
 pre.historicos {
   padding-left: 10%;
-	font-size: 3.9vw !important;
+	font-size: 4vw !important;
 }
 
 .preloader {
