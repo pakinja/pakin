@@ -275,9 +275,9 @@ p.chec {
 }
 
 
-div.webHide {
-  width: 100% ;
-  height: auto;
+.webHide div {
+  width: 320px;
+  height: 100px;
   text-align: center;
 }
 
@@ -289,7 +289,7 @@ div.p_3 {
 }
 
 a.example_a {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 
