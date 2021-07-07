@@ -275,9 +275,9 @@ p.chec {
 }
 
 
-.webHide div {
-  width: 320px;
-  height: 100px;
+div.webHide {
+  max-width: 320px !important;
+  max-height: 100px !important;
   text-align: center;
 }
 
@@ -962,7 +962,7 @@ div.adRightM {
 }
 
 pre.historicos {
-  padding-left: 10%;
+  padding-left: 6%;
 	font-size: 1.4vw !important;
 }
 
