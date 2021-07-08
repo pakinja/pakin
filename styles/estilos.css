@@ -42,9 +42,9 @@ p {
 }
 
 p.nota {
-  font-size: 1vw;
+  font-size: 0.6vw;
   line-height: 1.5;
-	text-align: left !important;
+	text-align: left;
 }
 
 pre {
@@ -1502,6 +1502,11 @@ div.col {
     margin-top: 20px !important;
   }
   p.par {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  p.nota {
     padding-left: 5%;
     padding-right: 5%;
   }
