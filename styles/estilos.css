@@ -42,7 +42,7 @@ p {
 }
 
 p.nota {
-  font-size: 0.6vw;
+  font-size: 1vw !important;
   line-height: 1.5;
 	text-align: left;
 }
