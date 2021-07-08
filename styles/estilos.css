@@ -41,6 +41,10 @@ p {
 	font-size: 3vh !important;
 }
 
+p.nota {
+  font-size: 1vw;
+}
+
 pre {
 	font-size: 1vw !important;
 }
