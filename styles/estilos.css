@@ -1129,6 +1129,10 @@ div.adRightW {
   	line-height: 8vw;
   }
 
+  p.nota {
+    font-size: 3vw !important;
+  }
+
   .parPHP {
   	font-size: 6vw !important;
   	line-height: 1.5;
