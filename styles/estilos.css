@@ -282,8 +282,8 @@ label.chec {
 
 
 div.webHide {
-  /* width: 320px !important;
-  height: 100px !important; */
+  width: 100%;
+  height: auto;
   text-align: center;
   margin-bottom: 10px
 }
@@ -980,21 +980,9 @@ pre.historicos {
 
 /*MOBILE PORTRAIT*/
 
-
-/* table.hist {
-	font-size: 10px;
-} */
-
-/* .aldata {
-  margin-top: 0px;
-  padding-top: 0px;
-  font-size: 6vw !important;
-} */
-
-/* div.ads {
-display: none;
-} */
-
+div.ads {
+  display: none;
+}
 
 a.example_a {
   font-size: 5vw;
@@ -1507,6 +1495,8 @@ div.col {
 
 }
 
+/***********SOLO DESKTOP*************/
+
 @media (min-width: 767px) {
 
   h1.titulo {
@@ -1546,11 +1536,11 @@ div.col {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-  .webHide{
+  div.webHide{
     display: none;
   }
 }
-
+/*******************************************/
 .svg-container {
   margin-top: 3% !important;
 }
