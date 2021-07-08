@@ -244,7 +244,7 @@ h3.subsubtitulo {
   z-index:80;
 }
 
-.preloaderH {
+/* .preloaderH {
   width: 110px;
   height: 110px;
   border: 15px solid red;
@@ -256,9 +256,9 @@ h3.subsubtitulo {
   position:absolute;
   top:50%;
   left:47%;
-  /* padding:0px; */
+  padding:0px;
   z-index:80;
-}
+} */
 
 
 @keyframes girar {
@@ -1016,16 +1016,18 @@ pre.historicos {
   width: 70px !important;
   height: 70px !important;
   margin-top: 10% !important;
-  margin-left: 50% !important;
+  margin-left: 30% !important;
+  /* top:15%;
+  left:30% !important; */
   border: 10px solid red !important;
   border-top: 10px solid #3D3C3A !important;
 }
 
-.preloaderH {
-  /* position:absolute; */
+/* .preloaderH {
+  position:absolute;
   margin-top: 80% !important;
   margin-left: 23% !important;
-}
+} */
 
 
 section.ticons  {
