@@ -958,7 +958,7 @@ div.adRightM {
   border: 1px solid;
   margin: auto;
   height:600px;
-  width: 28%;
+  width: 30%;
   overflow:auto;
 }
 
@@ -998,7 +998,7 @@ a.example_a {
 
 pre.historicos {
   padding-left: 10%;
-	font-size: 4vw !important;
+	font-size: 4.1vw !important;
 }
 
 .preloader {
