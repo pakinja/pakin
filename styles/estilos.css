@@ -47,6 +47,12 @@ p.nota {
 	text-align: left;
 }
 
+p.notahistoricos {
+  margin-top: 0px;
+  font-size: 1vw !important;
+	text-align: center;
+}
+
 pre {
 	font-size: 1vw !important;
 }
@@ -1130,6 +1136,11 @@ div.adRightW {
     font-size: 3vw !important;
   }
 
+  p.notahistoricos {
+    font-size: 3vw !important;
+  }
+
+
   .parPHP {
   	font-size: 6vw !important;
   	line-height: 1.5;
@@ -1513,6 +1524,7 @@ div.col {
     padding-left: 5%;
     padding-right: 5%;
   }
+
 
   ol.inav {
   	margin-left: 0;
