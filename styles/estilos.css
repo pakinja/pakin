@@ -84,7 +84,7 @@ hr.hrhead  {
 
 hr.abs  {
 	border: 1px solid #D1D0CE;
-  margin-top: 15vw;
+  margin-top: 5vw;
 }
 
 hr.desc  {
@@ -274,6 +274,7 @@ div.ads {
   width: 100%;
   height: auto;
   text-align: center !important;
+  margin-top: 13px;
 }
 
 label.chec {
