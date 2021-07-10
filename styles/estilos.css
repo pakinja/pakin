@@ -276,6 +276,18 @@ h3.subsubtitulo {
   }
 }
 
+label.chec {
+  font-size: 0px !important;
+}
+
+/***********************ADS****************/
+
+
+.mobileHideM {
+	width: 300px;
+	height: auto;
+}
+
 div.ads {
   width: 100%;
   height: auto;
@@ -283,23 +295,7 @@ div.ads {
   margin-top: 13px;
 }
 
-label.chec {
-  font-size: 0px !important;
-}
-
-/*
- @media (max-width: 480px) {
-
-   .adslot_1 {
-     display: none;
-   }
- } */
-
- /* @media (min-width:500px) and (min-width:727px) { .adslot_1 { width: 468px; height: 60px; } } */
-/* @media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } } */
-
-
-.adslot_1 {
+/* .adslot_1 {
   display:block;
   width: 320px;
   height: 100px;
@@ -308,16 +304,40 @@ label.chec {
 .adcenter {
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: inherit;
-}
+  text-align: -webkit-center;
+} */
 
 div.webHide {
+  display:block;
+  width: 320px;
+  height: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: -webkit-center;
 }
 
 
+@media (max-width: 800px) {
+
+  .ads {
+    display: none;
+  }
+}
+
+ @media (min-width: 800px) {
+
+   webHide {
+     display: none;
+   }
+ }
+
+ /* @media (min-width:500px) and (max-width:727px) {
+    .adslot_1 {
+      width: 468px; height: 60px;
+    }
+} */
+
+/********************************************/
 div.p_3 {
   width: auto;
   height: 200px !important;
@@ -765,12 +785,9 @@ img.fb {
 }
 /************ADS*****************/
 
-.mobileHideM {
-	width: 300px;
-	height: auto;
-}
 
-.mobileHideMR {
+
+/* .mobileHideMR {
 	width: 160px;
 	height: auto;
 }
@@ -778,11 +795,11 @@ img.fb {
 .mobileHideMRC {
 	width: 250px;
 	height: auto;
-}
+} */
 
 /***************************/
 
-
+/*
 .mobileHideBY {
 	padding-top: 13px !important;
 }
@@ -790,7 +807,7 @@ img.fb {
 .mobileHideBP {
 	z-index: 300;
 	padding-top: 10px !important;
-}
+} */
 
 /* Flash class and keyframe animation */
 .flashit{
@@ -1009,9 +1026,9 @@ pre.historicos {
 
 /*MOBILE PORTRAIT*/
 
-div.ads {
+/* div.ads {
   display: none;
-}
+} */
 
 a.example_a {
   font-size: 5vw;
@@ -1571,12 +1588,12 @@ div.col {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-  div.webHide{
+  /* div.webHide{
     display: none;
   }
   .adslot_1 {
     display: none;
-  }
+  } */
 }
 /*******************************************/
 .svg-container {
