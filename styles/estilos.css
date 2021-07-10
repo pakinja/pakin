@@ -313,20 +313,20 @@ div.webHide {
   height: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-align: -webkit-center;
+  text-align: center;
 }
 
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
 
-  .ads {
+  div.ads {
     display: none;
   }
-}
+} */
 
  @media (min-width: 800px) {
 
-   .webHide {
+   div.webHide {
      display: none;
    }
  }
