@@ -290,7 +290,7 @@ label.chec {
 
 div.webHide {
   width: 320px;
-  max-height: 100px !important;
+  height: auto;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
