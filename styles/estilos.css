@@ -326,7 +326,7 @@ div.webHide {
 
  @media (min-width: 800px) {
 
-   webHide {
+   .webHide {
      display: none;
    }
  }
