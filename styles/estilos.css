@@ -288,12 +288,32 @@ label.chec {
 }
 
 
-div.webHide {
+/* @media (max-width: 480px) {
+
+   .adslot_1 {
+     display: none;
+   }
+ } */
+/* @media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
+@media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } } */
+
+
+.adslot_1 {
+  display:block;
   width: 320px;
-  height: auto;
-  text-align: center;
+  height: 100px;
+}
+
+.adcenter {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: inherit;
+}
+
+div.webHide {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 
@@ -1551,6 +1571,9 @@ div.col {
     padding-right: 5% !important;
   }
   div.webHide{
+    display: none;
+  }
+  .adslot_1 {
     display: none;
   }
 }
