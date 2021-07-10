@@ -287,15 +287,16 @@ label.chec {
   font-size: 0px !important;
 }
 
-
-/* @media (max-width: 480px) {
+/*
+ @media (max-width: 480px) {
 
    .adslot_1 {
      display: none;
    }
  } */
-/* @media (min-width:500px) { .adslot_1 { width: 468px; height: 60px; } }
-@media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } } */
+
+ @media (min-width:500px) and (min-width:727px) { .adslot_1 { width: 468px; height: 60px; } }
+/* @media (min-width:800px) { .adslot_1 { width: 728px; height: 90px; } } */
 
 
 .adslot_1 {
