@@ -282,16 +282,27 @@ label.chec {
 
 /***********************ADS****************/
 
+.mobileHideMR {
+  width: 160px;
+	max-width: 160px;
+	height: auto;
+}
+
 
 .mobileHideM {
+  width: 336px;
 	max-width: 336px;
 	height: auto;
 }
 
 .ads {
-  max-width: 970px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  margin: auto
+  text-align: center;
+  /* margin: auto; */
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 /* .ads div {
@@ -313,6 +324,7 @@ label.chec {
 
 div.webHide {
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -327,12 +339,12 @@ div.webHide {
   }
 } */
 
- @media (min-width: 800px) {
+ /* @media (min-width: 800px) {
 
-   div.webHide {
+   .webHide div{
      display: none;
    }
- }
+ } */
 
  /* @media (min-width:500px) and (max-width:727px) {
     .adslot_1 {
@@ -790,12 +802,9 @@ img.fb {
 
 
 
-/* .mobileHideMR {
-	width: 160px;
-	height: auto;
-}
 
-.mobileHideMRC {
+
+/* .mobileHideMRC {
 	width: 250px;
 	height: auto;
 } */
@@ -1371,9 +1380,9 @@ div.adRightW {
   	display: none;
   }
 
-  .mobileHideMRC {
+  /* .mobileHideMRC {
     display: none;
-  }
+  } */
 
   .sticky {
     overflow: hidden;
@@ -1591,10 +1600,10 @@ div.col {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-  /* div.webHide{
+  div.webHide{
     display: none;
   }
-  .adslot_1 {
+  /* .adslot_1 {
     display: none;
   } */
 }
