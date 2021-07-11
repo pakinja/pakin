@@ -301,10 +301,10 @@ label.chec {
 
 .ads {
   width: 100%;
-  min-width: 88px;
+  min-width: 160px;
   max-width: 1024px;
   height: auto;
-  min-height: 31px;
+  min-height: 90px;
   /* text-align: center; */
   margin: auto;
   margin-top:10px;
