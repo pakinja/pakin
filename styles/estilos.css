@@ -284,16 +284,20 @@ label.chec {
 
 
 .mobileHideM {
-	width: 300px;
+	max-width: 336px;
 	height: auto;
 }
 
-div.ads {
-  width: 100%;
+.ads {
+  max-width: 970px;
   height: auto;
+  margin: auto
+}
+
+/* .ads div {
   text-align: center !important;
   margin-top: 13px;
-}
+} */
 
 /* .adslot_1 {
   display:block;
@@ -308,9 +312,8 @@ div.ads {
 } */
 
 div.webHide {
-  display:block;
-  width: 320px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
