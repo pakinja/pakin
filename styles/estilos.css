@@ -284,7 +284,7 @@ label.chec {
 
 .mobileHideMR {
   min-width: 120px;
-  /* width: 160px; */
+  width: 160px;
 	max-width: 160px;
   min-height: 50px;
 	height: auto;
@@ -293,15 +293,15 @@ label.chec {
 
 .mobileHideM {
   min-width:120px;
-  /* width: 336px; */
+  width: 300px;
 	max-width: 336px;
   min-height: 50px;
 	height: auto;
 }
 
 .ads {
-  /* width: 100%; */
-  /* min-width: 120px; */
+  width: 100%;
+  min-width: 120px;
   max-width: 1200px;
   height: auto;
   min-height: 50px;
