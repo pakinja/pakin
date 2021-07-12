@@ -329,11 +329,12 @@ label.chec {
   text-align: -webkit-center;
 } */
 
-div.webHide {
+.webHide {
   min-width: 88px;
-  /* width: 100%; */
+  width: 100%;
   max-width: 336px;
   height: auto;
+  max-height: 100px;
   min-height: 88px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1047,9 +1048,6 @@ pre.historicos {
 
 /*MOBILE PORTRAIT*/
 
-/* div.ads {
-  display: none;
-} */
 
 a.example_a {
   font-size: 5vw;
@@ -1609,7 +1607,7 @@ div.col {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-  div.webHide{
+  .webHide{
     display: none;
   }
 
