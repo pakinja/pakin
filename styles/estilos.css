@@ -300,8 +300,8 @@ label.chec {
 }
 
 .ads {
-  width: 100%;
-  min-width: 120px;
+  /* width: 100%; */
+  /* min-width: 120px; */
   max-width: 1200px;
   height: auto;
   min-height: 50px;
