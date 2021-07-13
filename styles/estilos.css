@@ -312,6 +312,12 @@ label.chec {
   margin-bottom:10px;
 }
 
+@media (max-width: 728px) {
+   .ads {
+      display: none !important;
+   }
+}
+
 .cnter {
   text-align: -webkit-center;
   text-align: -moz-center;
