@@ -312,34 +312,28 @@ label.chec {
   margin-bottom:10px;
 }
 
-/* .ads div {
-  text-align: center !important;
-  margin-top: 13px;
-} */
-
-/* .adslot_1 {
-  display:block;
-  width: 320px;
-  height: 100px;
-}
-
-.adcenter {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.cnter {
   text-align: -webkit-center;
-} */
+  text-align: -moz-center;
+}
 
 .webHide {
-  /* min-width: 88px; */
+  min-width: 200px;
   width: 300px;
-  /* max-width: 336px; */
+  max-width: 300px;
   height: 100px;
-  /* max-height: 100px;
-  min-height: 88px; */
-  margin-top: 10px;
-  margin-bottom: 10px;
+  max-height: 100px;
+  min-height: 50px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   text-align: center;
 }
+
+/* @media (max-width: 400px) {
+   .webHide {
+     display: none;
+     }
+    } */
 
 
 /* @media (max-width: 800px) {
@@ -1055,6 +1049,7 @@ a.example_a {
 
 .Content {
   margin: auto;
+  margin-top: -15px;
   height: 260px !important;
   width: 90% !important;
   overflow: auto;
@@ -1108,7 +1103,7 @@ h2.h2card {
 }
 
 section.empticons  {
-  margin-top: 0px;
+  margin-top: 0px !important;
 }
 
 div.col {
@@ -1607,8 +1602,9 @@ div.col {
     padding-left: 5% !important;
     padding-right: 5% !important;
   }
-  .webHide{
-    display: none;
+
+  .webHide {
+    display: none !important;
   }
 
 }
