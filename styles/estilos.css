@@ -1059,12 +1059,12 @@ a.example_a {
   margin: auto;
   margin-top: -15px;
   height: 260px !important;
-  width: 90% !important;
+  width: 93% !important;
   overflow: auto;
 }
 
 pre.historicos {
-  padding-left: 10%;
+  padding-left: 6%;
 	font-size: 4.1vw !important;
 }
 
@@ -1116,8 +1116,8 @@ section.empticons  {
 
 div.col {
   display: inline-block !important;
-  padding-right: 1.5vw !important;
-  padding-left: 1.5vw !important;
+  padding-right: 2vw !important;
+  padding-left: 2vw !important;
 }
 
 div.colhide {
