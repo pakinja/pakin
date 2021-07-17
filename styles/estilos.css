@@ -1039,6 +1039,8 @@ div.adRightM {
 }
 
 pre.historicos {
+  line-height: 2vw;
+  letter-spacing: 1px;
   padding-left: 6%;
 	font-size: 1.4vw !important;
 }
@@ -1064,7 +1066,9 @@ a.example_a {
 }
 
 pre.historicos {
-  padding-left: 6%;
+  line-height: 5.5vw;
+  letter-spacing: 0.3px;
+  padding-left: 3%;
 	font-size: 4.1vw !important;
 }
 
@@ -1418,6 +1422,21 @@ div.adRightW {
 @media (min-width: 481px) and (max-width: 767px) {
 
 /*TABLET MOBILE LANDSCAPE*/
+
+.Content {
+  border: 1px solid;
+  margin: auto;
+  height:300px;
+  width: 60%;
+  overflow:auto;
+}
+
+pre.historicos {
+  line-height: 2.9vw;
+  letter-spacing: 0.3px;
+  padding-left: 3%;
+	font-size: 2.5vw !important;
+}
 
 h2.h2card {
 	font-size: 1.5vw !important;
