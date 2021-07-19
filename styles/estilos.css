@@ -17,7 +17,7 @@ aside.R {
 }
 
 aside.RCH {
-  margin-right: 10%;
+  margin-right: 2%;
   float: right;
   position: absolute !important;
   right: 0 !important;
@@ -38,7 +38,7 @@ aside.L {
 }
 
 aside.LCH {
-  margin-left: 10%;
+  margin-left: 2%;
   float: left;
   position: absolute !important;
   left: 0 !important;
@@ -302,7 +302,7 @@ label.chec {
 	max-width: 160px !important;
   min-height: 50px;
   max-height: 1200px;
-	/* height: auto; */
+	height: auto;
 }
 
 
@@ -312,17 +312,16 @@ label.chec {
 	max-width: 336px !important;
   min-height: 50px;
   max-height: 1200px;
-	/* height: auto; */
+	height: auto;
 }
 
 .mobileHideMCH {
   min-width: 200px;
-  width: 250px;
-  max-width: 250px;
-  height: 250px;
-  max-height: 250px;
-  min-height: 50px;
-  margin: auto;
+  width: auto;
+  max-width: 336px;
+  min-height: 200px;
+  height: auto;
+  max-height: 280px;
 }
 
 .ads {
