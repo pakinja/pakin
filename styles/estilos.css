@@ -55,7 +55,7 @@ p {
 	font-size: 3vh !important;
 }
 
-div.nota {
+p.nota {
   font-size: 1vw !important;
   /* line-height: 1.5; */
 	text-align: center;
