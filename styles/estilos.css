@@ -1015,7 +1015,7 @@ div.output_area {
 	border-radius: 3px;
 }
 
-div.adRightW {
+.adRightW {
   width: 300px;
   height: auto;
   margin-right: 0;
@@ -1033,9 +1033,13 @@ div.left {
   float: left;
 }
 
-div.adRightM {
-  width: 200px;
-  height: auto;
+.adRightM {
+  min-width: 200px;
+  width: auto;
+  max-width: 200px;
+  min-height: 100px;
+  height: 250;
+  max-height: 250px;
   float: right;
   margin-right: 0 !important;
 }
