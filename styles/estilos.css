@@ -58,7 +58,7 @@ p {
 p.nota {
   font-size: 1vw !important;
   /* line-height: 1.5; */
-	text-align: center;
+	text-align: center !important;
 }
 
 p.notahistoricos {
