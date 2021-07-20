@@ -1160,8 +1160,8 @@ section.empticons  {
 
 div.col {
   display: inline-block !important;
-  padding-right: 2vw !important;
-  padding-left: 2vw !important;
+  padding-right: 4vw !important;
+  padding-left: 4vw !important;
 }
 
 div.colhide {
