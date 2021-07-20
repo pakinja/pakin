@@ -55,10 +55,10 @@ p {
 	font-size: 3vh !important;
 }
 
-p.nota {
+.nota p {
   font-size: 1vw !important;
   /* line-height: 1.5; */
-	text-align: left;
+	text-align: center;
 }
 
 p.notahistoricos {
@@ -1041,11 +1041,12 @@ div.left {
   min-width: 200px;
   width: auto;
   max-width: 200px;
-  min-height: 100px;
-  height: 250px;
+  min-height: 200px;
+  height: auto;
   max-height: 250px;
   float: right;
   margin-right: 0 !important;
+  margin-bottom: 3px;
 }
 
 
@@ -1650,10 +1651,10 @@ div.col {
     padding-right: 5%;
   }
 
-  p.nota {
+  /* p.nota {
     padding-left: 5%;
     padding-right: 5%;
-  }
+  } */
 
 
   ol.inav {
