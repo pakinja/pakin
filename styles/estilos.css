@@ -317,7 +317,7 @@ label.chec {
 
 .mobileHideMCH {
   min-width: 300px;
-  width: auto;
+  /* width: auto; */
   max-width: 336px;
   min-height: 200px;
   height: auto;
@@ -1016,7 +1016,7 @@ div.output_area {
 }
 
 .adRightW {
-  margin-right: 6%;
+  /* margin-right: 6%; */
   float: right;
   width: 300px;
   min-width:160px;
