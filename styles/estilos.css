@@ -316,9 +316,9 @@ label.chec {
 }
 
 .mobileHideMCH {
-  min-width: 300px;
+  min-width: 200px;
   /* width: auto; */
-  max-width: 336px;
+  max-width: 300px;
   min-height: 200px;
   height: auto;
   max-height: 280px;
