@@ -995,25 +995,30 @@ div.output_area {
 /********FOOTER********************/
 
 .sticky {
-
-  overflow: hidden;
-  width: 100% !important;
-	padding-top: 5px;
-	padding-bottom:5px;
-  align-items: center;
+  /* overflow: hidden; */
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  /* align-items: center; */
   background-color: #3D3C3A;
+  position: absolute;
+  bottom: 0;
+  /* margin-bottom: -9px;
+  margin-left: -9px;
+  margin-right: 0px; */
+	/* z-index: 200; */
+	opacity: 80%;
+	/* border-radius: 3px; */
+}
+
+/* p.sticky {
+  padding-top: 5px;
+	padding-bottom: 5px;
   color: white;
   font-weight: normal;
-  font-size: 18px;
-  text-align: center;
-  position: fixed;
-  bottom:0 !important;
-  left:0 !important;
-  right:0 !important;
-	z-index: 200;
-	opacity: 80%;
-	border-radius: 3px;
-}
+  font-size: 18px !important;
+  text-align: left;
+} */
 
 .adRightW {
   /* margin-right: 6%; */
