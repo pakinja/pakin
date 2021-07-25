@@ -995,13 +995,13 @@ div.output_area {
 /********FOOTER********************/
 
 .sticky {
-  /* overflow: hidden; */
-  display: inline-block;
+  overflow: hidden;
+  /* display: inline-block; */
   height: 50px;
   width: 100%;
   /* align-items: center; */
   background-color: #3D3C3A;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   /* margin-bottom: -9px;
   margin-left: -9px;
