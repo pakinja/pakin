@@ -996,29 +996,21 @@ div.output_area {
 
 .sticky {
   overflow: hidden;
-  /* display: inline-block; */
-  height: 50px;
+  height: 40px;
   width: 100%;
-  /* align-items: center; */
   background-color: #3D3C3A;
-  /* position: absolute; */
-  bottom: 0;
-  /* margin-bottom: -9px;
-  margin-left: -9px;
-  margin-right: 0px; */
-	/* z-index: 200; */
+  position: absolute;
+  left: 0;
 	opacity: 80%;
-	/* border-radius: 3px; */
 }
 
-/* p.sticky {
-  padding-top: 5px;
-	padding-bottom: 5px;
+.sticky p {
+  margin: auto;
   color: white;
   font-weight: normal;
-  font-size: 18px !important;
-  text-align: left;
-} */
+  font-size: 1.3vw !important;
+  text-align: center;
+}
 
 .adRightW {
   /* margin-right: 6%; */
@@ -1448,12 +1440,11 @@ div.adRightW {
   } */
 
   .sticky {
-    overflow: hidden;
-    width: 100% !important;
-  	padding-top: 2px;
-  	padding-bottom:2px;
-  	opacity: 80%;
-    z-index: 500;
+    height: 20px;
+  }
+
+  .sticky p {
+    font-size: 3vw !important;
   }
 
   #notebook-container {
@@ -1471,6 +1462,15 @@ div.adRightW {
 @media (min-width: 481px) and (max-width: 767px) {
 
 /*TABLET MOBILE LANDSCAPE*/
+
+.sticky {
+  height: 20px;
+}
+
+.sticky p {
+  font-size: 2vw !important;
+}
+
 
 .Content {
   border: 1px solid;
