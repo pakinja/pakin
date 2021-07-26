@@ -1006,6 +1006,80 @@ div.output_area {
 @green: #34c748;
 @offWhite: #e9eaea;
 
+html {
+  background: @rhinoMid;
+}
+
+div.browser {
+  background: #fff url(http://www.s4c.cymru/temp/unsplash-kitsune-4.jpg) no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 8px -4px rgba(0,0,0,0.4), 0 12px 24px -6px rgba(0,0,0,0.4), 0 24px 64px 12px rgba(0,0,0,0.25);
+  color: @rhino;
+  font-family: 'Source Sans Pro', helvetica;
+  overflow: hidden;
+  letter-spacing: -0.05em;
+  margin: 5% auto;
+  max-width: 1200px;
+  min-width: 320px;
+  min-height: 600px;
+  padding-bottom: 10%;
+  position: relative;
+  width: 90%;
+  div.chrome {
+    background: @rhinoMid;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    > a {
+      border-radius: 12px;
+      display: block;
+      float: left;
+      height: 12px;
+      margin: 13px 4px;
+      width: 12px;
+      &:first-child {
+        margin-left: 13px;
+      }
+      &.red {
+        background: @red;
+      }
+      &.amber {
+        background: @amber;
+      }
+      &.green {
+        background: @green;
+      }
+    }
+    div.url {
+      background: #5f676d;
+      border-radius: 4px;
+      height: 24px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 8px;
+      width: 70%;
+    }
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 0;
+    padding: 80px 40px 10px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 1em;
+    max-width: 16em;
+    margin: 0;
+    padding: 0 40px;
+  }
+}
+
 footer {
   bottom: 0;
   left: 0;
@@ -1070,7 +1144,6 @@ footer {
 		}
 	}
 }
-
 /************************************/
 
 .sticky {
