@@ -1011,8 +1011,8 @@ div.output_area {
   left: 0px;
 }
 
-p.footname {
-  text-align: center;
+.footer-distributed .footname p {
+  text-align: center !important;
 }
 
 .footer-distributed {
