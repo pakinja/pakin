@@ -1002,8 +1002,10 @@ div.output_area {
 } */
 
 .fw {
-  width:100%;
+  width: 100%;
   position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .footer-distributed {
