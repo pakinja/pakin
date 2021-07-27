@@ -1111,7 +1111,7 @@ div.output_area {
 }
 
 .sticky p {
-  margin: auto;
+  margin-bottom: 5px;
   color: white;
   font-weight: normal;
   font-size: 1.3vw !important;
