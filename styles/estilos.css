@@ -1004,14 +1004,14 @@ div.output_area {
   font-family: Roboto;
 } */
 
-.fw {
+/* .fw {
   overflow: hidden;
   width: 100%;
   position: absolute;
   left: 0px;
-}
+} */
 
-p.fw {
+.footer-distributed p {
   text-align: center !important;
 }
 
