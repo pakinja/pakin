@@ -1011,7 +1011,9 @@ div.output_area {
   left: 0px;
 } */
 
-.footer-distributed p {
+.footer-distributed p.footname  {
+  font-size: 1.6vw !important;
+  color: #ffffff;
   text-align: center !important;
 }
 
@@ -1020,8 +1022,8 @@ div.output_area {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
-  /* position: absolute;
-  left: 0; */
+  position: absolute;
+  left: 0;
   text-align: left;
   font: normal 16px sans-serif;
   padding: 35px 40px;
@@ -1076,11 +1078,11 @@ div.output_area {
   height: 35px;
   background-color: #33383b;
   border-radius: 2px;
-  font-size: 23px;
+  font-size: 29px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;
-  margin-left: 3px;
+  margin-left: 9px;
   transition:all .25s;
 }
 
