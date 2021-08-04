@@ -1,12 +1,13 @@
 /*********GENRALES********/
 
 html, body{
-   width:100%;
+   width:100% !important;
    height:100%;
    margin:0px;
 }
 
 body {
+  padding: 0px !important;
 	font-family: sans-serif, Arial, Verdana, Helvetica;
 	background: white;
 }
