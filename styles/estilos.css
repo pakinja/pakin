@@ -353,10 +353,10 @@ label.chec {
 
 .webHide {
   min-width: 200px;
-  width: 300px;
+  width: auto;
   max-width: 300px;
-  height: 100px;
-  max-height: 100px;
+  height: auto;
+  max-height: 600px;
   min-height: 50px;
   margin-top: 9px;
   margin-bottom: 3px;
