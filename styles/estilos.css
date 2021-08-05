@@ -331,7 +331,7 @@ label.chec {
   width: auto;
   min-width: 120px;
   max-width: 1200px;
-  /* height: auto; */
+  height: auto;
   min-height: 50px;
   max-height: 1200px;
   /* text-align: center; */
