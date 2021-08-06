@@ -352,14 +352,14 @@ label.chec {
 }
 
 .webHide {
-  min-width: 200px;
+  /* min-width: 200px;
   width: auto;
   max-width: 300px;
   height: auto;
   max-height: 600px;
   min-height: 50px;
   margin-top: 9px;
-  margin-bottom: 3px;
+  margin-bottom: 3px; */
   text-align: center;
 }
 
