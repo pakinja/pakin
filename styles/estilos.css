@@ -334,7 +334,7 @@ label.chec {
   height: auto;
   min-height: 50px;
   max-height: 1200px;
-  /* text-align: center; */
+  text-align: center;
   margin: auto;
   /* margin-top:10px;
   margin-bottom:10px; */
@@ -346,10 +346,10 @@ label.chec {
    }
 } */
 
-.cnter {
+/* .cnter {
   text-align: -webkit-center;
   text-align: -moz-center;
-}
+} */
 
 .webHide {
   /* min-width: 200px;
