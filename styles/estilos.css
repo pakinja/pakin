@@ -330,11 +330,11 @@ label.chec {
 .ads {
   /* width: auto; */
   min-width: 120px;
-  /* max-width: 1200px; */
-  /* height: auto; */
+  max-width: 1200px;
+  height: auto;
   min-height: 50px;
-  /* max-height: 1200px; */
-  text-align: center;
+  max-height: 1200px;
+  /* text-align: center; */
   margin: auto;
   margin-top:10px;
   margin-bottom:10px;
@@ -1131,10 +1131,10 @@ div.output_area {
   float: right;
   /* width: 300px; */
   min-width:160px;
-	/* max-width: 336px; */
+	max-width: 336px;
   /* height: auto; */
   min-height: 600px;
-  /* max-height: 1200px; */
+  max-height: 1200px;
 }
 
 
@@ -1149,10 +1149,10 @@ div.left {
 }
 
 .adRightM {
-  width: auto;
+  /* width: auto; */
   min-width: 200px;
   max-width: 200px;
-  height: auto;
+  /* height: auto; */
   min-height: 200px;
   max-height: 250px;
   float: right;
