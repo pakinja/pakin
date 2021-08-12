@@ -1131,9 +1131,9 @@ div.output_area {
   float: right;
   width: auto;
   min-width:160px;
-	max-width: 336px !important;
+	max-width: 336px;
   height: auto;
-  min-height: 200px;
+  min-height: 280px;
   max-height: 1200px;
 }
 
