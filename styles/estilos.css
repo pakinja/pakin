@@ -328,16 +328,16 @@ label.chec {
 }
 
 .ads {
-  /* width: auto;
+  /* width: auto; */
   min-width: 120px;
-  max-width: 1200px;
-  height: auto;
+  /* max-width: 1200px; */
+  /* height: auto; */
   min-height: 50px;
-  max-height: 1200px; */
+  /* max-height: 1200px; */
   text-align: center;
-  /* margin: auto;
+  margin: auto;
   margin-top:10px;
-  margin-bottom:10px; */
+  margin-bottom:10px;
 }
 
 /* @media (max-width: 728px) {
