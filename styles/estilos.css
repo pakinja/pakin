@@ -1129,12 +1129,12 @@ div.output_area {
 .adRightW {
   /* margin-right: 6%; */
   float: right;
-  width: auto;
+  /* width: auto; */
   min-width: 160px;
-	max-width: 300px !important;
-  min-height: 50px;
+	max-width: 300px;
+  min-height: 250px;
   max-height: 1200px;
-	height: auto;
+	/* height: auto; */
 }
 
 
