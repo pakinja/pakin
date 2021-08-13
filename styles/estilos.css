@@ -1266,7 +1266,7 @@ h2.h2card {
 }
 
 section.empticons  {
-  margin-top: -18px !important;
+  margin-top: 0px !important;
 }
 
 div.col {
@@ -1403,6 +1403,7 @@ div.adRightW {
 	h1.titulo {
 		font-size: 10vw !important;
 		margin-top: 15px !important;
+    margin-bottom: 0px;
 	}
   h2.subtitulo {
     font-size: 6vw !important;
