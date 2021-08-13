@@ -744,7 +744,7 @@ img.fb {
 
   section.empticons  {
   	text-align: center !important;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0px;
   }
 
@@ -1211,7 +1211,7 @@ a.example_a {
 .Content {
   margin: auto;
   margin-top: -15px;
-  height: 260px !important;
+  height: 200px !important;
   width: 93% !important;
   overflow: auto;
 }
@@ -1266,7 +1266,7 @@ h2.h2card {
 }
 
 section.empticons  {
-  margin-top: 0px !important;
+  margin-top: -18px !important;
 }
 
 div.col {
@@ -1614,9 +1614,9 @@ h2.sloganhome {
 	font-size: 0vw !important;
 }
 
-.empticons {
+/* .empticons {
   display: none;
-}
+} */
 
 div.col {
   padding-right: 30px !important;
