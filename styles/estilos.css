@@ -328,7 +328,7 @@ label.chec {
 }
 
 .ads {
-  /* width: auto; */
+  width: auto;
   min-width: 120px;
   max-width: 1200px;
   height: auto;
