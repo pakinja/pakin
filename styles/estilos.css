@@ -730,7 +730,7 @@ img.fb {
 
 	img.logoN {
     float: left;
-    width:55px;
+    width:55px !important;
 		height: 55px !important;
 		margin-top: 10px;
     margin-left: 1% !important;
@@ -1838,20 +1838,21 @@ text-align: center !important;
 }
 
 .header ul {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   list-style: none !important;
   overflow: hidden;
   background-color: #B22222;
 }
 
-.header li a {
+.header a {
   font-size: 1.5vw;
+  font-weight: 800;
   color: #000000;
   display: block;
   margin: auto;
   /* padding: 20px 20px; */
-  /* border-right: 1px solid #f4f4f4; */
+  border-right: 0.5px solid #3D3C3A;
   text-decoration: none !important;
 }
 
