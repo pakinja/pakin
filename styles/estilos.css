@@ -729,9 +729,11 @@ img.fb {
 /*****************************************/
 
 	img.logoN {
+    float: left;
     width:55px;
 		height: 55px !important;
 		margin-top: 10px;
+    margin-left: 1% !important;
 		border-radius: 3px;
     border: 0.5px solid #000000;
     z-index: 10000 !important;
@@ -1838,22 +1840,25 @@ text-align: center !important;
 .header ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: none !important;
   overflow: hidden;
   background-color: #B22222;
 }
 
 .header li a {
+  font-size: 1.5vw;
+  color: #000000;
   display: block;
-  padding: 20px 20px;
+  margin: auto;
+  /* padding: 20px 20px; */
   /* border-right: 1px solid #f4f4f4; */
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-.header li a:hover,
+/* .header li a:hover,
 .header .menu-btn:hover {
   background-color: #f4f4f4;
-}
+} */
 
 /* .header .logo {
   width:55px;
