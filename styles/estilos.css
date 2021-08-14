@@ -350,8 +350,9 @@ label.chec {
   /* max-height: 90px; */
   text-align: center;
   margin: auto;
-  /* margin-top:10px;
-  margin-bottom:10px; */
+  margin-top:10px;
+  margin-bottom:10px;
+  z-index: 100;
 }
 
 .webHide {
