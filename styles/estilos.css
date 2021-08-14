@@ -730,8 +730,8 @@ img.fb {
 
 	img.logoN {
     float: left;
-    width:55px !important;
-		height: 55px !important;
+    width:55px;
+		/* height: 55px !important; */
 		margin-top: 10px;
     margin-left: 1% !important;
 		border-radius: 3px;
@@ -1829,7 +1829,7 @@ text-align: center !important;
 
 .header {
   background-color: #B22222;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,1);
   position: fixed;
   right: 0px;
 	top: 0px;
@@ -1947,6 +1947,7 @@ text-align: center !important;
 /* 48em = 768px */
 
 @media (min-width: 48em) {
+
   .header li {
     float: left;
   }
