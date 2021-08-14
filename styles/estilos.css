@@ -341,14 +341,14 @@ label.chec {
 }
 
 .top {
-  position: static;
-  width: auto;
-  min-width: 468px;
-  max-width: 970px;
-  height: auto;
-  min-height: 90px;
-  max-height: 90px;
-  /* text-align: center; */
+  position: fixed;
+  width: 970px;
+  /* min-width: 970px; */
+  /* max-width: 970px; */
+  height: 90px;
+  /* min-height: 90px; */
+  /* max-height: 90px; */
+  text-align: center;
   margin: auto;
   /* margin-top:10px;
   margin-bottom:10px; */
