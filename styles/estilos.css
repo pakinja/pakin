@@ -1856,6 +1856,10 @@ text-align: center !important;
   text-decoration: none !important;
 }
 
+.header a {
+  color: inherit !important;
+}
+
 /* .header li a:hover,
 .header .menu-btn:hover {
   background-color: #f4f4f4;
