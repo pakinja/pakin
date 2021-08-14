@@ -1860,10 +1860,9 @@ text-align: center !important;
   color: inherit !important;
 }
 
-/* .header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-} */
+.header li a:hover {
+  color: #C0C0C0;
+}
 
 /* .header .logo {
   width:55px;
