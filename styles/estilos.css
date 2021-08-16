@@ -199,6 +199,7 @@ h1.titulo {
   padding-top: 0;
 }
 
+
 h1.tithome {
   text-align: center !important;
   font-size: 0vw !important;
@@ -300,22 +301,22 @@ label.chec {
 /***********************ADS****************/
 
 .mobileHideMR {
-  width: auto;
+  /* width: auto; */
   min-width: 160px;
-	max-width: 160px !important;
-  min-height: 50px;
-  max-height: 1200px;
-	height: auto;
+	/* max-width: 160px !important; */
+  /* min-height: 50px; */
+  /* max-height: 1200px; */
+	/* height: auto; */
 }
 
 
 .mobileHideM {
-  width: auto;
+  /* width: auto; */
   min-width:300px;
-	max-width: 336px !important;
-  min-height: 50px;
-  max-height: 1200px;
-	height: auto;
+	/* max-width: 336px !important; */
+  /* min-height: 50px; */
+  /* max-height: 1200px; */
+	/* height: auto; */
 }
 
 .mobileHideMCH {
@@ -327,7 +328,7 @@ label.chec {
   max-height: 280px;
 }
 
-div.ads {
+.ads {
   /* width: auto; */
   min-width: 120px;
   /* max-width: 1200px; */
@@ -1140,7 +1141,7 @@ div.output_area {
   /* margin-right: 6%; */
   float: right;
   /* width: auto; */
-  min-width: 160px;
+  min-width: 300px;
 	/* max-width: 300px;
   min-height: 250px;
   max-height: 1200px; */
@@ -1161,10 +1162,10 @@ div.left {
 .adRightM {
   /* width: auto; */
   min-width: 200px;
-  max-width: 200px;
+  /* max-width: 200px; */
   /* height: auto; */
-  min-height: 200px;
-  max-height: 250px;
+  /* min-height: 200px;
+  max-height: 250px; */
   float: right;
   margin-right: 0 !important;
   margin-bottom: 3px;
@@ -1259,6 +1260,13 @@ section.ticons  {
 h1.tithome {
   padding-top: 0vh !important;
   font-size: 0vh !important;
+}
+
+h1.tituloH{
+  text-align: center !important;
+  font-size: 5vh !important;
+  /* margin-top: 0 !important; */
+  padding-top: 50px;
 }
 
 h2.sloganhome {
@@ -1623,6 +1631,14 @@ h1.tithome {
   font-size: 0vw !important;
 }
 
+h1.tituloH{
+  text-align: center !important;
+  font-size: 4vw !important;
+  margin-top: 0 !important;
+  padding-top: 50px;
+}
+
+
 h2.sloganhome {
 	font-size: 0vw !important;
 }
@@ -1775,9 +1791,17 @@ div.col {
 
 @media (min-width: 767px) {
 
-  h1.titulo {
+  /* h1.titulo {
     margin-top: 0px !important;
+  } */
+
+  h1.tituloH{
+    text-align: center !important;
+    font-size: 4vw !important;
+    /* margin-top: 0 !important; */
+    padding-top: 60px;
   }
+
   p.par {
     padding-left: 5%;
     padding-right: 5%;
@@ -1875,7 +1899,7 @@ a.effect-shine:hover {
   font-weight: bold;
   display: block;
   margin-left: -18px;
-  padding: 9px 4px;
+  padding: 9px 21px;
   border-right: 1px solid #000000;
   text-decoration: none !important;
 }
