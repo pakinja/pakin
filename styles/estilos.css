@@ -1900,7 +1900,7 @@ a.effect-shine:hover {
   font-weight: bold;
   display: block;
   margin-left: -18px;
-  padding: 9px 21px;
+  padding: 9px 0px;
   border-right: 1px solid #000000;
   text-decoration: none !important;
 }
