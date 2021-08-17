@@ -67,7 +67,7 @@ p.nota {
 p.notahistoricos {
   margin-top: 0px;
   font-size: 1vw !important;
-	text-align: center;
+	text-align: center !important;
 }
 
 pre {
@@ -1371,6 +1371,7 @@ div.adRightW {
 
   p.notahistoricos {
     font-size: 3vw !important;
+    text-align: center;
   }
 
 
