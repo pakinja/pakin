@@ -1066,6 +1066,15 @@ div.output_area {
   transition: ease .25s;
 }
 
+.footer-distributed p.footer-links a.jaf {
+  text-align: center;
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
 .footer-distributed .footer-links a:before {
   content: "·";
   font-size: 20px;
