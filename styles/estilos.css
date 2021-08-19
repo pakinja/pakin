@@ -1047,6 +1047,12 @@ div.output_area {
   font-size: 12px;
   margin: 0;
 }
+
+.footer-distributed .footer-center p {
+  color: #8f9296;
+  font-size: 12px;
+  text-align: center;
+}
 /* Footer links */
 
 .footer-distributed p.footer-links {
