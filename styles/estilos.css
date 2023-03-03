@@ -460,13 +460,13 @@ div.mobileHideMdab {
 .ads {
   /* min-height: 90px; */
   /* width: 100%; */
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
   /* width: 970px; */
   text-align: center !important;
   margin: auto;
-  margin-top: 1em !important;
-  margin-bottom: 1.5em !important;
+  /* margin-top: 1em !important; */
+  /* margin-bottom: 1.5em !important; */
   /* overflow-x: hidden !important; */
 }
 
