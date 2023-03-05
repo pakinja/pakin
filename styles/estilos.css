@@ -74,12 +74,12 @@ div.cell {
   padding: 5px 0 0 0!important;
 }
 
-/* thead.headfijos  th {
+thead.headfijos  th {
   position: sticky !important;
-  top: 0 !important;
+  top: -15px !important;
   color: white;
-  background: black !important;
-} */
+  background: #3D3C3A !important;
+}
 
 
 
@@ -1021,6 +1021,14 @@ pre.CHhistoricos {
 @media (min-width: 0px) and (max-width: 480px) {
 
 /*MOBILE PORTRAIT*/
+
+
+thead.headfijos  th {
+
+  top: -3px !important;
+
+}
+
 
 .cmi img{
   width: 100%;
