@@ -78,13 +78,13 @@ thead.headfijos  th {
   position: sticky !important;
   top: -12.9px !important;
   color: white;
-  background: #8B0000 !important;
+  background: rgba(0,0,0,0.8) !important;
 }
 
 
 
 .header {
-  background-color: #B22222;
+  background-color: #8B0000;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   border-bottom: 0.5px solid black;
   position: fixed;
@@ -99,7 +99,7 @@ thead.headfijos  th {
   padding: 0;
   list-style: none !important;
   overflow: hidden;
-  background-color: #B22222;
+  background-color: #8B0000;
 }
 
 .header a {
@@ -224,7 +224,7 @@ thead.headfijos  th {
   text-align: center;
   width: 8%;
   display: inline-block;
-  border: 2px solid #B22222;
+  border: 2px solid #8B0000;
   border-radius: 5px;
 }
 
@@ -583,7 +583,7 @@ p.price {
   color: white;
 	font-weight: bold;
 	font-size: 33px;
-  background-color: #B22222;
+  background-color: #8B0000;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -635,7 +635,7 @@ div.output_area pre{
 	font-size: 1.8vw !important;
 	line-height: 1.6;
 	text-align: center;
-  color: #B22222 !important;
+  color: #8B0000 !important;
 }
 
 .output_subarea {
@@ -790,7 +790,7 @@ div.buscar {
   text-decoration: none;
   cursor: pointer;
 	padding: 11px 15px 11px 15px;
-  background-color: #B22222;
+  background-color: #8B0000;
 }
 
 #display:active, #displayb:active {
@@ -1235,7 +1235,7 @@ div.adRightW {
   font-size: 6.3vw;
   display: inline-block;
   width: 13%;
-  border: 1px solid #B22222;
+  border: 1px solid #8B0000;
   border-radius: 5px;
   margin: auto;
 }
@@ -1373,7 +1373,7 @@ div.adRightW {
 
   div.output_area pre{
   	font-size: 3vh !important;
-    color: #B22222 !important;
+    color: #8B0000 !important;
   }
   .math span{
   	font-size: 4.5vw ;
