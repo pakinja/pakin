@@ -232,7 +232,15 @@ section.encabezado {
   width: 100% !important;
 }
 
-hr.hrhead  {
+
+hr.sec {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+/* hr.hrhead  {
   margin: 0px;
 	border: 0.6px solid #000000;
 }
@@ -248,7 +256,7 @@ hr.abs  {
 hr.desc  {
 	border: 1px solid #000000;
   width:50%;
-}
+} */
 
 p.contacto {
 	font-size: 1.2em;
@@ -460,7 +468,7 @@ div.mobileHideMdab {
 .ads {
   /* min-height: 90px; */
   /* width: 100%; */
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
   /* width: 970px; */
   text-align: center !important;
@@ -1083,16 +1091,10 @@ div.mefijo {
 
 
 .ads {
-  /*min-height: 250px; */
-  /* max-width: auto; */
-  /* height: auto; */
-  /* text-align: center; */
+
   margin: auto;
-  /* margin-top: 2em !important;
-  margin-top: 2em !important; */
   max-width: 100%;
-  /* width: 300px; */
-  margin-top: 0px;
+  /* margin-top: 0px; */
 }
 
 
@@ -1213,10 +1215,10 @@ div.colhide {
   display: none !important;
 }
 
-hr.abs  {
+/* hr.abs  {
 	border: 1px solid #D1D0CE;
   margin-top: 2vh;
-}
+} */
 
 .web {
   display: none;
