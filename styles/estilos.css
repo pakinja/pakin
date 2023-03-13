@@ -1799,7 +1799,7 @@ text-align: center !important;
   padding: 10px 15px 10px 15px;;
   position: absolute;
   z-index: 1;
-  bottom: -100%;
+  bottom: 30%;
   left: 0%;
   /* margin-left: -60px; */
   opacity: 0;
