@@ -87,7 +87,7 @@ thead.headfijos  th {
   background-color: #8B0000;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   border-bottom: 0.5px solid black;
-  position: fixed !important;
+  position: fixed;
   right:0;
   top: 0;
   width: 100%;
@@ -1034,10 +1034,7 @@ pre.CHhistoricos {
 /*MOBILE PORTRAIT*/
 
 hr.sec {
-  border: 0;
   height: 6px;
-  background: #8B0000;
-  background-image: linear-gradient(to right, #FFFFFF, #8B0000, #FFFFFF);
   margin-top: 1em;
   margin-bottom: 2em;
 }
