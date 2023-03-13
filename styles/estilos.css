@@ -1033,6 +1033,15 @@ pre.CHhistoricos {
 
 /*MOBILE PORTRAIT*/
 
+hr.sec {
+  border: 0;
+  height: 3px;
+  background: #8B0000;
+  background-image: linear-gradient(to right, #FFFFFF, #8B0000, #FFFFFF);
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 
 thead.headfijos  th {
 
