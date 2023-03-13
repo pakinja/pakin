@@ -236,8 +236,10 @@ section.encabezado {
 hr.sec {
   border: 0;
   height: 3px;
-  background: #095484;
-  background-image: linear-gradient(to right, #ccc, #8B0000, #ccc);
+  background: #8B0000;
+  background-image: linear-gradient(to right, #FFFFFF, #8B0000, #FFFFFF);
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 
