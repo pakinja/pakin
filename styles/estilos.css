@@ -370,16 +370,17 @@ h2.h2card {
   padding-bottom: 5px;
 }
 
-.slogan {
+/* .slogan {
 	text-align: center;
 	font-size: 2.5vw !important;
 	margin-top: 20px !important;
   color: #666362;
-}
+} */
 
 h2.subtitulo {
+  font-family: 'Oxygen Mono', monospace;
 	text-align: center;
-	font-size: 3vw !important;
+	font-size: 2.3vw !important;
 	margin-top: 1vw !important;
   color: #666362;
 }
@@ -399,6 +400,9 @@ h3.subsubtitulo {
   margin-bottom: 1em !important;
   /* color: #666362; */
 }
+
+
+
 
 .preloader {
   width: 110px;
