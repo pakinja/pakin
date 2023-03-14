@@ -1107,8 +1107,9 @@ div.mefijo {
 
 .ads {
 
-  margin: auto;
-  max-width: 100%;
+  margin: auto !important;
+  max-width: 300px;
+  text-align: center !important;
   /* margin-top: 0px; */
 }
 
