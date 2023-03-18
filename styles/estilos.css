@@ -475,7 +475,7 @@ div.mobileHideMdab {
 
 
 .ads {
-  min-height: 50px;
+  min-height: 250px;
   min-width: 120px;
   max-width: 1200px;
   text-align: center !important;
@@ -486,7 +486,7 @@ div.mobileHideMdab {
 }
 
 .adsH {
-  min-height: 50px;
+  min-height: 250px;
   min-width: 120px;
   max-width: 1200px;
   /* min-width: 970px; */
