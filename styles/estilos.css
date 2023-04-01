@@ -476,7 +476,7 @@ div.mobileHideMdab {
 
 .ads {
   min-height: 250px;
-  min-width: 120px;
+  min-width: 100px;
   max-width: 1200px;
   text-align: center !important;
   margin: auto;
@@ -506,7 +506,7 @@ div.mobileHideMdab {
 }
 
 .webHide {
-  max-width: 100%;
+  /* max-width: 100%; */
   text-align: center;
   margin-top:30px;
   display: block;
