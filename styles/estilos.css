@@ -475,9 +475,9 @@ div.mobileHideMdab {
 
 
 .ads {
-  min-height: 250px;
+  /* min-height: 250px;
   min-width: 100px;
-  max-width: 1200px;
+  max-width: 1200px; */
   text-align: center !important;
   margin: auto;
   /* margin-top: 1em !important; */
@@ -486,9 +486,9 @@ div.mobileHideMdab {
 }
 
 .adsH {
-  min-height: 250px;
+  /* min-height: 250px;
   min-width: 120px;
-  max-width: 1200px;
+  max-width: 1200px; */
   /* min-width: 970px; */
   /* width: 970px; */
   margin: auto;
@@ -1122,8 +1122,8 @@ div.mefijo {
   height: auto; */
   text-align: center;
   margin: auto;
-  min-width: 320px;
-  width:320px;
+  /* min-width: 320px;
+  width:320px; */
   margin-top: 1.3em;
 }
 
@@ -1501,11 +1501,11 @@ div.adRightW {
 }
 
 .ads {
-  width: 468px;
+  /* width: 468px; */
 }
 
 .adsH {
-  width: 468px;
+  /* width: 468px; */
   margin-top: 3em;
 }
 
