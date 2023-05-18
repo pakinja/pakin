@@ -482,9 +482,9 @@ div.mobileHideMdab {
 
 
 .ads {
-  /* min-height: 250px;
-  min-width: 100px;
-  max-width: 1200px; */
+  min-height: 200px;
+  /* min-width: 200px; */
+  /*max-width: 1200px; */
   text-align: center !important;
   margin: auto;
   /* margin-top: 1em !important; */
