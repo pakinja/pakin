@@ -1389,8 +1389,8 @@ div.adRightW {
 
   h2.atract {
     font-size: 7vw !important;
-    margin-top: 7px !important;
-    margin-bottom: 7px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
 
   div.output_area pre{
