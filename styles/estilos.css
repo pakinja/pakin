@@ -412,8 +412,8 @@ h3.subsubtitulo {
 
 h3.subsubtitulo2 {
   font-family: 'Oxygen Mono', monospace;
-	text-align: center;
-	font-size: 1vw !important;
+	text-align: center !important;
+	font-size: 1.5vw !important;
 	margin-top: 1em !important;
   margin-bottom: 1em !important;
   /* color: #666362; */
@@ -1366,6 +1366,12 @@ div.adRightW {
 
   h3.subsubtitulo {
   	font-size: 5vw !important;
+    margin-top: 1em !important;
+    margin-bottom: 0em !important;
+  }
+
+  h3.subsubtitulo2 {
+  	font-size: 4vw !important;
     margin-top: 1em !important;
     margin-bottom: 0em !important;
   }
