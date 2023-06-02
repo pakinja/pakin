@@ -410,7 +410,14 @@ h3.subsubtitulo {
   /* color: #666362; */
 }
 
-
+h3.subsubtitulo2 {
+  font-family: 'Oxygen Mono', monospace;
+	text-align: center;
+	font-size: 1vw !important;
+	margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  /* color: #666362; */
+}
 
 
 .preloader {
