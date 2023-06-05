@@ -235,9 +235,9 @@ section.encabezado {
 
 hr.sec {
   border: 0;
-  height: 6px;
+  height: 2px;
   background: #8B0000;
-  background-image: linear-gradient(to right, #000000, #FFFFFF, #000000);
+  background-image: linear-gradient(to right, #000000, #8B0000, #000000);
   margin-top: 4em;
   margin-bottom: 4em;
   border-radius: 5px;
@@ -1051,7 +1051,7 @@ pre.CHhistoricos {
 /*MOBILE PORTRAIT*/
 
 hr.sec {
-  height: 6px;
+  height: 3px;
   margin-top: 1em;
   margin-bottom: 2em;
 }
