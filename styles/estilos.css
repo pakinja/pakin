@@ -142,7 +142,7 @@ thead.headfijos  th {
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: #FFFFFF;
   display: block;
   height: 4px;
   position: relative;
@@ -152,7 +152,7 @@ thead.headfijos  th {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #FFFFFF;
   content: '';
   display: block;
   height: 100%;
@@ -338,7 +338,6 @@ h2.atract {
 h1.tituloBarra {
   font-family: 'Roboto', monospace;
   font-size: 2em !important;
-  /* color: #FFFF33; */
   color: #000000;
   margin-left: 8vw !important;
   vertical-align: middle !important;
