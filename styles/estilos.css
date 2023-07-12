@@ -889,7 +889,7 @@ div.output_area {
   width: 100%;
   left: 0;
   position: absolute;
-  left: 0;
+  /* bottom: 0 !important; */
   text-align: left;
   font: normal 16px sans-serif;
   padding: 15px 40px 0px;
