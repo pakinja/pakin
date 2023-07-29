@@ -9,6 +9,7 @@ html, body{
 }
 
 body {
+  font-family: 'Roboto', sans-serif !important;
   padding: 0px !important;
 	background: white;
 }
@@ -78,8 +79,16 @@ thead.headfijos  th {
   position: sticky !important;
   top: -12.9px !important;
   color: white;
-  background: rgba(0,0,0,0.8) !important;
+  background: rgba(0,0,0,1) !important;
 }
+
+thead.headfijos_bal_cron  th {
+  position: sticky !important;
+  top: -12.9px !important;
+  color: white;
+  background: rgba(0,0,0,1) !important;
+}
+
 
 
 
@@ -1062,6 +1071,11 @@ thead.headfijos  th {
 
 }
 
+thead.headfijos_bal_cron  th {
+
+  top: -3px !important;
+}
+
 
 .cmi img{
   width: 100%;
@@ -1088,6 +1102,12 @@ div.chfijo {
   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
   /* margin: auto; */
   /* border: 1px solid; */
+}
+
+
+div.bal_cron_width_heigth {
+  height: 330px;
+  /* margin: auto; */
 }
 
 div.trfijo {
@@ -1725,6 +1745,13 @@ div.col {
     /* box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.8); */
     /* border: 1px solid #DCDCDC; */
   }
+
+  div.bal_cron_width_heigth {
+    width: 40%;
+    height: 660px;
+    margin: auto;
+  }
+
 
   div.refijo {
     width: 64%;
