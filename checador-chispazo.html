@@ -40,7 +40,7 @@
 	    "https://www.pakin.lat/images/pakin.webp"
 	  ],
 	  "datePublished": "2019-04-03 00:35",
-	  "dateModified": "2023-08-31 13:21",
+	  "dateModified": "2023-08-31 13:23",
 	  "author": {
 	    "@type": "Person",
 	    "name": "Francisco Jaramillo A."
@@ -13202,13 +13202,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<!-- <script>
+<script>
     function clearDefaultValue(input) {
         input.value = '';
     }
-</script> -->
-
-<form align="center" action="" method="POST" id="form">
+</script><form align="center" action="" method="POST" id="form">
     <fieldset>
         <label for="r1" class="chec">R1</label>
         <input id="r1" name="R1" type="number" min="1" max="24" step="1" onfocus="clearDefaultValue(this)" />
@@ -13255,15 +13253,10 @@ div#notebook {
                             $(".myresult").html(result);
                         }
                     });
-                });
-
-                // Función para borrar el valor al colocarse en el campo
-                $("input[type='number']").focus(function() {
-                    $(this).val("");
-                });
+                }).click();
             }
         };
-        xhttp.open("GET", "chdefvalue.php", true);
+        xhttp.open("GET", "php/chdefvalue.php", true);
         xhttp.send();
     });
 </script><div class = "buscar">
