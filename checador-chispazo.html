@@ -40,7 +40,7 @@
 	    "https://www.pakin.lat/images/pakin.webp"
 	  ],
 	  "datePublished": "2019-04-03 00:35",
-	  "dateModified": "2023-08-31 13:08",
+	  "dateModified": "2023-08-31 13:11",
 	  "author": {
 	    "@type": "Person",
 	    "name": "Francisco Jaramillo A."
@@ -13257,9 +13257,14 @@ div#notebook {
                         $(this).val("");
                     }
                 });
+
+                // Función para borrar cualquier valor al hacer clic en el campo
+                $("input[type='number']").click(function() {
+                    $(this).val("");
+                });
             }
         };
-        xhttp.open("GET", "php/chdefvalue.php", true);
+        xhttp.open("GET", "chdefvalue.php", true);
         xhttp.send();
     });
 </script><div class = "buscar">
