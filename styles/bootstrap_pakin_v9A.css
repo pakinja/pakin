@@ -1,0 +1,716 @@
+/*!
+*
+* Twitter Bootstrap
+*
+*/
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  
+  a {
+    background-color: transparent;
+  }
+  
+  b,
+  strong {
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  img {
+    border: 0;
+  }
+  
+  hr {
+    box-sizing: content-box;
+    height: 0;
+  }
+  pre {
+    overflow: auto;
+  }
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+  
+  
+  input {
+    line-height: normal;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td,
+  th {
+    padding: 0;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+  }
+  input,
+  button,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  hr {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+  }
+  
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 18px;
+    margin-bottom: 9px;
+  }
+  
+  
+  h1,
+  .h1 {
+    font-size: 33px;
+  }
+  h2,
+  .h2 {
+    font-size: 27px;
+  }
+  h3,
+  .h3 {
+    font-size: 23px;
+  }
+  
+  
+  p {
+    margin: 0 0 9px;
+  }
+  
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+  
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace;
+  }
+  
+  
+  pre {
+    display: block;
+    padding: 8.5px;
+    margin: 0 0 9px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333333;
+    background-color: #f5f5f5;
+    /*border: 1px solid #ccc;*/
+    border-radius: 2px;
+  }
+  
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  table {
+    background-color: transparent;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px;
+    line-height: normal;
+  }
+  
+  .clearfix:before,
+  .clearfix:after,
+  .dl-horizontal dd:before,
+  .dl-horizontal dd:after,
+  .container:before,
+  .container:after,
+  .container-fluid:before,
+  .container-fluid:after,
+  .row:before,
+  .row:after,
+  .form-horizontal .form-group:before,
+  .form-horizontal .form-group:after,
+  .btn-toolbar:before,
+  .btn-toolbar:after,
+  .btn-group-vertical > .btn-group:before,
+  .btn-group-vertical > .btn-group:after,
+  .nav:before,
+  .nav:after,
+  .navbar:before,
+  .navbar:after,
+  .navbar-header:before,
+  .navbar-header:after,
+  .navbar-collapse:before,
+  .navbar-collapse:after,
+  .pager:before,
+  .pager:after,
+  .panel-body:before,
+  .panel-body:after,
+  .modal-header:before,
+  .modal-header:after,
+  .modal-footer:before,
+  .modal-footer:after,
+  .item_buttons:before,
+  .item_buttons:after {
+    content: " ";
+    display: table;
+  }
+  .clearfix:after,
+  .dl-horizontal dd:after,
+  .container:after,
+  .container-fluid:after,
+  .row:after,
+  .form-horizontal .form-group:after,
+  .btn-toolbar:after,
+  .btn-group-vertical > .btn-group:after,
+  .nav:after,
+  .navbar:after,
+  .navbar-header:after,
+  .navbar-collapse:after,
+  .pager:after,
+  .panel-body:after,
+  .modal-header:after,
+  .modal-footer:after,
+  .item_buttons:after {
+    clear: both;
+  }
+  
+  pre {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  label {
+    font-weight: normal;
+  }
+  
+  .border-box-sizing {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fff;
+    /* This makes sure that the body covers the entire window and needs to
+         be in a different element than the display: box in wrapper below */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow: visible;
+  }
+  
+  div.cell {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    width: 100%;
+    padding: 5px;
+    /* This acts as a spacer between cells, that is outside the border */
+    margin: 0px;
+    outline: none;
+    position: relative;
+    overflow: visible;
+  }
+  div.cell:before {
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: -1px;
+    width: 5px;
+    height: calc(100% +  2px);
+    content: '';
+    background: transparent;
+  }
+  
+  div.inner_cell {
+    min-width: 0;
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Old browsers */
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    /* Modern browsers */
+    flex: 1;
+  }
+  
+  div.code_cell {
+    /* avoid page breaking on code cells when printing */
+  }
+  
+  div.output_wrapper {
+    /* this position must be relative to enable descendents to be absolute within it */
+    position: relative;
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 1;
+  }
+  
+  
+  div.output_area {
+    padding: 0px;
+    page-break-inside: avoid;
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  div.output_area .rendered_html table {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .output {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  @media (max-width: 540px) {
+    div.output_area {
+      /* Old browsers */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-box-align: stretch;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      -moz-box-align: stretch;
+      display: box;
+      box-orient: vertical;
+      box-align: stretch;
+      /* Modern browsers */
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+}   
+    
+  div.output_area pre {
+    margin: 0;
+    padding: 1px 0 1px 0;
+    border: 0;
+    vertical-align: baseline;
+    color: black;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  
+  div.output_subarea {
+    overflow-x: auto;
+    padding: 0.4em;
+    /* Old browsers */
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    /* Modern browsers */
+    flex: 1;
+    max-width: calc(100% - 14ex);
+  }
+  
+  div.output_text {
+    text-align: left;
+    color: #000;
+    /* This has to match that of the the CodeMirror class line-height below */
+    line-height: 1.21429em;
+  }
+  
+  .rendered_html {
+    color: #000;
+    /* any extras will just be numbers: */
+  }
+  
+  .rendered_html strong {
+    font-weight: bold;
+  }
+  
+  .rendered_html :link {
+    text-decoration: underline;
+  }
+  .rendered_html :visited {
+    text-decoration: underline;
+  }
+  /*.rendered_html h1 {
+    font-size: 185.7%;
+    margin: 1.08em 0 0 0;
+    font-weight: bold;
+    line-height: 1.0;
+  }*/
+  /*.rendered_html h2 {
+    font-size: 157.1%;
+    margin: 1.27em 0 0 0;
+    font-weight: bold;
+    line-height: 1.0;
+  }*/
+  /*.rendered_html h3 {
+    font-size: 128.6%;
+    margin: 1.55em 0 0 0;
+    font-weight: bold;
+    line-height: 1.0;
+  }*/
+  
+  .rendered_html h2:first-child {
+    margin-top: 0.636em;
+  }
+  .rendered_html h3:first-child {
+    margin-top: 0.777em;
+  }
+  
+  .rendered_html ul:not(.list-inline),
+  .rendered_html ol:not(.list-inline) {
+    padding-left: 2em;
+  }
+  .rendered_html ul {
+    list-style: disc;
+  }
+  
+  .rendered_html * + ul {
+    margin-top: 1em;
+  }
+  
+  .rendered_html hr {
+    color: black;
+    background-color: black;
+  }
+  
+  .rendered_html table {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: black;
+    font-size: 12px;
+    table-layout: fixed;
+  }
+  .rendered_html thead {
+    border-bottom: 1px solid black;
+    vertical-align: bottom;
+  }
+  .rendered_html tr,
+  .rendered_html th,
+  .rendered_html td {
+    text-align: right;
+    vertical-align: middle;
+    padding: 0.5em 0.5em;
+    line-height: normal;
+    white-space: normal;
+    max-width: none;
+    border: none;
+  }
+  .rendered_html th {
+    font-weight: bold;
+  }
+  .rendered_html tbody tr:nth-child(odd) {
+    background: #f5f5f5;
+  }
+  
+  .rendered_html * + table {
+    margin-top: 1em;
+  }
+  .rendered_html p {
+    text-align: left;
+  }
+  .rendered_html * + p {
+    margin-top: 1em;
+  }
+  .rendered_html img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rendered_html * + img {
+    margin-top: 1em;
+  }
+  .rendered_html img,
+  .rendered_html svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  div.text_cell {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  div.text_cell_render {
+    /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+    outline: none;
+    resize: none;
+    width: inherit;
+    border-style: none;
+    padding: 0.5em 0.5em 0.5em 0.4em;
+    color: #000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  .text_cell.rendered .rendered_html {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  
+  div#notebook {
+    font-size: 14px;
+    line-height: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    /* This spaces the page away from the edge of the notebook area */
+    padding-top: 20px;
+    margin: 0px;
+    outline: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    min-height: 100%;
+  }
+  
+  /*@media not print {*/
+  /*  #notebook-container {*/
+  /*    padding: 15px;*/
+  /*    background-color: #fff;*/
+  /*    min-height: 0;*/
+  /*    -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);*/
+  /*    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);*/
+  /*  }*/
+  /*}*/
+  
+  pre,
+  code,
+  kbd,
+  samp {
+    white-space: pre-wrap;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+  
+  body {
+    overflow: visible;
+    padding: 8px;
+  }
+  
+  div#notebook {
+    overflow: visible;
+    border-top: none;
+  }div#notebook-container{
+    padding: 6ex 12ex 8ex 12ex;
+  }
+  
+  .rendered_html pre {
+    margin: 1em 2em;
+    padding: 0px;
+    background-color: #fff;
+  }
+
+  fieldset {
+    border: 0;
+  }
+
+  

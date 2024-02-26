@@ -1,13 +1,95 @@
-[debug] [2024-02-26T07:02:17.660Z] ----------------------------------------------------------------------
-[debug] [2024-02-26T07:02:17.662Z] Command:       /usr/local/bin/firebase /home/pakin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting
-[debug] [2024-02-26T07:02:17.662Z] CLI Version:   13.3.1
-[debug] [2024-02-26T07:02:17.663Z] Platform:      linux
-[debug] [2024-02-26T07:02:17.663Z] Node Version:  v18.5.0
-[debug] [2024-02-26T07:02:17.663Z] Time:          Mon Feb 26 2024 01:02:17 GMT-0600 (Central Standard Time)
-[debug] [2024-02-26T07:02:17.663Z] ----------------------------------------------------------------------
+[debug] [2024-02-26T07:16:29.963Z] ----------------------------------------------------------------------
+[debug] [2024-02-26T07:16:29.965Z] Command:       /usr/local/bin/firebase /home/pakin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2024-02-26T07:16:29.965Z] CLI Version:   13.3.1
+[debug] [2024-02-26T07:16:29.966Z] Platform:      linux
+[debug] [2024-02-26T07:16:29.966Z] Node Version:  v18.5.0
+[debug] [2024-02-26T07:16:29.966Z] Time:          Mon Feb 26 2024 01:16:29 GMT-0600 (Central Standard Time)
+[debug] [2024-02-26T07:16:29.966Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-02-26T07:02:17.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-02-26T07:02:17.669Z] > authorizing via signed-in user (francisco.jaramilloaguilar@gmail.com)
+[debug] [2024-02-26T07:16:30.103Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-26T07:16:30.103Z] > authorizing via signed-in user (francisco.jaramilloaguilar@gmail.com)
+[debug] [2024-02-26T07:16:30.103Z] [iam] checking project prueba-pakin for permissions ["firebase.projects.get"]
+[debug] [2024-02-26T07:16:30.105Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-pakin:testIamPermissions [none]
+[debug] [2024-02-26T07:16:30.105Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-pakin:testIamPermissions x-goog-quota-user=projects/prueba-pakin
+[debug] [2024-02-26T07:16:30.105Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-pakin:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-26T07:16:30.578Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-pakin:testIamPermissions 200
+[debug] [2024-02-26T07:16:30.579Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-pakin:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-26T07:16:30.579Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin [none]
+[debug] [2024-02-26T07:16:31.088Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin 200
+[debug] [2024-02-26T07:16:31.088Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin {"projectId":"prueba-pakin","projectNumber":"331510004525","displayName":"prueba pakin","name":"projects/prueba-pakin","resources":{"hostingSite":"prueba-pakin"},"state":"ACTIVE","etag":"1_735fb938-cfd2-43f2-a4fa-99eeef479321"}
+[info] 
+[info] === Serving from '/home/pakin/Documents/pakin'...
+[info] 
+[debug] [2024-02-26T07:16:31.094Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/prueba-pakin/sites 
+[debug] [2024-02-26T07:16:31.959Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/prueba-pakin/sites 200
+[debug] [2024-02-26T07:16:31.959Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/prueba-pakin/sites {"sites":[{"name":"projects/prueba-pakin/sites/prueba-pakin","defaultUrl":"https://prueba-pakin.web.app","appId":"1:331510004525:web:e4255f432635efac62f1a4","type":"DEFAULT_SITE"}]}
+[debug] [2024-02-26T07:16:31.959Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin/webApps/1:331510004525:web:e4255f432635efac62f1a4/config [none]
+[debug] [2024-02-26T07:16:32.322Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin/webApps/1:331510004525:web:e4255f432635efac62f1a4/config 200
+[debug] [2024-02-26T07:16:32.322Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin/webApps/1:331510004525:web:e4255f432635efac62f1a4/config {"projectId":"prueba-pakin","appId":"1:331510004525:web:e4255f432635efac62f1a4","storageBucket":"prueba-pakin.appspot.com","apiKey":"AIzaSyBt4fOEoA6jCl0o9mr8GkuDzk3sOuUvbxs","authDomain":"prueba-pakin.firebaseapp.com","messagingSenderId":"331510004525"}
+[debug] [2024-02-26T07:16:32.368Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin [none]
+[debug] [2024-02-26T07:16:32.584Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin 200
+[debug] [2024-02-26T07:16:32.584Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin {"projectId":"prueba-pakin","projectNumber":"331510004525","displayName":"prueba pakin","name":"projects/prueba-pakin","resources":{"hostingSite":"prueba-pakin"},"state":"ACTIVE","etag":"1_735fb938-cfd2-43f2-a4fa-99eeef479321"}
+[info] i  hosting[prueba-pakin]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[prueba-pakin]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.376Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js [none]
+[debug] [2024-02-26T07:16:56.383Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js [none]
+[debug] [2024-02-26T07:16:56.391Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js [none]
+[debug] [2024-02-26T07:16:56.393Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js [none]
+[debug] [2024-02-26T07:16:56.395Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js [none]
+[debug] [2024-02-26T07:16:56.397Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js [none]
+[debug] [2024-02-26T07:16:56.436Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js 200
+[debug] [2024-02-26T07:16:56.437Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-app-compat.js HTTP/1.1" 200 9369 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-app-compat.js HTTP/1.1\" 200 9369 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.450Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js 200
+[debug] [2024-02-26T07:16:56.450Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js [stream]
+[debug] [2024-02-26T07:16:56.458Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js 200
+[debug] [2024-02-26T07:16:56.458Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-functions-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-functions-compat.js HTTP/1.1" 200 3253 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-functions-compat.js HTTP/1.1\" 200 3253 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.460Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js 200
+[debug] [2024-02-26T07:16:56.460Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-messaging-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-messaging-compat.js HTTP/1.1" 200 9995 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-messaging-compat.js HTTP/1.1\" 200 9995 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.463Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js 200
+[debug] [2024-02-26T07:16:56.463Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js [stream]
+[debug] [2024-02-26T07:16:56.465Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js [none]
+[debug] [2024-02-26T07:16:56.468Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-auth-compat.js HTTP/1.1" 200 39209 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-auth-compat.js HTTP/1.1\" 200 39209 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.475Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-remote-config-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-database-compat.js HTTP/1.1" 200 48015 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-database-compat.js HTTP/1.1\" 200 48015 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.481Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-performance-compat.js [none]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.533Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js 200
+[debug] [2024-02-26T07:16:56.533Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-analytics-compat.js HTTP/1.1" 200 9216 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-analytics-compat.js HTTP/1.1\" 200 9216 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.536Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-remote-config-compat.js 200
+[debug] [2024-02-26T07:16:56.536Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-remote-config-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-remote-config-compat.js HTTP/1.1" 200 8816 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-remote-config-compat.js HTTP/1.1\" 200 8816 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.541Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-performance-compat.js 200
+[debug] [2024-02-26T07:16:56.541Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-performance-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-performance-compat.js HTTP/1.1" 200 10250 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-performance-compat.js HTTP/1.1\" 200 10250 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.578Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js 200
+[debug] [2024-02-26T07:16:56.578Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-storage-compat.js HTTP/1.1" 200 12989 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-storage-compat.js HTTP/1.1\" 200 12989 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:16:56.768Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js 200
+[debug] [2024-02-26T07:16:56.768Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js [stream]
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /__/firebase/10.8.0/firebase-firestore-compat.js HTTP/1.1" 200 101194 "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /__/firebase/10.8.0/firebase-firestore-compat.js HTTP/1.1\" 200 101194 \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:16:56 +0000] \"GET /favicon.ico HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:18:18 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:18:18 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:18:18 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:18:18 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:18:19 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:18:19 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:18:19 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:18:19 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:20:39 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:20:39 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [26/Feb/2024:07:20:39 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [26/Feb/2024:07:20:39 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36\""}}
+[debug] [2024-02-26T07:26:09.132Z] ----------------------------------------------------------------------
+[debug] [2024-02-26T07:26:09.133Z] Command:       /usr/local/bin/firebase /home/pakin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2024-02-26T07:26:09.134Z] CLI Version:   13.3.1
+[debug] [2024-02-26T07:26:09.134Z] Platform:      linux
+[debug] [2024-02-26T07:26:09.134Z] Node Version:  v18.5.0
+[debug] [2024-02-26T07:26:09.134Z] Time:          Mon Feb 26 2024 01:26:09 GMT-0600 (Central Standard Time)
+[debug] [2024-02-26T07:26:09.134Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-26T07:26:09.190Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-26T07:26:09.190Z] > authorizing via signed-in user (francisco.jaramilloaguilar@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -19,24 +101,7 @@ You're about to initialize a Firebase project in this directory:
 
   /home/pakin/Documents/pakin
 
-[info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2024-02-26T07:04:27.438Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2024-02-26T07:04:27.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2024-02-26T07:04:27.862Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project prueba-pakin (prueba pakin) 
-[info] 
-=== Hosting Setup
-[debug] [2024-02-26T07:04:52.169Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin [none]
-[debug] [2024-02-26T07:04:52.381Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin 200
-[debug] [2024-02-26T07:04:52.382Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin {"projectId":"prueba-pakin","projectNumber":"331510004525","displayName":"prueba pakin","name":"projects/prueba-pakin","resources":{"hostingSite":"prueba-pakin"},"state":"ACTIVE","etag":"1_735fb938-cfd2-43f2-a4fa-99eeef479321"}
-[info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
-[info] 
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
