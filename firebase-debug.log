@@ -1,0 +1,42 @@
+[debug] [2024-02-26T07:02:17.660Z] ----------------------------------------------------------------------
+[debug] [2024-02-26T07:02:17.662Z] Command:       /usr/local/bin/firebase /home/pakin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting
+[debug] [2024-02-26T07:02:17.662Z] CLI Version:   13.3.1
+[debug] [2024-02-26T07:02:17.663Z] Platform:      linux
+[debug] [2024-02-26T07:02:17.663Z] Node Version:  v18.5.0
+[debug] [2024-02-26T07:02:17.663Z] Time:          Mon Feb 26 2024 01:02:17 GMT-0600 (Central Standard Time)
+[debug] [2024-02-26T07:02:17.663Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-26T07:02:17.668Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-26T07:02:17.669Z] > authorizing via signed-in user (francisco.jaramilloaguilar@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/pakin/Documents/pakin
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-02-26T07:04:27.438Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-02-26T07:04:27.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-02-26T07:04:27.862Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project prueba-pakin (prueba pakin) 
+[info] 
+=== Hosting Setup
+[debug] [2024-02-26T07:04:52.169Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin [none]
+[debug] [2024-02-26T07:04:52.381Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin 200
+[debug] [2024-02-26T07:04:52.382Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-pakin {"projectId":"prueba-pakin","projectNumber":"331510004525","displayName":"prueba pakin","name":"projects/prueba-pakin","resources":{"hostingSite":"prueba-pakin"},"state":"ACTIVE","etag":"1_735fb938-cfd2-43f2-a4fa-99eeef479321"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
