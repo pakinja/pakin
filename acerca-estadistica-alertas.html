@@ -18,7 +18,7 @@
 	  "headline": "Explicación de la Estadística y Alertas de Sorteos Pakin",
 	  "image": "https://www.pakin.lat/images/pakin.webp",
 	  "datePublished": "2017-01-01T11:11:00+06:00",
-	  "dateModified": "2024-02-28T12:12:57+06:00",
+	  "dateModified": "2024-02-28T12:24:16+06:00",
 	  "author": {
 	    "@type": "Person",
 	    "name": "Francisco Jaramillo",
@@ -249,13 +249,19 @@
     <div class="cell border-box-sizing text_cell rendered">
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
-       <button onclick="goBack()">
-        Volver
-       </button>
+       <div class="volver">
+        <a class="enlace-menu-seccion" href="#">
+         Regresar
+        </a>
+       </div>
        <script>
-        function goBack() {
-  window.history.back();
-}
+        document.addEventListener("DOMContentLoaded", function() {
+  var botonVolver = document.querySelector('.enlace-menu-seccion');
+  botonVolver.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+    window.history.back(); // Redirigir al usuario a la página anterior
+  });
+});
        </script>
       </div>
      </div>
