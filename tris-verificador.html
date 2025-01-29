@@ -77,6 +77,8 @@
 <meta content="https://www.pakin.lat/images/pakin-checadores.webp" property="og:image"/>
 <meta content="Revisa y comprueba si tu jugada ya ha resultado ganadora, en qué número de sorteo y fecha o si tu jugada aún no resulta ganadora." property="og:description"/>
 <meta content="Francisco Jaramillo A." name="author"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script>
 
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>
@@ -159,68 +161,78 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="myresult">
+<table border="1" id="resultTable">
+<thead>
+<tr>
+<th>
+            SORTEO
+           </th>
+<th>
+            R1
+           </th>
+<th>
+            R2
+           </th>
+<th>
+            R3
+           </th>
+<th>
+            R4
+           </th>
+<th>
+            R5
+           </th>
+<th>
+            PRIMOS
+           </th>
+<th>
+            REPS
+           </th>
+<th>
+            FECHA
+           </th>
+</tr>
+</thead>
+<tbody>
+<tr id="noResultRow">
+<td colspan="9" style="text-align: center;">
+            Realiza tu consulta
+           </td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="preloader" id="wait1" style="display:none;">
-</div>
-</div>
-</div>
-</div>
-
-
-
-<form action="" align="center" id="form2" method="POST">
-<fieldset>
-<label class="chec2" for="fecha">
-</label>
+<p>
+<!-- Preloader -->
+</p>
+<div id="preloader" style="display: none; text-align: center; font-size: 16px; font-weight: bold;">
+        Buscando...
+       </div>
+<p>
+<!-- Formularios -->
+</p>
+<form id="formFecha">
 <input id="fecha" name="FECHA" placeholder="YYYY-MM-DD" type="date"/>
-</fieldset>
-</form>
-<div class="buscar">
-<button class="ChecadorTrisF" id="display">
-         Por Fecha
+<button type="submit">
+         Buscar por Fecha
         </button>
-</div>
-<form action="" align="center" id="form1" method="POST">
-<fieldset>
-<label class="chec1" for="concurso">
-</label>
-<input id="concurso" min="1" name="CONCURSO" onfocus="clearDefaultValue(this)" placeholder="Sorteo" type="number"/>
-</fieldset>
 </form>
-<div class="buscar">
-<button class="ChecadorTrisS" id="display">
-         Por Sorteo
+<form id="formConcurso">
+<input id="concurso" min="1" name="CONCURSO" placeholder="Sorteo" type="number"/>
+<button type="submit">
+         Buscar por Sorteo
         </button>
-</div>
-<form action="" align="center" id="form" method="POST">
-<fieldset>
-<label class="chec" for="r1">
-          R1
-         </label>
-<input id="r1" max="9" min="0" name="R1" onfocus="clearDefaultValue(this)" type="number" value="0"/>
-<label class="chec" for="r2">
-          R2
-         </label>
-<input id="r2" max="9" min="0" name="R2" onfocus="clearDefaultValue(this)" type="number" value="0"/>
-<label class="chec" for="r3">
-          R3
-         </label>
-<input id="r3" max="9" min="0" name="R3" onfocus="clearDefaultValue(this)" type="number" value="0"/>
-<label class="chec" for="r4">
-          R4
-         </label>
-<input id="r4" max="9" min="0" name="R4" onfocus="clearDefaultValue(this)" type="number" value="0"/>
-<label class="chec" for="r5">
-          R5
-         </label>
-<input id="r5" max="9" min="0" name="R5" onfocus="clearDefaultValue(this)" type="number" value="0"/>
-</fieldset>
 </form>
-<div class="buscar">
-<button class="ChecadorTris" id="display">
-         Por Números
+<form id="formNumeros">
+<input id="r1" max="9" min="0" name="R1" type="number" value="0"/>
+<input id="r2" max="9" min="0" name="R2" type="number" value="0"/>
+<input id="r3" max="9" min="0" name="R3" type="number" value="0"/>
+<input id="r4" max="9" min="0" name="R4" type="number" value="0"/>
+<input id="r5" max="9" min="0" name="R5" type="number" value="0"/>
+<button type="submit">
+         Buscar por Números
         </button>
-</div>
+</form>
 <div class="adsH webHide">
 <!-- PAKIN Tris Checador Bottom-->
 <ins class="adsbygoogle" data-ad-client="ca-pub-1379506914303333" data-ad-format="auto" data-ad-slot="7379648877" data-full-width-responsive="true" style="display:block">
@@ -229,22 +241,9 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 </div>
-
-
-
-
-
-
-<div>
-<p class="par">
-         Si no aparece número de sorteo y fecha, esa jugada no ha resultado ganadora.
-         <br/>
-         Datos a partir de 2007-09-03 (formato actual).
-        </p>
 </div>
-
-
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -272,18 +271,11 @@
 </footer>
 <script defer="" src="/js/footer/footer_v21.js">
 </script>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/tris/trisChecador.js">
+<script defer="" src="js/tris/consulta_tris_verificador.js">
 </script>
-</div>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/tris/trisChecadorS.js" type="text/javascript">
-</script>
-</div>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/tris/trisChecadorF.js" type="text/javascript">
-</script>
-</div>
+<p>
+        &lt;/div&gt;
+       </p>
 <script defer="" src="js/tag_manager.js">
 </script>
 </div>
