@@ -154,78 +154,102 @@
 </div>
 <section>
 <h2 class="subtituloAlertas">
-         Revisa Tus Jugadas
+         Consulta Resultados
         </h2>
 </section>
+
+
+
+
+
+
+<div id="preloader" style="display: none; text-align: center; font-size: 22px; font-weight: normal; color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #8B0000; background: #8B0000; width: fit-content; margin: 15px auto;">
+<span id="preloaderText">
+         Buscando
+        </span>
+<span id="dots">
+         ...
+        </span>
+</div>
 
 
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="preloader" id="wait1" style="display:none;">
-</div>
 <div class="myresult">
+<table border="1" id="resultTable">
+<thead class="headfijos">
+<tr>
+<th>
+            SORTEO
+           </th>
+<th>
+            R1
+           </th>
+<th>
+            R2
+           </th>
+<th>
+            R3
+           </th>
+<th>
+            R4
+           </th>
+<th>
+            R5
+           </th>
+<th>
+            PRIMOS
+           </th>
+<th>
+            REPS
+           </th>
+<th>
+            MEDIA
+           </th>
+<th>
+            FECHA
+           </th>
+</tr>
+</thead>
+<tbody>
+<tr id="noResultRow">
+<td colspan="10" style="text-align: center;">
+            Realiza tu consulta
+           </td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-</div>
-</div>
-
-
-
-<form action="" align="center" id="form2" method="POST">
-<fieldset>
-<label class="chec2" for="fecha">
-</label>
-<input id="fecha" name="FECHA" type="date"/>
-</fieldset>
-</form>
+<form align="center" id="form2">
+<input id="fecha" name="FECHA" placeholder="YYYY-MM-DD" type="date"/>
 <div class="buscar">
-<button class="ChecadorChispazoF" id="display">
-         Por Fecha
-        </button>
+<button id="display" type="submit">
+          Buscar por Fecha
+         </button>
 </div>
-<form action="" align="center" id="form1" method="POST">
-<fieldset>
-<label class="chec1" for="concurso">
-</label>
-<input id="concurso" min="1" name="CONCURSO" onfocus="clearDefaultValue(this)" placeholder="Sorteo" type="number"/>
-</fieldset>
 </form>
+<form align="center" id="form1">
+<input id="concurso" min="1" name="CONCURSO" placeholder="Sorteo" type="number"/>
 <div class="buscar">
-<button class="ChecadorChispazoS" id="display">
-         Por Sorteo
-        </button>
+<button id="display" type="submit">
+          Buscar por Sorteo
+         </button>
 </div>
-<form action="" align="center" id="form" method="POST">
-<fieldset>
-<label class="chec" for="r1">
-          R1
-         </label>
-<input id="r1" max="24" min="1" name="R1" onfocus="clearDefaultValue(this)" step="1" type="number" value="1"/>
-<label class="chec" for="r2">
-          R2
-         </label>
-<input id="r2" max="25" min="2" name="R2" onfocus="clearDefaultValue(this)" step="1" type="number" value="2"/>
-<label class="chec" for="r3">
-          R3
-         </label>
-<input id="r3" max="26" min="3" name="R3" onfocus="clearDefaultValue(this)" step="1" type="number" value="3"/>
-<label class="chec" for="r4">
-          R4
-         </label>
-<input id="r4" max="27" min="4" name="R4" onfocus="clearDefaultValue(this)" step="1" type="number" value="4"/>
-<label class="chec" for="r5">
-          R5
-         </label>
-<input id="r5" max="28" min="5" name="R5" onfocus="clearDefaultValue(this)" step="1" type="number" value="5"/>
-</fieldset>
 </form>
+<form align="center" id="form">
+<input id="r1" max="28" min="1" name="R1" type="number" value="1"/>
+<input id="r2" max="28" min="1" name="R2" type="number" value="1"/>
+<input id="r3" max="28" min="1" name="R3" type="number" value="1"/>
+<input id="r4" max="28" min="1" name="R4" type="number" value="1"/>
+<input id="r5" max="28" min="1" name="R5" type="number" value="1"/>
 <div class="buscar">
-<button class="ChecadorChispazo" id="display">
-         Por Número
-        </button>
+<button id="display" type="submit">
+          Buscar por Números
+         </button>
 </div>
+</form>
 <div class="adsH webHide">
 <!-- PAKIN Chispazo Checador Bottom Web -->
 <ins class="adsbygoogle" data-ad-client="ca-pub-1379506914303333" data-ad-format="auto" data-ad-slot="1607930525" data-full-width-responsive="true" style="display:block">
@@ -234,22 +258,9 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
 </div>
-
-
-
-
-
-
-<div>
-<p class="par">
-         En la comprobación por números, si no aparece número de sorteo y fecha, esa jugada no ha resultado ganadora.
-         <br/>
-         Datos a partir de 2005-04-01 (formato actual del sorteo).
-        </p>
 </div>
-
-
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -277,22 +288,8 @@
 </footer>
 <script defer="" src="/js/footer/footer_v21.js">
 </script>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/chispazo/chChecador.js" type="text/javascript">
+<script defer="" src="js/chispazo/consulta_chispazo_verificador.js">
 </script>
-</div>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/chispazo/chChecadorS.js" type="text/javascript">
-</script>
-</div>
-<p>
-</p>
-<div align="center" id="responsecontainer">
-<script defer="" src="js/chispazo/chChecadorF.js" type="text/javascript">
-</script>
-</div>
-<p>
-</p>
 <script defer="" src="js/tag_manager.js">
 </script>
 </div>
