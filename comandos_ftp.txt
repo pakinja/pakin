@@ -1,0 +1,12 @@
+user pak@pakin.lat Z@87912151
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put chispazo.html
+put tris.html
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+put chispazo20.svg
+put chispazo100.svg
+put tris10.svg
+put tris100.svg
+bye
