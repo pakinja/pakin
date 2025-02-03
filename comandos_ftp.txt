@@ -1,2 +1,19 @@
 user pak@pakin.lat Z@87912151
 binary
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put chispazo-verificador.html
+! sleep 3
+put verificadores.html
+! sleep 3
+put melate-verificador.html
+! sleep 3
+put gana-gato-verificador.html
+! sleep 3
+put melate-retro-verificador.html
+! sleep 3
+put tris-verificador.html
+! sleep 3
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+bye
