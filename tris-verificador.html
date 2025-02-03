@@ -148,6 +148,9 @@
 
 
 
+<p>
+<!-- Preloader -->
+</p>
 <div id="preloader" style="display: none; text-align: center; font-size: 22px; font-weight: normal; color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #8B0000; background: #8B0000; width: fit-content; margin: 15px auto;">
 <span id="preloaderText">
          Buscando
@@ -162,6 +165,9 @@
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<!-- Tabla de Resultados -->
+</p>
 <div class="myresult">
 <table border="1" id="resultTable">
 <thead class="headfijos">
@@ -210,10 +216,13 @@
 
 
 
+<p>
+<!-- Formulario por Fecha -->
+</p>
 <form align="center" id="form2">
-<input id="fecha" name="FECHA" placeholder="YYYY-MM-DD" type="date"/>
+<input id="fecha" name="FECHA" required="" type="date"/>
 <div class="buscar">
-<button class="ChecadorTrisF" id="display" type="submit">
+<button class="ChecadorTrisF" disabled="" id="btnFecha" type="submit">
           Buscar por Fecha
          </button>
 </div>
@@ -224,10 +233,13 @@
 
 
 
+<p>
+<!-- Formulario por Sorteo -->
+</p>
 <form align="center" id="form1">
-<input id="concurso" min="1" name="CONCURSO" placeholder="Sorteo" type="number"/>
+<input id="concurso" min="1" name="CONCURSO" placeholder="Sorteo" required="" type="number"/>
 <div class="buscar">
-<button class="ChecadorTrisS" id="display" type="submit">
+<button class="ChecadorTrisS" disabled="" id="btnSorteo" type="submit">
           Buscar por Sorteo
          </button>
 </div>
@@ -238,14 +250,17 @@
 
 
 
+<p>
+<!-- Formulario por Números -->
+</p>
 <form align="center" id="form">
-<input id="r1" max="9" min="0" name="R1" type="number" value="0"/>
-<input id="r2" max="9" min="0" name="R2" type="number" value="0"/>
-<input id="r3" max="9" min="0" name="R3" type="number" value="0"/>
-<input id="r4" max="9" min="0" name="R4" type="number" value="0"/>
-<input id="r5" max="9" min="0" name="R5" type="number" value="0"/>
+<input id="r1" max="9" min="0" name="R1" required="" type="number"/>
+<input id="r2" max="9" min="0" name="R2" required="" type="number"/>
+<input id="r3" max="9" min="0" name="R3" required="" type="number"/>
+<input id="r4" max="9" min="0" name="R4" required="" type="number"/>
+<input id="r5" max="9" min="0" name="R5" required="" type="number"/>
 <div class="buscar">
-<button class="ChecadorTris" id="display" type="submit">
+<button class="ChecadorTris" disabled="" id="btnNumeros" type="submit">
           Buscar por Números
          </button>
 </div>
