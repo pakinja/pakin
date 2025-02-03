@@ -1,6 +1,0 @@
-chispazo-verificador.html
-verificadores.html
-melate-verificador.html
-gana-gato-verificador.html
-melate-retro-verificador.html
-tris-verificador.html
