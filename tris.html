@@ -115,76 +115,78 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #8B0000;">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="/">
-                <img src="/images/p2.webp" alt="Pakin" width="55" height="55" class="rounded-logo">
-            </a>
+          <!-- Logo -->
+          <a class="navbar-brand" href="/">
+            <img src="/images/p2.webp" alt="Pakin" width="55" height="55" class="rounded-logo">
+          </a>
     
-            <!-- Título Tris Analítica -->
-            <h1 class="fs-4 text-white m-0">
-                <a style="text-decoration: none" href="tris" class="text-decoration-none text-white">Tris Analítica</a>
-            </h1>
+          <!-- Título Tris Analítica -->
+          <h1 class="fs-4 text-white m-0">
+            <a href="tris" class="text-decoration-none text-white">Tris Analítica</a>
+          </h1>
     
-            <!-- Botón Hamburguesa -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          <!-- Botón Hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list" style="font-size: 1.8rem; color: white;"></i>
-            </button>
+            <i class="bi bi-list" style="font-size: 1.8rem; color: white;"></i>
+          </button>
     
-            <!-- Menú Principal -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-    
-                    <!-- Dropdown (Versión para Web) -->
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Tris Analítica
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMobile">
-                            <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
-                        </ul>
-                    </li>
-    
-                    <!-- Enlaces adicionales -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="tris-verificador">Tris Verificador</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tris-generador">Tris Generador</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tris-resultados-historicos">Tris Histórico Completo</a>
-                    </li>
+          <!-- Menú Principal -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <!-- Dropdown (Versión para Web) -->
+              <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Secciones Tris Analítica
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
+                  <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
+                  <li><a class="dropdown-item" href="#primos">Primos</a></li>
+                  <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
+                  <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
+                  <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
+                  <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
                 </ul>
-            </div>
+              </li>
     
-            <!-- Dropdown (Versión para Móvil) -->
-            <div class="d-lg-none w-100 mt-2">
-                <div class="dropdown">
-                    <button class="btn btn-light w-100 dropdown-toggle" type="button" id="dropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
-                        Secciones Tris Analítica
-                    </button>
-                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
-                        <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                        <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                        <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                        <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                        <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
-                        <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
-                    </ul>
-                </div>
+              <!-- Enlaces adicionales -->
+              <li class="nav-item">
+                <a class="nav-link" href="tris-verificador">Tris Verificador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tris-generador">Tris Generador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tris-resultados-historicos">Tris Histórico Completo</a>
+              </li>
+            </ul>
+          </div>
+    
+          <!-- Dropdown (Versión para Móvil) -->
+          <div class="d-lg-none w-100 mt-2">
+            <div class="dropdown">
+              <button class="btn btn-light w-100 dropdown-toggle" type="button" id="dropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+                Secciones Tris Analítica
+              </button>
+              <ul class="dropdown-menu w-100" aria-labelledby="dropdownMobile">
+                <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
+                <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
+                <li><a class="dropdown-item" href="#primos">Primos</a></li>
+                <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
+                <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
+                <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
+                <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
+              </ul>
             </div>
+          </div>
         </div>
-    </nav>
+      </nav>
+    
+      <!-- Bootstrap JS y Popper.js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
 
    
