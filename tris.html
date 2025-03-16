@@ -5216,6 +5216,19 @@
         tooltipTriggerList.map(function (tooltipTriggerEl) {
             new bootstrap.Tooltip(tooltipTriggerEl);
         });
+
+        // Asegurar que los tooltips sean grandes en móviles
+        var tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltips.forEach(function (tooltip) {
+            tooltip.addEventListener('show.bs.tooltip', function () {
+                // Cambiar el tamaño de los tooltips en dispositivos móviles
+                if (window.innerWidth <= 768) {
+                    var tooltipElement = tooltip._tooltip;
+                    tooltipElement.style.fontSize = '2vw';
+                    tooltipElement.style.maxWidth = '250px';  // Ajustar el tamaño máximo según lo que necesites
+                }
+            });
+        });
     });
 </script>
 
