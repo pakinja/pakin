@@ -5208,6 +5208,17 @@
         
     </div>
     
+    <!-- Añadir el JavaScript para habilitar tooltips en dispositivos móviles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+    
+    
     
     
 
