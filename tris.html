@@ -5208,15 +5208,30 @@
         
     </div>
     
-    <!-- Añadir el JavaScript para habilitar tooltips en dispositivos móviles -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-            tooltipTriggerList.map(function (tooltipTriggerEl) {
-                new bootstrap.Tooltip(tooltipTriggerEl);
+    <!-- Añadir el JavaScript para habilitar y mejorar tooltips en dispositivos móviles -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Inicializar los tooltips de Bootstrap
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Asegurar que los tooltips sean grandes en móviles
+        var tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltips.forEach(function (tooltip) {
+            tooltip.addEventListener('show.bs.tooltip', function () {
+                // Cambiar el tamaño de los tooltips en dispositivos móviles
+                if (window.innerWidth <= 768) {
+                    var tooltipElement = tooltip._tooltip;
+                    tooltipElement.style.fontSize = '1.2rem';
+                    tooltipElement.style.maxWidth = '250px';  // Ajustar el tamaño máximo según lo que necesites
+                }
             });
         });
-    </script>
+    });
+</script>
+
     
     
     
