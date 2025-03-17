@@ -145,6 +145,27 @@
         </div>
     </nav>
     
+    <div class="dropdown-flotante">
+        <button class="btn" id="toggle-dropdown">Mostrar menú</button>
+        <ul class="dropdown-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#tris-verificador">Tris Verificador</a></li>
+            <li><a href="#tris-generador">Tris Generador</a></li>
+            <li><a href="#historico-completo">Histórico Completo</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('toggle-dropdown').addEventListener('click', function() {
+        document.querySelector('.dropdown-menu').style.display = 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target !== document.querySelector('.dropdown-flotante') && event.target.parentNode !== document.querySelector('.dropdown-flotante')) {
+            document.querySelector('.dropdown-menu').style.display = 'none';
+        }
+    });
+    </script>
    
     
     <section>
