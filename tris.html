@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">  
+  <style>
+    .navbar-custom {
+        background-color: #8B0000;
+    }
+  </style>
 
 	<title>
       Tris Resultados Históricos y Analítica | Pakin
@@ -20,7 +24,6 @@
 	
 	<meta name="theme-color" content="#8B0000">
 	
-	<!--link rel="prefetch stylesheet" href="styles/bootstrap_pakin_v11.css"-->
 	
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
      crossorigin="anonymous"></script>
@@ -114,73 +117,30 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #8B0000;">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #8B0000;">
         <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="/">
-                <img src="/images/p2.webp" alt="Pakin" width="55" height="55" class="rounded-logo">
+            <a class="navbar-brand" href="/index">
+                <img src="/images/p2.webp" alt="Pakin" width="55" height="55">
             </a>
-    
-            <!-- Título Tris Analítica -->
-            <h1 class="fs-4 text-white m-0">
-                <a style="text-decoration: none" href="tris" class="text-decoration-none text-white">Tris Analítica</a>
-            </h1>
-    
-            <!-- Botón Hamburguesa -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list" style="font-size: 1.8rem; color: white;"></i>
+            <a class="navbar-brand" href="tris" style="color: #FFFFFF; text-decoration: none;">Tris Analítica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-    
-            <!-- Menú Principal -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-    
-                    <!-- Dropdown (Versión para Web) -->
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Tris Analítica
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
-                        </ul>
-                    </li>
-    
-                    <!-- Enlaces adicionales -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="tris-verificador">Tris Verificador</a>
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tris-generador">Tris Generador</a>
+                        <a class="nav-link" href="tris-verificador">Tris Verificador |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tris-resultados-historicos">Tris Histórico Completo</a>
+                        <a class="nav-link" href="tris-generador">Tris Generador |</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tris-resultados-historicos">Histórico Completo</a>
                     </li>
                 </ul>
-            </div>
-    
-            <!-- Dropdown (Versión para Móvil) -->
-            <div class="d-lg-none w-100 mt-2">
-                <div class="dropdown">
-                    <button class="btn btn-light w-100 dropdown-toggle" type="button" id="dropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
-                        Secciones Tris Analítica
-                    </button>
-                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="#resultados">Resultados</a></li>
-                        <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                        <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                        <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                        <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                        <li><a class="dropdown-item" href="#balanza">Balanza Global</a></li>
-                        <li><a class="dropdown-item" href="#cronometro">Cronómetro Global</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </nav>
@@ -262,9 +222,33 @@
               
               <tr>
                   
-                  <td>33901</td>
+                  <td>33902</td>
                   
                   <td>0</td>
+                  
+                  <td>7</td>
+                  
+                  <td>8</td>
+                  
+                  <td>7</td>
+                  
+                  <td>5</td>
+                  
+                  <td>0</td>
+                  
+                  <td>nan</td>
+                  
+                  <td>nan</td>
+                  
+                  <td>2025-03-16</td>
+                  
+              </tr>
+              
+              <tr>
+                  
+                  <td>33901</td>
+                  
+                  <td>1</td>
                   
                   <td>9</td>
                   
@@ -276,9 +260,9 @@
                   
                   <td>7</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-16</td>
                   
@@ -288,7 +272,7 @@
                   
                   <td>33900</td>
                   
-                  <td>1</td>
+                  <td>2</td>
                   
                   <td>8</td>
                   
@@ -300,9 +284,9 @@
                   
                   <td>7</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-16</td>
                   
@@ -312,7 +296,7 @@
                   
                   <td>33899</td>
                   
-                  <td>2</td>
+                  <td>3</td>
                   
                   <td>6</td>
                   
@@ -324,9 +308,9 @@
                   
                   <td>6</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-16</td>
                   
@@ -336,7 +320,7 @@
                   
                   <td>33898</td>
                   
-                  <td>3</td>
+                  <td>4</td>
                   
                   <td>2</td>
                   
@@ -348,9 +332,9 @@
                   
                   <td>5</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-16</td>
                   
@@ -360,7 +344,7 @@
                   
                   <td>33897</td>
                   
-                  <td>4</td>
+                  <td>5</td>
                   
                   <td>9</td>
                   
@@ -372,9 +356,9 @@
                   
                   <td>4</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-15</td>
                   
@@ -384,7 +368,7 @@
                   
                   <td>33896</td>
                   
-                  <td>5</td>
+                  <td>6</td>
                   
                   <td>0</td>
                   
@@ -396,9 +380,9 @@
                   
                   <td>3</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-15</td>
                   
@@ -408,7 +392,7 @@
                   
                   <td>33895</td>
                   
-                  <td>6</td>
+                  <td>7</td>
                   
                   <td>8</td>
                   
@@ -420,9 +404,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-15</td>
                   
@@ -432,7 +416,7 @@
                   
                   <td>33894</td>
                   
-                  <td>7</td>
+                  <td>8</td>
                   
                   <td>7</td>
                   
@@ -444,9 +428,9 @@
                   
                   <td>4</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-15</td>
                   
@@ -456,7 +440,7 @@
                   
                   <td>33893</td>
                   
-                  <td>8</td>
+                  <td>9</td>
                   
                   <td>5</td>
                   
@@ -468,9 +452,9 @@
                   
                   <td>1</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-15</td>
                   
@@ -480,7 +464,7 @@
                   
                   <td>33892</td>
                   
-                  <td>9</td>
+                  <td>10</td>
                   
                   <td>4</td>
                   
@@ -492,9 +476,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-14</td>
                   
@@ -504,7 +488,7 @@
                   
                   <td>33891</td>
                   
-                  <td>10</td>
+                  <td>11</td>
                   
                   <td>2</td>
                   
@@ -516,9 +500,9 @@
                   
                   <td>0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-14</td>
                   
@@ -528,7 +512,7 @@
                   
                   <td>33890</td>
                   
-                  <td>11</td>
+                  <td>12</td>
                   
                   <td>3</td>
                   
@@ -540,9 +524,9 @@
                   
                   <td>3</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-14</td>
                   
@@ -552,7 +536,7 @@
                   
                   <td>33889</td>
                   
-                  <td>12</td>
+                  <td>13</td>
                   
                   <td>4</td>
                   
@@ -564,9 +548,9 @@
                   
                   <td>0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-14</td>
                   
@@ -576,7 +560,7 @@
                   
                   <td>33888</td>
                   
-                  <td>13</td>
+                  <td>14</td>
                   
                   <td>6</td>
                   
@@ -588,9 +572,9 @@
                   
                   <td>9</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-14</td>
                   
@@ -600,7 +584,7 @@
                   
                   <td>33887</td>
                   
-                  <td>14</td>
+                  <td>15</td>
                   
                   <td>7</td>
                   
@@ -612,9 +596,9 @@
                   
                   <td>0</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-13</td>
                   
@@ -624,7 +608,7 @@
                   
                   <td>33886</td>
                   
-                  <td>15</td>
+                  <td>16</td>
                   
                   <td>2</td>
                   
@@ -636,9 +620,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-13</td>
                   
@@ -648,7 +632,7 @@
                   
                   <td>33885</td>
                   
-                  <td>16</td>
+                  <td>17</td>
                   
                   <td>5</td>
                   
@@ -660,9 +644,9 @@
                   
                   <td>5</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-13</td>
                   
@@ -672,7 +656,7 @@
                   
                   <td>33884</td>
                   
-                  <td>17</td>
+                  <td>18</td>
                   
                   <td>8</td>
                   
@@ -684,9 +668,9 @@
                   
                   <td>6</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-13</td>
                   
@@ -696,7 +680,7 @@
                   
                   <td>33883</td>
                   
-                  <td>18</td>
+                  <td>19</td>
                   
                   <td>7</td>
                   
@@ -708,9 +692,9 @@
                   
                   <td>2</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-13</td>
                   
@@ -720,7 +704,7 @@
                   
                   <td>33882</td>
                   
-                  <td>19</td>
+                  <td>20</td>
                   
                   <td>6</td>
                   
@@ -732,9 +716,9 @@
                   
                   <td>6</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-12</td>
                   
@@ -744,7 +728,7 @@
                   
                   <td>33881</td>
                   
-                  <td>20</td>
+                  <td>21</td>
                   
                   <td>1</td>
                   
@@ -756,9 +740,9 @@
                   
                   <td>1</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-12</td>
                   
@@ -768,7 +752,7 @@
                   
                   <td>33880</td>
                   
-                  <td>21</td>
+                  <td>22</td>
                   
                   <td>6</td>
                   
@@ -780,9 +764,9 @@
                   
                   <td>5</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-12</td>
                   
@@ -792,7 +776,7 @@
                   
                   <td>33879</td>
                   
-                  <td>22</td>
+                  <td>23</td>
                   
                   <td>2</td>
                   
@@ -804,9 +788,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-12</td>
                   
@@ -816,7 +800,7 @@
                   
                   <td>33878</td>
                   
-                  <td>23</td>
+                  <td>24</td>
                   
                   <td>4</td>
                   
@@ -828,9 +812,9 @@
                   
                   <td>2</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-12</td>
                   
@@ -840,7 +824,7 @@
                   
                   <td>33877</td>
                   
-                  <td>24</td>
+                  <td>25</td>
                   
                   <td>9</td>
                   
@@ -852,9 +836,9 @@
                   
                   <td>0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-11</td>
                   
@@ -864,7 +848,7 @@
                   
                   <td>33876</td>
                   
-                  <td>25</td>
+                  <td>26</td>
                   
                   <td>5</td>
                   
@@ -876,9 +860,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-11</td>
                   
@@ -888,7 +872,7 @@
                   
                   <td>33875</td>
                   
-                  <td>26</td>
+                  <td>27</td>
                   
                   <td>6</td>
                   
@@ -900,9 +884,9 @@
                   
                   <td>1</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-11</td>
                   
@@ -912,7 +896,7 @@
                   
                   <td>33874</td>
                   
-                  <td>27</td>
+                  <td>28</td>
                   
                   <td>7</td>
                   
@@ -924,9 +908,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-11</td>
                   
@@ -936,7 +920,7 @@
                   
                   <td>33873</td>
                   
-                  <td>28</td>
+                  <td>29</td>
                   
                   <td>5</td>
                   
@@ -948,9 +932,9 @@
                   
                   <td>4</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-11</td>
                   
@@ -960,7 +944,7 @@
                   
                   <td>33872</td>
                   
-                  <td>29</td>
+                  <td>30</td>
                   
                   <td>5</td>
                   
@@ -972,9 +956,9 @@
                   
                   <td>9</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-10</td>
                   
@@ -984,7 +968,7 @@
                   
                   <td>33871</td>
                   
-                  <td>30</td>
+                  <td>31</td>
                   
                   <td>8</td>
                   
@@ -996,9 +980,9 @@
                   
                   <td>3</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-10</td>
                   
@@ -1008,7 +992,7 @@
                   
                   <td>33870</td>
                   
-                  <td>31</td>
+                  <td>32</td>
                   
                   <td>2</td>
                   
@@ -1020,9 +1004,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-10</td>
                   
@@ -1032,7 +1016,7 @@
                   
                   <td>33869</td>
                   
-                  <td>32</td>
+                  <td>33</td>
                   
                   <td>0</td>
                   
@@ -1044,9 +1028,9 @@
                   
                   <td>3</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-10</td>
                   
@@ -1056,7 +1040,7 @@
                   
                   <td>33868</td>
                   
-                  <td>33</td>
+                  <td>34</td>
                   
                   <td>2</td>
                   
@@ -1068,9 +1052,9 @@
                   
                   <td>0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-10</td>
                   
@@ -1080,7 +1064,7 @@
                   
                   <td>33867</td>
                   
-                  <td>34</td>
+                  <td>35</td>
                   
                   <td>1</td>
                   
@@ -1092,9 +1076,9 @@
                   
                   <td>1</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-09</td>
                   
@@ -1104,7 +1088,7 @@
                   
                   <td>33866</td>
                   
-                  <td>35</td>
+                  <td>36</td>
                   
                   <td>1</td>
                   
@@ -1116,9 +1100,9 @@
                   
                   <td>8</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-09</td>
                   
@@ -1128,7 +1112,7 @@
                   
                   <td>33865</td>
                   
-                  <td>36</td>
+                  <td>37</td>
                   
                   <td>7</td>
                   
@@ -1140,9 +1124,9 @@
                   
                   <td>4</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-09</td>
                   
@@ -1152,7 +1136,7 @@
                   
                   <td>33864</td>
                   
-                  <td>37</td>
+                  <td>38</td>
                   
                   <td>7</td>
                   
@@ -1164,9 +1148,9 @@
                   
                   <td>2</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-09</td>
                   
@@ -1176,7 +1160,7 @@
                   
                   <td>33863</td>
                   
-                  <td>38</td>
+                  <td>39</td>
                   
                   <td>6</td>
                   
@@ -1188,9 +1172,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-09</td>
                   
@@ -1200,7 +1184,7 @@
                   
                   <td>33862</td>
                   
-                  <td>39</td>
+                  <td>40</td>
                   
                   <td>3</td>
                   
@@ -1212,9 +1196,9 @@
                   
                   <td>9</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-08</td>
                   
@@ -1224,7 +1208,7 @@
                   
                   <td>33861</td>
                   
-                  <td>40</td>
+                  <td>41</td>
                   
                   <td>3</td>
                   
@@ -1236,9 +1220,9 @@
                   
                   <td>1</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-08</td>
                   
@@ -1248,7 +1232,7 @@
                   
                   <td>33860</td>
                   
-                  <td>41</td>
+                  <td>42</td>
                   
                   <td>8</td>
                   
@@ -1260,9 +1244,9 @@
                   
                   <td>7</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-08</td>
                   
@@ -1272,7 +1256,7 @@
                   
                   <td>33859</td>
                   
-                  <td>42</td>
+                  <td>43</td>
                   
                   <td>0</td>
                   
@@ -1284,9 +1268,9 @@
                   
                   <td>7</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-08</td>
                   
@@ -1296,7 +1280,7 @@
                   
                   <td>33858</td>
                   
-                  <td>43</td>
+                  <td>44</td>
                   
                   <td>1</td>
                   
@@ -1308,9 +1292,9 @@
                   
                   <td>6</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-08</td>
                   
@@ -1320,7 +1304,7 @@
                   
                   <td>33857</td>
                   
-                  <td>44</td>
+                  <td>45</td>
                   
                   <td>9</td>
                   
@@ -1332,9 +1316,9 @@
                   
                   <td>2</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-07</td>
                   
@@ -1344,7 +1328,7 @@
                   
                   <td>33856</td>
                   
-                  <td>45</td>
+                  <td>46</td>
                   
                   <td>5</td>
                   
@@ -1356,9 +1340,9 @@
                   
                   <td>6</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-07</td>
                   
@@ -1368,7 +1352,7 @@
                   
                   <td>33855</td>
                   
-                  <td>46</td>
+                  <td>47</td>
                   
                   <td>3</td>
                   
@@ -1380,9 +1364,9 @@
                   
                   <td>6</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-07</td>
                   
@@ -1392,7 +1376,7 @@
                   
                   <td>33854</td>
                   
-                  <td>47</td>
+                  <td>48</td>
                   
                   <td>4</td>
                   
@@ -1404,9 +1388,9 @@
                   
                   <td>3</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-07</td>
                   
@@ -1416,7 +1400,7 @@
                   
                   <td>33853</td>
                   
-                  <td>48</td>
+                  <td>49</td>
                   
                   <td>8</td>
                   
@@ -1428,9 +1412,9 @@
                   
                   <td>2</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-07</td>
                   
@@ -1440,7 +1424,7 @@
                   
                   <td>33852</td>
                   
-                  <td>49</td>
+                  <td>50</td>
                   
                   <td>7</td>
                   
@@ -1452,9 +1436,9 @@
                   
                   <td>5</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-06</td>
                   
@@ -1464,7 +1448,7 @@
                   
                   <td>33851</td>
                   
-                  <td>50</td>
+                  <td>51</td>
                   
                   <td>4</td>
                   
@@ -1476,9 +1460,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-06</td>
                   
@@ -1488,7 +1472,7 @@
                   
                   <td>33850</td>
                   
-                  <td>51</td>
+                  <td>52</td>
                   
                   <td>4</td>
                   
@@ -1500,9 +1484,9 @@
                   
                   <td>7</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-06</td>
                   
@@ -1512,7 +1496,7 @@
                   
                   <td>33849</td>
                   
-                  <td>52</td>
+                  <td>53</td>
                   
                   <td>5</td>
                   
@@ -1524,9 +1508,9 @@
                   
                   <td>5</td>
                   
-                  <td>5</td>
+                  <td>5.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-06</td>
                   
@@ -1536,7 +1520,7 @@
                   
                   <td>33848</td>
                   
-                  <td>53</td>
+                  <td>54</td>
                   
                   <td>2</td>
                   
@@ -1548,9 +1532,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-06</td>
                   
@@ -1560,7 +1544,7 @@
                   
                   <td>33847</td>
                   
-                  <td>54</td>
+                  <td>55</td>
                   
                   <td>7</td>
                   
@@ -1572,9 +1556,9 @@
                   
                   <td>8</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-05</td>
                   
@@ -1584,7 +1568,7 @@
                   
                   <td>33846</td>
                   
-                  <td>55</td>
+                  <td>56</td>
                   
                   <td>3</td>
                   
@@ -1596,9 +1580,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-05</td>
                   
@@ -1608,7 +1592,7 @@
                   
                   <td>33845</td>
                   
-                  <td>56</td>
+                  <td>57</td>
                   
                   <td>1</td>
                   
@@ -1620,9 +1604,9 @@
                   
                   <td>8</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-05</td>
                   
@@ -1632,7 +1616,7 @@
                   
                   <td>33844</td>
                   
-                  <td>57</td>
+                  <td>58</td>
                   
                   <td>8</td>
                   
@@ -1644,9 +1628,9 @@
                   
                   <td>5</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-05</td>
                   
@@ -1656,7 +1640,7 @@
                   
                   <td>33843</td>
                   
-                  <td>58</td>
+                  <td>59</td>
                   
                   <td>9</td>
                   
@@ -1668,9 +1652,9 @@
                   
                   <td>4</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-05</td>
                   
@@ -1680,7 +1664,7 @@
                   
                   <td>33842</td>
                   
-                  <td>59</td>
+                  <td>60</td>
                   
                   <td>9</td>
                   
@@ -1692,9 +1676,9 @@
                   
                   <td>8</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-04</td>
                   
@@ -1704,7 +1688,7 @@
                   
                   <td>33841</td>
                   
-                  <td>60</td>
+                  <td>61</td>
                   
                   <td>5</td>
                   
@@ -1716,9 +1700,9 @@
                   
                   <td>7</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-04</td>
                   
@@ -1728,7 +1712,7 @@
                   
                   <td>33840</td>
                   
-                  <td>61</td>
+                  <td>62</td>
                   
                   <td>4</td>
                   
@@ -1740,9 +1724,9 @@
                   
                   <td>6</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-04</td>
                   
@@ -1752,7 +1736,7 @@
                   
                   <td>33839</td>
                   
-                  <td>62</td>
+                  <td>63</td>
                   
                   <td>7</td>
                   
@@ -1764,9 +1748,9 @@
                   
                   <td>3</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-04</td>
                   
@@ -1776,7 +1760,7 @@
                   
                   <td>33838</td>
                   
-                  <td>63</td>
+                  <td>64</td>
                   
                   <td>2</td>
                   
@@ -1788,9 +1772,9 @@
                   
                   <td>2</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-04</td>
                   
@@ -1800,7 +1784,7 @@
                   
                   <td>33837</td>
                   
-                  <td>64</td>
+                  <td>65</td>
                   
                   <td>4</td>
                   
@@ -1812,9 +1796,9 @@
                   
                   <td>3</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-03</td>
                   
@@ -1824,7 +1808,7 @@
                   
                   <td>33836</td>
                   
-                  <td>65</td>
+                  <td>66</td>
                   
                   <td>2</td>
                   
@@ -1836,9 +1820,9 @@
                   
                   <td>4</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-03</td>
                   
@@ -1848,7 +1832,7 @@
                   
                   <td>33835</td>
                   
-                  <td>66</td>
+                  <td>67</td>
                   
                   <td>4</td>
                   
@@ -1860,9 +1844,9 @@
                   
                   <td>7</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-03</td>
                   
@@ -1872,7 +1856,7 @@
                   
                   <td>33834</td>
                   
-                  <td>67</td>
+                  <td>68</td>
                   
                   <td>6</td>
                   
@@ -1884,9 +1868,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-03</td>
                   
@@ -1896,7 +1880,7 @@
                   
                   <td>33833</td>
                   
-                  <td>68</td>
+                  <td>69</td>
                   
                   <td>9</td>
                   
@@ -1908,9 +1892,9 @@
                   
                   <td>8</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-03</td>
                   
@@ -1920,7 +1904,7 @@
                   
                   <td>33832</td>
                   
-                  <td>69</td>
+                  <td>70</td>
                   
                   <td>1</td>
                   
@@ -1932,9 +1916,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-02</td>
                   
@@ -1944,7 +1928,7 @@
                   
                   <td>33831</td>
                   
-                  <td>70</td>
+                  <td>71</td>
                   
                   <td>2</td>
                   
@@ -1956,9 +1940,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-02</td>
                   
@@ -1968,7 +1952,7 @@
                   
                   <td>33830</td>
                   
-                  <td>71</td>
+                  <td>72</td>
                   
                   <td>4</td>
                   
@@ -1980,9 +1964,9 @@
                   
                   <td>9</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-02</td>
                   
@@ -1992,7 +1976,7 @@
                   
                   <td>33829</td>
                   
-                  <td>72</td>
+                  <td>73</td>
                   
                   <td>2</td>
                   
@@ -2004,9 +1988,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-02</td>
                   
@@ -2016,7 +2000,7 @@
                   
                   <td>33828</td>
                   
-                  <td>73</td>
+                  <td>74</td>
                   
                   <td>3</td>
                   
@@ -2028,9 +2012,9 @@
                   
                   <td>9</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-03-02</td>
                   
@@ -2040,7 +2024,7 @@
                   
                   <td>33827</td>
                   
-                  <td>74</td>
+                  <td>75</td>
                   
                   <td>4</td>
                   
@@ -2052,9 +2036,9 @@
                   
                   <td>6</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-01</td>
                   
@@ -2064,7 +2048,7 @@
                   
                   <td>33826</td>
                   
-                  <td>75</td>
+                  <td>76</td>
                   
                   <td>1</td>
                   
@@ -2076,9 +2060,9 @@
                   
                   <td>3</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-01</td>
                   
@@ -2088,7 +2072,7 @@
                   
                   <td>33825</td>
                   
-                  <td>76</td>
+                  <td>77</td>
                   
                   <td>2</td>
                   
@@ -2100,9 +2084,9 @@
                   
                   <td>9</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-01</td>
                   
@@ -2112,7 +2096,7 @@
                   
                   <td>33824</td>
                   
-                  <td>77</td>
+                  <td>78</td>
                   
                   <td>0</td>
                   
@@ -2124,9 +2108,9 @@
                   
                   <td>4</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-03-01</td>
                   
@@ -2136,7 +2120,7 @@
                   
                   <td>33823</td>
                   
-                  <td>78</td>
+                  <td>79</td>
                   
                   <td>1</td>
                   
@@ -2148,9 +2132,9 @@
                   
                   <td>8</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-03-01</td>
                   
@@ -2160,7 +2144,7 @@
                   
                   <td>33822</td>
                   
-                  <td>79</td>
+                  <td>80</td>
                   
                   <td>3</td>
                   
@@ -2172,9 +2156,9 @@
                   
                   <td>1</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-28</td>
                   
@@ -2184,7 +2168,7 @@
                   
                   <td>33821</td>
                   
-                  <td>80</td>
+                  <td>81</td>
                   
                   <td>2</td>
                   
@@ -2196,9 +2180,9 @@
                   
                   <td>9</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-28</td>
                   
@@ -2208,7 +2192,7 @@
                   
                   <td>33820</td>
                   
-                  <td>81</td>
+                  <td>82</td>
                   
                   <td>7</td>
                   
@@ -2220,9 +2204,9 @@
                   
                   <td>1</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-28</td>
                   
@@ -2232,7 +2216,7 @@
                   
                   <td>33819</td>
                   
-                  <td>82</td>
+                  <td>83</td>
                   
                   <td>0</td>
                   
@@ -2244,9 +2228,9 @@
                   
                   <td>3</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-28</td>
                   
@@ -2256,7 +2240,7 @@
                   
                   <td>33818</td>
                   
-                  <td>83</td>
+                  <td>84</td>
                   
                   <td>8</td>
                   
@@ -2268,9 +2252,9 @@
                   
                   <td>0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-28</td>
                   
@@ -2280,7 +2264,7 @@
                   
                   <td>33817</td>
                   
-                  <td>84</td>
+                  <td>85</td>
                   
                   <td>3</td>
                   
@@ -2292,9 +2276,9 @@
                   
                   <td>6</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-27</td>
                   
@@ -2304,7 +2288,7 @@
                   
                   <td>33816</td>
                   
-                  <td>85</td>
+                  <td>86</td>
                   
                   <td>2</td>
                   
@@ -2316,9 +2300,9 @@
                   
                   <td>1</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-27</td>
                   
@@ -2328,7 +2312,7 @@
                   
                   <td>33815</td>
                   
-                  <td>86</td>
+                  <td>87</td>
                   
                   <td>7</td>
                   
@@ -2340,9 +2324,9 @@
                   
                   <td>4</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-27</td>
                   
@@ -2352,7 +2336,7 @@
                   
                   <td>33814</td>
                   
-                  <td>87</td>
+                  <td>88</td>
                   
                   <td>2</td>
                   
@@ -2364,9 +2348,9 @@
                   
                   <td>6</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-27</td>
                   
@@ -2376,7 +2360,7 @@
                   
                   <td>33813</td>
                   
-                  <td>88</td>
+                  <td>89</td>
                   
                   <td>0</td>
                   
@@ -2388,9 +2372,9 @@
                   
                   <td>6</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-27</td>
                   
@@ -2400,7 +2384,7 @@
                   
                   <td>33812</td>
                   
-                  <td>89</td>
+                  <td>90</td>
                   
                   <td>8</td>
                   
@@ -2412,9 +2396,9 @@
                   
                   <td>4</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-26</td>
                   
@@ -2424,7 +2408,7 @@
                   
                   <td>33811</td>
                   
-                  <td>90</td>
+                  <td>91</td>
                   
                   <td>2</td>
                   
@@ -2436,9 +2420,9 @@
                   
                   <td>8</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-02-26</td>
                   
@@ -2448,7 +2432,7 @@
                   
                   <td>33810</td>
                   
-                  <td>91</td>
+                  <td>92</td>
                   
                   <td>4</td>
                   
@@ -2460,9 +2444,9 @@
                   
                   <td>8</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-26</td>
                   
@@ -2472,7 +2456,7 @@
                   
                   <td>33809</td>
                   
-                  <td>92</td>
+                  <td>93</td>
                   
                   <td>3</td>
                   
@@ -2484,9 +2468,9 @@
                   
                   <td>8</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-26</td>
                   
@@ -2496,7 +2480,7 @@
                   
                   <td>33808</td>
                   
-                  <td>93</td>
+                  <td>94</td>
                   
                   <td>4</td>
                   
@@ -2508,9 +2492,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-26</td>
                   
@@ -2520,7 +2504,7 @@
                   
                   <td>33807</td>
                   
-                  <td>94</td>
+                  <td>95</td>
                   
                   <td>2</td>
                   
@@ -2532,9 +2516,9 @@
                   
                   <td>0</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-25</td>
                   
@@ -2544,7 +2528,7 @@
                   
                   <td>33806</td>
                   
-                  <td>95</td>
+                  <td>96</td>
                   
                   <td>8</td>
                   
@@ -2556,9 +2540,9 @@
                   
                   <td>7</td>
                   
-                  <td>3</td>
+                  <td>3.0</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
                   <td>2025-02-25</td>
                   
@@ -2568,7 +2552,7 @@
                   
                   <td>33805</td>
                   
-                  <td>96</td>
+                  <td>97</td>
                   
                   <td>8</td>
                   
@@ -2580,9 +2564,9 @@
                   
                   <td>7</td>
                   
-                  <td>2</td>
+                  <td>2.0</td>
                   
-                  <td>0</td>
+                  <td>0.0</td>
                   
                   <td>2025-02-25</td>
                   
@@ -2592,7 +2576,7 @@
                   
                   <td>33804</td>
                   
-                  <td>97</td>
+                  <td>98</td>
                   
                   <td>7</td>
                   
@@ -2604,9 +2588,9 @@
                   
                   <td>3</td>
                   
-                  <td>4</td>
+                  <td>4.0</td>
                   
-                  <td>1</td>
+                  <td>1.0</td>
                   
                   <td>2025-02-25</td>
                   
@@ -2616,47 +2600,23 @@
                   
                   <td>33803</td>
                   
-                  <td>98</td>
-                  
-                  <td>7</td>
-                  
-                  <td>1</td>
-                  
-                  <td>0</td>
-                  
-                  <td>8</td>
-                  
-                  <td>4</td>
-                  
-                  <td>1</td>
-                  
-                  <td>1</td>
-                  
-                  <td>2025-02-25</td>
-                  
-              </tr>
-              
-              <tr>
-                  
-                  <td>33802</td>
-                  
                   <td>99</td>
                   
-                  <td>9</td>
-                  
-                  <td>4</td>
-                  
                   <td>7</td>
-                  
-                  <td>8</td>
-                  
-                  <td>1</td>
                   
                   <td>1</td>
                   
                   <td>0</td>
                   
-                  <td>2025-02-24</td>
+                  <td>8</td>
+                  
+                  <td>4</td>
+                  
+                  <td>1.0</td>
+                  
+                  <td>1.0</td>
+                  
+                  <td>2025-02-25</td>
                   
               </tr>
               
@@ -3909,24 +3869,7 @@
     
     <div class="resultados">
         
-            <table class="tblres tblest">
-                <thead>
-                    <tr>
-                        <th>POS</th>
-                        <th>CANTIDAD</th>
-                        <th>TIPO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>R3</td>
-                        <td>8</td>
-                        <td>Pares</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+            <p class="atract flashit text-center" style="color: #8B0000; font-size: 1.3rem; font-weight: normal;">¡No se encontraron alertas!</p>
         
     </div>
 
@@ -5397,12 +5340,8 @@
     </div>
 </footer>
 
-
-  <!-- Bootstrap JS y Popper.js -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script defer src="/js/tris/esperandoTris_v2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script defer src="/js/tris/esperandoTris_v2.js"></script>
   <script src="/js/subir.js" defer></script>
   <script src="/js/tris/tris_resultados.js" defer></script>
   <script defer src="/js/tag_manager.js"></script>
