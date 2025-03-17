@@ -164,9 +164,9 @@
     </div> -->
 
     <script>
-        ddocument.getElementById('toggle-dropdown').addEventListener('click', function() {
+        document.getElementById('toggle-dropdown').addEventListener('click', function() {
         document.querySelector('.dropdown-menu').style.display = 'block';
-        });
+    });
 
         document.addEventListener('click', function(event) {
             if (event.target !== document.querySelector('.dropdown') && event.target.parentNode !== document.querySelector('.dropdown')) {
