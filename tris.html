@@ -143,17 +143,19 @@
                 </ul>
             </div>
         </div>
+        <div class="dropdown-flotante" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%);">
+            <button class="btn btn-link text-white" id="toggle-dropdown">Opciones</button>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: none;">
+                <li><a class="dropdown-item text-white" href="#">Opción 1</a></li>
+                <li><a class="dropdown-item text-white" href="#">Opción 2</a></li>
+                <li><a class="dropdown-item text-white" href="#">Opción 3</a></li>
+            </ul>
+        </div>
+    
+
     </nav>
     
-    <div class="dropdown-flotante" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%);">
-        <button class="btn btn-link text-white" id="toggle-dropdown">Opciones</button>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: none;">
-            <li><a class="dropdown-item text-white" href="#">Opción 1</a></li>
-            <li><a class="dropdown-item text-white" href="#">Opción 2</a></li>
-            <li><a class="dropdown-item text-white" href="#">Opción 3</a></li>
-        </ul>
-    </div>
-
+    
 
     <script>
         document.querySelector('.dropdown-flotante button').addEventListener('click', function() {
