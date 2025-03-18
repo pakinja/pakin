@@ -134,7 +134,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white nav-link" href="#frecuencias">Frecuencias</a>
+                        <a class="nav-link text-white" href="#frecuencias">Frecuencias</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#primos">Primos</a>
@@ -156,7 +156,16 @@
         </div>
     </nav>
 
-    
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navCollapse = document.querySelector('.navbar-collapse');
+                if (navCollapse.classList.contains('show')) {
+                    navCollapse.classList.remove('show');
+                }
+            });
+        });
+      </script>
     
     <section>
       <h2 class="titulos bg-light text-dark px-5 py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">Resultados Tris</h2>
