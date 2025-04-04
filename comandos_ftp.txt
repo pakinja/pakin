@@ -1,0 +1,13 @@
+user pak@pakin.lat Z@87912151
+binary
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put gana-gato.html
+! sleep 1
+put gana-gato-generador.html
+! sleep 1
+put gana-gato-verificador.html
+! sleep 1
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+bye
