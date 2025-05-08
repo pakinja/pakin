@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="last-modified" content="mié, 07 may 2025 18:56:59 CST">
+  <meta http-equiv="last-modified" content="mié, 07 may 2025 19:00:30 CST">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" defer>  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" defer>
    <style>
@@ -31,19 +31,16 @@
             margin: 5px 0;
         }
 
-        .tooltip.show {
-            opacity: 1 !important;
-            transition: opacity 0.01s !important;
-        }
-
+        /* Mejora visual para tooltips en móvil */
         @media (pointer: coarse) {
-            /* Para dispositivos táctiles */
-            [data-bs-toggle="tooltip"] {
-                touch-action: manipulation; /* Mejora el comportamiento táctil */
+            .tooltip {
+                pointer-events: none !important;
+                opacity: 1 !important;
             }
             
-            .tooltip {
-                pointer-events: none !important; /* Permite interactuar con lo que está debajo */
+            .tooltip-inner {
+                font-size: 14px;
+                padding: 8px 12px;
             }
         }
 
@@ -99,7 +96,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2025-05-07T18:56:59-06:00",
+          "dateModified": "2025-05-07T19:00:30-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -9290,26 +9287,60 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Configuración mejorada para móviles
-            var tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            // Detectar si es un dispositivo táctil
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            
+            // Inicializar tooltips
+            const tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            let currentTooltip = null;
+            
             tooltips.forEach(function(el) {
-                new bootstrap.Tooltip(el, {
-                    trigger: 'manual', // Control manual del tooltip
+                // Configuración común
+                const tooltipInstance = new bootstrap.Tooltip(el, {
                     boundary: 'window',
-                    animation: true
+                    animation: true,
+                    trigger: isTouchDevice ? 'manual' : 'hover focus' // Diferente trigger según dispositivo
                 });
                 
-                // Mostrar al tocar
-                el.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    var tooltip = bootstrap.Tooltip.getInstance(el);
-                    tooltip.show();
+                // Comportamiento para dispositivos táctiles
+                if(isTouchDevice) {
+                    el.addEventListener('touchstart', function(e) {
+                        e.preventDefault();
+                        
+                        // Cerrar tooltip anterior si existe
+                        if(currentTooltip && currentTooltip !== tooltipInstance) {
+                            currentTooltip.hide();
+                        }
+                        
+                        // Mostrar el nuevo tooltip
+                        tooltipInstance.show();
+                        currentTooltip = tooltipInstance;
+                        
+                        // Ocultar después de 3 segundos
+                        setTimeout(function() {
+                            if(currentTooltip === tooltipInstance) {
+                                tooltipInstance.hide();
+                                currentTooltip = null;
+                            }
+                        }, 3000);
+                    }, {passive: false});
                     
-                    // Ocultar después de 3 segundos (ajustable)
-                    setTimeout(function() {
-                        tooltip.hide();
-                    }, 3000);
-                }, {passive: false});
+                    // Cerrar al hacer scroll
+                    window.addEventListener('scroll', function() {
+                        if(currentTooltip) {
+                            currentTooltip.hide();
+                            currentTooltip = null;
+                        }
+                    });
+                }
+            });
+            
+            // Cerrar tooltips al hacer clic/touch fuera
+            document.addEventListener('click', function(e) {
+                if(!e.target.closest('[data-bs-toggle="tooltip"]') && currentTooltip) {
+                    currentTooltip.hide();
+                    currentTooltip = null;
+                }
             });
         });
         </script>
