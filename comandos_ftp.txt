@@ -1,0 +1,15 @@
+user pak@pakin.lat Z@87912151
+binary
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put melate-retro-verificador.html
+! sleep 1
+put melate-retro.html
+! sleep 1
+put melate-retro-resultados-historicos.html
+! sleep 1
+put melate-retro-generador.html
+! sleep 1
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+bye
