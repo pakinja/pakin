@@ -1,0 +1,3 @@
+gana-gato.html
+gana-gato-generador.html
+gana-gato-verificador.html
