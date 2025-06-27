@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="vie, 27 jun 2025 15:26:37 CST">
+    <meta http-equiv="last-modified" content="vie, 27 jun 2025 17:55:23 CST">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         crossorigin="anonymous" defer>
 
@@ -57,7 +57,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2025-06-27T15:26:37-06:00",
+          "dateModified": "2025-06-27T17:55:23-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -8909,8 +8909,17 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
-" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
+" defer></script> -->
+
+
+    <script type="module">
+        // importamos sólo el Dropdown
+        import Dropdown from 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.esm.min.js';
+        // inicializamos todos los toggles automágicamente
+        document.querySelectorAll('[data-bs-toggle="dropdown"]')
+            .forEach(el => new Dropdown(el));
+    </script>
 
 
 
