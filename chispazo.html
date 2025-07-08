@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:27:30 CST">
+    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:34:25 CST">
 
 
 
@@ -13,26 +13,29 @@
 
 
     <style>
-        /* Estilizar popover para que parezca tooltip */
-        .popover {
+        /* Estilo unificado para popover (móvil) y tooltip (desktop) */
+        .popover,
+        .tooltip-inner {
             background-color: rgba(0, 0, 0, 0.85);
             color: #fff;
-            border: none;
-            border-radius: 0.3rem;
-            padding: 0.25rem 0.5rem;
             font-size: 0.875rem;
+            border-radius: 0.3rem;
             max-width: 200px;
+            padding: 0.25rem 0.5rem;
+            text-align: center;
+        }
+
+        .popover {
+            border: none;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         }
 
-        .popover .popover-body {
-            padding: 0;
-        }
-
-        .popover-arrow {
-            display: none;
+        .popover-arrow,
+        .tooltip-arrow {
+            display: none !important;
         }
     </style>
+
 
 
 
@@ -86,7 +89,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2025-07-07T19:27:30-06:00",
+          "dateModified": "2025-07-07T19:34:25-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -6848,8 +6851,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #1589FF;" data-tooltip-content="Estado: IDX = 0"
                             tabindex="0">
@@ -6859,8 +6862,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6870,8 +6873,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6881,8 +6884,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6892,8 +6895,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6919,8 +6922,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(32.1111111111111, 
-                                 32.1111111111111, 
+                        <td class="text-center" style="background-color: rgb(32.1111111111111,
+                                 32.1111111111111,
                                  32.1111111111111);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -6930,8 +6933,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(146.12969924812032, 
-                                 146.12969924812032, 
+                        <td class="text-center" style="background-color: rgb(146.12969924812032,
+                                 146.12969924812032,
                                  146.12969924812032);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -6941,8 +6944,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6952,8 +6955,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6963,8 +6966,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -6990,8 +6993,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(60.51709401709404, 
-                                 60.51709401709404, 
+                        <td class="text-center" style="background-color: rgb(60.51709401709404,
+                                 60.51709401709404,
                                  60.51709401709404);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -7001,8 +7004,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(91.80639097744363, 
-                                 91.80639097744363, 
+                        <td class="text-center" style="background-color: rgb(91.80639097744363,
+                                 91.80639097744363,
                                  91.80639097744363);
            color: #1589FF;" data-tooltip-content="Estado: IDX = 0"
                             tabindex="0">
@@ -7012,8 +7015,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(207.5889687235841, 
-                                 207.5889687235841, 
+                        <td class="text-center" style="background-color: rgb(207.5889687235841,
+                                 207.5889687235841,
                                  207.5889687235841);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7023,8 +7026,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7034,8 +7037,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7061,8 +7064,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(85.51435897435896, 
-                                 85.51435897435896, 
+                        <td class="text-center" style="background-color: rgb(85.51435897435896,
+                                 85.51435897435896,
                                  85.51435897435896);
            color: #59E817;" data-tooltip-content="Estado: IDX ~ PROM"
                             tabindex="0">
@@ -7072,8 +7075,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(51.824436090225525, 
-                                 51.824436090225525, 
+                        <td class="text-center" style="background-color: rgb(51.824436090225525,
+                                 51.824436090225525,
                                  51.824436090225525);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7083,8 +7086,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(191.46555367709215, 
-                                 191.46555367709215, 
+                        <td class="text-center" style="background-color: rgb(191.46555367709215,
+                                 191.46555367709215,
                                  191.46555367709215);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -7094,8 +7097,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.09812030075187, 
-                                 216.09812030075187, 
+                        <td class="text-center" style="background-color: rgb(216.09812030075187,
+                                 216.09812030075187,
                                  216.09812030075187);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7105,8 +7108,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7132,8 +7135,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(107.38696581196582, 
-                                 107.38696581196582, 
+                        <td class="text-center" style="background-color: rgb(107.38696581196582,
+                                 107.38696581196582,
                                  107.38696581196582);
            color: #59E817;" data-tooltip-content="Estado: IDX ~ PROM"
                             tabindex="0">
@@ -7143,8 +7146,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(24.336842105263194, 
-                                 24.336842105263194, 
+                        <td class="text-center" style="background-color: rgb(24.336842105263194,
+                                 24.336842105263194,
                                  24.336842105263194);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7154,8 +7157,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(170.3951817413356, 
-                                 170.3951817413356, 
+                        <td class="text-center" style="background-color: rgb(170.3951817413356,
+                                 170.3951817413356,
                                  170.3951817413356);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7165,8 +7168,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(214.25112781954888, 
-                                 214.25112781954888, 
+                        <td class="text-center" style="background-color: rgb(214.25112781954888,
+                                 214.25112781954888,
                                  214.25112781954888);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7176,8 +7179,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.73764957264956, 
-                                 216.73764957264956, 
+                        <td class="text-center" style="background-color: rgb(216.73764957264956,
+                                 216.73764957264956,
                                  216.73764957264956);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7203,8 +7206,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(126.40662393162395, 
-                                 126.40662393162395, 
+                        <td class="text-center" style="background-color: rgb(126.40662393162395,
+                                 126.40662393162395,
                                  126.40662393162395);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7214,8 +7217,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(7.605263157894732, 
-                                 7.605263157894732, 
+                        <td class="text-center" style="background-color: rgb(7.605263157894732,
+                                 7.605263157894732,
                                  7.605263157894732);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7225,8 +7228,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(146.21005917159763, 
-                                 146.21005917159763, 
+                        <td class="text-center" style="background-color: rgb(146.21005917159763,
+                                 146.21005917159763,
                                  146.21005917159763);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7236,8 +7239,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(210.77443609022558, 
-                                 210.77443609022558, 
+                        <td class="text-center" style="background-color: rgb(210.77443609022558,
+                                 210.77443609022558,
                                  210.77443609022558);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7247,8 +7250,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.68824786324785, 
-                                 216.68824786324785, 
+                        <td class="text-center" style="background-color: rgb(216.68824786324785,
+                                 216.68824786324785,
                                  216.68824786324785);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7274,8 +7277,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(142.83269230769233, 
-                                 142.83269230769233, 
+                        <td class="text-center" style="background-color: rgb(142.83269230769233,
+                                 142.83269230769233,
                                  142.83269230769233);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7285,8 +7288,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #59E817;" data-tooltip-content="Estado: IDX ~ PROM"
                             tabindex="0">
@@ -7296,8 +7299,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(120.55917159763314, 
-                                 120.55917159763314, 
+                        <td class="text-center" style="background-color: rgb(120.55917159763314,
+                                 120.55917159763314,
                                  120.55917159763314);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7307,8 +7310,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(205.34210526315792, 
-                                 205.34210526315792, 
+                        <td class="text-center" style="background-color: rgb(205.34210526315792,
+                                 205.34210526315792,
                                  205.34210526315792);
            color: #E41B17;" data-tooltip-content="Estado: IDX >= 0.5*MAX"
                             tabindex="0">
@@ -7318,8 +7321,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.56474358974359, 
-                                 216.56474358974359, 
+                        <td class="text-center" style="background-color: rgb(216.56474358974359,
+                                 216.56474358974359,
                                  216.56474358974359);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7345,8 +7348,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(156.9121794871795, 
-                                 156.9121794871795, 
+                        <td class="text-center" style="background-color: rgb(156.9121794871795,
+                                 156.9121794871795,
                                  156.9121794871795);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7356,8 +7359,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7367,8 +7370,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(94.90828402366864, 
-                                 94.90828402366864, 
+                        <td class="text-center" style="background-color: rgb(94.90828402366864,
+                                 94.90828402366864,
                                  94.90828402366864);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -7378,8 +7381,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(197.73684210526315, 
-                                 197.73684210526315, 
+                        <td class="text-center" style="background-color: rgb(197.73684210526315,
+                                 197.73684210526315,
                                  197.73684210526315);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7389,8 +7392,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.31773504273505, 
-                                 216.31773504273505, 
+                        <td class="text-center" style="background-color: rgb(216.31773504273505,
+                                 216.31773504273505,
                                  216.31773504273505);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7416,8 +7419,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(168.87974358974358, 
-                                 168.87974358974358, 
+                        <td class="text-center" style="background-color: rgb(168.87974358974358,
+                                 168.87974358974358,
                                  168.87974358974358);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7427,8 +7430,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(6.192857142857132, 
-                                 6.192857142857132, 
+                        <td class="text-center" style="background-color: rgb(6.192857142857132,
+                                 6.192857142857132,
                                  6.192857142857132);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -7438,8 +7441,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(70.53994082840235, 
-                                 70.53994082840235, 
+                        <td class="text-center" style="background-color: rgb(70.53994082840235,
+                                 70.53994082840235,
                                  70.53994082840235);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7449,8 +7452,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(187.84999999999997, 
-                                 187.84999999999997, 
+                        <td class="text-center" style="background-color: rgb(187.84999999999997,
+                                 187.84999999999997,
                                  187.84999999999997);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7460,8 +7463,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(215.88547008547008, 
-                                 215.88547008547008, 
+                        <td class="text-center" style="background-color: rgb(215.88547008547008,
+                                 215.88547008547008,
                                  215.88547008547008);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -7487,8 +7490,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(178.95769230769233, 
-                                 178.95769230769233, 
+                        <td class="text-center" style="background-color: rgb(178.95769230769233,
+                                 178.95769230769233,
                                  178.95769230769233);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -7498,8 +7501,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(17.274812030075164, 
-                                 17.274812030075164, 
+                        <td class="text-center" style="background-color: rgb(17.274812030075164,
+                                 17.274812030075164,
                                  17.274812030075164);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7509,8 +7512,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(48.55346576500419, 
-                                 48.55346576500419, 
+                        <td class="text-center" style="background-color: rgb(48.55346576500419,
+                                 48.55346576500419,
                                  48.55346576500419);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7520,8 +7523,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(175.68157894736842, 
-                                 175.68157894736842, 
+                        <td class="text-center" style="background-color: rgb(175.68157894736842,
+                                 175.68157894736842,
                                  175.68157894736842);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7531,8 +7534,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(215.19384615384615, 
-                                 215.19384615384615, 
+                        <td class="text-center" style="background-color: rgb(215.19384615384615,
+                                 215.19384615384615,
                                  215.19384615384615);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7558,8 +7561,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(187.35598290598293, 
-                                 187.35598290598293, 
+                        <td class="text-center" style="background-color: rgb(187.35598290598293,
+                                 187.35598290598293,
                                  187.35598290598293);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7569,8 +7572,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(32.05075187969924, 
-                                 32.05075187969924, 
+                        <td class="text-center" style="background-color: rgb(32.05075187969924,
+                                 32.05075187969924,
                                  32.05075187969924);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7580,8 +7583,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(29.864961961115778, 
-                                 29.864961961115778, 
+                        <td class="text-center" style="background-color: rgb(29.864961961115778,
+                                 29.864961961115778,
                                  29.864961961115778);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7591,8 +7594,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(161.34022556390977, 
-                                 161.34022556390977, 
+                        <td class="text-center" style="background-color: rgb(161.34022556390977,
+                                 161.34022556390977,
                                  161.34022556390977);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7602,8 +7605,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(214.15641025641025, 
-                                 214.15641025641025, 
+                        <td class="text-center" style="background-color: rgb(214.15641025641025,
+                                 214.15641025641025,
                                  214.15641025641025);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7629,8 +7632,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(194.2722222222222, 
-                                 194.2722222222222, 
+                        <td class="text-center" style="background-color: rgb(194.2722222222222,
+                                 194.2722222222222,
                                  194.2722222222222);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7640,8 +7643,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(49.43421052631577, 
-                                 49.43421052631577, 
+                        <td class="text-center" style="background-color: rgb(49.43421052631577,
+                                 49.43421052631577,
                                  49.43421052631577);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7651,8 +7654,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(15.207311918850353, 
-                                 15.207311918850353, 
+                        <td class="text-center" style="background-color: rgb(15.207311918850353,
+                                 15.207311918850353,
                                  15.207311918850353);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -7662,8 +7665,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(145.04323308270676, 
-                                 145.04323308270676, 
+                        <td class="text-center" style="background-color: rgb(145.04323308270676,
+                                 145.04323308270676,
                                  145.04323308270676);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7673,8 +7676,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(212.67435897435897, 
-                                 212.67435897435897, 
+                        <td class="text-center" style="background-color: rgb(212.67435897435897,
+                                 212.67435897435897,
                                  212.67435897435897);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7700,8 +7703,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(199.89166666666665, 
-                                 199.89166666666665, 
+                        <td class="text-center" style="background-color: rgb(199.89166666666665,
+                                 199.89166666666665,
                                  199.89166666666665);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7711,8 +7714,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(68.44736842105262, 
-                                 68.44736842105262, 
+                        <td class="text-center" style="background-color: rgb(68.44736842105262,
+                                 68.44736842105262,
                                  68.44736842105262);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7722,8 +7725,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(5.130177514792875, 
-                                 5.130177514792875, 
+                        <td class="text-center" style="background-color: rgb(5.130177514792875,
+                                 5.130177514792875,
                                  5.130177514792875);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -7733,8 +7736,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(127.11654135338347, 
-                                 127.11654135338347, 
+                        <td class="text-center" style="background-color: rgb(127.11654135338347,
+                                 127.11654135338347,
                                  127.11654135338347);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7744,8 +7747,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(210.63653846153846, 
-                                 210.63653846153846, 
+                        <td class="text-center" style="background-color: rgb(210.63653846153846,
+                                 210.63653846153846,
                                  210.63653846153846);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7771,8 +7774,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(204.38722222222222, 
-                                 204.38722222222222, 
+                        <td class="text-center" style="background-color: rgb(204.38722222222222,
+                                 204.38722222222222,
                                  204.38722222222222);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7782,8 +7785,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(88.22105263157893, 
-                                 88.22105263157893, 
+                        <td class="text-center" style="background-color: rgb(88.22105263157893,
+                                 88.22105263157893,
                                  88.22105263157893);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7793,8 +7796,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7804,8 +7807,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(107.99473684210525, 
-                                 107.99473684210525, 
+                        <td class="text-center" style="background-color: rgb(107.99473684210525,
+                                 107.99473684210525,
                                  107.99473684210525);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7815,8 +7818,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(207.91944444444445, 
-                                 207.91944444444445, 
+                        <td class="text-center" style="background-color: rgb(207.91944444444445,
+                                 207.91944444444445,
                                  207.91944444444445);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7842,8 +7845,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(207.91944444444445, 
-                                 207.91944444444445, 
+                        <td class="text-center" style="background-color: rgb(207.91944444444445,
+                                 207.91944444444445,
                                  207.91944444444445);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7853,8 +7856,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(107.99473684210525, 
-                                 107.99473684210525, 
+                        <td class="text-center" style="background-color: rgb(107.99473684210525,
+                                 107.99473684210525,
                                  107.99473684210525);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7864,8 +7867,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -7875,8 +7878,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(88.22105263157893, 
-                                 88.22105263157893, 
+                        <td class="text-center" style="background-color: rgb(88.22105263157893,
+                                 88.22105263157893,
                                  88.22105263157893);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -7886,8 +7889,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(204.38722222222222, 
-                                 204.38722222222222, 
+                        <td class="text-center" style="background-color: rgb(204.38722222222222,
+                                 204.38722222222222,
                                  204.38722222222222);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7913,8 +7916,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(210.63653846153846, 
-                                 210.63653846153846, 
+                        <td class="text-center" style="background-color: rgb(210.63653846153846,
+                                 210.63653846153846,
                                  210.63653846153846);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7924,8 +7927,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(127.11654135338347, 
-                                 127.11654135338347, 
+                        <td class="text-center" style="background-color: rgb(127.11654135338347,
+                                 127.11654135338347,
                                  127.11654135338347);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7935,8 +7938,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(5.130177514792875, 
-                                 5.130177514792875, 
+                        <td class="text-center" style="background-color: rgb(5.130177514792875,
+                                 5.130177514792875,
                                  5.130177514792875);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7946,8 +7949,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(68.44736842105262, 
-                                 68.44736842105262, 
+                        <td class="text-center" style="background-color: rgb(68.44736842105262,
+                                 68.44736842105262,
                                  68.44736842105262);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -7957,8 +7960,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(199.89166666666665, 
-                                 199.89166666666665, 
+                        <td class="text-center" style="background-color: rgb(199.89166666666665,
+                                 199.89166666666665,
                                  199.89166666666665);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7984,8 +7987,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(212.67435897435897, 
-                                 212.67435897435897, 
+                        <td class="text-center" style="background-color: rgb(212.67435897435897,
+                                 212.67435897435897,
                                  212.67435897435897);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -7995,8 +7998,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(145.04323308270676, 
-                                 145.04323308270676, 
+                        <td class="text-center" style="background-color: rgb(145.04323308270676,
+                                 145.04323308270676,
                                  145.04323308270676);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -8006,8 +8009,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(15.207311918850353, 
-                                 15.207311918850353, 
+                        <td class="text-center" style="background-color: rgb(15.207311918850353,
+                                 15.207311918850353,
                                  15.207311918850353);
            color: #1589FF;" data-tooltip-content="Estado: IDX = 0"
                             tabindex="0">
@@ -8017,8 +8020,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(49.43421052631577, 
-                                 49.43421052631577, 
+                        <td class="text-center" style="background-color: rgb(49.43421052631577,
+                                 49.43421052631577,
                                  49.43421052631577);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8028,8 +8031,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(194.2722222222222, 
-                                 194.2722222222222, 
+                        <td class="text-center" style="background-color: rgb(194.2722222222222,
+                                 194.2722222222222,
                                  194.2722222222222);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8055,8 +8058,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(214.15641025641025, 
-                                 214.15641025641025, 
+                        <td class="text-center" style="background-color: rgb(214.15641025641025,
+                                 214.15641025641025,
                                  214.15641025641025);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8066,8 +8069,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(161.34022556390977, 
-                                 161.34022556390977, 
+                        <td class="text-center" style="background-color: rgb(161.34022556390977,
+                                 161.34022556390977,
                                  161.34022556390977);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8077,8 +8080,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(29.864961961115778, 
-                                 29.864961961115778, 
+                        <td class="text-center" style="background-color: rgb(29.864961961115778,
+                                 29.864961961115778,
                                  29.864961961115778);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -8088,8 +8091,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(32.05075187969924, 
-                                 32.05075187969924, 
+                        <td class="text-center" style="background-color: rgb(32.05075187969924,
+                                 32.05075187969924,
                                  32.05075187969924);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8099,8 +8102,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(187.35598290598293, 
-                                 187.35598290598293, 
+                        <td class="text-center" style="background-color: rgb(187.35598290598293,
+                                 187.35598290598293,
                                  187.35598290598293);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8126,8 +8129,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(215.19384615384615, 
-                                 215.19384615384615, 
+                        <td class="text-center" style="background-color: rgb(215.19384615384615,
+                                 215.19384615384615,
                                  215.19384615384615);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8137,8 +8140,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(175.68157894736842, 
-                                 175.68157894736842, 
+                        <td class="text-center" style="background-color: rgb(175.68157894736842,
+                                 175.68157894736842,
                                  175.68157894736842);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8148,8 +8151,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(48.55346576500419, 
-                                 48.55346576500419, 
+                        <td class="text-center" style="background-color: rgb(48.55346576500419,
+                                 48.55346576500419,
                                  48.55346576500419);
            color: #E41B17;" data-tooltip-content="Estado: IDX >= 0.5*MAX"
                             tabindex="0">
@@ -8159,8 +8162,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(17.274812030075164, 
-                                 17.274812030075164, 
+                        <td class="text-center" style="background-color: rgb(17.274812030075164,
+                                 17.274812030075164,
                                  17.274812030075164);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -8170,8 +8173,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(178.95769230769233, 
-                                 178.95769230769233, 
+                        <td class="text-center" style="background-color: rgb(178.95769230769233,
+                                 178.95769230769233,
                                  178.95769230769233);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8197,8 +8200,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(215.88547008547008, 
-                                 215.88547008547008, 
+                        <td class="text-center" style="background-color: rgb(215.88547008547008,
+                                 215.88547008547008,
                                  215.88547008547008);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8208,8 +8211,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(187.84999999999997, 
-                                 187.84999999999997, 
+                        <td class="text-center" style="background-color: rgb(187.84999999999997,
+                                 187.84999999999997,
                                  187.84999999999997);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8219,8 +8222,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(70.53994082840235, 
-                                 70.53994082840235, 
+                        <td class="text-center" style="background-color: rgb(70.53994082840235,
+                                 70.53994082840235,
                                  70.53994082840235);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8230,8 +8233,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(6.192857142857132, 
-                                 6.192857142857132, 
+                        <td class="text-center" style="background-color: rgb(6.192857142857132,
+                                 6.192857142857132,
                                  6.192857142857132);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8241,8 +8244,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(168.87974358974358, 
-                                 168.87974358974358, 
+                        <td class="text-center" style="background-color: rgb(168.87974358974358,
+                                 168.87974358974358,
                                  168.87974358974358);
            color: #59E817;" data-tooltip-content="Estado: IDX ~ PROM"
                             tabindex="0">
@@ -8268,8 +8271,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.31773504273505, 
-                                 216.31773504273505, 
+                        <td class="text-center" style="background-color: rgb(216.31773504273505,
+                                 216.31773504273505,
                                  216.31773504273505);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8279,8 +8282,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(197.73684210526315, 
-                                 197.73684210526315, 
+                        <td class="text-center" style="background-color: rgb(197.73684210526315,
+                                 197.73684210526315,
                                  197.73684210526315);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8290,8 +8293,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(94.90828402366864, 
-                                 94.90828402366864, 
+                        <td class="text-center" style="background-color: rgb(94.90828402366864,
+                                 94.90828402366864,
                                  94.90828402366864);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8301,8 +8304,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #E41B17;" data-tooltip-content="Estado: IDX >= 0.5*MAX"
                             tabindex="0">
@@ -8312,8 +8315,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(156.9121794871795, 
-                                 156.9121794871795, 
+                        <td class="text-center" style="background-color: rgb(156.9121794871795,
+                                 156.9121794871795,
                                  156.9121794871795);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8339,8 +8342,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.56474358974359, 
-                                 216.56474358974359, 
+                        <td class="text-center" style="background-color: rgb(216.56474358974359,
+                                 216.56474358974359,
                                  216.56474358974359);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8350,8 +8353,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(205.34210526315792, 
-                                 205.34210526315792, 
+                        <td class="text-center" style="background-color: rgb(205.34210526315792,
+                                 205.34210526315792,
                                  205.34210526315792);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8361,8 +8364,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(120.55917159763314, 
-                                 120.55917159763314, 
+                        <td class="text-center" style="background-color: rgb(120.55917159763314,
+                                 120.55917159763314,
                                  120.55917159763314);
            color: #E41B17;" data-tooltip-content="Estado: IDX >= 0.5*MAX"
                             tabindex="0">
@@ -8372,8 +8375,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8383,8 +8386,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(142.83269230769233, 
-                                 142.83269230769233, 
+                        <td class="text-center" style="background-color: rgb(142.83269230769233,
+                                 142.83269230769233,
                                  142.83269230769233);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -8410,8 +8413,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.68824786324785, 
-                                 216.68824786324785, 
+                        <td class="text-center" style="background-color: rgb(216.68824786324785,
+                                 216.68824786324785,
                                  216.68824786324785);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8421,8 +8424,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(210.77443609022558, 
-                                 210.77443609022558, 
+                        <td class="text-center" style="background-color: rgb(210.77443609022558,
+                                 210.77443609022558,
                                  210.77443609022558);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8432,8 +8435,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(146.21005917159763, 
-                                 146.21005917159763, 
+                        <td class="text-center" style="background-color: rgb(146.21005917159763,
+                                 146.21005917159763,
                                  146.21005917159763);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8443,8 +8446,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(7.605263157894732, 
-                                 7.605263157894732, 
+                        <td class="text-center" style="background-color: rgb(7.605263157894732,
+                                 7.605263157894732,
                                  7.605263157894732);
            color: #1589FF;" data-tooltip-content="Estado: IDX = 0"
                             tabindex="0">
@@ -8454,8 +8457,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(126.40662393162395, 
-                                 126.40662393162395, 
+                        <td class="text-center" style="background-color: rgb(126.40662393162395,
+                                 126.40662393162395,
                                  126.40662393162395);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -8481,8 +8484,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.73764957264956, 
-                                 216.73764957264956, 
+                        <td class="text-center" style="background-color: rgb(216.73764957264956,
+                                 216.73764957264956,
                                  216.73764957264956);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8492,8 +8495,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(214.25112781954888, 
-                                 214.25112781954888, 
+                        <td class="text-center" style="background-color: rgb(214.25112781954888,
+                                 214.25112781954888,
                                  214.25112781954888);
            color: #FF6700;" data-tooltip-content="Estado: IDX >= PROM + STD"
                             tabindex="0">
@@ -8503,8 +8506,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(170.3951817413356, 
-                                 170.3951817413356, 
+                        <td class="text-center" style="background-color: rgb(170.3951817413356,
+                                 170.3951817413356,
                                  170.3951817413356);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8514,8 +8517,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(24.336842105263194, 
-                                 24.336842105263194, 
+                        <td class="text-center" style="background-color: rgb(24.336842105263194,
+                                 24.336842105263194,
                                  24.336842105263194);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8525,8 +8528,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(107.38696581196582, 
-                                 107.38696581196582, 
+                        <td class="text-center" style="background-color: rgb(107.38696581196582,
+                                 107.38696581196582,
                                  107.38696581196582);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8552,8 +8555,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8563,8 +8566,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.09812030075187, 
-                                 216.09812030075187, 
+                        <td class="text-center" style="background-color: rgb(216.09812030075187,
+                                 216.09812030075187,
                                  216.09812030075187);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8574,8 +8577,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(191.46555367709215, 
-                                 191.46555367709215, 
+                        <td class="text-center" style="background-color: rgb(191.46555367709215,
+                                 191.46555367709215,
                                  191.46555367709215);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8585,8 +8588,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(51.824436090225525, 
-                                 51.824436090225525, 
+                        <td class="text-center" style="background-color: rgb(51.824436090225525,
+                                 51.824436090225525,
                                  51.824436090225525);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8596,8 +8599,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(85.51435897435896, 
-                                 85.51435897435896, 
+                        <td class="text-center" style="background-color: rgb(85.51435897435896,
+                                 85.51435897435896,
                                  85.51435897435896);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8623,8 +8626,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8634,8 +8637,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8645,8 +8648,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(207.5889687235841, 
-                                 207.5889687235841, 
+                        <td class="text-center" style="background-color: rgb(207.5889687235841,
+                                 207.5889687235841,
                                  207.5889687235841);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8656,8 +8659,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(91.80639097744363, 
-                                 91.80639097744363, 
+                        <td class="text-center" style="background-color: rgb(91.80639097744363,
+                                 91.80639097744363,
                                  91.80639097744363);
            color: #F1E5AC;" data-tooltip-content="Estado: IDX >= PROM"
                             tabindex="0">
@@ -8667,8 +8670,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(60.51709401709404, 
-                                 60.51709401709404, 
+                        <td class="text-center" style="background-color: rgb(60.51709401709404,
+                                 60.51709401709404,
                                  60.51709401709404);
            color: #1589FF;" data-tooltip-content="Estado: IDX = 0"
                             tabindex="0">
@@ -8694,8 +8697,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8705,8 +8708,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8716,8 +8719,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8727,8 +8730,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(146.12969924812032, 
-                                 146.12969924812032, 
+                        <td class="text-center" style="background-color: rgb(146.12969924812032,
+                                 146.12969924812032,
                                  146.12969924812032);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8738,8 +8741,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(32.1111111111111, 
-                                 32.1111111111111, 
+                        <td class="text-center" style="background-color: rgb(32.1111111111111,
+                                 32.1111111111111,
                                  32.1111111111111);
            color: #FFFFFF;" data-tooltip-content="Estado: IDX < PROM"
                             tabindex="0">
@@ -8765,8 +8768,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8776,8 +8779,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8787,8 +8790,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8798,8 +8801,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(216.75, 
-                                 216.75, 
+                        <td class="text-center" style="background-color: rgb(216.75,
+                                 216.75,
                                  216.75);
            color: #FFFFFF;" data-tooltip-content="Estado: None"
                             tabindex="0">
@@ -8809,8 +8812,8 @@
                         
                         
                         
-                        <td class="text-center" style="background-color: rgb(0.0, 
-                                 0.0, 
+                        <td class="text-center" style="background-color: rgb(0.0,
+                                 0.0,
                                  0.0);
            color: #FDD017;" data-tooltip-content="Estado: IDX >= P80"
                             tabindex="0">
@@ -8990,23 +8993,40 @@
         document.addEventListener("DOMContentLoaded", function () {
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             const elements = document.querySelectorAll('td[data-tooltip-content]');
-            const instances = [];
+            const instances = new Map();
 
             elements.forEach(el => {
                 const content = el.getAttribute('data-tooltip-content');
 
                 if (isMobile) {
-                    el.setAttribute('data-bs-toggle', 'popover');
-                    el.setAttribute('data-bs-trigger', 'focus');
-                    el.setAttribute('data-bs-content', content);
                     const pop = new bootstrap.Popover(el, {
+                        content: content,
                         container: 'body',
                         placement: 'auto',
                         boundary: 'viewport',
-                        trigger: 'focus'
+                        trigger: 'manual' // Controlado 100% por JS
                     });
-                    instances.push(pop);
+                    instances.set(el, pop);
+
+                    el.addEventListener('click', (e) => {
+                        e.stopPropagation();
+
+                        // Cierra todos antes de abrir el nuevo
+                        instances.forEach((p, target) => {
+                            if (target !== el) p.hide();
+                        });
+
+                        // Toggle manual
+                        if (el.classList.contains('active-popover')) {
+                            pop.hide();
+                            el.classList.remove('active-popover');
+                        } else {
+                            pop.show();
+                            el.classList.add('active-popover');
+                        }
+                    });
                 } else {
+                    // Desktop tooltip con hover
                     el.setAttribute('data-bs-toggle', 'tooltip');
                     el.setAttribute('data-bs-title', content);
                     el.setAttribute('data-bs-trigger', 'hover');
@@ -9015,36 +9035,40 @@
                         placement: 'auto',
                         boundary: 'viewport'
                     });
-                    instances.push(tip);
+                    instances.set(el, tip);
                 }
             });
 
-            // Función para ocultar todos los tooltips/popovers
-            function hideAll() {
-                instances.forEach(inst => inst.hide && inst.hide());
-            }
+            // Ocultar popovers al hacer scroll (contenedor y ventana)
+            const hideAll = () => {
+                instances.forEach((inst, el) => {
+                    if (el.classList.contains('active-popover')) {
+                        inst.hide();
+                        el.classList.remove('active-popover');
+                    }
+                });
+            };
 
-            // Cierra en scroll del contenedor
             const scrollContainer = document.querySelector('.resultados');
             if (scrollContainer) {
                 scrollContainer.addEventListener('scroll', hideAll);
             }
 
-            // También cerrar al hacer scroll en todo el documento (fallback)
             window.addEventListener('scroll', hideAll, true);
 
-            // Cierra popovers al tocar fuera (móvil)
+            // Tocar fuera también cierra popovers
             if (isMobile) {
                 document.addEventListener('click', function (e) {
                     elements.forEach(el => {
                         if (!el.contains(e.target)) {
-                            el.blur(); // fuerza perder el foco = oculta popover
+                            hideAll();
                         }
                     });
                 });
             }
         });
     </script>
+
 
 
 
