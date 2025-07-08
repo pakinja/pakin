@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:15:00 CST">
+    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:21:41 CST">
 
 
 
@@ -62,7 +62,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2025-07-07T19:15:00-06:00",
+          "dateModified": "2025-07-07T19:21:41-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -8966,7 +8966,6 @@
         document.addEventListener("DOMContentLoaded", function () {
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             const elements = document.querySelectorAll('td[data-tooltip-content]');
-
             const instances = [];
 
             elements.forEach(el => {
@@ -8980,6 +8979,7 @@
                         container: 'body',
                         placement: 'auto',
                         boundary: 'viewport',
+                        trigger: 'focus'
                     });
                     instances.push(pop);
                 } else {
@@ -8988,33 +8988,40 @@
                     el.setAttribute('data-bs-trigger', 'hover');
                     const tip = new bootstrap.Tooltip(el, {
                         container: 'body',
-                        boundary: 'viewport',
                         placement: 'auto',
+                        boundary: 'viewport'
                     });
                     instances.push(tip);
                 }
             });
 
-            // Cierra tooltips/popovers al hacer scroll
-            const resultados = document.querySelector('.resultados');
-            if (resultados) {
-                resultados.addEventListener('scroll', () => {
-                    instances.forEach(inst => inst.hide());
-                });
+            // Función para ocultar todos los tooltips/popovers
+            function hideAll() {
+                instances.forEach(inst => inst.hide && inst.hide());
             }
 
-            // También cerrar popovers al tocar fuera (solo en móvil)
+            // Cierra en scroll del contenedor
+            const scrollContainer = document.querySelector('.resultados');
+            if (scrollContainer) {
+                scrollContainer.addEventListener('scroll', hideAll);
+            }
+
+            // También cerrar al hacer scroll en todo el documento (fallback)
+            window.addEventListener('scroll', hideAll, true);
+
+            // Cierra popovers al tocar fuera (móvil)
             if (isMobile) {
                 document.addEventListener('click', function (e) {
-                    instances.forEach(function (popover) {
-                        if (popover._element !== e.target && !popover._element.contains(e.target)) {
-                            popover.hide();
+                    elements.forEach(el => {
+                        if (!el.contains(e.target)) {
+                            el.blur(); // fuerza perder el foco = oculta popover
                         }
                     });
                 });
             }
         });
     </script>
+
 
 
 
