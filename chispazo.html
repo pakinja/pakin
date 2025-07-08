@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:37:14 CST">
+    <meta http-equiv="last-modified" content="lun, 07 jul 2025 19:46:19 CST">
 
 
 
@@ -62,7 +62,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2025-07-07T19:37:14-06:00",
+          "dateModified": "2025-07-07T19:46:19-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -8961,6 +8961,24 @@
             });
         })();
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarCollapse = document.getElementById("navbarNav");
+            const navLinks = navbarCollapse.querySelectorAll("a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    const isExpanded = document.querySelector(".navbar-toggler").getAttribute("aria-expanded");
+                    if (isExpanded === "true") {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
+
 
 </body>
 
