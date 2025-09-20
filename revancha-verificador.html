@@ -3,7 +3,7 @@
 <html lang="es">
 
 <head>
-  <meta http-equiv="last-modified" content="mié, 17 sep 2025 22:48:32 CST">
+  <meta http-equiv="last-modified" content="vie, 19 sep 2025 19:03:14 CST">
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="mar, 13 may 2025 19:30:35 CST" http-equiv="last-modified" />
@@ -133,19 +133,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Secciones Tris Analítica
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                                <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                                <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                                <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                                <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                                <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                            </ul>
-                        </li> -->
           <li class="nav-item">
             <a class="nav-link" href="revancha">
               Revancha Analítica
@@ -164,19 +151,6 @@
         </ul>
       </div>
       <ul class="navbar-nav d-lg-none dropdown-mobile">
-        <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Tris Analítica
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMobile">
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                        </ul>
-                    </li> -->
       </ul>
     </div>
   </nav>
@@ -271,15 +245,15 @@
         </tbody>
       </table>
     </div>
-    <div id="preloader"
-      style="display: none; text-align: center; font-size: 22px; font-weight: normal; color: #fff; padding: 15px; border-radius: 8px; border: 1px solid #8B0000; background: #8B0000; width: fit-content; margin: 15px auto;">
-      <span id="preloaderText">
+
+    <div id="preloader">
+      <div class="loading-msg">
         Buscando
-      </span>
-      <span id="dots">
-        ...
-      </span>
+        <span class="dots">
+        </span>
+      </div>
     </div>
+    
     <form align="center" id="form2">
       <input id="fecha" name="FECHA" type="date" />
       <div class="buscar">
