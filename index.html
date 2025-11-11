@@ -11,70 +11,91 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.css" defer>
   <style>
     .navbar {
-         background-color: #8B0000;
-         }
- 
-         .nav-link {
-         color: #ffffff;
-         opacity: 1; 
-         }
- 
-         .dropdown-mobile {
-             width: 100%;
-             text-align: center;
-         }
- 
-         .dropdown-mobile .nav-link {
-             display: block;
-             width: 100%;
-             padding: 10px 0;
-             background-color: #fff;
-             color: #8B0000;
-             border-radius: 5px;
-             margin: 5px 0;
-         }
- 
-         .card {
-             border-radius: 15px;
-             /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; */
-             transition: box-shadow 0.2s ease-in-out;
-             max-width: 200px;
-             margin: auto;
-             border: 1px solid #8B0000;
-             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-             overflow: hidden;
-         }
-         .card:hover {
-             transform: scale(1.001);
-             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-         }
-         .card img {
-             width: 100%;
-             height: auto;
-             display: block;
-         }
-         .card-body {
-             padding: 8px;
-         }
-         .card-title {
-             font-size: 1.3rem;
-         }
-         .card-text {
-             font-size: 1.2rem;
-         }
-         .btn {
-             padding: 1px 48.540px;
-             font-size: 1.3rem;
-             background-color: #8B0000;
-             border-color: #8B0000;
-             color: white;
-         }
-         .btn:hover {
-             background-color: #228B22;
-             border-color: #228B22;
-             color: white;
-         }
-   </style>
+      background-color: #8B0000;
+    }
+
+    .nav-link {
+      color: #ffffff;
+      opacity: 1;
+    }
+
+    .dropdown-mobile {
+      width: 100%;
+      text-align: center;
+    }
+
+    .dropdown-mobile .nav-link {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #fff;
+      color: #8B0000;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+
+    .card {
+      border-radius: 15px;
+      /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; */
+      /* transition: box-shadow 0.2s ease-in-out; */
+      max-width: 200px;
+      margin: auto;
+      border: 1px solid #000000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-body {
+      padding: 8px;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+    }
+
+    .card-text {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      padding: 1px 48.540px;
+      font-size: 1.3rem;
+      background-color: #8B0000;
+      border-color: #8B0000;
+      color: white;
+    }
+
+    .btn:hover {
+      background-color: #228B22;
+      border-color: #228B22;
+      color: white;
+    }
+
+    .donar-flotante {
+      position: fixed;
+      bottom: 140px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.7);
+      color: black;
+      padding: 0.8em 1.2em;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      font-weight: bold;
+    }
+
+    .donar-flotante:hover {
+      background-color: #228B22;
+    }
+  </style>
+
   <title>
     Pakin | Datos y Analítica Más Completa de Sorteos
   </title>
@@ -132,7 +153,7 @@
 		"https://www.pakin.lat/images/pakin-historicos.svg"
 	       ],
 	      "datePublished": "2017-02-05T08:00:00+06:00",
-	      "dateModified": "2025-11-11T11:27:51+06:00",
+	      "dateModified": "2025-11-11T11:32:20+06:00",
 	      "keywords": ["chispazo", "tris", "melate", "melate retro", "gana gato", "revancha", "revanchita", "sorteo mayor", "powerball", "megamillions", "resultados de hoy", "verificador de jugadas", "historicos"],
 	      "author": [{
 		  "@type": "Person",
@@ -186,54 +207,11 @@
       </a>
       <a class="navbar-brand" href="\">
       </a>
-      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-      <!-- <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> -->
-      <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Tris Analítica
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                        </ul>
-                    </li> -->
-      <!-- <li class="nav-item">
-                        <a class="nav-link" href="gana-gato">Gana Gato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gana-gato-verificador">Gana Gato Verificador</a>
-                    </li> -->
-      <!-- <li class="nav-item">
-                        <a class="nav-link" href="gana-gato-resultados-historicos">Gana Gato Histórico Completo</a>
-                    </li> -->
-      <!-- </ul>
-            </div> -->
-      <!-- <ul class="navbar-nav d-lg-none dropdown-mobile"> -->
-      <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Secciones Tris Analítica
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMobile">
-                        <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                        <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                        <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                        <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                        <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                        <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                    </ul>
-                </li> -->
-      <!-- </ul> -->
+
     </div>
   </nav>
   <section>
-    <h2 class="titulos verif bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">
+    <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">
       Analítica, Datos, Resultados y Herramientas Sobre Sorteos
     </h2>
     <div align="center">
@@ -248,6 +226,11 @@
     <div class="container py-5">
       <div class="g-ytsubscribe" data-channelid="UCq8uycqV1nI1eSeAcC0pveA" data-count="default" data-layout="full">
       </div>
+
+      <div class="alert text-center mt-3 mb-3" role="alert"
+        style="background:#fff; border:1px solid #8B0000; color:#000000;"> “Analiza tus números, encuentra patrones y
+        confía en tu intuición.” </div>
+
       <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
         <div class="col">
           <div class="card h-100">
@@ -441,27 +424,42 @@
             </div>
           </div>
         </div>
+        <div class="col">
+          <div class="card h-100">
+            <img alt="Pakin Zodiaco" class="card-img-top" src="/images/pakin-zodiaco.webp" />
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                Sorteo Zodiaco
+              </h5>
+              <p class="card-text">
+                Analítica
+              </p>
+              <a class="btn" href="#">
+                Pronto
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+
   <footer class="bg-dark text-light py-4">
     <div class="container">
       <div class="row">
         <!-- Acerca de -->
-        <div class="col-md-4 mb-3">
-          <h5>
-            Acerca de
-          </h5>
-          <p>
-            Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de datos, analítica
-            y herramientas.
+        <div class="col-md-3 mb-3">
+          <h5>Acerca de</h5>
+          <p class="w-100 w-md-75 w-lg-100" style="max-width: 250px;">
+            Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de
+            datos, analítica
+            y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.
           </p>
         </div>
         <!-- Enlaces Rápidos -->
-        <div class="col-md-4 mb-3">
-          <h5>
-            Enlaces Rápidos
-          </h5>
+        <div class="col-md-3 mb-3">
+          <h5>Enlaces Rápidos</h5>
           <ul class="list-unstyled">
             <li>
               <a class="text-light text-decoration-none" href="https://www.pakin.lat/verificadores" rel="noopener"
@@ -481,6 +479,12 @@
                 Históricos
               </a>
             </li>
+          </ul>
+        </div>
+        <!-- Sitios de Interés -->
+        <div class="col-md-3 mb-3">
+          <h5>Sitios de Interés</h5>
+          <ul class="list-unstyled">
             <li>
               <a class="text-light text-decoration-none" href="https://www.loterianacional.gob.mx/home/index"
                 rel="noopener" target="_blank">
@@ -493,28 +497,55 @@
                 Pronosports
               </a>
             </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://www.ligamx.net/" rel="noopener" target="_blank">
+                LigaMX
+              </a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://www.premierleague.com/en/" rel="noopener"
+                target="_blank">
+                Premier League
+              </a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://www.laliga.com/en-MX" rel="noopener"
+                target="_blank">
+                LaLiga
+              </a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://lfa.mx/" rel="noopener" target="_blank">
+                LFA
+              </a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://es.mlssoccer.com/" rel="noopener"
+                target="_blank">
+                MLS
+              </a>
+            </li>
+            <li>
+              <a class="text-light text-decoration-none" href="https://www.nfl.com/international/" rel="noopener"
+                target="_blank">
+                NFL
+              </a>
+            </li>
           </ul>
         </div>
         <!-- Contacto y Redes Sociales -->
-        <div class="col-md-4 mb-3">
-          <h5>
-            Contacto
-          </h5>
-          <p>
-            Email: contacto@pakin.lat
-          </p>
+        <div class="col-md-3 mb-3">
+          <h5>Contacto</h5>
+          <p>Email: contacto@pakin.lat</p>
           <div class="d-flex gap-3">
             <a class="text-light" href="https://www.facebook.com/pakinloteria" rel="noopener" target="_blank">
-              <i class="bi bi-facebook">
-              </i>
+              <i class="bi bi-facebook"></i>
             </a>
-            <a class="text-light" href="#">
-              <i class="bi bi-twitter">
-              </i>
+            <a class="text-light" href="https://x.com/pakinlat" rel="noopener" target="_blank">
+              <i class="bi bi-twitter"></i>
             </a>
             <a class="text-light" href="https://www.linkedin.com/in/fjaramilloa/" rel="noopener" target="_blank">
-              <i class="bi bi-linkedin">
-              </i>
+              <i class="bi bi-linkedin"></i>
             </a>
           </div>
         </div>
@@ -529,37 +560,16 @@
       </div>
     </div>
   </footer>
+
+
+
   <script src="https://apis.google.com/js/platform.js">
   </script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
   </script>
   <script defer="" src="js/tag_manager.js">
   </script>
-  <script data-cfasync="false" id="clever-core" type="text/javascript">
-    /* <![CDATA[ */
-    (function (document, window) {
-      var a, c = document.createElement("script"), f = window.frameElement;
 
-      c.id = "CleverCoreLoader92720";
-      c.src = "https://scripts.cleverwebserver.com/93b7d3fe77a05ad222b3930b167bcddb.js";
-      c.async = !0;
-      c.type = "text/javascript";
-      c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
-      c.setAttribute("data-callback", "put-your-callback-function-here");
-      c.setAttribute("data-callback-url-click", "put-your-click-macro-here");
-      c.setAttribute("data-callback-url-view", "put-your-view-macro-here");
-      try {
-        a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
-      } catch (e) {
-        a = !1;
-      }
-      a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
-      a.parentNode.insertBefore(c, a);
-    })(document, window);
-    /* ]]> */
-  </script>
-  <div class="clever-core-ads-offerwall">
-  </div>
 </body>
 
 </html>
