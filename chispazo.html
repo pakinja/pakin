@@ -4,34 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="mar, 17 mar 2026 19:17:55 CST">
+    <meta http-equiv="last-modified" content="mar, 17 mar 2026 19:53:10 CST">
 
-    <!-- 1. Preconectamos a los servidores de Google (Esto lo dejas igual) -->
+    <!-- 1. PRECONEXIONES (Aceleran DNS y TCP) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <!-- 2. Cargamos el CSS de la fuente de forma asíncrona (El truco del preload) -->
+    <!-- 3. CSS NO CRÍTICO ASÍNCRONO (Fuentes y framework general) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-
-    <!-- 3. Fallback para usuarios sin JavaScript -->
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
     </noscript>
 
-
-    <!-- 1. Preconectamos con el CDN para acelerar la conexión -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
-    <!-- 2. Cargamos el CSS de forma asíncrona -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-
-    <!-- 3. Fallback en caso de que el usuario tenga JavaScript desactivado -->
     <noscript>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
             crossorigin="anonymous">
     </noscript>
+
+    <!-- 4. JAVASCRIPT DIFERIDO -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
 
 
 
@@ -39,6 +36,7 @@
         Chispazo Resultados Históricos y Analítica | Pakin
     </title>
 
+    <!-- 2. CSS CRÍTICO (Bloquea el renderizado de forma intencional para evitar FOUC) -->
     <link href="styles/style_pakin_v26.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -84,7 +82,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "",
+          "dateModified": "2026-03-17T19:53:10-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -8958,8 +8956,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
-        defer></script>
+        crossorigin="anonymous"></script>
+
 
 
 
