@@ -4,41 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="mar, 17 mar 2026 19:04:40 CST">
+    <meta http-equiv="last-modified" content="mar, 17 mar 2026 19:26:40 CST">
 
-    <!-- 1. Preconectamos a los servidores de Google (Esto lo dejas igual) -->
+    <!-- 1. PRECONEXIONES (Aceleran DNS y TCP) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <!-- 2. Cargamos el CSS de la fuente de forma asíncrona (El truco del preload) -->
+    <!-- 2. CSS CRÍTICO (Bloquea el renderizado de forma intencional para evitar FOUC) -->
+    <link href="styles/style_pakin_v26.css" rel="stylesheet">
+
+    <!-- 3. CSS NO CRÍTICO ASÍNCRONO (Fuentes y framework general) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-
-    <!-- 3. Fallback para usuarios sin JavaScript -->
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
     </noscript>
 
-
-    <!-- 1. Preconectamos con el CDN para acelerar la conexión -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
-    <!-- 2. Cargamos el CSS de forma asíncrona -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-
-    <!-- 3. Fallback en caso de que el usuario tenga JavaScript desactivado -->
     <noscript>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
             crossorigin="anonymous">
     </noscript>
 
+    <!-- 4. JAVASCRIPT DIFERIDO -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
 
     <title>
         Tris Resultados Históricos y Analítica | Pakin
     </title>
-
-    <link href="styles/style_pakin_v26.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -83,7 +80,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "",
+          "dateModified": "2026-03-17T19:26:40-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
@@ -261,9 +258,33 @@
                     
                     <tr>
                         
-                        <td>35730</td>
+                        <td>35731</td>
                         
                         <td>0</td>
+                        
+                        <td>5</td>
+                        
+                        <td>3</td>
+                        
+                        <td>5</td>
+                        
+                        <td>6</td>
+                        
+                        <td>3</td>
+                        
+                        <td>4</td>
+                        
+                        <td>1</td>
+                        
+                        <td>2026-03-17</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td>35730</td>
+                        
+                        <td>1</td>
                         
                         <td>9</td>
                         
@@ -287,7 +308,7 @@
                         
                         <td>35729</td>
                         
-                        <td>1</td>
+                        <td>2</td>
                         
                         <td>6</td>
                         
@@ -311,7 +332,7 @@
                         
                         <td>35728</td>
                         
-                        <td>2</td>
+                        <td>3</td>
                         
                         <td>2</td>
                         
@@ -335,7 +356,7 @@
                         
                         <td>35727</td>
                         
-                        <td>3</td>
+                        <td>4</td>
                         
                         <td>2</td>
                         
@@ -359,7 +380,7 @@
                         
                         <td>35726</td>
                         
-                        <td>4</td>
+                        <td>5</td>
                         
                         <td>5</td>
                         
@@ -383,7 +404,7 @@
                         
                         <td>35725</td>
                         
-                        <td>5</td>
+                        <td>6</td>
                         
                         <td>5</td>
                         
@@ -407,7 +428,7 @@
                         
                         <td>35724</td>
                         
-                        <td>6</td>
+                        <td>7</td>
                         
                         <td>9</td>
                         
@@ -431,7 +452,7 @@
                         
                         <td>35723</td>
                         
-                        <td>7</td>
+                        <td>8</td>
                         
                         <td>6</td>
                         
@@ -455,7 +476,7 @@
                         
                         <td>35722</td>
                         
-                        <td>8</td>
+                        <td>9</td>
                         
                         <td>8</td>
                         
@@ -479,7 +500,7 @@
                         
                         <td>35721</td>
                         
-                        <td>9</td>
+                        <td>10</td>
                         
                         <td>7</td>
                         
@@ -503,7 +524,7 @@
                         
                         <td>35720</td>
                         
-                        <td>10</td>
+                        <td>11</td>
                         
                         <td>4</td>
                         
@@ -527,7 +548,7 @@
                         
                         <td>35719</td>
                         
-                        <td>11</td>
+                        <td>12</td>
                         
                         <td>0</td>
                         
@@ -551,7 +572,7 @@
                         
                         <td>35718</td>
                         
-                        <td>12</td>
+                        <td>13</td>
                         
                         <td>5</td>
                         
@@ -575,7 +596,7 @@
                         
                         <td>35717</td>
                         
-                        <td>13</td>
+                        <td>14</td>
                         
                         <td>6</td>
                         
@@ -599,7 +620,7 @@
                         
                         <td>35716</td>
                         
-                        <td>14</td>
+                        <td>15</td>
                         
                         <td>5</td>
                         
@@ -623,7 +644,7 @@
                         
                         <td>35715</td>
                         
-                        <td>15</td>
+                        <td>16</td>
                         
                         <td>4</td>
                         
@@ -647,7 +668,7 @@
                         
                         <td>35714</td>
                         
-                        <td>16</td>
+                        <td>17</td>
                         
                         <td>5</td>
                         
@@ -671,7 +692,7 @@
                         
                         <td>35713</td>
                         
-                        <td>17</td>
+                        <td>18</td>
                         
                         <td>7</td>
                         
@@ -695,7 +716,7 @@
                         
                         <td>35712</td>
                         
-                        <td>18</td>
+                        <td>19</td>
                         
                         <td>1</td>
                         
@@ -719,7 +740,7 @@
                         
                         <td>35711</td>
                         
-                        <td>19</td>
+                        <td>20</td>
                         
                         <td>3</td>
                         
@@ -743,7 +764,7 @@
                         
                         <td>35710</td>
                         
-                        <td>20</td>
+                        <td>21</td>
                         
                         <td>6</td>
                         
@@ -767,7 +788,7 @@
                         
                         <td>35709</td>
                         
-                        <td>21</td>
+                        <td>22</td>
                         
                         <td>9</td>
                         
@@ -791,7 +812,7 @@
                         
                         <td>35708</td>
                         
-                        <td>22</td>
+                        <td>23</td>
                         
                         <td>1</td>
                         
@@ -815,7 +836,7 @@
                         
                         <td>35707</td>
                         
-                        <td>23</td>
+                        <td>24</td>
                         
                         <td>2</td>
                         
@@ -839,7 +860,7 @@
                         
                         <td>35706</td>
                         
-                        <td>24</td>
+                        <td>25</td>
                         
                         <td>3</td>
                         
@@ -863,7 +884,7 @@
                         
                         <td>35705</td>
                         
-                        <td>25</td>
+                        <td>26</td>
                         
                         <td>1</td>
                         
@@ -887,7 +908,7 @@
                         
                         <td>35704</td>
                         
-                        <td>26</td>
+                        <td>27</td>
                         
                         <td>3</td>
                         
@@ -911,7 +932,7 @@
                         
                         <td>35703</td>
                         
-                        <td>27</td>
+                        <td>28</td>
                         
                         <td>7</td>
                         
@@ -935,7 +956,7 @@
                         
                         <td>35702</td>
                         
-                        <td>28</td>
+                        <td>29</td>
                         
                         <td>1</td>
                         
@@ -959,7 +980,7 @@
                         
                         <td>35701</td>
                         
-                        <td>29</td>
+                        <td>30</td>
                         
                         <td>2</td>
                         
@@ -983,7 +1004,7 @@
                         
                         <td>35700</td>
                         
-                        <td>30</td>
+                        <td>31</td>
                         
                         <td>9</td>
                         
@@ -1007,7 +1028,7 @@
                         
                         <td>35699</td>
                         
-                        <td>31</td>
+                        <td>32</td>
                         
                         <td>8</td>
                         
@@ -1031,7 +1052,7 @@
                         
                         <td>35698</td>
                         
-                        <td>32</td>
+                        <td>33</td>
                         
                         <td>7</td>
                         
@@ -1055,7 +1076,7 @@
                         
                         <td>35697</td>
                         
-                        <td>33</td>
+                        <td>34</td>
                         
                         <td>8</td>
                         
@@ -1079,7 +1100,7 @@
                         
                         <td>35696</td>
                         
-                        <td>34</td>
+                        <td>35</td>
                         
                         <td>7</td>
                         
@@ -1103,7 +1124,7 @@
                         
                         <td>35695</td>
                         
-                        <td>35</td>
+                        <td>36</td>
                         
                         <td>8</td>
                         
@@ -1127,7 +1148,7 @@
                         
                         <td>35694</td>
                         
-                        <td>36</td>
+                        <td>37</td>
                         
                         <td>5</td>
                         
@@ -1151,7 +1172,7 @@
                         
                         <td>35693</td>
                         
-                        <td>37</td>
+                        <td>38</td>
                         
                         <td>0</td>
                         
@@ -1175,7 +1196,7 @@
                         
                         <td>35692</td>
                         
-                        <td>38</td>
+                        <td>39</td>
                         
                         <td>6</td>
                         
@@ -1199,7 +1220,7 @@
                         
                         <td>35691</td>
                         
-                        <td>39</td>
+                        <td>40</td>
                         
                         <td>1</td>
                         
@@ -1223,7 +1244,7 @@
                         
                         <td>35690</td>
                         
-                        <td>40</td>
+                        <td>41</td>
                         
                         <td>8</td>
                         
@@ -1247,7 +1268,7 @@
                         
                         <td>35689</td>
                         
-                        <td>41</td>
+                        <td>42</td>
                         
                         <td>4</td>
                         
@@ -1271,7 +1292,7 @@
                         
                         <td>35688</td>
                         
-                        <td>42</td>
+                        <td>43</td>
                         
                         <td>1</td>
                         
@@ -1295,7 +1316,7 @@
                         
                         <td>35687</td>
                         
-                        <td>43</td>
+                        <td>44</td>
                         
                         <td>4</td>
                         
@@ -1319,7 +1340,7 @@
                         
                         <td>35686</td>
                         
-                        <td>44</td>
+                        <td>45</td>
                         
                         <td>8</td>
                         
@@ -1343,7 +1364,7 @@
                         
                         <td>35685</td>
                         
-                        <td>45</td>
+                        <td>46</td>
                         
                         <td>8</td>
                         
@@ -1367,7 +1388,7 @@
                         
                         <td>35684</td>
                         
-                        <td>46</td>
+                        <td>47</td>
                         
                         <td>6</td>
                         
@@ -1391,7 +1412,7 @@
                         
                         <td>35683</td>
                         
-                        <td>47</td>
+                        <td>48</td>
                         
                         <td>9</td>
                         
@@ -1415,7 +1436,7 @@
                         
                         <td>35682</td>
                         
-                        <td>48</td>
+                        <td>49</td>
                         
                         <td>2</td>
                         
@@ -1439,7 +1460,7 @@
                         
                         <td>35681</td>
                         
-                        <td>49</td>
+                        <td>50</td>
                         
                         <td>6</td>
                         
@@ -1463,7 +1484,7 @@
                         
                         <td>35680</td>
                         
-                        <td>50</td>
+                        <td>51</td>
                         
                         <td>8</td>
                         
@@ -1487,7 +1508,7 @@
                         
                         <td>35679</td>
                         
-                        <td>51</td>
+                        <td>52</td>
                         
                         <td>4</td>
                         
@@ -1511,7 +1532,7 @@
                         
                         <td>35678</td>
                         
-                        <td>52</td>
+                        <td>53</td>
                         
                         <td>4</td>
                         
@@ -1535,7 +1556,7 @@
                         
                         <td>35677</td>
                         
-                        <td>53</td>
+                        <td>54</td>
                         
                         <td>4</td>
                         
@@ -1559,7 +1580,7 @@
                         
                         <td>35676</td>
                         
-                        <td>54</td>
+                        <td>55</td>
                         
                         <td>1</td>
                         
@@ -1583,7 +1604,7 @@
                         
                         <td>35675</td>
                         
-                        <td>55</td>
+                        <td>56</td>
                         
                         <td>1</td>
                         
@@ -1607,7 +1628,7 @@
                         
                         <td>35674</td>
                         
-                        <td>56</td>
+                        <td>57</td>
                         
                         <td>0</td>
                         
@@ -1631,7 +1652,7 @@
                         
                         <td>35673</td>
                         
-                        <td>57</td>
+                        <td>58</td>
                         
                         <td>9</td>
                         
@@ -1655,7 +1676,7 @@
                         
                         <td>35672</td>
                         
-                        <td>58</td>
+                        <td>59</td>
                         
                         <td>2</td>
                         
@@ -1679,7 +1700,7 @@
                         
                         <td>35671</td>
                         
-                        <td>59</td>
+                        <td>60</td>
                         
                         <td>8</td>
                         
@@ -1703,7 +1724,7 @@
                         
                         <td>35670</td>
                         
-                        <td>60</td>
+                        <td>61</td>
                         
                         <td>7</td>
                         
@@ -1727,7 +1748,7 @@
                         
                         <td>35669</td>
                         
-                        <td>61</td>
+                        <td>62</td>
                         
                         <td>3</td>
                         
@@ -1751,7 +1772,7 @@
                         
                         <td>35668</td>
                         
-                        <td>62</td>
+                        <td>63</td>
                         
                         <td>1</td>
                         
@@ -1775,7 +1796,7 @@
                         
                         <td>35667</td>
                         
-                        <td>63</td>
+                        <td>64</td>
                         
                         <td>4</td>
                         
@@ -1799,7 +1820,7 @@
                         
                         <td>35666</td>
                         
-                        <td>64</td>
+                        <td>65</td>
                         
                         <td>7</td>
                         
@@ -1823,7 +1844,7 @@
                         
                         <td>35665</td>
                         
-                        <td>65</td>
+                        <td>66</td>
                         
                         <td>4</td>
                         
@@ -1847,7 +1868,7 @@
                         
                         <td>35664</td>
                         
-                        <td>66</td>
+                        <td>67</td>
                         
                         <td>9</td>
                         
@@ -1871,7 +1892,7 @@
                         
                         <td>35663</td>
                         
-                        <td>67</td>
+                        <td>68</td>
                         
                         <td>8</td>
                         
@@ -1895,7 +1916,7 @@
                         
                         <td>35662</td>
                         
-                        <td>68</td>
+                        <td>69</td>
                         
                         <td>0</td>
                         
@@ -1919,7 +1940,7 @@
                         
                         <td>35661</td>
                         
-                        <td>69</td>
+                        <td>70</td>
                         
                         <td>8</td>
                         
@@ -1943,7 +1964,7 @@
                         
                         <td>35660</td>
                         
-                        <td>70</td>
+                        <td>71</td>
                         
                         <td>7</td>
                         
@@ -1967,7 +1988,7 @@
                         
                         <td>35659</td>
                         
-                        <td>71</td>
+                        <td>72</td>
                         
                         <td>0</td>
                         
@@ -1991,7 +2012,7 @@
                         
                         <td>35658</td>
                         
-                        <td>72</td>
+                        <td>73</td>
                         
                         <td>7</td>
                         
@@ -2015,7 +2036,7 @@
                         
                         <td>35657</td>
                         
-                        <td>73</td>
+                        <td>74</td>
                         
                         <td>5</td>
                         
@@ -2039,7 +2060,7 @@
                         
                         <td>35656</td>
                         
-                        <td>74</td>
+                        <td>75</td>
                         
                         <td>0</td>
                         
@@ -2063,7 +2084,7 @@
                         
                         <td>35655</td>
                         
-                        <td>75</td>
+                        <td>76</td>
                         
                         <td>3</td>
                         
@@ -2087,7 +2108,7 @@
                         
                         <td>35654</td>
                         
-                        <td>76</td>
+                        <td>77</td>
                         
                         <td>6</td>
                         
@@ -2111,7 +2132,7 @@
                         
                         <td>35653</td>
                         
-                        <td>77</td>
+                        <td>78</td>
                         
                         <td>3</td>
                         
@@ -2135,7 +2156,7 @@
                         
                         <td>35652</td>
                         
-                        <td>78</td>
+                        <td>79</td>
                         
                         <td>7</td>
                         
@@ -2159,7 +2180,7 @@
                         
                         <td>35651</td>
                         
-                        <td>79</td>
+                        <td>80</td>
                         
                         <td>8</td>
                         
@@ -2183,7 +2204,7 @@
                         
                         <td>35650</td>
                         
-                        <td>80</td>
+                        <td>81</td>
                         
                         <td>3</td>
                         
@@ -2207,7 +2228,7 @@
                         
                         <td>35649</td>
                         
-                        <td>81</td>
+                        <td>82</td>
                         
                         <td>2</td>
                         
@@ -2231,7 +2252,7 @@
                         
                         <td>35648</td>
                         
-                        <td>82</td>
+                        <td>83</td>
                         
                         <td>2</td>
                         
@@ -2255,7 +2276,7 @@
                         
                         <td>35647</td>
                         
-                        <td>83</td>
+                        <td>84</td>
                         
                         <td>6</td>
                         
@@ -2279,7 +2300,7 @@
                         
                         <td>35646</td>
                         
-                        <td>84</td>
+                        <td>85</td>
                         
                         <td>9</td>
                         
@@ -2303,7 +2324,7 @@
                         
                         <td>35645</td>
                         
-                        <td>85</td>
+                        <td>86</td>
                         
                         <td>7</td>
                         
@@ -2327,7 +2348,7 @@
                         
                         <td>35644</td>
                         
-                        <td>86</td>
+                        <td>87</td>
                         
                         <td>0</td>
                         
@@ -2351,7 +2372,7 @@
                         
                         <td>35643</td>
                         
-                        <td>87</td>
+                        <td>88</td>
                         
                         <td>7</td>
                         
@@ -2375,7 +2396,7 @@
                         
                         <td>35642</td>
                         
-                        <td>88</td>
+                        <td>89</td>
                         
                         <td>2</td>
                         
@@ -2399,7 +2420,7 @@
                         
                         <td>35641</td>
                         
-                        <td>89</td>
+                        <td>90</td>
                         
                         <td>8</td>
                         
@@ -2423,7 +2444,7 @@
                         
                         <td>35640</td>
                         
-                        <td>90</td>
+                        <td>91</td>
                         
                         <td>3</td>
                         
@@ -2447,7 +2468,7 @@
                         
                         <td>35639</td>
                         
-                        <td>91</td>
+                        <td>92</td>
                         
                         <td>5</td>
                         
@@ -2471,7 +2492,7 @@
                         
                         <td>35638</td>
                         
-                        <td>92</td>
+                        <td>93</td>
                         
                         <td>7</td>
                         
@@ -2495,7 +2516,7 @@
                         
                         <td>35637</td>
                         
-                        <td>93</td>
+                        <td>94</td>
                         
                         <td>3</td>
                         
@@ -2519,7 +2540,7 @@
                         
                         <td>35636</td>
                         
-                        <td>94</td>
+                        <td>95</td>
                         
                         <td>8</td>
                         
@@ -2543,7 +2564,7 @@
                         
                         <td>35635</td>
                         
-                        <td>95</td>
+                        <td>96</td>
                         
                         <td>9</td>
                         
@@ -2567,7 +2588,7 @@
                         
                         <td>35634</td>
                         
-                        <td>96</td>
+                        <td>97</td>
                         
                         <td>4</td>
                         
@@ -2591,7 +2612,7 @@
                         
                         <td>35633</td>
                         
-                        <td>97</td>
+                        <td>98</td>
                         
                         <td>3</td>
                         
@@ -2615,7 +2636,7 @@
                         
                         <td>35632</td>
                         
-                        <td>98</td>
+                        <td>99</td>
                         
                         <td>8</td>
                         
@@ -2630,30 +2651,6 @@
                         <td>2</td>
                         
                         <td>1</td>
-                        
-                        <td>2026-02-25</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td>35631</td>
-                        
-                        <td>99</td>
-                        
-                        <td>1</td>
-                        
-                        <td>2</td>
-                        
-                        <td>7</td>
-                        
-                        <td>3</td>
-                        
-                        <td>5</td>
-                        
-                        <td>4</td>
-                        
-                        <td>0</td>
                         
                         <td>2026-02-25</td>
                         
@@ -2773,14 +2770,14 @@
                         
                         
                         
-                        <td>24</td>
+                        <td>23</td>
                         
                         
                         
                         
                         <td
                             class="">
-                            -1.71
+                            -2.71
                         </td>
                         
                         
@@ -2849,19 +2846,19 @@
                         
                         
                         
-                        <td>7.68</td>
+                        <td>7.69</td>
                         
                         
                         
                         
-                        <td>9</td>
+                        <td>10</td>
                         
                         
                         
                         
                         <td
                             class="">
-                            1.32
+                            2.31
                         </td>
                         
                         
@@ -2930,14 +2927,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            8
-                        </td>
-                        
-                        <td style="background-color: rgb(246, 235, 235); color: black;">
                             9
                         </td>
                         
-                        <td style="background-color: rgb(210, 156, 156); color: black;">
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            9
+                        </td>
+                        
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             13
                         </td>
                         
@@ -2962,14 +2959,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            2
-                        </td>
-                        
-                        <td style="background-color: rgb(226, 191, 191); color: black;">
                             3
                         </td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            3
+                        </td>
+                        
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             4
                         </td>
                         
@@ -2994,14 +2991,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            0
+                            1
                         </td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             2
                         </td>
                         
-                        <td style="background-color: rgb(168, 63, 63); color: black;">
+                        <td style="background-color: rgb(177, 85, 85); color: black;">
                             3
                         </td>
                         
@@ -3025,8 +3022,8 @@
                             3
                         </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">
-                            3
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
+                            4
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
@@ -3057,15 +3054,15 @@
                             4
                         </td>
                         
-                        <td style="background-color: rgb(170, 69, 69); color: black;">
-                            17
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            0
                         </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                        <td style="background-color: rgb(202, 140, 140); color: black;">
                             9
                         </td>
                         
-                        <td style="background-color: rgb(212, 162, 162); color: black;">
+                        <td style="background-color: rgb(179, 89, 89); color: black;">
                             13
                         </td>
                         
@@ -3078,7 +3075,7 @@
                         </td>
                         
                         <td style="background-color: None; color: black;">
-                            2
+                            18
                         </td>
                         
                     </tr>
@@ -3090,14 +3087,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            24
+                            25
                         </td>
                         
-                        <td style="background-color: rgb(217, 171, 171); color: black;">
+                        <td style="background-color: rgb(217, 173, 173); color: black;">
                             70
                         </td>
                         
-                        <td style="background-color: rgb(194, 122, 122); color: black;">
+                        <td style="background-color: rgb(195, 123, 123); color: black;">
                             97
                         </td>
                         
@@ -3227,14 +3224,14 @@
                         
                         
                         
-                        <td>43.0</td>
+                        <td>42.0</td>
                         
                         
                         
                         
                         <td
-                            class="naranja-oscuro">
-                            3.01
+                            class="">
+                            2.01
                         </td>
                         
                         
@@ -3254,14 +3251,14 @@
                         
                         
                         
-                        <td>14.0</td>
+                        <td>15.0</td>
                         
                         
                         
                         
                         <td
                             class="">
-                            -1.22
+                            -0.22
                         </td>
                         
                         
@@ -3357,14 +3354,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            6
+                            7
                         </td>
                         
-                        <td style="background-color: rgb(230, 200, 200); color: black;">
+                        <td style="background-color: rgb(237, 215, 215); color: black;">
                             9
                         </td>
                         
-                        <td style="background-color: rgb(205, 145, 145); color: black;">
+                        <td style="background-color: rgb(210, 156, 156); color: black;">
                             12
                         </td>
                         
@@ -3389,14 +3386,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            1
-                        </td>
-                        
-                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             2
                         </td>
                         
-                        <td style="background-color: rgb(177, 85, 85); color: black;">
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            2
+                        </td>
+                        
+                        <td style="background-color: rgb(197, 127, 127); color: black;">
                             3
                         </td>
                         
@@ -3421,14 +3418,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            0
+                            1
                         </td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             2
                         </td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             2
                         </td>
                         
@@ -3452,19 +3449,19 @@
                             3
                         </td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: black;">
-                            16
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            0
                         </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                        <td style="background-color: rgb(202, 139, 139); color: black;">
                             5
                         </td>
                         
-                        <td style="background-color: rgb(233, 208, 208); color: black;">
+                        <td style="background-color: rgb(181, 92, 92); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(191, 115, 115); color: black;">
+                        <td style="background-color: rgb(139, 0, 0); color: black;">
                             11
                         </td>
                         
@@ -3473,7 +3470,7 @@
                         </td>
                         
                         <td style="background-color: None; color: black;">
-                            12
+                            17
                         </td>
                         
                     </tr>
@@ -3485,18 +3482,18 @@
                         </td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">
-                            92
+                            93
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
                             38
                         </td>
                         
-                        <td style="background-color: rgb(214, 165, 165); color: black;">
+                        <td style="background-color: rgb(214, 166, 166); color: black;">
                             57
                         </td>
                         
-                        <td style="background-color: rgb(143, 9, 9); color: black;">
+                        <td style="background-color: rgb(145, 13, 13); color: black;">
                             90
                         </td>
                         
@@ -3517,7 +3514,7 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            245
+                            246
                         </td>
                         
                         <td style="background-color: rgb(217, 173, 173); color: black;">
@@ -3596,14 +3593,14 @@
                         
                         
                         
-                        <td>8.0</td>
+                        <td>7.0</td>
                         
                         
                         
                         
                         <td
-                            class="">
-                            -2.13
+                            class="azul">
+                            -3.13
                         </td>
                         
                         
@@ -3623,14 +3620,14 @@
                         
                         
                         
-                        <td>13.0</td>
+                        <td>14.0</td>
                         
                         
                         
                         
                         <td
                             class="naranja-oscuro">
-                            3.13
+                            4.13
                         </td>
                         
                         
@@ -3704,14 +3701,14 @@
                         
                         
                         
-                        <td>14.0</td>
+                        <td>13.0</td>
                         
                         
                         
                         
                         <td
                             class="naranja-oscuro">
-                            4.06
+                            3.06
                         </td>
                         
                         
@@ -3753,14 +3750,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            2
+                            3
                         </td>
                         
-                        <td style="background-color: rgb(210, 156, 156); color: black;">
+                        <td style="background-color: rgb(216, 170, 170); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(192, 117, 117); color: black;">
+                        <td style="background-color: rgb(197, 127, 127); color: black;">
                             9
                         </td>
                         
@@ -3785,14 +3782,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            1
+                            0
                         </td>
                         
-                        <td style="background-color: rgb(208, 153, 153); color: black;">
+                        <td style="background-color: rgb(204, 143, 143); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(185, 102, 102); color: black;">
+                        <td style="background-color: rgb(182, 95, 95); color: black;">
                             10
                         </td>
                         
@@ -3805,7 +3802,7 @@
                         </td>
                         
                         <td style="background-color: None; color: black;">
-                            10
+                            2
                         </td>
                         
                     </tr>
@@ -3817,14 +3814,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            1
+                            2
                         </td>
                         
-                        <td style="background-color: rgb(208, 153, 153); color: black;">
+                        <td style="background-color: rgb(213, 163, 163); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(185, 102, 102); color: black;">
+                        <td style="background-color: rgb(188, 109, 109); color: black;">
                             10
                         </td>
                         
@@ -3849,14 +3846,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            3
+                            4
                         </td>
                         
-                        <td style="background-color: rgb(219, 176, 176); color: black;">
+                        <td style="background-color: rgb(226, 191, 191); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(201, 137, 137); color: black;">
+                        <td style="background-color: rgb(206, 148, 148); color: black;">
                             9
                         </td>
                         
@@ -3881,14 +3878,14 @@
                         </td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">
-                            0
+                            1
                         </td>
                         
-                        <td style="background-color: rgb(204, 143, 143); color: black;">
+                        <td style="background-color: rgb(208, 153, 153); color: black;">
                             7
                         </td>
                         
-                        <td style="background-color: rgb(182, 95, 95); color: black;">
+                        <td style="background-color: rgb(185, 102, 102); color: black;">
                             10
                         </td>
                         
@@ -3942,14 +3939,8 @@
                 <tbody>
                     
                     <tr>
-                        <td>R4</td>
-                        <td>8</td>
-                        <td>Nones</td>
-                    </tr>
-                    
-                    <tr>
                         <td>R5</td>
-                        <td>6</td>
+                        <td>7</td>
                         <td>Nones</td>
                     </tr>
                     
@@ -4003,7 +3994,7 @@
                         
                         <td>2</td>
                         
-                        <td></td>
+                        <td>3</td>
                         
                         <td>8</td>
                         
@@ -4155,10 +4146,10 @@
                             
                         
                         
-                         <td
-                            class="text-center ">
+                           <td
+                            class="text-center negativo">
                             
-                            -4.97
+                            -9.97
                             
                             </td>
                             
@@ -4264,7 +4255,7 @@
                            <td
                             class="text-center negativo">
                             
-                            -5.1
+                            -10.11
                             
                             </td>
                             
@@ -4274,7 +4265,7 @@
                          <td
                             class="text-center ">
                             
-                            -0.22
+                            +4.78
                             
                             </td>
                             
@@ -4286,19 +4277,7 @@
                          <td
                             class="text-center positivo">
                             
-                            +15.14
-                            
-                            </td>
-                            
-                            
-                        
-                        
-                        
-                        
-                         <td
-                            class="text-center positivo">
-                            
-                            +9.93
+                            +10.14
                             
                             </td>
                             
@@ -4308,7 +4287,17 @@
                          <td
                             class="text-center ">
                             
-                            -4.91
+                            +4.93
+                            
+                            </td>
+                            
+                            
+                        
+                        
+                         <td
+                            class="text-center ">
+                            
+                            +0.09
                             
                             </td>
                             
@@ -4370,7 +4359,7 @@
                            <td
                             class="text-center negativo">
                             
-                            -9.88
+                            -9.87
                             
                             </td>
                             
@@ -4390,7 +4379,7 @@
                          <td
                             class="text-center positivo">
                             
-                            +15.0
+                            +20.0
                             
                             </td>
                             
@@ -4400,17 +4389,19 @@
                          <td
                             class="text-center ">
                             
-                            +0.29
+                            +0.3
                             
                             </td>
                             
                             
                         
                         
+                        
+                        
                          <td
-                            class="text-center ">
+                            class="text-center positivo">
                             
-                            +4.97
+                            +9.97
                             
                             </td>
                             
@@ -4429,12 +4420,10 @@
                             
                         
                         
-                        
-                        
                          <td
-                            class="text-center positivo">
+                            class="text-center ">
                             
-                            +9.76
+                            +4.75
                             
                             </td>
                             
@@ -4484,7 +4473,7 @@
                          <td
                             class="text-center ">
                             
-                            -4.95
+                            +0.05
                             
                             </td>
                             
@@ -4750,35 +4739,35 @@
                         
                         <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -1.0
+                            -2.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            5.0
+                            4.0
                         </td>
                         
                         
                         
-                        <td class="text-center" style="color: #FDD017" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= P80">
-                            -8.0
+                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -9.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -3.0
+                            -4.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            2.0
+                            1.0
                         </td>
                         
                         
@@ -4798,13 +4787,6 @@
                         
                         
                         
-                        <td class="text-center" style="color: #FDD017" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= P80">
-                            -8.0
-                        </td>
-                        
-                        
-                        
                         <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
                             -9.0
@@ -4812,23 +4794,30 @@
                         
                         
                         
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            5.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            0.0
+                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -10.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            8.0
+                            4.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
+                            -1.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            7.0
                         </td>
                         
                         
@@ -4850,35 +4839,35 @@
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            8.0
+                            7.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
+                            -1.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -13.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -23.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            0.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM + STD">
-                            -12.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM + STD">
-                            -22.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            4.0
+                            3.0
                         </td>
                         
                         
@@ -4900,7 +4889,7 @@
                         
                         <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
-                            -9.0
+                            -10.0
                         </td>
                         
                         
@@ -4912,23 +4901,23 @@
                         
                         
                         
-                        <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            0.0
+                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
+                            -1.0
                         </td>
                         
                         
                         
-                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM">
-                            -5.0
+                        <td class="text-center" style="color: #FDD017" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= P80">
+                            -6.0
                         </td>
                         
                         
                         
-                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM">
-                            -4.0
+                        <td class="text-center" style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
+                            10.0
                         </td>
                         
                         
@@ -4948,37 +4937,37 @@
                         
                         
                         
-                        <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            0.0
+                        <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
+                            -1.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            2.0
+                            1.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
-                            -23.0
+                            -24.0
                         </td>
                         
                         
@@ -4998,30 +4987,16 @@
                         
                         
                         
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            6.0
+                        <td class="text-center" style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
+                            10.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -1.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            4.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            9.0
+                            -2.0
                         </td>
                         
                         
@@ -5029,6 +5004,20 @@
                         <td class="text-center" style="color: #1589FF" data-bs-toggle="tooltip"
                             title="Estado: IDX = 0">
                             10.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            8.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
@@ -5050,14 +5039,21 @@
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            3.0
+                            2.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
@@ -5071,14 +5067,7 @@
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            1.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            3.0
+                            2.0
                         </td>
                         
                         
@@ -5100,14 +5089,21 @@
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            1.0
+                            0.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #E41B17" data-bs-toggle="tooltip"
                             title="Estado: IDX >= 0.5*MAX">
-                            -33.0
+                            -34.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            5.0
                         </td>
                         
                         
@@ -5121,14 +5117,7 @@
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            7.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            7.0
+                            6.0
                         </td>
                         
                         
@@ -5150,35 +5139,35 @@
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            2.0
+                            1.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            7.0
+                            6.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            1.0
+                            0.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -2.0
+                            -3.0
                         </td>
                         
                         
                         
-                        <td class="text-center" style="color: #FDD017" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= P80">
-                            -8.0
+                        <td class="text-center" style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -9.0
                         </td>
                         
                         
@@ -5198,30 +5187,16 @@
                         
                         
                         
-                        <td class="text-center" style="color: #1589FF" data-bs-toggle="tooltip"
-                            title="Estado: IDX = 0">
-                            10.0
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
                         
                         <td class="text-center" style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -4.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            7.0
-                        </td>
-                        
-                        
-                        
-                        <td class="text-center" style="color: #1589FF" data-bs-toggle="tooltip"
-                            title="Estado: IDX = 0">
-                            10.0
+                            -5.0
                         </td>
                         
                         
@@ -5229,6 +5204,20 @@
                         <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
                             6.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
+                        </td>
+                        
+                        
+                        
+                        <td class="text-center" style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            5.0
                         </td>
                         
                         
@@ -5376,8 +5365,8 @@
         </div>
     </footer>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
 
     <script defer src="/js/tris/esperandoTris_v2.js"></script>
     <script src="/js/subir.js" defer></script>
