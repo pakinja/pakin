@@ -4,26 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="vie, 20 mar 2026 19:48:40 CST">
+    <meta http-equiv="last-modified" content="vie, 20 mar 2026 19:53:26 CST">
 
-    <!-- 1. PRECONEXIONES (Correctas) -->
+    <!-- 1. PRECONEXIONES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
-    <!-- 2. CARGA DE FUENTES (Optimizado para evitar FOUC) -->
-    <!-- Usamos swap para que el navegador use una fuente parecida mientras descarga la otra -->
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap" rel="stylesheet">
+    <!-- 2. FUENTES (Carga síncrona para evitar saltos de texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=block" rel="stylesheet">
 
-    <!-- 3. BOOTSTRAP CSS (En el HEAD, sin defer y versión correcta) -->
-    <!-- Nota: La versión actual estable es 5.3.3, la 5.3.7 no existe oficialmente aún -->
+    <!-- 3. BOOTSTRAP CSS (Versión 5.3.3 corregida - Carga normal) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <!-- 4. ESTILO CRÍTICO (Para que la fuente gane a Bootstrap) -->
     <style>
-        /* 4. TRUCO PARA MÉTRICAS: Evita que la fuente salte mucho */
+        /* Usamos !important solo si Bootstrap se resiste, 
+           pero aplicarlo al body suele ser suficiente */
         body {
-            font-family: 'Oxygen Mono', monospace;
+            font-family: 'Oxygen Mono', monospace !important;
         }
     </style>
 
@@ -76,7 +76,7 @@
           "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-chispazo-mobile.webp",
           "datePublished": "2017-01-01T11:11:00+06:00",
-          "dateModified": "2026-03-20T19:48:40-06:00",
+          "dateModified": "2026-03-20T19:53:26-06:00",
           "author": {
             "@type": "Person",
             "name": "Francisco Jaramillo",
