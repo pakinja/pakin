@@ -1,0 +1,339 @@
+user pak@pakin.lat Z@87912151
+binary
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put chispazo-resultados-historicos.html
+! sleep 1
+put chispazo-verificador.html
+! sleep 1
+put chispazo-generador.html
+! sleep 1
+put chispazo.html
+! sleep 1
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+mdelete melate28_*.webp
+put melate28_331fc28a6b.webp
+! sleep 1
+mdelete retroadicional39_*.webp
+put retroadicional39_7b5b5f6bd4.webp
+! sleep 1
+mdelete retro16_*.webp
+put retro16_faa5d4d2de.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_2c1a3c948b.webp
+! sleep 1
+put revancha38.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_59041036b1.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_683f25726f.webp
+! sleep 1
+mdelete revancha28_*.webp
+put revancha28_fce1bb2137.webp
+! sleep 1
+mdelete retro12_*.webp
+put retro12_edbc686ea1.webp
+! sleep 1
+put revancha28.webp
+! sleep 1
+mdelete pakin_*.webp
+put pakin_ni.webp
+! sleep 1
+mdelete smayor20_*.webp
+put smayor20_3a89ea4c9f.webp
+! sleep 1
+put pakin-zodiaco.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_3750f7dc49.webp
+! sleep 1
+put pakin-buscadores.webp
+! sleep 1
+put retro12.webp
+! sleep 1
+put pakin.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_89f8a56290.webp
+! sleep 1
+mdelete melateadicional56_*.webp
+put melateadicional56_b34d6c98f3.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_d35f0bd5bb.webp
+! sleep 1
+mdelete melate19_*.webp
+put melate19_91487349c9.webp
+! sleep 1
+put pakin-ganagato.webp
+! sleep 1
+mdelete chispazo12_20260318_*.webp
+put chispazo12_20260318_175404.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_1f6a182a41.webp
+! sleep 1
+mdelete revanchita19_*.webp
+put revanchita19_68b718b796.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_545cd14ebc.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_909ea15688.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_5fb125c4d8.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_d8ad20015e.webp
+! sleep 1
+put pakin-tris1-mobile.webp
+! sleep 1
+put melateadicional56.webp
+! sleep 1
+put pakin-megamillions-mobile.webp
+! sleep 1
+mdelete melateadicional56_*.webp
+put melateadicional56_7bcbc9c8bb.webp
+! sleep 1
+put melate38.webp
+! sleep 1
+put pakin-sorteo-superior.webp
+! sleep 1
+put melate22.webp
+! sleep 1
+mdelete melateadicional56_*.webp
+put melateadicional56_1ebc92aa21.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_90e624a0d7.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_7bb6a68c2b.webp
+! sleep 1
+put revanchita19.webp
+! sleep 1
+mdelete chispazo8_*.webp
+put chispazo8_8699312a3b.webp
+! sleep 1
+mdelete revanchita19_*.webp
+put revanchita19_1a2bf2e487.webp
+! sleep 1
+put revanchita28.webp
+! sleep 1
+mdelete revanchita28_*.webp
+put revanchita28_1c6378a43a.webp
+! sleep 1
+put p2.webp
+! sleep 1
+put melate19.webp
+! sleep 1
+put revancha19.webp
+! sleep 1
+mdelete melate28_*.webp
+put melate28_7af3849496.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_81da7ce0ce.webp
+! sleep 1
+mdelete melate19_*.webp
+put melate19_2553b1ad00.webp
+! sleep 1
+mdelete revancha19_*.webp
+put revancha19_d7cc2b51f1.webp
+! sleep 1
+put revanchita38.webp
+! sleep 1
+put tris6.webp
+! sleep 1
+put pakin-chispazo-mobile.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_b44863dbe7.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_05b3664e89.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_89a47dd4de.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_a09791f3a7.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_a5d9c5231f.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_d7397bb4ef.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_e5f79bc92a.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_0fae0ee22c.webp
+! sleep 1
+put chispazo8.webp
+! sleep 1
+mdelete chispazo12_20260318_*.webp
+put chispazo12_20260318_173858.webp
+! sleep 1
+put retro16.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_01b70cf278.webp
+! sleep 1
+mdelete melate19_*.webp
+put melate19_dd96fc4a0d.webp
+! sleep 1
+mdelete revanchita19_*.webp
+put revanchita19_0c30c34610.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_e7f0294f78.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_5363d206a7.webp
+! sleep 1
+mdelete revancha28_*.webp
+put revancha28_dc79aef23a.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_8a3ea9771c.webp
+! sleep 1
+put pakin-melate-retro.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_4bfc02a791.webp
+! sleep 1
+mdelete chispazo12_20260318_*.webp
+put chispazo12_20260318_174404.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_c6c03d2a7a.webp
+! sleep 1
+mdelete revancha28_*.webp
+put revancha28_d7a86c7bd4.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_d9590df3f4.webp
+! sleep 1
+mdelete melate28_*.webp
+put melate28_4c20eaa6a8.webp
+! sleep 1
+mdelete melate19_*.webp
+put melate19_2fb5cb1592.webp
+! sleep 1
+put pakin-historicos.webp
+! sleep 1
+put pakin-sorteo-mayor-mobile.webp
+! sleep 1
+put pakin-checadores.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_e554f8fb13.webp
+! sleep 1
+put retroadicional39.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_cb80f84c37.webp
+! sleep 1
+put pakin-tris.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_7b5e24677c.webp
+! sleep 1
+mdelete revanchita28_*.webp
+put revanchita28_d82bf3c424.webp
+! sleep 1
+mdelete chispazo12_*.webp
+put chispazo12_c76f93b489.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_1d9e35fe28.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_f447a457be.webp
+! sleep 1
+mdelete revancha19_*.webp
+put revancha19_a526a2b752.webp
+! sleep 1
+put revanchita22.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_74a27bf90d.webp
+! sleep 1
+mdelete retro12_*.webp
+put retro12_b56c75b402.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_6c420d94fe.webp
+! sleep 1
+put pakin-powerball-mobile.webp
+! sleep 1
+mdelete melate28_*.webp
+put melate28_9d7d9c25fb.webp
+! sleep 1
+put melate28.webp
+! sleep 1
+mdelete melate28_*.webp
+put melate28_cc7a7adf82.webp
+! sleep 1
+put tris10.webp
+! sleep 1
+put revancha22.webp
+! sleep 1
+mdelete melateadicional56_*.webp
+put melateadicional56_0f19321c8b.webp
+! sleep 1
+put pakin-mapas.webp
+! sleep 1
+put pakin-melate-retro-mobile.webp
+! sleep 1
+put pakin-tris1-mobilef.webp
+! sleep 1
+mdelete revanchita28_*.webp
+put revanchita28_a2b3fa71c5.webp
+! sleep 1
+mdelete melate19_*.webp
+put melate19_ff160718bd.webp
+! sleep 1
+put chispazo12.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_b2ce95ca65.webp
+! sleep 1
+mdelete tris6_*.webp
+put tris6_988a9c2bc0.webp
+! sleep 1
+mdelete retroadicional39_*.webp
+put retroadicional39_9ad97a9b30.webp
+! sleep 1
+mdelete melateadicional56_*.webp
+put melateadicional56_886ef64d5e.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_a805d83cb3.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_7c026b0ed6.webp
+! sleep 1
+put pakin-melate-revancha-revanchita-mobile.webp
+! sleep 1
+mdelete smayor100_*.webp
+put smayor100_12e6d3ad44.webp
+! sleep 1
+mdelete retro16_*.webp
+put retro16_5d19e6830e.webp
+! sleep 1
+mdelete tris10_*.webp
+put tris10_028ecebd9e.webp
+! sleep 1
+mdelete revancha19_*.webp
+put revancha19_31483ed86b.webp
+! sleep 1
+bye
