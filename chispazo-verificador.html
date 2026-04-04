@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:17:56 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:23:23 CST">
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333" crossorigin="anonymous"></script>
 
-    <!-- METADATOS JSON-LD INTACTOS -->
+    <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -32,7 +32,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00+06:00",
-      "dateModified": "2026-04-04T12:17:56-06:00",
+      "dateModified": "2026-04-04T12:23:23-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -185,7 +185,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -197,21 +197,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Chispazo Analítica
-                        </a>
-                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="chispazo#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="chispazo#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="chispazo#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="chispazo#medias">Alta-Baja</a></li>
-                            <li><a class="dropdown-item" href="chispazo#consecutivos">Consecutivos</a></li>
-                            <li><a class="dropdown-item" href="chispazo#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="chispazo#balanza">Balanza</a></li>
-                            <li><a class="dropdown-item" href="chispazo#cronometro">Cronómetro</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/chispazo">Chispazo Analítica</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold active" style="color: #8B0000;" href="chispazo-verificador">Chispazo Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo Generador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-resultados-historicos">Histórico Completo</a></li>
@@ -243,8 +229,8 @@
             <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato anterior</h4>
         </div>
 
-        <!-- PRELOADER -->
-        <div id="preloader" class="text-center my-3">
+        <!-- PRELOADER (Ahora oculto por defecto con display: none) -->
+        <div id="preloader" class="text-center my-3" style="display: none;">
             <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
                 Buscando resultados<span class="dots">...</span>
             </div>
