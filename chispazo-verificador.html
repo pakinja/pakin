@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 11:47:34 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 11:53:48 CST">
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 
     <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"></script>
 
-    <!-- METADATOS JSON-LD INTACTOS -->
+    <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -34,7 +34,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00+06:00",
-      "dateModified": "2026-04-04T11:47:34-06:00",
+      "dateModified": "2026-04-04T11:53:48-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -50,14 +50,7 @@
         "url": "https://pakin.lat/chispazo-verificador",
         "keywords": "Chispazo, resultados, combinaciones, verificador, comprobador",
         "creator": { "@type": "Organization", "name": "Pakin", "url": "https://pakin.lat", "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp" },
-        "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-04T11:47:34-06:00",
-        "distribution": { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://www.loterianacional.gob.mx/DatosAbiertos/NumerosGanadores" }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://pakin.lat/chispazo-verificador?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+        "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos"
       }
     }
     </script>
@@ -68,10 +61,8 @@
     <meta content="website" property="og:type" />
     <meta content="https://pakin.lat/chispazo-verificador" property="og:url" />
     <meta content="https://pakin.lat/images/pakin-checadores.webp" property="og:image" />
-    <meta content="Revisa y comprueba si tu jugada ya ha resultado ganadora, en qué número de sorteo y fecha o si tu combinación aún no resulta ganadora." property="og:description" />
-    <meta content="Francisco Jaramillo A." name="author" />
 
-    <!-- CORE CSS (Análogo a Analítica) -->
+    <!-- CORE CSS -->
     <style>
         body {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -79,7 +70,76 @@
             padding-top: 85px;
         }
 
-        /* TABLAS ESTILO DASHBOARD PREMIUM */
+        /* ----------------------------------------------------
+           BLINDAMOS LOS INPUTS CONTRA TU CSS ANTIGUO
+           ---------------------------------------------------- */
+        .form-pakin input.form-control {
+            border: 1px solid #ced4da !important;
+            border-radius: 8px !important;
+            padding: 0.5rem 1rem !important;
+            font-size: 1.1rem !important;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.075) !important;
+            color: #495057 !important;
+            background-color: #fff !important;
+            margin: 0 !important;
+            height: auto !important;
+        }
+
+        .form-pakin input.form-control:focus {
+            border-color: #8B0000 !important;
+            box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25) !important;
+            outline: none !important;
+        }
+
+        /* Diseño especial ancho para los 5 números */
+        .input-bolita {
+            width: 65px !important;
+            height: 65px !important;
+            text-align: center !important;
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            padding: 0 !important;
+        }
+
+        /* Ocultar flechas numéricas (spinners) para que se vea más limpio */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        @media (max-width: 450px) {
+            .input-bolita {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.2rem !important;
+            }
+        }
+
+        /* Botones Pakin */
+        .btn-pakin {
+            background-color: rgba(139, 0, 0, 0.9) !important;
+            color: #fff !important;
+            transition: all 0.3s ease !important;
+            font-weight: 600 !important;
+            padding: 10px 20px !important;
+            border-radius: 8px !important;
+            border: none !important;
+        }
+        .btn-pakin:hover:not(:disabled) {
+            background-color: #495057 !important;
+            transform: scale(1.02);
+        }
+        .btn-pakin:disabled {
+            background-color: #ced4da !important;
+            color: #6c757d !important;
+            cursor: not-allowed;
+        }
+
+        /* TABLAS ESTILO DASHBOARD */
         .contenedor-tabla {
             max-width: fit-content;
             max-height: 600px;
@@ -88,15 +148,11 @@
             background: #ffffff;
             margin: 0 auto 3rem auto;
             scrollbar-width: thin;
-            scrollbar-color: #adb5bd #f8f9fa;
         }
-
         .table-pakin {
             white-space: nowrap;
             font-size: 0.95rem;
         }
-
-        /* Header Congelado */
         .contenedor-tabla thead th {
             position: sticky;
             top: 0;
@@ -105,78 +161,25 @@
             z-index: 2;
             border-bottom: 2px solid #343a40;
             padding: 12px 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
         }
-
         .contenedor-tabla tbody td {
             padding: 10px 15px;
             border-bottom: 1px solid #e9ecef;
             vertical-align: middle;
             text-align: center;
         }
-
         .contenedor-tabla tbody tr:hover td {
             background-color: #f1f3f5;
-        }
-
-        @media (max-width: 768px) {
-            .contenedor-tabla {
-                max-height: 450px;
-                width: 100%;
-                max-width: 100%;
-                border-radius: 0 !important;
-                border-left: 0 !important;
-                border-right: 0 !important;
-            }
-            .contenedor-tabla tbody td {
-                padding: 8px 6px;
-                font-size: 0.85rem;
-            }
-            .contenedor-tabla thead th {
-                padding: 10px 6px;
-                font-size: 0.85rem;
-            }
-        }
-
-        /* Formularios y Botones */
-        .btn-pakin {
-            background-color: rgba(139, 0, 0, 0.9);
-            color: #fff;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-
-        .btn-pakin:hover:not(:disabled) {
-            background-color: #495057;
-            color: white;
-            transform: scale(1.02);
-        }
-
-        .btn-pakin:disabled {
-            background-color: #d3d3d3;
-            color: #888;
-            border: none;
-        }
-
-        /* FOOTER & EXTRAS */
-        footer a.text-secondary {
-            transition: color 0.2s ease;
-        }
-
-        footer a.text-secondary:hover {
-            color: #212529 !important;
         }
     </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR BLANCA (Igual a Analítica) -->
+    <!-- NAVBAR IDÉNTICA A ANALÍTICA -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
-                <!-- Se actualizó el logo con los tamaños correctos -->
                 <img src="/images/p2.webp" alt="Pakin" width="45" height="45" style="object-fit: contain;">
                 <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
             </a>
@@ -186,8 +189,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo">Chispazo Analítica</a></li>
-                    <li class="nav-item"><a class="nav-link active text-danger" href="chispazo-verificador">Chispazo Verificador</a></li>
+                    <!-- Mismo dropdown de analítica pero apuntando a la ruta "chispazo" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones Chispazo Analítica
+                        </a>
+                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="chispazo#frecuencias">Frecuencias</a></li>
+                            <li><a class="dropdown-item" href="chispazo#primos">Primos</a></li>
+                            <li><a class="dropdown-item" href="chispazo#repetidos">Repetidos</a></li>
+                            <li><a class="dropdown-item" href="chispazo#medias">Alta-Baja</a></li>
+                            <li><a class="dropdown-item" href="chispazo#consecutivos">Consecutivos</a></li>
+                            <li><a class="dropdown-item" href="chispazo#alertas">Alertas</a></li>
+                            <li><a class="dropdown-item" href="chispazo#balanza">Balanza</a></li>
+                            <li><a class="dropdown-item" href="chispazo#cronometro">Cronómetro</a></li>
+                        </ul>
+                    </li>
+                    <!-- Elementos Restantes, con "Verificador" marcado como activo -->
+                    <li class="nav-item"><a class="nav-link text-danger fw-bold active" href="chispazo-verificador">Chispazo Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo Generador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-resultados-historicos">Histórico Completo</a></li>
                 </ul>
@@ -195,7 +215,7 @@
         </div>
     </nav>
 
-    <!-- ADS LATERALES (Optimizados con clases Flex de Bootstrap) -->
+    <!-- ADS LATERALES -->
     <div class="d-none d-xl-flex flex-column justify-content-center"
         style="position: fixed; top: 100px; left: 12px; width: 160px; height: 600px; z-index: 0;">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="7361077709" data-ad-format="auto"></ins>
@@ -220,39 +240,39 @@
             <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato anterior</h4>
         </div>
 
-        <!-- FORMULARIOS (Convertidos a Cards Modernas con Flexbox) -->
-        <div class="row justify-content-center g-4 mb-5 mx-auto" style="max-width: 1000px;">
+        <!-- FORMULARIOS EN DISPOSICIÓN VERTICAL ELEGANTE -->
+        <div class="row justify-content-center mx-auto" style="max-width: 650px;">
             
-            <!-- Formulario Fecha -->
-            <div class="col-md-4 col-lg-3">
-                <form id="form2" class="bg-white p-4 border rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <label class="form-label fw-bold text-dark text-center w-100 mb-3" style="letter-spacing: 0.5px;">POR FECHA</label>
-                    <input id="fecha" name="FECHA" required type="date" class="form-control text-center mb-3" />
-                    <button class="btn btn-pakin w-100 ChecadorChispazoF mt-auto shadow-sm" disabled id="display" type="submit">Buscar Fecha</button>
+            <!-- 1. Formulario Fecha -->
+            <div class="col-12 mb-4">
+                <form id="form2" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
+                    <input id="fecha" name="FECHA" required type="date" class="form-control text-center mb-3" style="max-width: 300px;" />
+                    <button class="btn btn-pakin ChecadorChispazoF w-100 shadow-sm" style="max-width: 300px;" disabled id="display" type="submit">Buscar por Fecha</button>
                 </form>
             </div>
 
-            <!-- Formulario Sorteo -->
-            <div class="col-md-4 col-lg-3">
-                <form id="form1" class="bg-white p-4 border rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <label class="form-label fw-bold text-dark text-center w-100 mb-3" style="letter-spacing: 0.5px;">POR SORTEO</label>
-                    <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number" class="form-control text-center mb-3" />
-                    <button class="btn btn-pakin w-100 ChecadorChispazoS mt-auto shadow-sm" disabled id="display" type="submit">Buscar Sorteo</button>
+            <!-- 2. Formulario Sorteo -->
+            <div class="col-12 mb-4">
+                <form id="form1" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
+                    <input id="concurso" min="1" name="CONCURSO" placeholder="Ingresa el No. de Sorteo" required type="number" class="form-control text-center mb-3" style="max-width: 300px;" />
+                    <button class="btn btn-pakin ChecadorChispazoS w-100 shadow-sm" style="max-width: 300px;" disabled id="display" type="submit">Buscar por Sorteo</button>
                 </form>
             </div>
 
-            <!-- Formulario Números -->
-            <div class="col-md-12 col-lg-6">
-                <form id="form" class="bg-white p-4 border rounded-3 shadow-sm h-100 d-flex flex-column justify-content-between">
-                    <label class="form-label fw-bold text-dark text-center w-100 mb-3" style="letter-spacing: 0.5px;">POR NÚMEROS</label>
-                    <div class="d-flex justify-content-center gap-2 mb-3">
-                        <input id="r1" max="28" min="1" name="R1" placeholder="R1" required type="number" class="form-control text-center px-1" />
-                        <input id="r2" max="28" min="1" name="R2" placeholder="R2" required type="number" class="form-control text-center px-1" />
-                        <input id="r3" max="28" min="1" name="R3" placeholder="R3" required type="number" class="form-control text-center px-1" />
-                        <input id="r4" max="28" min="1" name="R4" placeholder="R4" required type="number" class="form-control text-center px-1" />
-                        <input id="r5" max="28" min="1" name="R5" placeholder="R5" required type="number" class="form-control text-center px-1" />
+            <!-- 3. Formulario Números -->
+            <div class="col-12 mb-5">
+                <form id="form" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE NÚMEROS</label>
+                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
+                        <input id="r1" max="28" min="1" name="R1" placeholder="1" required type="number" class="form-control input-bolita" />
+                        <input id="r2" max="28" min="1" name="R2" placeholder="2" required type="number" class="form-control input-bolita" />
+                        <input id="r3" max="28" min="1" name="R3" placeholder="3" required type="number" class="form-control input-bolita" />
+                        <input id="r4" max="28" min="1" name="R4" placeholder="4" required type="number" class="form-control input-bolita" />
+                        <input id="r5" max="28" min="1" name="R5" placeholder="5" required type="number" class="form-control input-bolita" />
                     </div>
-                    <button class="btn btn-pakin w-100 ChecadorChispazo mt-auto shadow-sm" disabled id="display" type="submit">Buscar Combinación</button>
+                    <button class="btn btn-pakin ChecadorChispazo w-100 shadow-sm" style="max-width: 350px;" disabled id="display" type="submit">Buscar Combinación</button>
                 </form>
             </div>
 
@@ -298,7 +318,7 @@
 
     </section>
 
-    <!-- FOOTER BLANCO (Igual a Analítica) -->
+    <!-- FOOTER BLANCO -->
     <footer class="bg-white border-top py-5 mt-auto">
         <div class="container text-secondary" style="font-size: 0.9rem;">
             <div class="row g-4">
@@ -351,5 +371,4 @@
     <script defer="" src="js/tag_manager.js"></script>
 
 </body>
-
 </html>
