@@ -4,17 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="jue, 02 abr 2026 19:21:42 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 00:46:32 CST">
 
     <!-- Bootstrap CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Tu CSS personalizado -->
-    <link href="/styles/style_pakin_v26.css" rel="stylesheet">
-
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
-        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
 
     <title>Sorteo Mayor Resultados Históricos y Analítica | Pakin</title>
 
@@ -26,8 +21,7 @@
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
-        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333" crossorigin="anonymous"></script>
 
     <!-- SEO Schema.org (Adaptado para Sorteo Mayor) -->
     <script type="application/ld+json">
@@ -42,65 +36,207 @@
     </script>
 
     <link rel="canonical" href="https://pakin.lat/sorteo-mayor">
-    <meta name="description"
-        content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el Sorteo Mayor. ¡Empodérate a diario!">
+    <meta name="description" content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el Sorteo Mayor. ¡Empodérate a diario!">
     <meta property="og:title" content="Ciencia de Datos y Herramientas Sobre Sorteo Mayor">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pakin.lat/sorteo-mayor">
     <meta name="author" content="Francisco Jaramillo A.">
+
+    <!-- CORE CSS (NUEVO DISEÑO PREMIUM) -->
+    <style>
+        /* 1. ESTILOS BASE Y LECTURA */
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 85px;
+        }
+
+        .texto-analitica {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            color: #495057;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            text-align: justify;
+        }
+
+        .texto-analitica strong {
+            color: #8B0000;
+        }
+
+        .texto-analitica a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .texto-analitica a:hover {
+            text-decoration: underline;
+        }
+
+        /* Imágenes Frecuencias SVG */
+        .img-frecuencias {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin: 0 auto 2rem auto;
+            display: block;
+            background: #fff; /* Asegura contraste si los SVG son transparentes */
+            padding: 10px;
+        }
+
+        /* 2. TABLAS ESTILO DASHBOARD PREMIUM */
+        .contenedor-tabla {
+            max-width: fit-content;
+            max-height: 600px;
+            overflow-y: auto;
+            overflow-x: auto;
+            background: #ffffff;
+            margin: 0 auto 3rem auto;
+            scrollbar-width: thin;
+            scrollbar-color: #adb5bd #f8f9fa;
+        }
+
+        .table-pakin {
+            white-space: nowrap;
+            font-size: 0.95rem;
+        }
+
+        /* Header Congelado (Sticky) */
+        .contenedor-tabla thead th {
+            position: sticky;
+            top: 0;
+            background-color: #495057 !important;
+            color: #ffffff !important;
+            z-index: 2;
+            border-bottom: 2px solid #343a40;
+            padding: 12px 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .contenedor-tabla tbody td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .contenedor-tabla tbody tr:hover td {
+            background-color: #f1f3f5;
+        }
+
+        /* Sombreado sutil de la columna IDX si existe */
+        .tabla-mayor tbody td:nth-child(2) {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #6c757d;
+        }
+
+        /* 3. COLORES CONDICIONALES */
+        .rojo-oscuro { color: #dc3545 !important; }
+        .naranja-oscuro { color: #fd7e14 !important; }
+        .azul-claro { color: #0dcaf0 !important; }
+        .azul { color: #0d6efd !important; }
+
+        /* 4. MEDIA QUERIES TABLAS MÓVIL */
+        @media (max-width: 768px) {
+            .contenedor-tabla {
+                max-height: 450px;
+                width: 100%;
+                max-width: 100%;
+                border-radius: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+            }
+
+            .contenedor-tabla tbody td,
+            .contenedor-tabla thead th {
+                padding: 10px 6px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* 5. FOOTER & BOTÓN SUBIR */
+        footer a.text-secondary {
+            transition: color 0.2s ease;
+        }
+        footer a.text-secondary:hover {
+            color: #212529 !important;
+        }
+
+        .subir {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .enlace-menu-seccion {
+            display: inline-block;
+            background-color: rgba(139, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 9px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .enlace-menu-seccion:hover {
+            background-color: #495057;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR (Estilo Chispazo pero para Sorteo Mayor) -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- NAVBAR BLANCA FIXED -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="/images/p2.webp" alt="Pakin" width="55" height="55" style="border-radius: 6px;">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/images/p2.webp" alt="Pakin" width="45" height="45" style="border-radius: 6px; object-fit: contain;">
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
             </a>
-            <a class="navbar-brand" href="sorteo-mayor">Sorteo Mayor</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Secciones Sorteo Mayor
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
                             <li><a class="dropdown-item" href="#numero-inicial">Número Inicial</a></li>
                             <li><a class="dropdown-item" href="#terminacion">Terminación</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="chispazo">Chispazo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tris">Tris</a></li>
-                    <li class="nav-item"><a class="nav-link" href="melate-retro">Melate Retro</a></li>
-                    <li class="nav-item"><a class="nav-link" href="melate">Melate</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo">Chispazo</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="tris">Tris</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro">Melate Retro</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="melate">Melate</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- ADS LATERALES -->
-    <div class="mobileHide" style="float: left; position: fixed; top: 100px; left: 12px; width: 160px;">
-        <!-- Pakin Sorteo Mayor Left -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
-            data-ad-slot="5298337011" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <!-- ADS LATERALES FIJOS (Optimizados para escritorio) -->
+    <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; left: 12px; width: 160px; height: 600px; z-index: 0;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="5298337011" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-    <div class="mobileHide" style="float: right; position: fixed; top: 100px; right: 12px; width: 160px;">
-        <!-- Pakin Sorteo Mayor Right -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
-            data-ad-slot="2672173673" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+    <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; right: 12px; width: 160px; height: 600px; z-index: 0;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2672173673" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <!-- BOTON SUBIR -->
@@ -108,20 +244,25 @@
         <a class="enlace-menu-seccion">Subir</a>
     </div>
 
-    <!-- 1. RESULTADOS GENERALES -->
-    <section style="margin-top: 100px;">
-        <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">Resultados Sorteo
-            Mayor</h2>
-        <h3 class="text-center text-muted mt-2 fs-6 fw-light">Sólo Premio Mayor</h3>
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
-        <div class="resultados text-center mb-4">
-            <a href="https://www.pakin.lat/images/SorteoMayor.pdf" target="_blank">
-                <img class="img-fluid" src="/images/smayor.png" alt="Pakin Sorteo Mayor">
+        <!-- 1. RESULTADOS GENERALES -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">
+                Resultados Sorteo Mayor<span style="color: #8B0000;">.</span>
+            </h2>
+            <h3 class="text-secondary mt-2 fs-6 fw-light">Sólo Premio Mayor</h3>
+        </div>
+
+        <div class="text-center mb-4">
+            <a href="https://www.pakin.lat/images/SorteoMayor.pdf" target="_blank" style="display: inline-block; transition: transform 0.2s ease;">
+                <img class="img-fluid rounded shadow-sm border" src="/images/smayor.png" alt="Pakin Sorteo Mayor" style="max-width: 300px;">
             </a>
         </div>
 
-        <div id="resultados" class="resultados">
-            <table class="tblres idx tabla-mayor">
+        <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover table-pakin tabla-mayor idx tblres mb-0 align-middle text-center">
                 <thead>
                     <tr>
                          <th>SORTEO</th>  <th>IDX</th>  <th>NUMERO</th>  <th>N1</th>  <th>N2</th>  <th>N3</th>  <th>N4</th>  <th>N5</th> 
@@ -532,105 +673,91 @@
                 </tbody>
             </table>
         </div>
-    </section>
 
-    <!-- AD MOBILE -->
-    <div class="webHide">
-        <!-- Pakin Sorteo Mayor Mobile -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
-            data-ad-slot="8192093668" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+        <!-- AD MÓVIL (Bajo la primera tabla) -->
+        <div class="d-block d-xl-none text-center my-4">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8192093668" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
 
-    <span id="frecuencias"></span>
+        <span id="frecuencias"></span>
 
-    <!-- 2. FRECUENCIAS (Gráficos SVG) -->
-    <section>
-        <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">Frecuencias de las
-            Terminaciones</h2>
-        <p class="par">En el siguiente gráfico podemos ver cuántas veces ha aparecido cada número como terminación del
-            <strong>premio mayor</strong>, en verde la terminación del último sorteo y en amarillo la terminación de dos
-            sorteos anteriores.
+        <!-- 2. FRECUENCIAS (Gráficos SVG) -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Frecuencias de las Terminaciones</h2>
+        </div>
+        <p class="texto-analitica px-3 px-md-0">
+            En el siguiente gráfico podemos ver cuántas veces ha aparecido cada número como terminación del <strong>premio mayor</strong>, en verde la terminación del último sorteo y en amarillo la terminación de dos sorteos anteriores.
         </p>
 
-        <img class="frecs img-fluid" src="/images/smayor15_8a2237b0.webp" loading="lazy" alt="Pakin Sorteo Mayor Frecuencias 15">
-        <br>
-        <img class="frecs img-fluid mt-3" src="/images/smayor30_38ca3ff9.webp" loading="lazy"
-            alt="Pakin Sorteo Mayor Frecuencias 30">
-    </section>
+        <img class="img-frecuencias" src="/images/smayor15_8a2237b0.webp" loading="lazy" alt="Pakin Sorteo Mayor Frecuencias 15">
+        <img class="img-frecuencias mt-4" src="/images/smayor30_38ca3ff9.webp" loading="lazy" alt="Pakin Sorteo Mayor Frecuencias 30">
 
-    <span id="numero-inicial"></span>
+        <span id="numero-inicial"></span>
 
-    <!-- 3. NÚMERO INICIAL -->
-    <section>
-        <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">Número Inicial</h2>
+        <!-- 3. NÚMERO INICIAL -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Número Inicial</h2>
+        </div>
 
-        <h3 class="titulos bg-light text-dark py-1 rounded text-center w-50 mx-auto fs-5 fs-md-4">Balanza [%]</h3>
-        <div class="resultados">
-            <table class="tblres tblest">
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover table-pakin tblres tblest mb-0 align-middle text-center">
                 <thead>
                     <tr> <th>NUM</th>  <th>DISTRIBUCION</th>  <th>P100</th>  <th>BALANZA</th> </tr>
                 </thead>
                 <tbody>
                     
                     <tr>
-                        <td>0</td>
+                        <td class="fw-bold bg-light">0</td>
                         <td>15.72%</td>
                         <td>10%</td>
-                        <td
-                            class="azul-claro fw-bold">
+                        <td class="azul-claro fw-bold">
                             -5.72
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>1</td>
+                        <td class="fw-bold bg-light">1</td>
                         <td>17.42%</td>
                         <td>21%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             3.58
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>2</td>
+                        <td class="fw-bold bg-light">2</td>
                         <td>17.52%</td>
                         <td>22%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             4.48
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>3</td>
+                        <td class="fw-bold bg-light">3</td>
                         <td>17.42%</td>
                         <td>16%</td>
-                        <td
-                            class="azul-claro fw-bold">
+                        <td class="azul-claro fw-bold">
                             -1.42
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>4</td>
+                        <td class="fw-bold bg-light">4</td>
                         <td>17.33%</td>
                         <td>17%</td>
-                        <td
-                            class="">
+                        <td class="">
                             -0.33
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>5</td>
+                        <td class="fw-bold bg-light">5</td>
                         <td>14.58%</td>
                         <td>14%</td>
-                        <td
-                            class="">
+                        <td class="">
                             -0.58
                         </td>
                     </tr>
@@ -639,9 +766,9 @@
             </table>
         </div>
 
-        <h3 class="titulos bg-light text-dark py-1 rounded text-center w-50 mx-auto fs-5 fs-md-4 mt-4">Cronómetro</h3>
-        <div class="resultados">
-            <table class="tblres tblest">
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover table-pakin tblres tblest mb-0 align-middle text-center">
                 <thead>
                     <tr> <th>NUM</th>  <th>IDX</th>  <th>50_PER</th>  <th>MEDIA</th>  <th>80_PER</th>  <th>MAX</th>  <th>UTA</th> </tr>
                 </thead>
@@ -653,23 +780,19 @@
                             0
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             0
                         </td>
                         
-                        <td  style="background-color: rgb(173, 75, 75); color: white;"
-                            >
+                        <td  style="background-color: rgb(173, 75, 75); color: white; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(164, 55, 55); color: white;"
-                            >
+                        <td  style="background-color: rgb(164, 55, 55); color: white; border-bottom: 1px solid #dee2e6;" >
                             6
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
@@ -689,23 +812,19 @@
                             1
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             3
                         </td>
                         
-                        <td  style="background-color: rgb(215, 167, 167); color: black;"
-                            >
+                        <td  style="background-color: rgb(215, 167, 167); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(194, 123, 123); color: black;"
-                            >
+                        <td  style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
@@ -725,23 +844,19 @@
                             2
                         </td>
                         
-                        <td  style="background-color: rgb(157, 40, 40); color: white;"
-                            >
+                        <td  style="background-color: rgb(157, 40, 40); color: white; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(204, 144, 144); color: black;"
-                            >
+                        <td  style="background-color: rgb(204, 144, 144); color: black; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
@@ -761,23 +876,19 @@
                             3
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             1
                         </td>
                         
-                        <td  style="background-color: rgb(194, 123, 123); color: black;"
-                            >
+                        <td  style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(183, 98, 98); color: white;"
-                            >
+                        <td  style="background-color: rgb(183, 98, 98); color: white; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             10
                         </td>
                         
@@ -797,23 +908,19 @@
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(210, 157, 157); color: black;"
-                            >
+                        <td  style="background-color: rgb(210, 157, 157); color: black; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
@@ -833,23 +940,19 @@
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             11
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(218, 175, 175); color: black;"
-                            >
+                        <td  style="background-color: rgb(218, 175, 175); color: black; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(172, 72, 72); color: white;"
-                            >
+                        <td  style="background-color: rgb(172, 72, 72); color: white; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
@@ -866,118 +969,108 @@
                 </tbody>
             </table>
         </div>
-    </section>
 
-    <span id="terminacion"></span>
+        <span id="terminacion"></span>
 
-    <!-- 4. TERMINACIÓN -->
-    <section class="mb-5">
-        <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">Terminación</h2>
+        <!-- 4. TERMINACIÓN -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Terminación</h2>
+        </div>
 
-        <h3 class="titulos bg-light text-dark py-1 rounded text-center w-50 mx-auto fs-5 fs-md-4">Balanza [%]</h3>
-        <div class="resultados">
-            <table class="tblres tblest">
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover table-pakin tblres tblest mb-0 align-middle text-center">
                 <thead>
                     <tr> <th>NUM</th>  <th>DISTRIBUCION</th>  <th>P100</th>  <th>BALANZA</th> </tr>
                 </thead>
                 <tbody>
                     
                     <tr>
-                        <td>0</td>
+                        <td class="fw-bold bg-light">0</td>
                         <td>9.56%</td>
                         <td>11%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             1.44
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>1</td>
+                        <td class="fw-bold bg-light">1</td>
                         <td>8.9%</td>
                         <td>10%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             1.1
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>2</td>
+                        <td class="fw-bold bg-light">2</td>
                         <td>10.32%</td>
                         <td>14%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             3.68
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>3</td>
+                        <td class="fw-bold bg-light">3</td>
                         <td>9.28%</td>
                         <td>10%</td>
-                        <td
-                            class="">
+                        <td class="">
                             0.72
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>4</td>
+                        <td class="fw-bold bg-light">4</td>
                         <td>10.04%</td>
                         <td>7%</td>
-                        <td
-                            class="azul-claro fw-bold">
+                        <td class="azul-claro fw-bold">
                             -3.04
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>5</td>
+                        <td class="fw-bold bg-light">5</td>
                         <td>10.13%</td>
                         <td>8%</td>
-                        <td
-                            class="azul-claro fw-bold">
+                        <td class="azul-claro fw-bold">
                             -2.13
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>6</td>
+                        <td class="fw-bold bg-light">6</td>
                         <td>9.19%</td>
                         <td>7%</td>
-                        <td
-                            class="azul-claro fw-bold">
+                        <td class="azul-claro fw-bold">
                             -2.19
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>7</td>
+                        <td class="fw-bold bg-light">7</td>
                         <td>11.65%</td>
                         <td>11%</td>
-                        <td
-                            class="">
+                        <td class="">
                             -0.65
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>8</td>
+                        <td class="fw-bold bg-light">8</td>
                         <td>10.13%</td>
                         <td>12%</td>
-                        <td
-                            class="rojo-oscuro fw-bold">
+                        <td class="rojo-oscuro fw-bold">
                             1.87
                         </td>
                     </tr>
                     
                     <tr>
-                        <td>9</td>
+                        <td class="fw-bold bg-light">9</td>
                         <td>10.8%</td>
                         <td>10%</td>
-                        <td
-                            class="">
+                        <td class="">
                             -0.8
                         </td>
                     </tr>
@@ -986,9 +1079,9 @@
             </table>
         </div>
 
-        <h3 class="titulos bg-light text-dark py-1 rounded text-center w-50 mx-auto fs-5 fs-md-4 mt-4">Cronómetro</h3>
-        <div class="resultados">
-            <table class="tblres tblest">
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover table-pakin tblres tblest mb-0 align-middle text-center">
                 <thead>
                     <tr> <th>NUM</th>  <th>IDX</th>  <th>50_PER</th>  <th>MEDIA</th>  <th>80_PER</th>  <th>MAX</th>  <th>UTA</th> </tr>
                 </thead>
@@ -1000,23 +1093,19 @@
                             0
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             2
                         </td>
                         
-                        <td  style="background-color: rgb(185, 101, 101); color: white;"
-                            >
+                        <td  style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(172, 72, 72); color: white;"
-                            >
+                        <td  style="background-color: rgb(172, 72, 72); color: white; border-bottom: 1px solid #dee2e6;" >
                             10
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             16
                         </td>
                         
@@ -1036,23 +1125,19 @@
                             1
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(218, 175, 175); color: black;"
-                            >
+                        <td  style="background-color: rgb(218, 175, 175); color: black; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(185, 101, 101); color: white;"
-                            >
+                        <td  style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;" >
                             11
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             19
                         </td>
                         
@@ -1072,23 +1157,19 @@
                             2
                         </td>
                         
-                        <td  style="background-color: rgb(207, 151, 151); color: black;"
-                            >
+                        <td  style="background-color: rgb(207, 151, 151); color: black; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(207, 151, 151); color: black;"
-                            >
+                        <td  style="background-color: rgb(207, 151, 151); color: black; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             16
                         </td>
                         
@@ -1108,23 +1189,19 @@
                             3
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             29
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(219, 177, 177); color: black;"
-                            >
+                        <td  style="background-color: rgb(219, 177, 177); color: black; border-bottom: 1px solid #dee2e6;" >
                             10
                         </td>
                         
-                        <td  style="background-color: rgb(182, 96, 96); color: white;"
-                            >
+                        <td  style="background-color: rgb(182, 96, 96); color: white; border-bottom: 1px solid #dee2e6;" >
                             17
                         </td>
                         
@@ -1144,23 +1221,19 @@
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             1
                         </td>
                         
-                        <td  style="background-color: rgb(185, 101, 101); color: white;"
-                            >
+                        <td  style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(166, 59, 59); color: white;"
-                            >
+                        <td  style="background-color: rgb(166, 59, 59); color: white; border-bottom: 1px solid #dee2e6;" >
                             10
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             15
                         </td>
                         
@@ -1180,23 +1253,19 @@
                             5
                         </td>
                         
-                        <td  style="background-color: rgb(160, 46, 46); color: white;"
-                            >
+                        <td  style="background-color: rgb(160, 46, 46); color: white; border-bottom: 1px solid #dee2e6;" >
                             13
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(218, 175, 175); color: black;"
-                            >
+                        <td  style="background-color: rgb(218, 175, 175); color: black; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             15
                         </td>
                         
@@ -1216,23 +1285,19 @@
                             6
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             0
                         </td>
                         
-                        <td  style="background-color: rgb(183, 98, 98); color: white;"
-                            >
+                        <td  style="background-color: rgb(183, 98, 98); color: white; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(173, 75, 75); color: white;"
-                            >
+                        <td  style="background-color: rgb(173, 75, 75); color: white; border-bottom: 1px solid #dee2e6;" >
                             10
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             18
                         </td>
                         
@@ -1252,23 +1317,19 @@
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             4
                         </td>
                         
-                        <td  style="background-color: rgb(194, 123, 123); color: black;"
-                            >
+                        <td  style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;" >
                             7
                         </td>
                         
-                        <td  style="background-color: rgb(183, 98, 98); color: white;"
-                            >
+                        <td  style="background-color: rgb(183, 98, 98); color: white; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             13
                         </td>
                         
@@ -1288,23 +1349,19 @@
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             8
                         </td>
                         
-                        <td  style="background-color: rgb(215, 167, 167); color: black;"
-                            >
+                        <td  style="background-color: rgb(215, 167, 167); color: black; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             14
                         </td>
                         
@@ -1324,23 +1381,19 @@
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             6
                         </td>
                         
-                        <td  style="background-color: rgb(255, 255, 255); color: black;"
-                            >
+                        <td  style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;" >
                             6
                         </td>
                         
-                        <td  style="background-color: rgb(194, 123, 123); color: black;"
-                            >
+                        <td  style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;" >
                             9
                         </td>
                         
-                        <td  style="background-color: rgb(139, 0, 0); color: white;"
-                            >
+                        <td  style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;" >
                             15
                         </td>
                         
@@ -1357,142 +1410,58 @@
                 </tbody>
             </table>
         </div>
+
     </section>
 
-    <!-- FOOTER PAKIN -->
-    <footer class="bg-dark text-light py-4">
-        <div class="container">
-            <div class="row">
-                <!-- Acerca de -->
-                <div class="col-md-3 mb-3">
-                    <h5>Acerca de</h5>
-                    <p class="w-100 w-md-75 w-lg-100" style="max-width: 250px;">
-                        Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de
-                        datos, analítica
-                        y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.
-                    </p>
+    <!-- FOOTER BLANCO PREMIUM -->
+    <footer class="bg-white border-top py-5 mt-auto">
+        <div class="container text-secondary" style="font-size: 0.9rem;">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Acerca de</h6>
+                    <p class="mb-0" style="line-height: 1.6;">Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.</p>
                 </div>
-                <!-- Enlaces Rápidos -->
-                <div class="col-md-3 mb-3">
-                    <h5>Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://pakin.lat/verificadores"
-                                rel="noopener" target="_blank">
-                                Verificadores
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://pakin.lat/generadores"
-                                rel="noopener" target="_blank">
-                                Generadores
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none"
-                                href="https://pakin.lat/resultados-historicos-completos" rel="noopener" target="_blank">
-                                Históricos
-                            </a>
-                        </li>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos</h6>
+                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores" target="_blank">Verificadores</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores" target="_blank">Generadores</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a></li>
                     </ul>
                 </div>
-                <!-- Sitios de Interés -->
-                <div class="col-md-3 mb-3">
-                    <h5>Sitios de Interés</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a class="text-light text-decoration-none"
-                                href="https://www.loterianacional.gob.mx/home/index" rel="noopener" target="_blank">
-                                Lotería Nacional
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://www.pronosports.net/"
-                                rel="noopener" target="_blank">
-                                Pronosports
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://www.ligamx.net/" rel="noopener"
-                                target="_blank">
-                                LigaMX
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://www.premierleague.com/en/"
-                                rel="noopener" target="_blank">
-                                Premier League
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://www.laliga.com/en-MX"
-                                rel="noopener" target="_blank">
-                                LaLiga
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://lfa.mx/" rel="noopener"
-                                target="_blank">
-                                LFA
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://es.mlssoccer.com/" rel="noopener"
-                                target="_blank">
-                                MLS
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-light text-decoration-none" href="https://www.nfl.com/international/"
-                                rel="noopener" target="_blank">
-                                NFL
-                            </a>
-                        </li>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés</h6>
+                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+                        <li><a class="text-secondary text-decoration-none" href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería Nacional</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/" target="_blank">Pronosports</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/" target="_blank">LigaMX</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/" target="_blank">Premier League</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX" target="_blank">LaLiga</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/" target="_blank">LFA</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/" target="_blank">MLS</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/" target="_blank">NFL</a></li>
                     </ul>
                 </div>
-                <!-- Contacto y Redes Sociales -->
-                <div class="col-md-3 mb-3">
-                    <h5>Contacto</h5>
-                    <p>Email: contacto@pakin.lat</p>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Contacto</h6>
+                    <p class="mb-3">Email: contacto@pakin.lat</p>
                     <div class="d-flex gap-3">
-                        <!-- Facebook -->
-                        <a class="text-light" href="https://www.facebook.com/pakinloteria" rel="noopener"
-                            target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                            </svg>
+                        <!-- Redes en Gris Secundaria -->
+                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" /></svg>
                         </a>
-
-                        <!-- Twitter (X) -->
-                        <a class="text-light" href="https://x.com/pakinlat" rel="noopener" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                <path
-                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
-                            </svg>
+                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" /></svg>
                         </a>
-
-                        <!-- LinkedIn -->
-                        <a class="text-light" href="https://www.linkedin.com/in/fjaramilloa/" rel="noopener"
-                            target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg>
+                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" /></svg>
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Línea divisora -->
-            <hr class="border-light" />
-            <!-- Derechos reservados -->
+            <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
             <div class="text-center">
-                <p class="mb-0">
-                    © 2026 Pakin.lat - Todos los derechos reservados.
-                </p>
+                <p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
