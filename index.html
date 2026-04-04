@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -7,80 +8,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="last-modified" content="Mon, 24 Mar 2025 09:30:00 CST">
 
+
   <!-- 1. Bootstrap CSS (Alojado por ti, súper rápido gracias a tu Cloudflare) -->
   <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Tu CSS personalizado -->
-  <link href="styles/style_pakin_v26.css" rel="stylesheet">
 
   <style>
-    .navbar {
-      background-color: #8B0000;
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 85px;
     }
 
-    .nav-link {
-      color: #ffffff;
-      opacity: 1;
+    /* Tarjetas estáticas (Sólidas, sin animaciones ni cambios de color) */
+    .card-analitica {
+      border-top: 4px solid #495057 !important;
     }
 
-    .dropdown-mobile {
-      width: 100%;
-      text-align: center;
+    /* Botón ultra sutil */
+    .btn-sutil {
+      background-color: transparent;
+      border: 1px solid #ced4da;
+      color: #6c757d;
+      transition: all 0.3s ease;
     }
 
-    .dropdown-mobile .nav-link {
-      display: block;
-      width: 100%;
-      padding: 10px 0;
-      background-color: #fff;
-      color: #8B0000;
-      border-radius: 5px;
-      margin: 5px 0;
+    .btn-sutil:hover {
+      background-color: transparent;
+      border-color: #6c757d;
+      color: #212529;
     }
 
-    .card {
-      border-radius: 15px;
-      /* transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; */
-      /* transition: box-shadow 0.2s ease-in-out; */
-      max-width: 200px;
-      margin: auto;
-      border: 1px solid #000000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
+    /* Interacción sutil para los enlaces del footer */
+    footer a.text-secondary {
+      transition: color 0.2s ease;
     }
 
-    .card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .card-body {
-      padding: 8px;
-    }
-
-    .card-title {
-      font-size: 1.3rem;
-    }
-
-    .card-text {
-      font-size: 1.2rem;
-    }
-
-    .btn {
-      padding: 1px 48.540px;
-      font-size: 1.3rem;
-      background-color: #8B0000;
-      border-color: #8B0000;
-      color: white;
-    }
-
-    .btn:hover {
-      background-color: #228B22;
-      border-color: #228B22;
-      color: white;
+    footer a.text-secondary:hover {
+      color: #212529 !important;
     }
   </style>
+
 
   <title>
     Pakin | Datos y Analítica Más Completa de Sorteos
@@ -184,351 +152,298 @@
 
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<body class="d-flex flex-column min-vh-100">
+  <!-- 2. NUEVA BARRA DE NAVEGACIÓN BLANCA -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img alt="Pakin" height="55" src="/images/p2.webp" style="border-radius: 6px;" width="55" />
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <!-- AQUÍ ESTÁ TU NUEVO LOGO SVG -->
+        <img alt="Pakin" src="/images/p2.svg" height="45" width="45" style="object-fit: contain;">
+        <!-- Texto a juego con el logo -->
+        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
       </a>
-      <a class="navbar-brand" href="\">
-      </a>
-
     </div>
   </nav>
-  <section>
-    <h2 class="titulos bg-light text-dark py-2 rounded text-center w-75 mx-auto fs-3 fs-md-2">
-      Analítica, Datos, Resultados y Herramientas Sobre Sorteos
+
+  <section class="container py-4 flex-grow-1">
+
+    <!-- Título principal con el "Punto Editorial" en Rojo Vino -->
+    <h2 class="text-center fw-bold text-dark mb-4" style="font-size: clamp(1.2rem, 3vw, 2rem);">
+      Analítica, Datos y Herramientas sobre Sorteos<span style="color: #8B0000;">.</span>
     </h2>
-    <div align="center">
-      <!-- Pakin Top -->
-      <ins class="adsbygoogle" data-ad-client="ca-pub-1379506914303333" data-ad-format="auto" data-ad-slot="7010563772"
-        data-full-width-responsive="true" style="display:block">
-      </ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+
+
+    <!-- Frase motivacional (Letra sutilmente más grande y línea Rojo Vino) -->
+    <div class="alert bg-white text-center shadow-sm border-0 text-secondary fst-italic mb-5 mx-auto rounded-3"
+      style="max-width: 650px; font-size: 1.05rem; border-top: 2px solid #8B0000 !important;">
+      "Analiza tus números, encuentra patrones y confía en tu intuición."
     </div>
-    <div class="container py-5">
-      <div class="g-ytsubscribe" data-channelid="UCq8uycqV1nI1eSeAcC0pveA" data-count="default" data-layout="full">
+
+
+    <!-- INICIO DE LAS TARJETAS -->
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
+
+      <!-- 1. Verificadores -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Verificadores</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="verificadores">Entrar</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="alert text-center mt-3 mb-3" role="alert"
-        style="background:#fff; border:1px solid #8B0000; color:#000000;"> “Analiza tus números, encuentra patrones y
-        confía en tu intuición.” </div>
-
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Verificadores" class="card-img-top" src="/images/pakin.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Verificadores
-              </h5>
-              <p class="card-text">
-                Jugadas
-              </p>
-              <a class="btn" href="verificadores">
-                Entrar
-              </a>
+      <!-- 2. Generadores -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Generadores</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="generadores">Entrar</a>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Generadores" class="card-img-top" src="/images/pakin.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Generadores
-              </h5>
-              <p class="card-text">
-                Jugadas
-              </p>
-              <a class="btn" href="generadores">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Históricos" class="card-img-top" src="/images/pakin.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Históricos
-              </h5>
-              <p class="card-text">
-                Completos
-              </p>
-              <a class="btn" href="resultados-historicos-completos">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Zodiaco" class="card-img-top" src="/images/pakin-zodiaco.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Sorteo Zodiaco
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="zodiaco">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Tris" class="card-img-top" src="/images/pakin-tris1-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Tris
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="tris">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Chispazo" class="card-img-top" src="/images/pakin-chispazo-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Chispazo
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="chispazo">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Melate Retro" class="card-img-top" src="/images/pakin-melate-retro-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Melate Retro
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="melate-retro">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Melate" class="card-img-top" src="/images/pakin-melate-revancha-revanchita-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Melate
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="melate">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Revancha" class="card-img-top" src="/images/pakin-melate-revancha-revanchita-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Revancha
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="revancha">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Revanchita" class="card-img-top"
-              src="/images/pakin-melate-revancha-revanchita-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Revanchita
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="revanchita">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Gana Gato" class="card-img-top" src="/images/pakin-ganagato.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Gana Gato
-              </h5>
-              <p class="card-text">
-              </p>
-              <a class="btn" href="gana-gato">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Sorteo Superior" class="card-img-top" src="/images/pakin-sorteo-superior.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Sorteo Superior
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="superior">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img alt="Pakin Sorteo Mayor" class="card-img-top" src="/images/pakin-sorteo-mayor-mobile.webp" />
-            <div class="card-body text-center">
-              <h5 class="card-title">
-                Sorteo Mayor
-              </h5>
-              <p class="card-text">
-                Analítica
-              </p>
-              <a class="btn" href="sorteo-mayor">
-                Entrar
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- 3. Históricos -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Históricos</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Completos</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="resultados-historicos-completos">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Sorteo Zodiaco -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Zodiaco</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="zodiaco">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Tris -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Tris</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;" href="tris">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Chispazo -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Chispazo</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="chispazo">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Melate Retro -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Melate Retro</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="melate-retro">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Melate -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Melate</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="melate">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Revancha -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Revancha</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="revancha">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Revanchita -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Revanchita</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="revanchita">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Gana Gato -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Gana Gato</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">&nbsp;</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="gana-gato">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Sorteo Superior -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Sorteo Superior</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="superior">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13. Sorteo Mayor -->
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 1px; font-size: 1.15rem;">Sorteo Mayor</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+                href="sorteo-mayor">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
-  <footer class="bg-dark text-light py-4">
-    <div class="container">
-      <div class="row">
+  <footer class="bg-white border-top py-5 mt-auto">
+    <div class="container text-secondary" style="font-size: 0.9rem;">
+      <div class="row g-4">
+
         <!-- Acerca de -->
-        <div class="col-md-3 mb-3">
-          <h5>Acerca de</h5>
-          <p class="w-100 w-md-75 w-lg-100" style="max-width: 250px;">
-            Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de
-            datos, analítica
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Acerca de</h6>
+          <p class="mb-0" style="line-height: 1.6;">
+            Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de datos, analítica
             y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.
           </p>
         </div>
+
         <!-- Enlaces Rápidos -->
-        <div class="col-md-3 mb-3">
-          <h5>Enlaces Rápidos</h5>
-          <ul class="list-unstyled">
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos</h6>
+          <ul class="list-unstyled mb-0" style="line-height: 1.8;">
             <li>
-              <a class="text-light text-decoration-none" href="https://pakin.lat/verificadores" rel="noopener"
-                target="_blank">
-                Verificadores
-              </a>
+              <a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores" rel="noopener"
+                target="_blank">Verificadores</a>
             </li>
             <li>
-              <a class="text-light text-decoration-none" href="https://pakin.lat/generadores" rel="noopener"
-                target="_blank">
-                Generadores
-              </a>
+              <a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores" rel="noopener"
+                target="_blank">Generadores</a>
             </li>
             <li>
-              <a class="text-light text-decoration-none" href="https://pakin.lat/resultados-historicos-completos"
-                rel="noopener" target="_blank">
-                Históricos
-              </a>
+              <a class="text-secondary text-decoration-none" href="https://pakin.lat/resultados-historicos-completos"
+                rel="noopener" target="_blank">Históricos</a>
             </li>
           </ul>
         </div>
+
         <!-- Sitios de Interés -->
-        <div class="col-md-3 mb-3">
-          <h5>Sitios de Interés</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.loterianacional.gob.mx/home/index"
-                rel="noopener" target="_blank">
-                Lotería Nacional
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.pronosports.net/" rel="noopener"
-                target="_blank">
-                Pronosports
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.ligamx.net/" rel="noopener" target="_blank">
-                LigaMX
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.premierleague.com/en/" rel="noopener"
-                target="_blank">
-                Premier League
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.laliga.com/en-MX" rel="noopener"
-                target="_blank">
-                LaLiga
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://lfa.mx/" rel="noopener" target="_blank">
-                LFA
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://es.mlssoccer.com/" rel="noopener"
-                target="_blank">
-                MLS
-              </a>
-            </li>
-            <li>
-              <a class="text-light text-decoration-none" href="https://www.nfl.com/international/" rel="noopener"
-                target="_blank">
-                NFL
-              </a>
-            </li>
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés</h6>
+          <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+            <li><a class="text-secondary text-decoration-none" href="https://www.loterianacional.gob.mx/home/index"
+                rel="noopener" target="_blank">Lotería Nacional</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/" rel="noopener"
+                target="_blank">Pronosports</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/" rel="noopener"
+                target="_blank">LigaMX</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/" rel="noopener"
+                target="_blank">Premier League</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX" rel="noopener"
+                target="_blank">LaLiga</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/" rel="noopener"
+                target="_blank">LFA</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/" rel="noopener"
+                target="_blank">MLS</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/" rel="noopener"
+                target="_blank">NFL</a></li>
           </ul>
         </div>
+
         <!-- Contacto y Redes Sociales -->
-        <div class="col-md-3 mb-3">
-          <h5>Contacto</h5>
-          <p>Email: contacto@pakin.lat</p>
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Contacto</h6>
+          <p class="mb-3">Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c3cfced4c1c3d4cfe0d0c1cbc9ce8eccc1d4">[email&#160;protected]</a></p>
           <div class="d-flex gap-3">
             <!-- Facebook -->
-            <a class="text-light" href="https://www.facebook.com/pakinloteria" rel="noopener" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
+            <a class="text-secondary" href="https://www.facebook.com/pakinloteria" rel="noopener" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook"
                 viewBox="0 0 16 16">
                 <path
                   d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
@@ -536,7 +451,7 @@
             </a>
 
             <!-- Twitter (X) -->
-            <a class="text-light" href="https://x.com/pakinlat" rel="noopener" target="_blank">
+            <a class="text-secondary" href="https://x.com/pakinlat" rel="noopener" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
                 viewBox="0 0 16 16">
                 <path
@@ -545,8 +460,8 @@
             </a>
 
             <!-- LinkedIn -->
-            <a class="text-light" href="https://www.linkedin.com/in/fjaramilloa/" rel="noopener" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+            <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" rel="noopener" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin"
                 viewBox="0 0 16 16">
                 <path
                   d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -555,11 +470,13 @@
           </div>
         </div>
       </div>
-      <!-- Línea divisora -->
-      <hr class="border-light" />
+
+      <!-- Línea divisora sutil -->
+      <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
+
       <!-- Derechos reservados -->
       <div class="text-center">
-        <p class="mb-0">
+        <p class="mb-0" style="font-size: 0.85rem;">
           © 2026 Pakin.lat - Todos los derechos reservados.
         </p>
       </div>
@@ -568,11 +485,12 @@
 
 
 
-  <script src="https://apis.google.com/js/platform.js">
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://apis.google.com/js/platform.js">
   </script>
   <script defer="" src="js/tag_manager.js">
   </script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"36b1f23debff40da8da48e87d68145c2","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 
 </html>
