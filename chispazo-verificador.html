@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:23:23 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:38:16 CST">
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +32,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00+06:00",
-      "dateModified": "2026-04-04T12:23:23-06:00",
+      "dateModified": "2026-04-04T12:38:16-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -185,7 +185,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE -->
+    <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE (SIN LINK A LA PÁGINA ACTUAL) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -198,7 +198,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
                     <li class="nav-item"><a class="nav-link text-dark" href="/chispazo">Chispazo Analítica</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold active" style="color: #8B0000;" href="chispazo-verificador">Chispazo Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo Generador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-resultados-historicos">Histórico Completo</a></li>
                 </ul>
@@ -229,7 +228,7 @@
             <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato anterior</h4>
         </div>
 
-        <!-- PRELOADER (Ahora oculto por defecto con display: none) -->
+        <!-- PRELOADER (Oculto por defecto con display: none) -->
         <div id="preloader" class="text-center my-3" style="display: none;">
             <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
                 Buscando resultados<span class="dots">...</span>
@@ -282,16 +281,16 @@
                 </form>
             </div>
 
-            <!-- 3. Formulario Números -->
+            <!-- 3. Formulario Números (PLACEHOLDERS ACTUALIZADOS A R1, R2, etc.) -->
             <div class="col-12 mb-5">
                 <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE NÚMEROS</label>
                     <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
-                        <input id="r1" max="28" min="1" name="R1" placeholder="1" required type="number" class="form-control input-bolita" />
-                        <input id="r2" max="28" min="1" name="R2" placeholder="2" required type="number" class="form-control input-bolita" />
-                        <input id="r3" max="28" min="1" name="R3" placeholder="3" required type="number" class="form-control input-bolita" />
-                        <input id="r4" max="28" min="1" name="R4" placeholder="4" required type="number" class="form-control input-bolita" />
-                        <input id="r5" max="28" min="1" name="R5" placeholder="5" required type="number" class="form-control input-bolita" />
+                        <input id="r1" max="28" min="1" name="R1" placeholder="R1" required type="number" class="form-control input-bolita" />
+                        <input id="r2" max="28" min="1" name="R2" placeholder="R2" required type="number" class="form-control input-bolita" />
+                        <input id="r3" max="28" min="1" name="R3" placeholder="R3" required type="number" class="form-control input-bolita" />
+                        <input id="r4" max="28" min="1" name="R4" placeholder="R4" required type="number" class="form-control input-bolita" />
+                        <input id="r5" max="28" min="1" name="R5" placeholder="R5" required type="number" class="form-control input-bolita" />
                     </div>
                     <button class="btn btn-pakin w-100 ChecadorChispazo" style="max-width: 250px;" disabled id="display" type="submit">Buscar Combinación</button>
                 </form>
