@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:48:14 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:52:47 CST">
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate-verificador",
       "datePublished": "2017-01-01T11:11:00+06:00",
-      "dateModified": "2026-04-04T12:48:14-06:00",
+      "dateModified": "2026-04-04T12:52:47-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -67,7 +67,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-04T12:48:14-06:00",
+        "dateModified": "2026-04-04T12:52:47-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -217,7 +217,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR LIMPIO (Sin link a la página actual) -->
+    <!-- NAVBAR LIMPIO -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -239,12 +239,10 @@
 
     <!-- ADS LATERALES -->
     <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; left: 12px; width: 160px; height: 600px; z-index: 0;">
-        <!-- Pakin25 Melate Verificador Left -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="4955440052" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
     <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; right: 12px; width: 160px; height: 600px; z-index: 0;">
-        <!-- Pakin25 Melate Verificador Right -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6241435718" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
@@ -262,7 +260,7 @@
             <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato anterior</h4>
         </div>
 
-        <!-- PRELOADER (Oculto por defecto) -->
+        <!-- PRELOADER -->
         <div id="preloader" class="text-center my-3" style="display: none;">
             <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
                 Buscando resultados<span class="dots">...</span>
@@ -304,7 +302,8 @@
                 <form id="form2" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date" class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorMelateF" style="max-width: 250px;" id="display" type="submit">Buscar por Fecha</button>
+                    <!-- AGREGADO: disabled -->
+                    <button class="btn btn-pakin w-100 ChecadorMelateF" style="max-width: 250px;" disabled id="display" type="submit">Buscar por Fecha</button>
                 </form>
             </div>
 
@@ -313,7 +312,8 @@
                 <form id="form1" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number" class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorMelateS" style="max-width: 250px;" id="display" type="submit">Buscar por Sorteo</button>
+                    <!-- AGREGADO: disabled -->
+                    <button class="btn btn-pakin w-100 ChecadorMelateS" style="max-width: 250px;" disabled id="display" type="submit">Buscar por Sorteo</button>
                 </form>
             </div>
 
@@ -329,7 +329,8 @@
                         <input id="r5" max="56" min="1" name="R5" placeholder="R5" required type="number" class="form-control input-bolita" />
                         <input id="r6" max="56" min="1" name="R6" placeholder="R6" required type="number" class="form-control input-bolita" />
                     </div>
-                    <button class="btn btn-pakin w-100 ChecadorMelate" style="max-width: 250px;" id="display" type="submit">Buscar Combinación</button>
+                    <!-- AGREGADO: disabled -->
+                    <button class="btn btn-pakin w-100 ChecadorMelate" style="max-width: 250px;" disabled id="display" type="submit">Buscar Combinación</button>
                 </form>
             </div>
 
@@ -337,7 +338,6 @@
 
         <!-- ADS Inferiores -->
         <div class="d-flex justify-content-center mt-3 mb-4 mx-auto" style="width: 100%; max-width: 320px; height: 100px;">
-            <!-- Pakin25 Melate Verificador 1 -->
             <ins class="adsbygoogle" style="display:block; width:100%;" data-ad-client="ca-pub-1379506914303333" data-ad-slot="4170472427" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
