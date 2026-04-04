@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 11:53:48 CST">
+    <meta http-equiv="last-modified" content="sáb, 04 abr 2026 12:03:48 CST">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS Exclusivamente -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <!-- Tu CSS personalizado -->
-    <link href="styles/style_pakin_v26.css" rel="stylesheet">
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
 
@@ -23,7 +22,7 @@
     <meta content="#8B0000" name="msapplication-TileColor" />
     <meta content="#8B0000" name="theme-color" />
 
-    <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"></script>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"></script>
 
     <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
@@ -34,7 +33,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00+06:00",
-      "dateModified": "2026-04-04T11:53:48-06:00",
+      "dateModified": "2026-04-04T12:03:48-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -62,7 +61,7 @@
     <meta content="https://pakin.lat/chispazo-verificador" property="og:url" />
     <meta content="https://pakin.lat/images/pakin-checadores.webp" property="og:image" />
 
-    <!-- CORE CSS -->
+    <!-- CORE CSS LÍMPIO (Sinergia con Bootstrap) -->
     <style>
         body {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -70,38 +69,28 @@
             padding-top: 85px;
         }
 
-        /* ----------------------------------------------------
-           BLINDAMOS LOS INPUTS CONTRA TU CSS ANTIGUO
-           ---------------------------------------------------- */
-        .form-pakin input.form-control {
-            border: 1px solid #ced4da !important;
-            border-radius: 8px !important;
-            padding: 0.5rem 1rem !important;
-            font-size: 1.1rem !important;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.075) !important;
-            color: #495057 !important;
-            background-color: #fff !important;
-            margin: 0 !important;
-            height: auto !important;
+        /* Ajuste de color al enfocar un campo para mantener el tono guinda de Pakin */
+        .form-control:focus {
+            border-color: #8B0000;
+            box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25);
         }
 
-        .form-pakin input.form-control:focus {
-            border-color: #8B0000 !important;
-            box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25) !important;
-            outline: none !important;
+        /* Dimensiones personalizadas pero limpias para los inputs */
+        .input-ancho {
+            max-width: 250px;
+            height: 48px;
+            font-size: 1.1rem;
         }
 
-        /* Diseño especial ancho para los 5 números */
         .input-bolita {
-            width: 65px !important;
-            height: 65px !important;
-            text-align: center !important;
-            font-size: 1.5rem !important;
-            font-weight: 700 !important;
-            padding: 0 !important;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
 
-        /* Ocultar flechas numéricas (spinners) para que se vea más limpio */
+        /* Ocultar las flechitas de los inputs numéricos (spinners) para que se vean como dados/bolitas limpias */
         input[type=number]::-webkit-inner-spin-button, 
         input[type=number]::-webkit-outer-spin-button { 
             -webkit-appearance: none; 
@@ -111,42 +100,34 @@
             -moz-appearance: textfield;
         }
 
-        @media (max-width: 450px) {
-            .input-bolita {
-                width: 50px !important;
-                height: 50px !important;
-                font-size: 1.2rem !important;
-            }
-        }
-
-        /* Botones Pakin */
+        /* Botón Pakin sutil y moderno */
         .btn-pakin {
-            background-color: rgba(139, 0, 0, 0.9) !important;
-            color: #fff !important;
-            transition: all 0.3s ease !important;
-            font-weight: 600 !important;
-            padding: 10px 20px !important;
-            border-radius: 8px !important;
-            border: none !important;
+            background-color: #8B0000;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease-in-out;
+            border: none;
         }
         .btn-pakin:hover:not(:disabled) {
-            background-color: #495057 !important;
-            transform: scale(1.02);
+            background-color: #495057;
+            color: #ffffff;
         }
         .btn-pakin:disabled {
-            background-color: #ced4da !important;
-            color: #6c757d !important;
+            background-color: #ced4da;
+            color: #6c757d;
             cursor: not-allowed;
         }
 
-        /* TABLAS ESTILO DASHBOARD */
+        /* Tabla estilo Dashboard (Igual a Analítica) */
         .contenedor-tabla {
             max-width: fit-content;
             max-height: 600px;
             overflow-y: auto;
             overflow-x: auto;
             background: #ffffff;
-            margin: 0 auto 3rem auto;
+            margin: 0 auto;
             scrollbar-width: thin;
         }
         .table-pakin {
@@ -156,8 +137,8 @@
         .contenedor-tabla thead th {
             position: sticky;
             top: 0;
-            background-color: #495057 !important;
-            color: #ffffff !important;
+            background-color: #495057;
+            color: #ffffff;
             z-index: 2;
             border-bottom: 2px solid #343a40;
             padding: 12px 15px;
@@ -176,7 +157,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR IDÉNTICA A ANALÍTICA -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
@@ -189,7 +170,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <!-- Mismo dropdown de analítica pero apuntando a la ruta "chispazo" -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -206,7 +186,6 @@
                             <li><a class="dropdown-item" href="chispazo#cronometro">Cronómetro</a></li>
                         </ul>
                     </li>
-                    <!-- Elementos Restantes, con "Verificador" marcado como activo -->
                     <li class="nav-item"><a class="nav-link text-danger fw-bold active" href="chispazo-verificador">Chispazo Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo Generador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-resultados-historicos">Histórico Completo</a></li>
@@ -231,7 +210,7 @@
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
         
         <!-- TÍTULOS -->
-        <div class="text-center mb-5 mt-2">
+        <div class="text-center mb-4 mt-2">
             <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); border-bottom: 3px solid #8B0000;">
                 Consulta por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
             </h2>
@@ -240,53 +219,14 @@
             <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato anterior</h4>
         </div>
 
-        <!-- FORMULARIOS EN DISPOSICIÓN VERTICAL ELEGANTE -->
-        <div class="row justify-content-center mx-auto" style="max-width: 650px;">
-            
-            <!-- 1. Formulario Fecha -->
-            <div class="col-12 mb-4">
-                <form id="form2" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
-                    <input id="fecha" name="FECHA" required type="date" class="form-control text-center mb-3" style="max-width: 300px;" />
-                    <button class="btn btn-pakin ChecadorChispazoF w-100 shadow-sm" style="max-width: 300px;" disabled id="display" type="submit">Buscar por Fecha</button>
-                </form>
-            </div>
-
-            <!-- 2. Formulario Sorteo -->
-            <div class="col-12 mb-4">
-                <form id="form1" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
-                    <input id="concurso" min="1" name="CONCURSO" placeholder="Ingresa el No. de Sorteo" required type="number" class="form-control text-center mb-3" style="max-width: 300px;" />
-                    <button class="btn btn-pakin ChecadorChispazoS w-100 shadow-sm" style="max-width: 300px;" disabled id="display" type="submit">Buscar por Sorteo</button>
-                </form>
-            </div>
-
-            <!-- 3. Formulario Números -->
-            <div class="col-12 mb-5">
-                <form id="form" class="form-pakin bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE NÚMEROS</label>
-                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
-                        <input id="r1" max="28" min="1" name="R1" placeholder="1" required type="number" class="form-control input-bolita" />
-                        <input id="r2" max="28" min="1" name="R2" placeholder="2" required type="number" class="form-control input-bolita" />
-                        <input id="r3" max="28" min="1" name="R3" placeholder="3" required type="number" class="form-control input-bolita" />
-                        <input id="r4" max="28" min="1" name="R4" placeholder="4" required type="number" class="form-control input-bolita" />
-                        <input id="r5" max="28" min="1" name="R5" placeholder="5" required type="number" class="form-control input-bolita" />
-                    </div>
-                    <button class="btn btn-pakin ChecadorChispazo w-100 shadow-sm" style="max-width: 350px;" disabled id="display" type="submit">Buscar Combinación</button>
-                </form>
-            </div>
-
-        </div>
-
-        <!-- PRELOADER -->
-        <div id="preloader" class="text-center my-4">
+        <!-- TABLA DE RESULTADOS Y PRELOADER (ARRIBA) -->
+        <div id="preloader" class="text-center my-3">
             <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
                 Buscando resultados<span class="dots">...</span>
             </div>
         </div>
 
-        <!-- TABLA DE RESULTADOS -->
-        <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto" id="resultados">
+        <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-5" id="resultados">
             <table class="table table-borderless table-hover table-pakin tblres mb-0 align-middle text-center" id="resultTable">
                 <thead class="headfijos">
                     <tr>
@@ -310,8 +250,47 @@
             </table>
         </div>
 
+        <!-- FORMULARIOS LIMPIOS Y VERTICALES (Full Bootstrap) -->
+        <div class="row justify-content-center mx-auto" style="max-width: 650px;">
+            
+            <!-- 1. Formulario Fecha -->
+            <div class="col-12 mb-4">
+                <form id="form2" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
+                    <!-- Uso de form-control nativo -->
+                    <input id="fecha" name="FECHA" required type="date" class="form-control text-center mb-3 input-ancho" />
+                    <button class="btn btn-pakin w-100 ChecadorChispazoF" style="max-width: 250px;" disabled id="display" type="submit">Buscar por Fecha</button>
+                </form>
+            </div>
+
+            <!-- 2. Formulario Sorteo -->
+            <div class="col-12 mb-4">
+                <form id="form1" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
+                    <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number" class="form-control text-center mb-3 input-ancho" />
+                    <button class="btn btn-pakin w-100 ChecadorChispazoS" style="max-width: 250px;" disabled id="display" type="submit">Buscar por Sorteo</button>
+                </form>
+            </div>
+
+            <!-- 3. Formulario Números -->
+            <div class="col-12 mb-5">
+                <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE NÚMEROS</label>
+                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
+                        <input id="r1" max="28" min="1" name="R1" placeholder="1" required type="number" class="form-control input-bolita" />
+                        <input id="r2" max="28" min="1" name="R2" placeholder="2" required type="number" class="form-control input-bolita" />
+                        <input id="r3" max="28" min="1" name="R3" placeholder="3" required type="number" class="form-control input-bolita" />
+                        <input id="r4" max="28" min="1" name="R4" placeholder="4" required type="number" class="form-control input-bolita" />
+                        <input id="r5" max="28" min="1" name="R5" placeholder="5" required type="number" class="form-control input-bolita" />
+                    </div>
+                    <button class="btn btn-pakin w-100 ChecadorChispazo" style="max-width: 250px;" disabled id="display" type="submit">Buscar Combinación</button>
+                </form>
+            </div>
+
+        </div>
+
         <!-- ADS Inferiores -->
-        <div class="d-flex justify-content-center mt-5 mb-4 mx-auto" style="width: 100%; max-width: 320px; height: 100px;">
+        <div class="d-flex justify-content-center mt-3 mb-4 mx-auto" style="width: 100%; max-width: 320px; height: 100px;">
             <ins class="adsbygoogle" style="display:block; width:100%;" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2108751025" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
