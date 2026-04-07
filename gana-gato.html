@@ -4,12 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-07T10:37:57-06:00" />
+    <meta property="article:modified_time" content="2026-04-07T17:04:20-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        defer></script>
 
     <title>Gana Gato Resultados Históricos | Pakin</title>
 
@@ -21,7 +25,8 @@
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+        crossorigin="anonymous"></script>
 
     <!-- METADATOS JSON-LD INTACTOS -->
     <script type="application/ld+json">
@@ -32,7 +37,7 @@
       "url": "https://pakin.lat/gana-gato",
       "description": "Consulta los resultados, estadística, analitica y gráficos del sorteo Gana Gato en Pakin Ciencia de Datos.",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-07T10:37:57-06:00",
+      "dateModified": "2026-04-07T17:04:20-06:00",
       "author": {
         "@type": "Person",
         "name": "Pakin"
@@ -78,155 +83,15 @@
     </script>
 
     <link rel="canonical" href="https://pakin.lat/gana-gato">
-    <meta name="description" content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el sorteo Gana Gato. ¡Empodérate a diario!">
+    <meta name="description"
+        content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el sorteo Gana Gato. ¡Empodérate a diario!">
     <meta property="og:title" content="Ciencia de Datos Sobre Sorteo Gana Gato">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pakin.lat/gana-gato">
     <meta property="og:image" content="https://pakin.lat/images/pakin-ganagato.webp">
-    <meta property="og:description" content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el sorteo Gana Gato. ¡Empodérate a diario!">
+    <meta property="og:description"
+        content="Resultados históricos, estadística, análitica, gráficos y herramientas sobre el sorteo Gana Gato. ¡Empodérate a diario!">
     <meta name="author" content="Francisco Jaramillo A.">
-
-    <!-- CORE CSS (NUEVO DISEÑO) -->
-    <style>
-        /* 1. ESTILOS BASE Y LECTURA */
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding-top: 85px;
-        }
-
-        .texto-analitica {
-            font-size: clamp(0.95rem, 2vw, 1.1rem);
-            color: #495057;
-            line-height: 1.7;
-            max-width: 900px;
-            margin: 0 auto 2rem auto;
-            text-align: justify;
-        }
-
-        .texto-analitica strong {
-            color: #8B0000;
-        }
-
-        .texto-analitica a {
-            color: #8B0000;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .texto-analitica a:hover {
-            text-decoration: underline;
-        }
-
-        /* 2. TABLAS ESTILO DASHBOARD PREMIUM */
-        .contenedor-tabla {
-            max-width: fit-content;
-            max-height: 600px;
-            overflow-y: auto;
-            overflow-x: auto;
-            background: #ffffff;
-            margin: 0 auto 3rem auto;
-            scrollbar-width: thin;
-            scrollbar-color: #adb5bd #f8f9fa;
-        }
-
-        .table-pakin {
-            white-space: nowrap;
-            font-size: 0.95rem;
-        }
-
-        /* Header Congelado (Sticky) */
-        .contenedor-tabla thead th {
-            position: sticky;
-            top: 0;
-            background-color: #495057 !important;
-            color: #ffffff !important;
-            z-index: 2;
-            border-bottom: 2px solid #343a40;
-            padding: 12px 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .contenedor-tabla tbody td {
-            padding: 10px 15px;
-            border-bottom: 1px solid #e9ecef;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .contenedor-tabla tbody tr:hover td {
-            background-color: #f1f3f5;
-        }
-
-        /* Sombreado sutil de la columna IDX (Para que tu JS se vea igual que antes) */
-        .tabla-gana_gato tbody td:nth-child(2) {
-            background-color: #f8f9fa;
-            font-weight: 600;
-            color: #6c757d;
-        }
-
-        /* 3. COLORES Y ANIMACIONES */
-        .rojo-oscuro { color: #dc3545 !important; font-weight: 700; }
-        .naranja-oscuro { color: #fd7e14 !important; font-weight: 700; }
-        .azul-claro { color: #0dcaf0 !important; font-weight: 700; }
-        .azul { color: #0d6efd !important; font-weight: 700; }
-
-        .flashit {
-            animation: flash 1.5s infinite alternate;
-        }
-
-        @keyframes flash {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
-        }
-
-        /* 4. MEDIA QUERIES TABLAS MÓVIL */
-        @media (max-width: 768px) {
-            .contenedor-tabla {
-                max-height: 450px;
-                width: 100%;
-                max-width: 100%;
-                border-radius: 0 !important;
-                border-left: 0 !important;
-                border-right: 0 !important;
-            }
-            .contenedor-tabla tbody td {
-                padding: 8px 6px;
-                font-size: 0.85rem;
-            }
-            .contenedor-tabla thead th {
-                padding: 10px 6px;
-                font-size: 0.85rem;
-            }
-        }
-
-        /* 5. FOOTER & EXTRAS */
-        footer a.text-secondary {
-            transition: color 0.2s ease;
-        }
-        footer a.text-secondary:hover {
-            color: #212529 !important;
-        }
-
-        /* Botón Donar Estilizado */
-        .btn-donar {
-            background-color: rgba(139, 0, 0, 0.9);
-            color: #fff;
-            border-radius: 6px;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .btn-donar:hover {
-            background-color: #495057;
-            color: white;
-            transform: translateY(-1px);
-        }
-    </style>
 
 </head>
 
@@ -236,14 +101,17 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="/images/p2.webp" alt="Pakin" width="45" height="45" style="border-radius: 6px; object-fit: contain;">
+                <img src="/images/p2.webp" alt="Pakin" width="45" height="45"
+                    style="border-radius: 6px; object-fit: contain;">
                 <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold align-items-lg-center" style="font-size: 0.95rem;">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold align-items-lg-center"
+                    style="font-size: 0.95rem;">
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="gana-gato-verificador">Gana Gato Verificador</a>
                     </li>
@@ -255,33 +123,36 @@
         </div>
     </nav>
 
-    <!-- ADS LATERALES (Optimizados) -->
-    <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; left: 12px; width: 160px; height: 600px; z-index: 0;">
-        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8216840286"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-    
-    <div class="d-none d-xl-flex flex-column justify-content-center" style="position: fixed; top: 100px; right: 12px; width: 160px; height: 600px; z-index: 0;">
-        <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2855205532"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
 
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
         <!-- ENCABEZADOS -->
         <div class="text-center mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">
                 Resultados Gana Gato<span style="color: #8B0000;">.</span>
             </h2>
-            <h2 class="atract flashit mt-2" style="color: #8B0000; font-size: 1.5rem; font-weight: normal;">&#36;301,000 MXN</h2>
-            <h2 class="atract flashit mt-2" style="display: none; color: #8B0000; font-size: 1.2rem; font-weight: normal;"></h2>
+            <h2 class="atract flashit mt-2" style="color: #8B0000; font-size: 1.5rem; font-weight: normal;">&#36;301,000
+                MXN</h2>
+            <h2 class="atract flashit mt-2"
+                style="display: none; color: #8B0000; font-size: 1.2rem; font-weight: normal;"></h2>
             <h3 class="text-secondary mt-2 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
+        </div>
+
+        <div style="margin: 25px 0; text-align: center;">
+            <!-- A Pakin Analítica Superior -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
+                data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
         <!-- TABLA PRINCIPAL -->
         <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-            <table class="table table-borderless table-hover table-pakin tabla-gana_gato idx tblres mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin tabla-gana_gato idx tblres mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -2915,13 +2786,17 @@
             </table>
         </div>
 
-        <!-- AD BOTTOM (Móvil) -->
-        <div class="d-block d-xl-none text-center my-4">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="3851054017" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
     </section>
+
+
+    <div style="margin: 25px 0; text-align: center;">
+        <!-- A Pakin Analitica Contenido -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
+            data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <!-- FOOTER BLANCO -->
     <footer class="bg-white border-top py-5 mt-auto">
@@ -2929,27 +2804,44 @@
             <div class="row g-4">
                 <div class="col-md-3">
                     <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Acerca de</h6>
-                    <p class="mb-0" style="line-height: 1.6;">Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.</p>
+                    <p class="mb-0" style="line-height: 1.6;">Un sitio dedicado a empoderar a los participantes de
+                        sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas
+                        a partir de los datos abiertos de Lotería Nacional.</p>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos</h6>
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos
+                    </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores" target="_blank">Verificadores</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores" target="_blank">Generadores</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores"
+                                target="_blank">Verificadores</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
+                                target="_blank">Generadores</a></li>
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés</h6>
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés
+                    </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none" href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería Nacional</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/" target="_blank">Pronosports</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/" target="_blank">LigaMX</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/" target="_blank">Premier League</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX" target="_blank">LaLiga</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/" target="_blank">LFA</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/" target="_blank">MLS</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/" target="_blank">NFL</a></li>
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
+                                Nacional</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
+                                target="_blank">Pronosports</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
+                                target="_blank">LigaMX</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/"
+                                target="_blank">Premier League</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX"
+                                target="_blank">LaLiga</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/"
+                                target="_blank">LFA</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/"
+                                target="_blank">MLS</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/"
+                                target="_blank">NFL</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -2957,13 +2849,25 @@
                     <p class="mb-3">Email: contacto@pakin.lat</p>
                     <div class="d-flex gap-3">
                         <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
                         </a>
                         <a class="text-secondary" href="https://x.com/pakinlat" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                            </svg>
                         </a>
                         <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
