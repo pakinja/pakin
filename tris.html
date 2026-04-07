@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-06T22:03:19-06:00" />
+    <meta property="article:modified_time" content="2026-04-06T22:37:55-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        defer></script>
 
     <title>Tris Resultados Históricos y Analítica | Pakin</title>
 
@@ -21,7 +22,8 @@
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+        crossorigin="anonymous"></script>
 
     <!-- METADATOS JSON-LD INTACTOS -->
     <script type="application/ld+json">
@@ -41,7 +43,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-06T22:03:19-06:00",
+          "dateModified": "2026-04-06T22:37:55-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -57,12 +59,14 @@
     </script>
 
     <link rel="canonical" href="https://pakin.lat/tris">
-    <meta name="description" content="¡Cómo Ganar el Tris!, Resultados históricos y el más poderoso análisis del sorteo Tris de la Lotería Nacional. ¡Empodérate a diario!">
+    <meta name="description"
+        content="¡Cómo Ganar el Tris!, Resultados históricos y el más poderoso análisis del sorteo Tris de la Lotería Nacional. ¡Empodérate a diario!">
     <meta property="og:title" content="Ciencia de Datos Sobre Sorteo Tris">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pakin.lat/tris">
     <meta property="og:image" content="https://pakin.lat/images/pakin-tris1.webp">
-    <meta property="og:description" content="¡Cómo Ganar el Tris!, Resultados históricos y el más completo análisis. Empodérate a diario!">
+    <meta property="og:description"
+        content="¡Cómo Ganar el Tris!, Resultados históricos y el más completo análisis. Empodérate a diario!">
     <meta name="author" content="Francisco Jaramillo A.">
 
     <!-- CORE CSS (Igual al de Chispazo con ajustes para Tris) -->
@@ -81,23 +85,34 @@
             margin: 0 auto 2rem auto;
             text-align: justify;
         }
-        .texto-analitica strong { color: #8B0000; }
-        .texto-analitica a { color: #8B0000; text-decoration: none; font-weight: 600; }
-        .texto-analitica a:hover { text-decoration: underline; }
+
+        .texto-analitica strong {
+            color: #8B0000;
+        }
+
+        .texto-analitica a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .texto-analitica a:hover {
+            text-decoration: underline;
+        }
 
         .img-frecuencias {
             width: 100%;
             max-width: 1000px;
             height: auto;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin: 0 auto 2rem auto;
             display: block;
         }
 
         .contenedor-tabla {
             max-width: fit-content;
-            max-height: 600px; 
+            max-height: 600px;
             overflow-y: auto;
             overflow-x: auto;
             background: #ffffff;
@@ -105,16 +120,16 @@
             scrollbar-width: thin;
             scrollbar-color: #adb5bd #f8f9fa;
         }
-        
+
         .table-pakin {
-            white-space: nowrap; 
+            white-space: nowrap;
             font-size: 0.95rem;
         }
-        
+
         .contenedor-tabla thead th {
             position: sticky;
             top: 0;
-            background-color: #495057 !important; 
+            background-color: #495057 !important;
             color: #ffffff !important;
             z-index: 2;
             border-bottom: 2px solid #343a40;
@@ -122,53 +137,119 @@
             font-weight: 600;
             letter-spacing: 0.5px;
         }
-        
+
         .contenedor-tabla tbody td {
             padding: 10px 15px;
             border-bottom: 1px solid #e9ecef;
             vertical-align: middle;
             text-align: center;
         }
-        
-        .contenedor-tabla tbody tr:hover td { background-color: #f1f3f5; }
+
+        .contenedor-tabla tbody tr:hover td {
+            background-color: #f1f3f5;
+        }
 
         /* Sombreado sutil columna IDX */
-        .tabla-tris tbody td:nth-child(2) { background-color: #f8f9fa; font-weight: 600; color: #6c757d; }
+        .tabla-tris tbody td:nth-child(2) {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #6c757d;
+        }
 
         /* Fondo oscuro automático para Balanza/Cronómetro Tris */
-        .bal-cron tbody td:not(:first-child) { 
-            background-color: #212529; 
-            color: #ffffff; 
+        .bal-cron tbody td:not(:first-child) {
+            background-color: #212529;
+            color: #ffffff;
             border-bottom: 1px solid #495057;
         }
 
         /* COLORES DE LÓGICA PYTHON */
-        .rojo-oscuro { color: #dc3545 !important; font-weight: 700; } 
-        .naranja-oscuro { color: #fd7e14 !important; font-weight: 700; } 
-        .azul-claro { color: #0dcaf0 !important; font-weight: 700; } 
-        .azul { color: #0d6efd !important; font-weight: 700; } 
+        .rojo-oscuro {
+            color: #dc3545 !important;
+            font-weight: 700;
+        }
 
-        .flashit { animation: flash 1.5s infinite alternate; }
-        @keyframes flash { from { opacity: 0.5; } to { opacity: 1; } }
+        .naranja-oscuro {
+            color: #fd7e14 !important;
+            font-weight: 700;
+        }
+
+        .azul-claro {
+            color: #0dcaf0 !important;
+            font-weight: 700;
+        }
+
+        .azul {
+            color: #0d6efd !important;
+            font-weight: 700;
+        }
+
+        .flashit {
+            animation: flash 1.5s infinite alternate;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 0.5;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
 
         @media (max-width: 768px) {
-            .contenedor-tabla { max-height: 450px; width: 100%; max-width: 100%; border-radius: 0 !important; border-left: 0 !important; border-right: 0 !important;} 
-            .contenedor-tabla tbody td { padding: 8px 6px; font-size: 0.85rem; }
-            .contenedor-tabla thead th { padding: 10px 6px; font-size: 0.85rem; }
+            .contenedor-tabla {
+                max-height: 450px;
+                width: 100%;
+                max-width: 100%;
+                border-radius: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+            }
+
+            .contenedor-tabla tbody td {
+                padding: 8px 6px;
+                font-size: 0.85rem;
+            }
+
+            .contenedor-tabla thead th {
+                padding: 10px 6px;
+                font-size: 0.85rem;
+            }
         }
 
-        footer a.text-secondary { transition: color 0.2s ease; }
-        footer a.text-secondary:hover { color: #212529 !important; }
-        
+        footer a.text-secondary {
+            transition: color 0.2s ease;
+        }
+
+        footer a.text-secondary:hover {
+            color: #212529 !important;
+        }
+
         /* Botón Flotante */
         .btn-subir {
-            position: fixed; bottom: 20px; right: 20px; z-index: 1000;
-            background-color: rgba(139,0,0,0.9); color: white;
-            border-radius: 50%; width: 50px; height: 50px;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: all 0.3s;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(139, 0, 0, 0.9);
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
         }
-        .btn-subir:hover { background-color: #495057; color: white; transform: scale(1.1); }
+
+        .btn-subir:hover {
+            background-color: #495057;
+            color: white;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -181,13 +262,15 @@
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
                 <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Secciones Tris Analítica
                         </a>
                         <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
@@ -201,7 +284,8 @@
                     </li>
                     <li class="nav-item"><a class="nav-link text-dark" href="tris-verificador">Tris Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="tris-generador">Tris Generador</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="tris-resultados-historicos">Tris Histórico Completo</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="tris-resultados-historicos">Tris Histórico
+                            Completo</a></li>
                 </ul>
             </div>
         </div>
@@ -212,10 +296,29 @@
 
         <!-- RESULTADOS TRIS -->
         <div class="text-center mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">Resultados Tris<span style="color: #8B0000;">.</span></h2>
-            <h2 class="atract flashit mt-2" style="display: none; color: #8B0000; font-size: 1.1rem; font-weight: normal;"></h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">Resultados Tris<span
+                    style="color: #8B0000;">.</span></h2>
+            <h2 class="atract flashit mt-2"
+                style="display: none; color: #8B0000; font-size: 1.1rem; font-weight: normal;"></h2>
             <h3 class="text-secondary mt-2 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
         </div>
+
+        <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
+        <div class="text-center mb-4">
+            <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
+                style="font-size: 0.85rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16">
+                    <path
+                        d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0 .287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                </svg>
+                Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
+            </span>
+        </div>
+        <!-- FIN PÍLDORA -->
+
 
         <div style="margin: 25px 0; text-align: center;">
             <!-- A Pakin Analítica Superior -->
@@ -227,7 +330,8 @@
         </div>
 
         <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-            <table class="table table-borderless table-hover table-pakin tabla-tris idx tblres mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin tabla-tris idx tblres mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -2671,12 +2775,18 @@
 
         <!-- FRECUENCIAS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Frecuencia Números Tris</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Frecuencia Números Tris
+            </h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">Veamos cuantas veces ha aparecido cada número <strong>sin importar la posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos anteriores.</p>
+        <p class="texto-analitica px-3 px-md-0">Veamos cuantas veces ha aparecido cada número <strong>sin importar la
+                posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos
+            anteriores.</p>
 
-        <img class="img-frecuencias" src="images/tris6_53d239002b.webp" fetchpriority="high" decoding="async" alt="Pakin Tris Frecuencias 6 Sorteos">
-        <img class="img-frecuencias" src="images/tris10_87a98b8306.webp" fetchpriority="high" decoding="async" alt="Pakin Tris Frecuencias 10 Sorteos">
+        <img class="img-frecuencias" src="images/tris6_53d239002b.webp" fetchpriority="high" decoding="async"
+            alt="Pakin Tris Frecuencias 6 Sorteos">
+        <img class="img-frecuencias" src="images/tris10_87a98b8306.webp" fetchpriority="high" decoding="async"
+            alt="Pakin Tris Frecuencias 10 Sorteos">
 
         <div style="margin: 25px 0; text-align: center;">
             <!-- A Pakin Analitica Contenido -->
@@ -2690,10 +2800,16 @@
 
         <!-- PRIMOS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cantidad de Números Primos</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cantidad de Números
+                Primos</h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris cada resultado puede tener de 0 a 5 números primos entre los números 0 al 9; En el <a href="#HPakin">histórico Tris Pakin</a> puedes ver los números primos de cada resultado en color <span style="color: #0d6efd; font-weight:bold;">azul</span> y cuando son 3 o más números primos se marca en color <span style="color: #dc3545; font-weight:bold;">rojo</span> en la columna PRIMOS.<br>A continuación la estadística.</p>
-        
+        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris cada resultado puede tener de 0 a 5 números primos
+            entre los números 0 al 9; En el <a href="#HPakin">histórico Tris Pakin</a> puedes ver los números primos de
+            cada resultado en color <span style="color: #0d6efd; font-weight:bold;">azul</span> y cuando son 3 o más
+            números primos se marca en color <span style="color: #dc3545; font-weight:bold;">rojo</span> en la columna
+            PRIMOS.<br>A continuación la estadística.</p>
+
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table class="table table-borderless table-hover table-pakin tris-primos-bal mb-0 align-middle text-center">
@@ -2731,7 +2847,9 @@
                         
                         
                         
-                        <td class="">-1.71</td>
+                        <td
+                            class="">
+                            -1.71</td>
                         
                         
                     </tr>
@@ -2755,7 +2873,9 @@
                         
                         
                         
-                        <td class="rojo-oscuro">7.26</td>
+                        <td
+                            class="rojo-oscuro">
+                            7.26</td>
                         
                         
                     </tr>
@@ -2779,7 +2899,9 @@
                         
                         
                         
-                        <td class="azul">-3.56</td>
+                        <td
+                            class="azul">
+                            -3.56</td>
                         
                         
                     </tr>
@@ -2803,7 +2925,9 @@
                         
                         
                         
-                        <td class="naranja-oscuro">3.69</td>
+                        <td
+                            class="naranja-oscuro">
+                            3.69</td>
                         
                         
                     </tr>
@@ -2827,7 +2951,9 @@
                         
                         
                         
-                        <td class="azul">-3.67</td>
+                        <td
+                            class="azul">
+                            -3.67</td>
                         
                         
                     </tr>
@@ -2851,7 +2977,9 @@
                         
                         
                         
-                        <td class="">-1.0</td>
+                        <td
+                            class="">
+                            -1.0</td>
                         
                         
                     </tr>
@@ -2862,7 +2990,8 @@
 
         <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-            <table class="table table-borderless table-hover table-pakin tris-primos-cron mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin tris-primos-cron mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -3008,11 +3137,15 @@
 
         <!-- REPETIDOS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cantidad de Números Repetidos</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cantidad de Números
+                Repetidos</h2>
         </div>
         <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Intersección</h3>
-        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris, cuántos números se repiten en un sorteo respecto al sorteo inmediato anterior <strong>sin importar la posición exacta</strong>, es decir la intersección de números entre un sorteo y otro.</p>
-        
+        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris, cuántos números se repiten en un sorteo respecto al
+            sorteo inmediato anterior <strong>sin importar la posición exacta</strong>, es decir la intersección de
+            números entre un sorteo y otro.</p>
+
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table class="table table-borderless table-hover table-pakin tris-ints-bal mb-0 align-middle text-center">
@@ -3050,7 +3183,9 @@
                         
                         
                         
-                        <td class="">-0.18</td>
+                        <td
+                            class="">
+                            -0.18</td>
                         
                         
                     </tr>
@@ -3074,7 +3209,9 @@
                         
                         
                         
-                        <td class="azul-claro">-6.81</td>
+                        <td
+                            class="azul-claro">
+                            -6.81</td>
                         
                         
                     </tr>
@@ -3098,7 +3235,9 @@
                         
                         
                         
-                        <td class="rojo-oscuro">9.98</td>
+                        <td
+                            class="rojo-oscuro">
+                            9.98</td>
                         
                         
                     </tr>
@@ -3122,7 +3261,9 @@
                         
                         
                         
-                        <td class="">-1.21</td>
+                        <td
+                            class="">
+                            -1.21</td>
                         
                         
                     </tr>
@@ -3146,7 +3287,9 @@
                         
                         
                         
-                        <td class="">-0.73</td>
+                        <td
+                            class="">
+                            -0.73</td>
                         
                         
                     </tr>
@@ -3170,7 +3313,9 @@
                         
                         
                         
-                        <td class="">-0.04</td>
+                        <td
+                            class="">
+                            -0.04</td>
                         
                         
                     </tr>
@@ -3325,11 +3470,17 @@
         </div>
 
         <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Por Posición</h3>
-        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris, la cantidad de números repetidos por posición se refiere a cuantos números se repiten en la posición exacta respecto al <strong>resultado inmediato anterior</strong>, en el <a href="#hpakin">histórico Tris Pakin</a> cuando un resultado tiene 2 o más números repetidos (posición exacta) se marcan en color <span style="color: #dc3545; font-weight:bold;">rojo</span> en la columna REPS.<br> A continuación la estadística.</p>
-        
+        <p class="texto-analitica px-3 px-md-0">En el sorteo Tris, la cantidad de números repetidos por posición se
+            refiere a cuantos números se repiten en la posición exacta respecto al <strong>resultado inmediato
+                anterior</strong>, en el <a href="#hpakin">histórico Tris Pakin</a> cuando un resultado tiene 2 o más
+            números repetidos (posición exacta) se marcan en color <span
+                style="color: #dc3545; font-weight:bold;">rojo</span> en la columna REPS.<br> A continuación la
+            estadística.</p>
+
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-            <table class="table table-borderless table-hover table-pakin tris-repspos-bal mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin tris-repspos-bal mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -3364,7 +3515,9 @@
                         
                         
                         
-                        <td class="">2.86</td>
+                        <td
+                            class="">
+                            2.86</td>
                         
                         
                     </tr>
@@ -3388,7 +3541,9 @@
                         
                         
                         
-                        <td class="naranja-oscuro">4.11</td>
+                        <td
+                            class="naranja-oscuro">
+                            4.11</td>
                         
                         
                     </tr>
@@ -3412,7 +3567,9 @@
                         
                         
                         
-                        <td class="">2.22</td>
+                        <td
+                            class="">
+                            2.22</td>
                         
                         
                     </tr>
@@ -3436,7 +3593,9 @@
                         
                         
                         
-                        <td class="">-0.03</td>
+                        <td
+                            class="">
+                            -0.03</td>
                         
                         
                     </tr>
@@ -3460,7 +3619,9 @@
                         
                         
                         
-                        <td class="">0.06</td>
+                        <td
+                            class="">
+                            0.06</td>
                         
                         
                     </tr>
@@ -3471,7 +3632,8 @@
 
         <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-            <table class="table table-borderless table-hover table-pakin tris-repspos-cron mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin tris-repspos-cron mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -3599,13 +3761,15 @@
 
         <!-- ALERTAS DINÁMICAS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Alertas Dinámicas</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Alertas Dinámicas</h2>
         </div>
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Pares - Nones Consecutivos</h3>
-        
+
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             
-            <p class="atract flashit text-center my-4" style="color: #8B0000; font-size: 1.1rem;">¡No se encontraron alertas!</p>
+            <p class="atract flashit text-center my-4" style="color: #8B0000; font-size: 1.1rem;">¡No se encontraron
+                alertas!</p>
             
         </div>
 
@@ -3701,14 +3865,26 @@
 
         <!-- BALANZA GLOBAL TRIS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Balanza[%] Global Tris</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Balanza[%] Global Tris
+            </h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">La Balanza Global Tris presenta la diferencia entre la distribución de los últimos -n- sorteos y la distribución histórica de cada número del conjunto Tris en cada una de sus posiciones posibles. Esta herramienta es ideal para quienes buscan mejorar sus probabilidades de ganar en el sorteo Tris de la Lotería Nacional y aspiran a volverse millonarios.<br><br> El valor de la Balanza se muestra en color <span style="color: #0dcaf0; font-weight:bold;">cyan</span> cuando en los últimos -n- sorteos el porcentaje de cada número es menor o igual a -3% y en color <span style="color: #dc3545; font-weight:bold;">rojo</span> cuando el porcentaje es mayor o igual a +3% con respecto al porcentaje histórico. Con esta información, los participantes pueden hacer ajustes estratégicos para aumentar sus oportunidades de ganar dinero.<br><br> El color de fondo de cada celda corresponde a la probabilidad de cada número en cada posición, que para Tris es 1/10 uniformemente.</p>
-        
+        <p class="texto-analitica px-3 px-md-0">La Balanza Global Tris presenta la diferencia entre la distribución de
+            los últimos -n- sorteos y la distribución histórica de cada número del conjunto Tris en cada una de sus
+            posiciones posibles. Esta herramienta es ideal para quienes buscan mejorar sus probabilidades de ganar en el
+            sorteo Tris de la Lotería Nacional y aspiran a volverse millonarios.<br><br> El valor de la Balanza se
+            muestra en color <span style="color: #0dcaf0; font-weight:bold;">cyan</span> cuando en los últimos -n-
+            sorteos el porcentaje de cada número es menor o igual a -3% y en color <span
+                style="color: #dc3545; font-weight:bold;">rojo</span> cuando el porcentaje es mayor o igual a +3% con
+            respecto al porcentaje histórico. Con esta información, los participantes pueden hacer ajustes estratégicos
+            para aumentar sus oportunidades de ganar dinero.<br><br> El color de fondo de cada celda corresponde a la
+            probabilidad de cada número en cada posición, que para Tris es 1/10 uniformemente.</p>
+
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Histórico Vs. Últimos Sorteos</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             
-            <table class="table table-borderless table-hover table-pakin bal-cron tabla-balanzas mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin bal-cron tabla-balanzas mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -3731,493 +3907,493 @@
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">0</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">0</td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.06
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -10.19
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -5.34
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -10.17
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.25
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">1</td>
-                        
-                        
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">1</td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +9.84
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.04
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.17
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +5.09
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.87
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">2</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">2</td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -5.16
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +5.09
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.75
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +14.92
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.13
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">3</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">3</td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -5.1
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.22
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.87
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -5.08
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.9
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">4</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">4</td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.07
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.86
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.1
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.23
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.85
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">5</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">5</td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -5.02
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.7
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.06
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +10.03
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +14.76
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">6</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">6</td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.33
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +10.0
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +15.04
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.95
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.02
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">7</td>
-                        
-                        
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">7</td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +5.11
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -10.2
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.31
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                           
-                        <td class="azul-claro">
+                           <td
+                            class="azul-claro">
                             -10.05
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.87
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">8</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">8</td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.96
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +15.2
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -4.9
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.2
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.25
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                     <tr>
                         
                         
-                        <td class="fw-bold bg-light" style="color: #495057 !important;">9</td>
+                            <td class="fw-bold bg-light" style="color: #495057 !important;">9</td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +4.81
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             -0.17
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +5.26
-                        </td>
+                            </td>
+                            
+                            
                         
                         
-                        
-                        
-                         
-                        <td class="">
+                         <td
+                            class="">
                             +0.19
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                         
                         
                          
-                         
-                        <td class="rojo-oscuro">
+                         <td
+                            class="rojo-oscuro">
                             +5.35
-                        </td>
-                        
-                        
+                            </td>
+                            
+                            
                     </tr>
                     
                 </tbody>
@@ -4237,14 +4413,25 @@
 
         <!-- CRONÓMETRO GLOBAL TRIS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1" style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cronómetro Global Tris</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Cronómetro Global Tris
+            </h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">El Cronómetro Global Tris presenta los ciclos de tiempo entre apariciones de cada número en cada una de sus posiciones posibles. Esta herramienta es esencial para quienes participan en el sorteo Tris de la Lotería Nacional y desean aumentar sus posibilidades de ganar grandes premios y volverse millonarios.<br><br>El Cronómetro comienza con el valor del tiempo promedio de aparición de cada número y va disminuyendo con cada sorteo, pasando por diferentes etapas estadísticas que se muestran en un código de colores. Esto permite a los jugadores identificar patrones y hacer estrategias informadas para ganar dinero. Una vez que el número reaparece, el ciclo comienza de nuevo, proporcionando una visión continua y actualizada de las probabilidades.<br><br> El color de fondo de cada celda corresponde a la probabilidad de cada número en cada posición que para Tris es 1/10 uniformemente.</p>
+        <p class="texto-analitica px-3 px-md-0">El Cronómetro Global Tris presenta los ciclos de tiempo entre
+            apariciones de cada número en cada una de sus posiciones posibles. Esta herramienta es esencial para quienes
+            participan en el sorteo Tris de la Lotería Nacional y desean aumentar sus posibilidades de ganar grandes
+            premios y volverse millonarios.<br><br>El Cronómetro comienza con el valor del tiempo promedio de aparición
+            de cada número y va disminuyendo con cada sorteo, pasando por diferentes etapas estadísticas que se muestran
+            en un código de colores. Esto permite a los jugadores identificar patrones y hacer estrategias informadas
+            para ganar dinero. Una vez que el número reaparece, el ciclo comienza de nuevo, proporcionando una visión
+            continua y actualizada de las probabilidades.<br><br> El color de fondo de cada celda corresponde a la
+            probabilidad de cada número en cada posición que para Tris es 1/10 uniformemente.</p>
 
         <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Ciclos Numéricos</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             
-            <table class="table table-borderless table-hover table-pakin bal-cron tabla-cronometro mb-0 align-middle text-center">
+            <table
+                class="table table-borderless table-hover table-pakin bal-cron tabla-cronometro mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         
@@ -4271,31 +4458,36 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             5.0
                         </td>
                         
                         
                         
-                        <td style="color: #FF6700" data-bs-toggle="tooltip" title="Estado: IDX >= PROM + STD">
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
                             -14.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -4.0
                         </td>
                         
                         
                         
-                        <td style="color: #FF6700" data-bs-toggle="tooltip" title="Estado: IDX >= PROM + STD">
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
                             -16.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             2.0
                         </td>
                         
@@ -4313,31 +4505,36 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             7.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             5.0
                         </td>
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip" title="Estado: IDX = 0">
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
                             10.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             4.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -1.0
                         </td>
                         
@@ -4355,31 +4552,36 @@
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -3.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             8.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             0.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             7.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             9.0
                         </td>
                         
@@ -4397,31 +4599,36 @@
                         
                         
                         
-                        <td style="color: #FF6700" data-bs-toggle="tooltip" title="Estado: IDX >= PROM + STD">
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
                             -9.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             7.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             6.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             8.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             5.0
                         </td>
                         
@@ -4439,31 +4646,36 @@
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -2.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             9.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             1.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -3.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             0.0
                         </td>
                         
@@ -4481,31 +4693,36 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             9.0
                         </td>
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip" title="Estado: IDX = 0">
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
                             10.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -3.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             9.0
                         </td>
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip" title="Estado: IDX = 0">
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
                             10.0
                         </td>
                         
@@ -4523,31 +4740,36 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             8.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -1.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             9.0
                         </td>
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip" title="Estado: IDX = 0">
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
                             10.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             7.0
                         </td>
                         
@@ -4565,31 +4787,36 @@
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             3.0
                         </td>
                         
                         
                         
-                        <td style="color: #FF6700" data-bs-toggle="tooltip" title="Estado: IDX >= PROM + STD">
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
                             -11.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             3.0
                         </td>
                         
                         
                         
-                        <td style="color: #FF6700" data-bs-toggle="tooltip" title="Estado: IDX >= PROM + STD">
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
                             -15.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             1.0
                         </td>
                         
@@ -4607,31 +4834,36 @@
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip" title="Estado: IDX = 0">
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
                             10.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             6.0
                         </td>
                         
                         
                         
-                        <td style="color: #FDD017" data-bs-toggle="tooltip" title="Estado: IDX >= P80">
+                        <td style="color: #FDD017" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= P80">
                             -7.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             6.0
                         </td>
                         
                         
                         
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip" title="Estado: IDX >= PROM">
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
                             -3.0
                         </td>
                         
@@ -4649,31 +4881,36 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             6.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip" title="Estado: IDX ~ PROM">
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
                             2.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             5.0
                         </td>
                         
                         
                         
-                        <td style="color: #FDD017" data-bs-toggle="tooltip" title="Estado: IDX >= P80">
+                        <td style="color: #FDD017" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= P80">
                             -6.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip" title="Estado: IDX < PROM">
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
                             6.0
                         </td>
                         
@@ -4693,8 +4930,10 @@
 
     <!-- Botón Flotante Subir -->
     <a href="#" class="btn-subir text-decoration-none" title="Subir">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up-short"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
         </svg>
     </a>
 
@@ -4704,41 +4943,75 @@
             <div class="row g-4">
                 <div class="col-md-3">
                     <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Acerca de</h6>
-                    <p class="mb-0" style="line-height: 1.6;">Un sitio dedicado a empoderar a los participantes de sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas a partir de los datos abiertos de Lotería Nacional.</p>
+                    <p class="mb-0" style="line-height: 1.6;">Un sitio dedicado a empoderar a los participantes de
+                        sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas
+                        a partir de los datos abiertos de Lotería Nacional.</p>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos</h6>
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Enlaces Rápidos
+                    </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores" target="_blank">Verificadores</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores" target="_blank">Generadores</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores"
+                                target="_blank">Verificadores</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
+                                target="_blank">Generadores</a></li>
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés</h6>
+                    <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Sitios de Interés
+                    </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none" href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería Nacional</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/" target="_blank">Pronosports</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/" target="_blank">LigaMX</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/" target="_blank">Premier League</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX" target="_blank">LaLiga</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/" target="_blank">LFA</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/" target="_blank">MLS</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/" target="_blank">NFL</a></li>
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
+                                Nacional</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
+                                target="_blank">Pronosports</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
+                                target="_blank">LigaMX</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/"
+                                target="_blank">Premier League</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX"
+                                target="_blank">LaLiga</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/"
+                                target="_blank">LFA</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/"
+                                target="_blank">MLS</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/"
+                                target="_blank">NFL</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h6 class="text-dark fw-bold text-uppercase mb-3" style="letter-spacing: 0.5px;">Contacto</h6>
                     <p class="mb-3">Email: contacto@pakin.lat</p>
                     <div class="d-flex gap-3">
-                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
-                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg></a>
-                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg></a>
+                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                            </svg></a>
+                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg></a>
                     </div>
                 </div>
             </div>
             <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
-            <div class="text-center"><p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p></div>
+            <div class="text-center">
+                <p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
@@ -4748,5 +5021,29 @@
     <script src="/js/tris/tris_resultados.js" defer></script>
     <script defer src="/js/tag_manager.js"></script>
 
+
+    <!-- Script para mostrar la fecha de actualización automáticamente -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Busca la meta etiqueta que tu script Bash actualiza
+            const metaTag = document.querySelector('meta[property="article:modified_time"]');
+            if (metaTag) {
+                const isoDate = metaTag.getAttribute("content");
+                const dateObj = new Date(isoDate);
+
+                // Formatea la fecha para que se lea bonito en español (Ej: 6 abr 2026, 22:03)
+                const opciones = { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+                const fechaFormateada = dateObj.toLocaleDateString('es-MX', opciones).replace('.', '');
+
+                // Lo inyecta en la píldora visual
+                document.getElementById("fecha-ui").innerText = fechaFormateada;
+            } else {
+                document.getElementById("fecha-ui").innerText = "Recientemente";
+            }
+        });
+    </script>
+
+
 </body>
+
 </html>
