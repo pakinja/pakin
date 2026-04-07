@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-07T13:16:51-06:00" />
+    <meta property="article:modified_time" content="2026-04-07T15:25:47-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
 
     <!-- jQuery y Scripts Históricos (Mantenidos exactamente como los enviaste) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -52,7 +54,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Tris",
       "url": "https://pakin.lat/tris-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-07T13:16:51-06:00",
+      "dateModified": "2026-04-07T15:25:47-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -71,99 +73,6 @@
     <meta property="og:description" content="Resultados Tris de Hoy e Histórico Completo - Pakin Ciencia de Datos">
     <meta name="author" content="Francisco Jaramillo A.">
 
-    <!-- CORE CSS -->
-    <style>
-        /* 1. ESTILOS BASE */
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding-top: 85px;
-        }
-
-        /* 2. COMPONENTES BOTONES */
-        .btn-pakin {
-            background-color: #8B0000;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.2s ease-in-out;
-            border: none;
-        }
-
-        .btn-pakin:hover:not(:disabled) {
-            background-color: #495057;
-            color: #ffffff;
-        }
-
-        .btn-pakin:disabled {
-            background-color: #ced4da;
-            color: #6c757d;
-            cursor: not-allowed;
-        }
-
-        /* 3. TABLA ESTILO DASHBOARD PREMIUM */
-        .contenedor-tabla {
-            max-width: fit-content;
-            max-height: 600px;
-            overflow-y: auto;
-            overflow-x: auto;
-            background: #ffffff;
-            margin: 0 auto;
-            scrollbar-width: thin;
-            scrollbar-color: #adb5bd #f8f9fa;
-        }
-
-        .table-pakin {
-            white-space: nowrap;
-            font-size: 0.95rem;
-        }
-
-        .contenedor-tabla thead th {
-            position: sticky;
-            top: 0;
-            background-color: #495057 !important;
-            color: #ffffff !important;
-            z-index: 2;
-            border-bottom: 2px solid #343a40;
-            padding: 12px 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .contenedor-tabla tbody td {
-            padding: 10px 15px;
-            border-bottom: 1px solid #e9ecef;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .contenedor-tabla tbody tr:hover td {
-            background-color: #f1f3f5;
-        }
-
-        /* 4. MEDIA QUERIES TABLA MÓVIL */
-        @media (max-width: 768px) {
-            .contenedor-tabla {
-                max-height: 450px;
-                width: 100%;
-                max-width: 100%;
-                border-radius: 0 !important;
-                border-left: 0 !important;
-                border-right: 0 !important;
-            }
-
-            .contenedor-tabla tbody td {
-                padding: 8px 6px;
-                font-size: 0.85rem;
-            }
-
-            .contenedor-tabla thead th {
-                padding: 10px 6px;
-                font-size: 0.85rem;
-            }
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
