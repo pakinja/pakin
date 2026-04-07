@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-07T10:35:59-06:00" />
+    <meta property="article:modified_time" content="2026-04-07T16:40:19-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
@@ -33,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-07T10:35:59-06:00",
+      "dateModified": "2026-04-07T16:40:19-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -67,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-07T10:35:59-06:00",
+        "dateModified": "2026-04-07T16:40:19-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -91,128 +93,6 @@
     <meta content="Revisa y comprueba si tu jugada Melate ya ha resultado ganadora, en qué número de sorteo y fecha o si tu jugada aún no resulta ganadora." property="og:description" />
     <meta content="Francisco Jaramillo A." name="author" />
 
-    <!-- CORE CSS LÍMPIO -->
-    <style>
-        /* 1. ESTILOS BASE */
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding-top: 85px;
-        }
-
-        /* 2. COMPONENTES FORMULARIO */
-        .form-control:focus {
-            border-color: #8B0000;
-            box-shadow: 0 0 0 0.25rem rgba(139, 0, 0, 0.25);
-        }
-
-        .input-ancho {
-            max-width: 250px;
-            height: 48px;
-            font-size: 1.1rem;
-        }
-
-        .input-bolita {
-            width: 60px;
-            height: 60px;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        /* Ocultar flechitas de número */
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { 
-            -webkit-appearance: none; 
-            margin: 0; 
-        }
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        .btn-pakin {
-            background-color: #8B0000;
-            color: #ffffff;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background-color 0.2s ease-in-out;
-            border: none;
-        }
-        
-        .btn-pakin:hover:not(:disabled) {
-            background-color: #495057;
-            color: #ffffff;
-        }
-        
-        .btn-pakin:disabled {
-            background-color: #ced4da;
-            color: #6c757d;
-            cursor: not-allowed;
-        }
-
-        /* 3. TABLA ESTILO DASHBOARD PREMIUM */
-        .contenedor-tabla {
-            max-width: fit-content;
-            max-height: 600px;
-            overflow-y: auto;
-            overflow-x: auto;
-            background: #ffffff;
-            margin: 0 auto;
-            scrollbar-width: thin;
-            scrollbar-color: #adb5bd #f8f9fa;
-        }
-
-        .table-pakin {
-            white-space: nowrap;
-            font-size: 0.95rem;
-        }
-
-        .contenedor-tabla thead th {
-            position: sticky;
-            top: 0;
-            background-color: #495057 !important;
-            color: #ffffff !important;
-            z-index: 2;
-            border-bottom: 2px solid #343a40;
-            padding: 12px 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .contenedor-tabla tbody td {
-            padding: 10px 15px;
-            border-bottom: 1px solid #e9ecef;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .contenedor-tabla tbody tr:hover td {
-            background-color: #f1f3f5;
-        }
-
-        /* 4. MEDIA QUERIES TABLA MÓVIL */
-        @media (max-width: 768px) {
-            .contenedor-tabla {
-                max-height: 450px;
-                width: 100%;
-                max-width: 100%;
-                border-radius: 0 !important;
-                border-left: 0 !important;
-                border-right: 0 !important;
-            }
-
-            .contenedor-tabla tbody td {
-                padding: 8px 6px;
-                font-size: 0.85rem;
-            }
-
-            .contenedor-tabla thead th {
-                padding: 10px 6px;
-                font-size: 0.85rem;
-            }
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
