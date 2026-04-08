@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-07T16:40:19-06:00" />
+    <meta property="article:modified_time" content="2026-04-07T19:03:46-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
         "description": "Genera-Busca tus combinaciones para Melate en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-04-07T16:40:19-06:00",
+        "dateModified": "2026-04-07T19:03:46-06:00",
         "license": "https://pakin.lat/melate-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -78,7 +78,8 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Melate Generador</span>
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Melate
+                    Generador</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -130,6 +131,21 @@
                 Buscando<span class="dots">...</span>
             </div>
         </div>
+
+        <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
+        <div class="text-center mb-4">
+            <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
+                style="font-size: 0.85rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16">
+                    <path
+                        d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0 .287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                </svg>
+                Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
+            </span>
+        </div>
+        <!-- FIN PÍLDORA -->
 
         <!-- BOTÓN GENERADOR -->
         <div class="row justify-content-center mx-auto" style="max-width: 650px;">
@@ -233,6 +249,7 @@
     <!-- Scripts Intactos -->
     <script defer src="js/melate/meBuscador.js"></script>
     <script defer src="js/tag_manager.js"></script>
+    <script defer src="/js/fecha_actualizar.js"></script>
 
 </body>
 
