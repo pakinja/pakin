@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-08T00:46:26-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T00:50:24-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-08T00:46:26-06:00",
+          "dateModified": "2026-04-08T00:50:24-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -9708,43 +9708,34 @@
             script.async = true;
             script.crossOrigin = 'anonymous';
 
-            // AQUÍ ESTÁ LA MAGIA NUEVA:
             script.onload = function () {
-                console.log("✅ Script de AdSense descargado con éxito. Inicializando anuncios...");
+                console.log("✅ Script descargado. Inicializando anuncios vacíos...");
 
-                // Buscamos cuántos espacios de anuncios hay en la página
-                let adBlocks = document.querySelectorAll('.adsbygoogle');
+                // LA DIFERENCIA ESTÁ AQUÍ: Solo busca anuncios que no se hayan cargado aún
+                let adBlocks = document.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status="done"])');
 
-                // Le pedimos a AdSense que llene cada uno de esos espacios
                 adBlocks.forEach(function () {
                     try {
                         (window.adsbygoogle = window.adsbygoogle || []).push({});
                     } catch (e) {
-                        console.error("❌ Error al inicializar un anuncio:", e);
+                        console.error("❌ Error silencioso al inicializar:", e);
                     }
                 });
             };
 
-            script.onerror = function () {
-                console.error("❌ Error: No se pudo descargar el script de AdSense. (Revisa tu bloqueador de anuncios)");
-            };
-
             document.head.appendChild(script);
 
-            // Limpiamos los eventos para que no se sigan ejecutando
             window.removeEventListener('scroll', cargarAdsense);
             window.removeEventListener('mousemove', cargarAdsense);
             window.removeEventListener('touchstart', cargarAdsense);
             window.removeEventListener('click', cargarAdsense);
         }
 
-        // Escuchadores de interacción del usuario
         window.addEventListener('scroll', cargarAdsense, { once: true });
         window.addEventListener('mousemove', cargarAdsense, { once: true });
         window.addEventListener('touchstart', cargarAdsense, { once: true });
         window.addEventListener('click', cargarAdsense, { once: true });
 
-        // Respaldo: si el usuario no hace nada en 5 segundos, cargarlo de todos modos
         setTimeout(cargarAdsense, 5000);
     </script>
 
