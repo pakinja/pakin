@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-08T15:51:21-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T16:10:02-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-08T15:51:21-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T16:10:02-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-08T15:51:21-06:00",
+      "dateModified": "2026-04-08T16:10:02-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -138,7 +138,9 @@
         <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-5" id="resultados">
 
             <!-- Aviso dinámico -->
-            <div id="resultNotice" class="d-none"></div>
+            <div class="result-notice-wrap">
+                <div id="resultNotice" class="d-none"></div>
+            </div>
 
             <table class="table table-borderless table-hover table-pakin tblres mb-0 align-middle text-center"
                 id="resultTable">
@@ -202,7 +204,7 @@
                         POR COMBINACIÓN DE NÚMEROS
                     </label>
 
-                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
+                    <div class="numeros-grid mb-4">
                         <input id="r1" max="28" min="1" name="R1" placeholder="R1" required type="number"
                             class="form-control input-bolita" />
                         <input id="r2" max="28" min="1" name="R2" placeholder="R2" required type="number"
@@ -312,7 +314,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/chispazo/consulta_chispazo_verificador?v=1.0.3.js"></script>
+    <script defer src="js/chispazo/consulta_chispazo_verificador?v=1.0.4.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy.js"></script>
