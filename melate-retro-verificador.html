@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-08T11:06:18-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T18:17:46-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main.css?v=1.8">
+    <link rel="stylesheet" href="styles/main.css?v=1.92">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate Retro. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate-retro-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-08T11:06:18-06:00",
+      "dateModified": "2026-04-08T18:17:46-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-08T11:06:18-06:00",
+        "dateModified": "2026-04-08T18:17:46-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -146,14 +146,12 @@
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            
+
         </div>
 
-        <!-- PRELOADER (Oculto por defecto) -->
-        <div id="preloader" class="text-center my-3" style="display: none;">
-            <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
-                Buscando resultados<span class="dots">...</span>
-            </div>
+        <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
+        <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
+            <div id="resultNotice" class="d-none"></div>
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -171,7 +169,7 @@
         </div>
         <!-- FIN PÍLDORA -->
 
-        <!-- TABLA DE RESULTADOS -->
+        <!-- CONTENEDOR DE RESULTADOS -->
         <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-5" id="resultados">
             <table class="table table-borderless table-hover table-pakin tblres mb-0 align-middle text-center"
                 id="resultTable">
@@ -193,7 +191,9 @@
                 </thead>
                 <tbody>
                     <tr id="noResultRow">
-                        <td colspan="12" class="text-muted py-4">Realiza tu consulta para ver los resultados</td>
+                        <td colspan="12" class="result-state-cell result-message-empty">
+                            Realiza tu consulta para ver los resultados
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -208,8 +208,9 @@
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorRetroF" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar por Fecha</button>
+                    <button class="btn btn-pakin w-100 ChecadorRetroF" style="max-width: 250px;" disabled type="submit">
+                        Buscar por Fecha
+                    </button>
                 </form>
             </div>
 
@@ -219,17 +220,20 @@
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorRetroS" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar por Sorteo</button>
+                    <button class="btn btn-pakin w-100 ChecadorRetroS" style="max-width: 250px;" disabled type="submit">
+                        Buscar por Sorteo
+                    </button>
                 </form>
             </div>
 
-            <!-- 3. Formulario Números (Valores 1-39 para Melate Retro) -->
+            <!-- 3. Formulario Números -->
             <div class="col-12 mb-5">
                 <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE
-                        NÚMEROS</label>
-                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">
+                        POR COMBINACIÓN DE NÚMEROS
+                    </label>
+
+                    <div class="numeros-grid numeros-grid-6 mb-4">
                         <input id="f1" max="39" min="1" name="F1" placeholder="F1" required type="number"
                             class="form-control input-bolita" />
                         <input id="f2" max="39" min="1" name="F2" placeholder="F2" required type="number"
@@ -243,8 +247,10 @@
                         <input id="f6" max="39" min="1" name="F6" placeholder="F6" required type="number"
                             class="form-control input-bolita" />
                     </div>
-                    <button class="btn btn-pakin w-100 ChecadorRetro" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar Combinación</button>
+
+                    <button class="btn btn-pakin w-100 ChecadorRetro" style="max-width: 250px;" disabled type="submit">
+                        Buscar Combinación
+                    </button>
                 </form>
             </div>
 
@@ -256,7 +262,7 @@
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        
+
     </div>
 
     <!-- FOOTER BLANCO (Igual que los anteriores) -->
@@ -338,7 +344,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/retro/consulta_melate_retro_verificador.js"></script>
+    <script defer src="js/retro/consulta_melate_retro_verificador?v=1.0.4.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy.js"></script>
