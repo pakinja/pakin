@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-08T17:25:18-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T19:00:57-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main.css?v=1.8">
+    <link rel="stylesheet" href="styles/main.css?v=1.93">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Tris. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/tris-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-08T17:25:18-06:00",
+      "dateModified": "2026-04-08T19:00:57-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-08T17:25:18-06:00",
+        "dateModified": "2026-04-08T19:00:57-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -106,7 +106,8 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Tris Verificador</span>
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Tris
+                    Verificador</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -144,14 +145,7 @@
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            
-        </div>
 
-        <!-- PRELOADER (Oculto por defecto) -->
-        <div id="preloader" class="text-center my-3" style="display: none;">
-            <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
-                Buscando resultados<span class="dots">...</span>
-            </div>
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -168,6 +162,12 @@
             </span>
         </div>
         <!-- FIN PÍLDORA -->
+
+        <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
+        <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
+            <div id="resultNotice" class="d-none"></div>
+        </div>
+
 
         <!-- TABLA DE RESULTADOS -->
         <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-5" id="resultados">
@@ -188,7 +188,9 @@
                 </thead>
                 <tbody>
                     <tr id="noResultRow">
-                        <td colspan="9" class="text-muted py-4">Realiza tu consulta para ver los resultados</td>
+                        <td colspan="9" class="result-state-cell result-message-empty">
+                            Realiza tu consulta para ver los resultados
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -203,8 +205,9 @@
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorTrisF" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar por Fecha</button>
+                    <button class="btn btn-pakin w-100 ChecadorTrisF" style="max-width: 250px;" disabled type="submit">
+                        Buscar por Fecha
+                    </button>
                 </form>
             </div>
 
@@ -214,17 +217,20 @@
                     <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorTrisS" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar por Sorteo</button>
+                    <button class="btn btn-pakin w-100 ChecadorTrisS" style="max-width: 250px;" disabled type="submit">
+                        Buscar por Sorteo
+                    </button>
                 </form>
             </div>
 
-            <!-- 3. Formulario Números (Valores 0-9 para Tris) -->
+            <!-- 3. Formulario Números -->
             <div class="col-12 mb-5">
                 <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR COMBINACIÓN DE
-                        NÚMEROS</label>
-                    <div class="d-flex justify-content-center flex-wrap gap-2 mb-4 w-100">
+                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">
+                        POR COMBINACIÓN DE NÚMEROS
+                    </label>
+
+                    <div class="numeros-grid numeros-grid-5 mb-4">
                         <input id="r1" max="9" min="0" name="R1" placeholder="R1" required type="number"
                             class="form-control input-bolita" />
                         <input id="r2" max="9" min="0" name="R2" placeholder="R2" required type="number"
@@ -236,8 +242,10 @@
                         <input id="r5" max="9" min="0" name="R5" placeholder="R5" required type="number"
                             class="form-control input-bolita" />
                     </div>
-                    <button class="btn btn-pakin w-100 ChecadorTris" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar Combinación</button>
+
+                    <button class="btn btn-pakin w-100 ChecadorTris" style="max-width: 250px;" disabled type="submit">
+                        Buscar Combinación
+                    </button>
                 </form>
             </div>
 
@@ -249,7 +257,7 @@
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        
+
     </div>
 
     <!-- FOOTER BLANCO (Igual que los anteriores) -->
@@ -331,7 +339,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/tris/consulta_tris_verificador.js"></script>
+    <script defer src="js/tris/consulta_tris_verificador?v=1.0.5.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy.js"></script>
