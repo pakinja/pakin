@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-07T22:32:25-06:00" />
+    <meta property="article:modified_time" content="2026-04-08T20:07:09-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main.css?v=1.3">
+    <link rel="stylesheet" href="styles/main.css?v=1.93">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -25,8 +25,7 @@
     <meta content="#8B0000" name="msapplication-TileColor" />
     <meta content="#8B0000" name="theme-color" />
 
-    <script async crossorigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"></script>
+
 
     <!-- METADATOS JSON-LD INTACTOS PARA GANA GATO -->
     <script type="application/ld+json">
@@ -37,7 +36,7 @@
       "description": "Verifica y comprueba tus jugadas de Gana Gato. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/gana-gato-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-07T22:32:25-06:00",
+      "dateModified": "2026-04-08T20:07:09-06:00",
       "inLanguage": "es",
       "isAccessibleForFree": true,
       "publisher": {
@@ -109,7 +108,8 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Gana Gato Verificador</span>
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Gana Gato
+                    Verificador</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,21 +142,33 @@
             <h3 class="text-secondary mt-1 fs-6 fw-light">Datos a partir del sorteo 1 ó 2006-11-04</h3>
         </div>
 
-        <div style="margin: 25px 0; text-align: center;">
+        <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
 
-        <!-- PRELOADER -->
-        <div id="preloader" class="text-center my-3" style="display: none;">
-            <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
-                Buscando resultados<span class="dots">...</span>
-            </div>
+
+        <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
+        <div class="text-center mb-4">
+            <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
+                style="font-size: 0.85rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16">
+                    <path
+                        d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0 .287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                </svg>
+                Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
+            </span>
         </div>
+        <!-- FIN PÍLDORA -->
+
+        <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
+        <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
+            <div id="resultNotice" class="d-none"></div>
+        </div>
+
 
         <!-- TABLA DE RESULTADOS -->
         <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-5" id="resultados">
@@ -178,7 +190,9 @@
                 </thead>
                 <tbody>
                     <tr id="noResultRow">
-                        <td colspan="10" class="text-muted py-4">Realiza tu consulta para ver los resultados</td>
+                        <td colspan="10" class="result-state-cell result-message-empty">
+                            Realiza tu consulta para ver los resultados
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -194,7 +208,9 @@
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin w-100 ChecadorGanaGatoF" style="max-width: 250px;" disabled
-                        id="display" type="submit">Buscar por Fecha</button>
+                        type="submit">
+                        Buscar por Fecha
+                    </button>
                 </form>
             </div>
 
@@ -205,50 +221,46 @@
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin w-100 ChecadorGanaGatoS" style="max-width: 250px;" disabled
-                        id="display" type="submit">Buscar por Sorteo</button>
+                        type="submit">
+                        Buscar por Sorteo
+                    </button>
                 </form>
             </div>
 
             <!-- 3. Formulario Números (Gato 3x3) -->
             <div class="col-12 mb-5">
                 <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-4" style="letter-spacing: 1px;">POR COMBINACIÓN DE
-                        NÚMEROS</label>
+                    <label class="form-label fw-bold text-dark mb-4" style="letter-spacing: 1px;">
+                        POR COMBINACIÓN DE NÚMEROS
+                    </label>
 
-                    <!-- Contenedor del Tablero del Gato -->
-                    <div class="d-flex flex-column gap-2 mb-4">
-                        <!-- Fila 1 -->
-                        <div class="d-flex justify-content-center gap-2">
-                            <input id="f1" max="5" min="1" name="F1" placeholder="F1" required type="number"
-                                class="form-control input-bolita" />
-                            <input id="f2" max="5" min="1" name="F2" placeholder="F2" required type="number"
-                                class="form-control input-bolita" />
-                            <input id="f3" max="5" min="1" name="F3" placeholder="F3" required type="number"
-                                class="form-control input-bolita" />
-                        </div>
-                        <!-- Fila 2 -->
-                        <div class="d-flex justify-content-center gap-2">
-                            <input id="f4" max="5" min="1" name="F4" placeholder="F4" required type="number"
-                                class="form-control input-bolita" />
-                            <!-- Centro Dummy/Comodín -->
-                            <input id="campo-dummy" name="campo-dummy" readonly type="text" value="GG"
-                                class="form-control input-bolita gato-centro" tabindex="-1" />
-                            <input id="f5" max="5" min="1" name="F5" placeholder="F5" required type="number"
-                                class="form-control input-bolita" />
-                        </div>
-                        <!-- Fila 3 -->
-                        <div class="d-flex justify-content-center gap-2">
-                            <input id="f6" max="5" min="1" name="F6" placeholder="F6" required type="number"
-                                class="form-control input-bolita" />
-                            <input id="f7" max="5" min="1" name="F7" placeholder="F7" required type="number"
-                                class="form-control input-bolita" />
-                            <input id="f8" max="5" min="1" name="F8" placeholder="F8" required type="number"
-                                class="form-control input-bolita" />
-                        </div>
+                    <div class="gato-grid mb-4">
+                        <input id="f1" max="5" min="1" name="F1" placeholder="F1" required type="number"
+                            class="form-control input-bolita" />
+                        <input id="f2" max="5" min="1" name="F2" placeholder="F2" required type="number"
+                            class="form-control input-bolita" />
+                        <input id="f3" max="5" min="1" name="F3" placeholder="F3" required type="number"
+                            class="form-control input-bolita" />
+
+                        <input id="f4" max="5" min="1" name="F4" placeholder="F4" required type="number"
+                            class="form-control input-bolita" />
+                        <input id="campo-dummy" name="campo-dummy" readonly type="text" value="GG"
+                            class="form-control input-bolita gato-centro" tabindex="-1" />
+                        <input id="f5" max="5" min="1" name="F5" placeholder="F5" required type="number"
+                            class="form-control input-bolita" />
+
+                        <input id="f6" max="5" min="1" name="F6" placeholder="F6" required type="number"
+                            class="form-control input-bolita" />
+                        <input id="f7" max="5" min="1" name="F7" placeholder="F7" required type="number"
+                            class="form-control input-bolita" />
+                        <input id="f8" max="5" min="1" name="F8" placeholder="F8" required type="number"
+                            class="form-control input-bolita" />
                     </div>
 
-                    <button class="btn btn-pakin w-100 ChecadorGanaGato" style="max-width: 250px;" disabled id="display"
-                        type="submit">Buscar Combinación</button>
+                    <button class="btn btn-pakin w-100 ChecadorGanaGato" style="max-width: 250px;" disabled
+                        type="submit">
+                        Buscar Combinación
+                    </button>
                 </form>
             </div>
 
@@ -256,13 +268,10 @@
 
     </section>
 
-    <div style="margin: 25px 0; text-align: center;">
+    <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
 
     <!-- FOOTER BLANCO ESTÁNDAR 4 COLUMNAS -->
@@ -344,8 +353,9 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/ganagato/consulta_ganagato_verificador.js"></script>
+    <script defer src="js/ganagato/consulta_ganagato_verificador?v=1.0.5.js"></script>
     <script defer src="js/tag_manager.js"></script>
+    <script defer src="/js/adsense-lazy.js"></script>
 
 </body>
 
