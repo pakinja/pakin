@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-09T10:41:10-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T21:30:23-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_v2.css">
+    <link rel="stylesheet" href="styles/main_v2?v=6.css">
 
-    <!-- jQuery y Script Principal (Mantenidos exactamente como los enviaste) -->
+    <!-- jQuery y Script Principal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer src="/js/revancha/hist_revanchaV24.js"></script>
+    <script defer src="/js/revancha/hist_revanchaV24?v=6.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -29,8 +29,6 @@
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
 
-    
-
     <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
     {
@@ -43,6 +41,7 @@
       ]
     }
     </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +50,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Revancha",
       "url": "https://pakin.lat/revancha-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-09T10:41:10-06:00",
+      "dateModified": "2026-04-09T21:30:23-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -89,8 +88,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
                     <li class="nav-item"><a class="nav-link text-dark" href="revancha">Revancha Analítica</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="revancha-verificador">Revancha
-                            Verificador</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="revancha-verificador">Revancha Verificador</a></li>
                 </ul>
             </div>
         </div>
@@ -108,11 +106,19 @@
             <h3 class="text-secondary mt-3 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
         </div>
 
+        <!-- TEXTO INTRODUCTORIO -->
+        <div class="mx-auto mb-4" style="max-width: 900px;">
+            <p class="texto-analitica mb-0 px-2 px-md-0">
+                Consulta el histórico completo de resultados de Revancha, revisa los sorteos más recientes y descarga
+                el archivo CSV para tus propios análisis. Si quieres complementar tu revisión, también puedes usar las
+                herramientas de <a href="revancha">analítica</a> y <a href="revancha-verificador">verificador</a>.
+            </p>
+        </div>
+
         <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -128,26 +134,64 @@
                 Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
             </span>
         </div>
-        <!-- FIN PÍLDORA -->
 
-        <!-- DIV DE RESULTADOS Y TABLA (Mantiene id="content" y clases para el JS) -->
-        <div class="Content resultados text-center mx-auto mb-4 contenedor-tabla shadow-sm rounded-3" id="content"
-            style="min-height: 50px;">
+        <!-- TABLA HISTÓRICO -->
+        <div id="resultados"
+            class="contenedor-tabla contenedor-tabla-historico shadow-sm border rounded-3 mx-auto mb-4">
+            <table
+                class="table table-borderless table-hover table-pakin tabla-revancha idx tblres mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th>SORTEO</th>
+                        <th>IDX</th>
+                        <th>R1</th>
+                        <th>R2</th>
+                        <th>R3</th>
+                        <th>R4</th>
+                        <th>R5</th>
+                        <th>R6</th>
+                        <th>PRIMOS</th>
+                        <th>REPS</th>
+                        <th>MEDIA</th>
+                        <th>FECHA</th>
+                    </tr>
+                </thead>
+                <tbody id="historicoTableBody">
+                    <tr id="historicoLoadingRow">
+                        <td colspan="12" class="result-state-cell">
+                            <div class="table-loader d-flex justify-content-center align-items-center gap-2">
+                                <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
+                                <span>Cargando histórico...</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- BOTONES DE ACCIÓN (Vista Simple y Descarga) -->
-        <div class="d-flex flex-column align-items-center gap-3 mx-auto my-4" style="max-width: 650px;">
-            <!-- Botón Vista Simple (Conserva id="displayb" y class="RevanchaVS") -->
-            <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Revancha.csv" target="_blank"
-                class="text-decoration-none w-100 text-center">
-                <button id="displayb" class="btn btn-pakin RevanchaVS w-100 py-3 fs-5 shadow-sm"
-                    style="max-width: 300px; letter-spacing: 1px;">
-                    Vista Simple
-                </button>
-            </a>
+        <!-- MENSAJE DE ESTADO GENERAL -->
+        <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
-            <!-- Contenedor dinámico de descarga (Conserva id="downloadContainer") -->
-            <div id="downloadContainer" class="w-100 text-center buscar">
+        <!-- ACCIONES -->
+        <div id="historicoActions" class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+
+            <div class="d-flex justify-content-center mb-3">
+                <button id="loadMoreBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                    Cargar más resultados
+                </button>
+            </div>
+
+            <div id="loadMoreLoader" class="text-center mb-3 d-none" aria-live="polite">
+                <div class="table-loader d-inline-flex justify-content-center align-items-center gap-2">
+                    <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
+                    <span>Cargando más resultados...</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button id="downloadCsvBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                    Descargar CSV
+                </button>
             </div>
         </div>
 
@@ -157,7 +201,6 @@
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        
     </div>
 
     <!-- FOOTER BLANCO -->
@@ -179,8 +222,7 @@
                         <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
                                 target="_blank">Generadores</a></li>
                         <li><a class="text-secondary text-decoration-none"
-                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
-                        </li>
+                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -188,8 +230,7 @@
                     </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
                         <li><a class="text-secondary text-decoration-none"
-                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
-                                Nacional</a></li>
+                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería Nacional</a></li>
                         <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
                                 target="_blank">Pronosports</a></li>
                         <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
@@ -241,6 +282,19 @@
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy.js"></script>
+
+    <!-- NAVEGACIÓN FLOTANTE -->
+    <div class="historico-floating-nav" aria-label="Navegación rápida del histórico">
+        <button id="scrollTopBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn d-none"
+            type="button" aria-label="Subir al inicio" title="Subir">
+            ↑
+        </button>
+
+        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn"
+            type="button" aria-label="Bajar al final" title="Bajar">
+            ↓
+        </button>
+    </div>
 
 </body>
 
