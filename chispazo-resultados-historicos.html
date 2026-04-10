@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-09T19:16:25-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T19:52:03-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-09T19:16:25-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T19:52:03-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Script Principal Histórico Chispazo -->
-    <script src="/js/chispazo/hist_chispazoV23?v=1.js" defer></script>
+    <script src="/js/chispazo/hist_chispazoV23?v=2.js" defer></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -68,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-09T19:16:25-06:00",
+	  "dateModified": "2026-04-09T19:52:03-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -204,7 +204,7 @@
         <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
         <!-- ACCIONES -->
-        <div class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions" style="max-width: 900px;">
 
             <!-- Acción principal -->
             <div class="d-flex justify-content-center mb-3">
@@ -221,35 +221,12 @@
                 </div>
             </div>
 
-            <!-- Bloque de acciones y navegación -->
-            <div class="row g-3 justify-content-center">
-
-                <div class="col-12 col-md-6 col-lg-3 d-grid">
-                    <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Chispazo.csv"
-                        target="_blank" rel="noopener noreferrer"
-                        class="btn btn-pakin py-3 shadow-sm text-decoration-none">
-                        Descargar CSV
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 d-grid">
-                    <a href="chispazo" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
-                        Chispazo Analítica
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 d-grid">
-                    <a href="chispazo-verificador" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
-                        Chispazo Verificador
-                    </a>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 d-grid">
-                    <a href="chispazo-generador" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
-                        Chispazo Generador
-                    </a>
-                </div>
-
+            <!-- Descarga -->
+            <div class="d-flex justify-content-center">
+                <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Chispazo.csv" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-pakin py-3 px-4 shadow-sm text-decoration-none">
+                    Descargar CSV
+                </a>
             </div>
         </div>
 
@@ -342,6 +319,21 @@
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy.js"></script>
+
+
+    <!-- NAVEGACIÓN FLOTANTE -->
+    <div class="historico-floating-nav" aria-label="Navegación rápida del histórico">
+        <button id="scrollTopBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn d-none"
+            type="button" aria-label="Subir al inicio" title="Subir">
+            ↑
+        </button>
+
+        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn" type="button"
+            aria-label="Bajar al final" title="Bajar">
+            ↓
+        </button>
+    </div>
+
 
 </body>
 
