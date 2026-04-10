@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-09T19:54:15-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T20:16:52-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-09T19:54:15-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T20:16:52-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Script Principal Histórico Chispazo -->
-    <script src="/js/chispazo/hist_chispazoV23?v=2.js" defer></script>
+    <script src="/js/chispazo/hist_chispazoV23?v=3.js" defer></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -68,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-09T19:54:15-06:00",
+	  "dateModified": "2026-04-09T20:16:52-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -208,7 +208,7 @@
 
             <!-- Acción principal -->
             <div class="d-flex justify-content-center mb-3">
-                <button id="loadMoreBtn" class="btn btn-pakin px-4 py-3 shadow-sm">
+                <button id="loadMoreBtn" class="btn btn-historico-accion shadow-sm" type="button">
                     Cargar más resultados
                 </button>
             </div>
@@ -223,10 +223,9 @@
 
             <!-- Descarga -->
             <div class="d-flex justify-content-center">
-                <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Chispazo.csv" target="_blank"
-                    rel="noopener noreferrer" class="btn btn-pakin py-3 px-4 shadow-sm text-decoration-none">
+                <button id="downloadCsvBtn" class="btn btn-sutil btn-historico-accion shadow-sm" type="button">
                     Descargar CSV
-                </a>
+                </button>
             </div>
         </div>
 
