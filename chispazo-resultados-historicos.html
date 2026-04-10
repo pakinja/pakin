@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-09T15:25:24-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T18:58:42-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-09T15:25:24-06:00" />
+    <meta property="article:modified_time" content="2026-04-09T18:58:42-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
-
 
     <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
@@ -69,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-09T15:25:24-06:00",
+	  "dateModified": "2026-04-09T18:58:42-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -115,8 +114,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo">Chispazo Analítica</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo">Chispazo Analítica</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-verificador">Chispazo
                             Verificador</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo
@@ -125,8 +123,6 @@
             </div>
         </div>
     </nav>
-
-
 
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
@@ -140,11 +136,20 @@
             <h3 class="text-secondary mt-3 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
         </div>
 
-        <div style="margin: 25px 0; text-align: center;">
+        <!-- TEXTO INTRODUCTORIO -->
+        <div class="mx-auto mb-4" style="max-width: 900px;">
+            <p class="texto-analitica mb-0 px-2 px-md-0">
+                Consulta el histórico completo de resultados de Chispazo, revisa los sorteos más recientes y descarga
+                el archivo CSV para tus propios análisis. Si quieres complementar tu revisión, también puedes usar las
+                herramientas de <a href="chispazo">analítica</a>, <a href="chispazo-verificador">verificador</a> y
+                <a href="chispazo-generador">generador</a> de jugadas.
+            </p>
+        </div>
+
+        <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -162,34 +167,98 @@
         </div>
         <!-- FIN PÍLDORA -->
 
-        <!-- DIV DE RESULTADOS Y TABLA -->
-        <div class="Content resultados text-center mx-auto mb-4 contenedor-tabla shadow-sm rounded-3" id="content"
-            style="min-height: 50px;">
+        <!-- TABLA HISTÓRICO -->
+        <div id="resultados"
+            class="contenedor-tabla contenedor-tabla-historico shadow-sm border rounded-3 mx-auto mb-4">
+            <table
+                class="table table-borderless table-hover table-pakin tabla-chispazo idx tblres mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th>SORTEO</th>
+                        <th>IDX</th>
+                        <th>R1</th>
+                        <th>R2</th>
+                        <th>R3</th>
+                        <th>R4</th>
+                        <th>R5</th>
+                        <th>PRIMOS</th>
+                        <th>REPS</th>
+                        <th>MEDIA</th>
+                        <th>FECHA</th>
+                    </tr>
+                </thead>
+                <tbody id="historicoTableBody">
+                    <tr id="historicoLoadingRow">
+                        <td colspan="11" class="result-state-cell">
+                            <div class="table-loader d-flex justify-content-center align-items-center gap-2">
+                                <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
+                                <span>Cargando histórico...</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- BOTONES DE ACCIÓN (Vista Simple y Descarga) -->
-        <div class="d-flex flex-column align-items-center gap-3 mx-auto my-4" style="max-width: 650px;">
-            <!-- Botón Vista Simple -->
-            <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Chispazo.csv" target="_blank"
-                class="text-decoration-none w-100 text-center">
-                <button id="displayb" class="btn btn-pakin ChispazoVS w-100 py-3 fs-5 shadow-sm"
-                    style="max-width: 300px; letter-spacing: 1px;">
-                    Vista Simple
-                </button>
-            </a>
+        <!-- MENSAJE DE ESTADO GENERAL -->
+        <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
-            <!-- Contenedor dinámico de descarga -->
-            <div id="downloadContainer" class="w-100 text-center buscar">
+        <!-- ACCIONES -->
+        <div class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+
+            <!-- Acción principal -->
+            <div class="d-flex justify-content-center mb-3">
+                <button id="loadMoreBtn" class="btn btn-pakin px-4 py-3 shadow-sm">
+                    Cargar más resultados
+                </button>
+            </div>
+
+            <!-- Loader secundario -->
+            <div id="loadMoreLoader" class="text-center mb-3 d-none" aria-live="polite">
+                <div class="table-loader d-inline-flex justify-content-center align-items-center gap-2">
+                    <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
+                    <span>Cargando más resultados...</span>
+                </div>
+            </div>
+
+            <!-- Bloque de acciones y navegación -->
+            <div class="row g-3 justify-content-center">
+
+                <div class="col-12 col-md-6 col-lg-3 d-grid">
+                    <a href="https://raw.githubusercontent.com/pakinja/pakin/refs/heads/master/Chispazo.csv"
+                        target="_blank" rel="noopener noreferrer"
+                        class="btn btn-pakin py-3 shadow-sm text-decoration-none">
+                        Descargar CSV
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 d-grid">
+                    <a href="chispazo" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
+                        Chispazo Analítica
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 d-grid">
+                    <a href="chispazo-verificador" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
+                        Chispazo Verificador
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 d-grid">
+                    <a href="chispazo-generador" class="btn btn-sutil py-3 shadow-sm text-decoration-none">
+                        Chispazo Generador
+                    </a>
+                </div>
+
             </div>
         </div>
 
     </section>
 
-    <div style="margin: 25px 0; text-align: center;">
+    <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        
     </div>
 
     <!-- FOOTER BLANCO -->
