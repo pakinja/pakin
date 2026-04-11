@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-10T22:18:40-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T12:58:40-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-10T22:18:40-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T12:58:40-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -68,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Melate Retro",
 	  "url": "https://pakin.lat/melate-retro-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-10T22:18:40-06:00",
+	  "dateModified": "2026-04-11T12:58:40-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -93,7 +93,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pakin.lat/melate-retro-resultados-historicos">
     <meta property="og:image" content="https://pakin.lat/images/pakin-historicos.webp">
-    <meta property="og:description" content="Resultados Melate Retro de Hoy e Histórico Completo - Pakin Ciencia de Datos">
+    <meta property="og:description"
+        content="Resultados Melate Retro de Hoy e Histórico Completo - Pakin Ciencia de Datos">
     <meta name="author" content="Francisco Jaramillo A.">
 
 </head>
@@ -105,7 +106,8 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">M. Retro Histórico</span>
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">M. Retro
+                    Histórico</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,9 +115,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro">Melate Retro Analítica</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-verificador">Melate Retro Verificador</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-generador">Melate Retro Generador</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro">Melate Retro Analítica</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-verificador">Melate Retro
+                            Verificador</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-generador">Melate Retro
+                            Generador</a></li>
                 </ul>
             </div>
         </div>
@@ -136,9 +141,11 @@
         <!-- TEXTO INTRODUCTORIO -->
         <div class="mx-auto mb-4" style="max-width: 900px;">
             <p class="texto-analitica mb-0 px-2 px-md-0">
-                Consulta el histórico completo de resultados de Melate Retro, revisa los sorteos más recientes y descarga
+                Consulta el histórico completo de resultados de Melate Retro, revisa los sorteos más recientes y
+                descarga
                 el archivo CSV para tus propios análisis. Si quieres complementar tu revisión, también puedes usar las
-                herramientas de <a href="melate-retro">analítica</a>, <a href="melate-retro-verificador">verificador</a> y
+                herramientas de <a href="melate-retro">analítica</a>, <a href="melate-retro-verificador">verificador</a>
+                y
                 <a href="melate-retro-generador">generador</a> de jugadas.
             </p>
         </div>
@@ -203,11 +210,11 @@
         <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
         <!-- ACCIONES -->
-        <div id="historicoActions" class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-900">
 
             <!-- Acción principal -->
             <div class="d-flex justify-content-center mb-3">
-                <button id="loadMoreBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="loadMoreBtn" class="btn btn-pakin shadow-sm" type="button">
                     Cargar más resultados
                 </button>
             </div>
@@ -222,7 +229,7 @@
 
             <!-- Descarga -->
             <div class="d-flex justify-content-center">
-                <button id="downloadCsvBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="downloadCsvBtn" class="btn btn-pakin-outline shadow-sm" type="button">
                     Descargar CSV
                 </button>
             </div>
