@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-10T22:02:41-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T12:55:11-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_v17.css">
+    <link rel="stylesheet" href="styles/main_v18.css">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Tris. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/tris-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-10T22:02:41-06:00",
+      "dateModified": "2026-04-11T12:55:11-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-10T22:02:41-06:00",
+        "dateModified": "2026-04-11T12:55:11-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -197,15 +197,15 @@
         </div>
 
         <!-- FORMULARIOS -->
-        <div class="row justify-content-center mx-auto" style="max-width: 650px;">
+        <div class="row justify-content-center mx-auto wrap-650">
 
             <!-- 1. Formulario Fecha -->
             <div class="col-12 mb-4">
                 <form id="form2" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR FECHA</label>
+                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorTrisF" style="max-width: 250px;" disabled type="submit">
+                    <button class="btn btn-pakin btn-w-250 ChecadorTrisF" disabled type="submit">
                         Buscar por Fecha
                     </button>
                 </form>
@@ -214,10 +214,10 @@
             <!-- 2. Formulario Sorteo -->
             <div class="col-12 mb-4">
                 <form id="form1" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">POR SORTEO</label>
+                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
-                    <button class="btn btn-pakin w-100 ChecadorTrisS" style="max-width: 250px;" disabled type="submit">
+                    <button class="btn btn-pakin btn-w-250 ChecadorTrisS" disabled type="submit">
                         Buscar por Sorteo
                     </button>
                 </form>
@@ -226,11 +226,11 @@
             <!-- 3. Formulario Números -->
             <div class="col-12 mb-5">
                 <form id="form" class="bg-white p-4 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3" style="letter-spacing: 1px;">
+                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">
                         POR COMBINACIÓN DE NÚMEROS
                     </label>
 
-                    <div class="numeros-grid numeros-grid-5 mb-4">
+                     <div class="numeros-grid numeros-grid-5 mb-4">
                         <input id="r1" max="9" min="0" name="R1" placeholder="R1" required type="number"
                             class="form-control input-bolita" />
                         <input id="r2" max="9" min="0" name="R2" placeholder="R2" required type="number"
@@ -243,7 +243,7 @@
                             class="form-control input-bolita" />
                     </div>
 
-                    <button class="btn btn-pakin w-100 ChecadorTris" style="max-width: 250px;" disabled type="submit">
+                    <button class="btn btn-pakin btn-w-250 ChecadorTris" disabled type="submit">
                         Buscar Combinación
                     </button>
                 </form>

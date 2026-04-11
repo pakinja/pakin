@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-10T22:02:41-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T12:55:11-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_v17.css">
+    <link rel="stylesheet" href="styles/main_v18.css">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -52,7 +52,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Tris",
       "url": "https://pakin.lat/tris-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-10T22:02:41-06:00",
+      "dateModified": "2026-04-11T12:55:11-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -175,10 +175,11 @@
         <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
         <!-- ACCIONES -->
-        <div id="historicoActions" class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-900">
 
+            <!-- Acción principal -->
             <div class="d-flex justify-content-center mb-3">
-                <button id="loadMoreBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="loadMoreBtn" class="btn btn-pakin shadow-sm" type="button">
                     Cargar más resultados
                 </button>
             </div>
@@ -190,8 +191,9 @@
                 </div>
             </div>
 
+            <!-- Descarga -->
             <div class="d-flex justify-content-center">
-                <button id="downloadCsvBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="downloadCsvBtn" class="btn btn-pakin-outline shadow-sm" type="button">
                     Descargar CSV
                 </button>
             </div>
@@ -294,8 +296,8 @@
             ↑
         </button>
 
-        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn"
-            type="button" aria-label="Bajar al final" title="Bajar">
+        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn" type="button"
+            aria-label="Bajar al final" title="Bajar">
             ↓
         </button>
     </div>
