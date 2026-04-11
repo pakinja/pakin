@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-10T23:26:56-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T13:01:10-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Revanchita",
       "url": "https://pakin.lat/revanchita-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-10T23:26:56-06:00",
+      "dateModified": "2026-04-11T13:01:10-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -66,7 +66,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pakin.lat/revanchita-resultados-historicos">
     <meta property="og:image" content="https://pakin.lat/images/pakin-historicos.webp">
-    <meta property="og:description" content="Resultados Revanchita de Hoy e Histórico Completo - Pakin Ciencia de Datos">
+    <meta property="og:description"
+        content="Resultados Revanchita de Hoy e Histórico Completo - Pakin Ciencia de Datos">
     <meta name="author" content="Francisco Jaramillo A.">
 
 </head>
@@ -88,7 +89,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
                     <li class="nav-item"><a class="nav-link text-dark" href="revanchita">Revanchita Analítica</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="revanchita-verificador">Revanchita Verificador</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="revanchita-verificador">Revanchita
+                            Verificador</a></li>
                 </ul>
             </div>
         </div>
@@ -173,10 +175,11 @@
         <div id="historicoStatus" class="historico-status text-center mb-3" aria-live="polite"></div>
 
         <!-- ACCIONES -->
-        <div id="historicoActions" class="mx-auto my-4 historico-actions" style="max-width: 900px;">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-900">
 
+            <!-- Acción principal -->
             <div class="d-flex justify-content-center mb-3">
-                <button id="loadMoreBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="loadMoreBtn" class="btn btn-pakin shadow-sm" type="button">
                     Cargar más resultados
                 </button>
             </div>
@@ -188,8 +191,9 @@
                 </div>
             </div>
 
+            <!-- Descarga -->
             <div class="d-flex justify-content-center">
-                <button id="downloadCsvBtn" class="btn btn-historico-accion shadow-sm" type="button">
+                <button id="downloadCsvBtn" class="btn btn-pakin-outline shadow-sm" type="button">
                     Descargar CSV
                 </button>
             </div>
@@ -222,7 +226,8 @@
                         <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
                                 target="_blank">Generadores</a></li>
                         <li><a class="text-secondary text-decoration-none"
-                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a></li>
+                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -230,7 +235,8 @@
                     </h6>
                     <ul class="list-unstyled mb-0" style="line-height: 1.8;">
                         <li><a class="text-secondary text-decoration-none"
-                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería Nacional</a></li>
+                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
+                                Nacional</a></li>
                         <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
                                 target="_blank">Pronosports</a></li>
                         <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
@@ -290,8 +296,8 @@
             ↑
         </button>
 
-        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn"
-            type="button" aria-label="Bajar al final" title="Bajar">
+        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn" type="button"
+            aria-label="Bajar al final" title="Bajar">
             ↓
         </button>
     </div>
