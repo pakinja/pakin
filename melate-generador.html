@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-11T12:59:39-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T17:36:37-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
         "description": "Genera-Busca tus combinaciones para Melate en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-04-11T12:59:39-06:00",
+        "dateModified": "2026-04-11T17:36:37-06:00",
         "license": "https://pakin.lat/melate-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -132,24 +132,16 @@
         </div>
         <!-- FIN PÍLDORA -->
 
-        <!-- DIV DE RESULTADOS (Mantiene id y clases exactas para el JS) -->
-        <div class="Hbusc resultados text-center mx-auto mb-4 contenedor-tabla shadow-sm rounded-3" id="resultados"
-            style="min-height: 50px;">
-        </div>
-
-        <!-- PRELOADER (Oculto por defecto con display: none) -->
-        <div id="preloader" class="text-center my-3" style="display: none;">
-            <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
-                Buscando<span class="dots">...</span>
-            </div>
+        <!-- DIV DE RESULTADOS -->
+        <div id="resultados"
+            class="contenedor-tabla contenedor-tabla-historico text-center mx-auto mb-4 shadow-sm border rounded-3">
         </div>
 
 
         <!-- BOTÓN GENERADOR -->
-        <div class="row justify-content-center mx-auto wrap-650">
-            <div class="col-12 mb-4 text-center">
-                <!-- Se conserva el id "displayb" y class "BuscadorMelate" para el JS -->
-                <button class="btn btn-pakin btn-w-300 BuscadorMelate shadow-sm" id="displayb">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-650">
+            <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-pakin btn-w-300 shadow-sm" id="displayb" type="button">
                     Generar Jugadas
                 </button>
             </div>
