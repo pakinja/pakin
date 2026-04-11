@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-11T15:50:03-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T17:21:15-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <meta name="msapplication-TileColor" content="#8B0000">
     <meta name="theme-color" content="#8B0000">
 
-    
+
 
     <!-- METADATOS JSON-LD -->
     <script type="application/ld+json">
@@ -47,7 +47,7 @@
         "description": "Genera-Busca tus combinaciones para Tris en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/tris-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-04-11T15:50:03-06:00",
+        "dateModified": "2026-04-11T17:21:15-06:00",
         "license": "https://pakin.lat/tris-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -114,7 +114,7 @@
             <!-- A Pakin Analítica Superior -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="4485588842" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            
+
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -132,23 +132,16 @@
         </div>
         <!-- FIN PÍLDORA -->
 
-        <!-- DIV DE RESULTADOS (Mantiene id y clases exactas para el JS) -->
-        <div class="Hbusc resultados text-center mx-auto mb-4 contenedor-tabla shadow-sm rounded-3" id="resultados"
-            style="min-height: 50px;">
+        <!-- DIV DE RESULTADOS -->
+        <div id="resultados"
+            class="contenedor-tabla contenedor-tabla-historico text-center mx-auto mb-4 shadow-sm border rounded-3">
         </div>
 
-        <!-- PRELOADER (Oculto por defecto con display: none) -->
-        <div id="preloader" class="text-center my-3" style="display: none;">
-            <div class="loading-msg fw-bold" style="color: #8B0000; font-size: 1.1rem;">
-                Buscando<span class="dots">...</span>
-            </div>
-        </div>
 
         <!-- BOTÓN GENERADOR -->
-        <div class="row justify-content-center mx-auto wrap-650">
-            <div class="col-12 mb-4 text-center">
-                <!-- Se conserva el id "displayb" y class "BuscadorTris" para el JS -->
-                <button class="btn btn-pakin btn-w-300 BuscadorTris shadow-sm" id="displayb">
+        <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-650">
+            <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-pakin btn-w-300 shadow-sm" id="displayb" type="button">
                     Generar Jugadas
                 </button>
             </div>
@@ -160,7 +153,7 @@
         <!-- A Pakin Analitica Contenido -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
             data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        
+
     </div>
 
     <!-- FOOTER BLANCO -->
