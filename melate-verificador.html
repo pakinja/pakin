@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-11T17:36:37-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T19:44:11-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-11T17:36:37-06:00",
+      "dateModified": "2026-04-11T19:44:11-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-11T17:36:37-06:00",
+        "dateModified": "2026-04-11T19:44:11-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -104,11 +104,19 @@
     <!-- NAVBAR LIMPIO -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="/">
+             <div class="d-flex align-items-center">
+            
+            <!-- 1. Solo el logo es un enlace al Home -->
+            <a class="navbar-brand me-0" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">Melate
-                    Verificador</span>
             </a>
+            
+            <!-- 2. El texto es solo lectura (sin enlace) -->
+            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                Melate Verificador
+            </span>
+
+        </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
