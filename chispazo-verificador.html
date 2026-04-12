@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-12T17:07:44-06:00" />
+    <meta property="article:modified_time" content="2026-04-12T17:17:19-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-12T17:07:44-06:00",
+      "dateModified": "2026-04-12T17:17:19-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -71,19 +71,19 @@
     <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE (SIN LINK A LA PÁGINA ACTUAL) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-             <div class="d-flex align-items-center">
-            
-            <!-- 1. Solo el logo es un enlace al Home -->
-            <a class="navbar-brand me-0" href="/">
-                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-            </a>
-            
-            <!-- 2. El texto es solo lectura (sin enlace) -->
-            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-                Chispazo Verificador
-            </span>
+            <div class="d-flex align-items-center">
 
-        </div>
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Chispazo Verificador
+                </span>
+
+            </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,25 +105,14 @@
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
-                <!-- ========================================== -->
+        <!-- ========================================== -->
         <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
         <!-- ========================================== -->
         <div class="text-center mb-4">
             <!-- Sin subrayado, con punto rojo -->
             <h1 class="fw-bold text-dark d-inline-block" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
-                Consulta por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
+                Chispazo: Verifica tus Jugadas<span style="color: #8B0000;">.</span>
             </h1>
-
-            <!-- Párrafos centrados y un poco más pequeños (0.9rem) reemplazando los h3 y h4 -->
-            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
-                Datos Abiertos Lotería Nacional Potencializados por Pakin
-            </p>
-            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
-                Datos a partir del sorteo 1363 ó 2005-04-01 (formato actual de Chispazo)
-            </p>
-            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
-                Repetidos (REPS) es siempre respecto al resultado inmediato anterior
-            </p>
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
@@ -140,6 +129,28 @@
             </span>
         </div>
         <!-- FIN PÍLDORA -->
+
+        <!-- ========================================== -->
+        <!-- H2: SECCIÓN DE CONSULTA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Con subrayado estilo sección -->
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Consulta por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
+            </h2>
+
+            <!-- Párrafos centrados y estilo homologado (0.9rem) -->
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos Abiertos Lotería Nacional Potencializados por Pakin
+            </p>
+            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos a partir del sorteo 1363 ó 2005-04-01 (formato actual de Chispazo)
+            </p>
+            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Repetidos (REPS) es siempre respecto al resultado inmediato anterior
+            </p>
+        </div>
 
         <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
         <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
