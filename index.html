@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -118,18 +117,18 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
     <div class="container-fluid">
       <div class="d-flex align-items-center">
-            
-            <!-- 1. Solo el logo es un enlace al Home -->
-            <a class="navbar-brand me-0" href="/">
-                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-            </a>
-            
-            <!-- 2. El texto es solo lectura (sin enlace) -->
-            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-                Pakin
-            </span>
 
-        </div>
+        <!-- 1. Solo el logo es un enlace al Home -->
+        <a class="navbar-brand me-0" href="/">
+          <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+        </a>
+
+        <!-- 2. El texto es solo lectura (sin enlace) -->
+        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+          Pakin
+        </span>
+
+      </div>
     </div>
   </nav>
 
@@ -142,24 +141,24 @@
 
 
     <!-- Frase motivacional (Letra sutilmente más grande y línea Rojo Vino) -->
-    <div class="alert bg-white text-center shadow-sm border-0 text-secondary fst-italic mb-5 mx-auto rounded-3"
+    <div class="alert bg-white text-center shadow-sm border-0 text-dark fst-italic mb-5 mx-auto rounded-3"
       style="max-width: 650px; font-size: 1.05rem; border-top: 2px solid #8B0000 !important;">
       "Analiza tus números, encuentra patrones y confía en tu intuición."
     </div>
 
 
-    <!-- INICIO DE LAS TARJETAS -->
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
+    <!-- INICIO DE LAS TARJETAS (Cambio aquí: g-3 g-md-4) -->
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 g-md-4 justify-content-center">
 
       <!-- 1. Verificadores -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Verificadores</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Verificadores</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="verificadores">Entrar</a>
             </div>
           </div>
@@ -169,12 +168,12 @@
       <!-- 2. Generadores -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Generadores</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Generadores</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="generadores">Entrar</a>
             </div>
           </div>
@@ -184,12 +183,12 @@
       <!-- 3. Históricos -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Históricos</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Históricos</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Completos</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="resultados-historicos-completos">Entrar</a>
             </div>
           </div>
@@ -199,12 +198,12 @@
       <!-- 4. Sorteo Zodiaco -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Zodiaco</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Zodiaco</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="zodiaco">Entrar</a>
             </div>
           </div>
@@ -214,12 +213,12 @@
       <!-- 5. Tris -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Tris</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Tris</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;" href="tris">Entrar</a>
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;" href="tris">Entrar</a>
             </div>
           </div>
         </div>
@@ -228,12 +227,12 @@
       <!-- 6. Chispazo -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Chispazo</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Chispazo</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="chispazo">Entrar</a>
             </div>
           </div>
@@ -243,12 +242,12 @@
       <!-- 7. Melate Retro -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Melate Retro</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Melate Retro</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="melate-retro">Entrar</a>
             </div>
           </div>
@@ -258,12 +257,12 @@
       <!-- 8. Melate -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Melate</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Melate</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="melate">Entrar</a>
             </div>
           </div>
@@ -273,12 +272,12 @@
       <!-- 9. Revancha -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Revancha</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Revancha</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="revancha">Entrar</a>
             </div>
           </div>
@@ -288,12 +287,12 @@
       <!-- 10. Revanchita -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Revanchita</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Revanchita</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="revanchita">Entrar</a>
             </div>
           </div>
@@ -303,12 +302,12 @@
       <!-- 11. Gana Gato -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Gana Gato</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Gana Gato</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">&nbsp;</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="gana-gato">Entrar</a>
             </div>
           </div>
@@ -318,12 +317,12 @@
       <!-- 12. Sorteo Superior -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Sorteo Superior</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Sorteo Superior</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="superior">Entrar</a>
             </div>
           </div>
@@ -333,12 +332,12 @@
       <!-- 13. Sorteo Mayor -->
       <div class="col">
         <div class="card h-100 border-0 shadow-sm card-analitica rounded-4">
-          <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
             <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
-              style="letter-spacing: 1px; font-size: 1.15rem;">Sorteo Mayor</h5>
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Sorteo Mayor</h5>
             <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
             <div class="mt-auto">
-              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.9rem;"
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
                 href="sorteo-mayor">Entrar</a>
             </div>
           </div>
@@ -349,11 +348,11 @@
   </section>
 
   <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
-      <!-- A Pakin Analítica Superior -->
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="4485588842"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <!-- A Pakin Analítica Superior -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333" data-ad-slot="4485588842"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
 
-    </div>
+  </div>
 
   <!-- FOOTER BLANCO -->
   <footer class="bg-white border-top py-5 mt-auto">
