@@ -117,12 +117,19 @@
   <!-- 2. NUEVA BARRA DE NAVEGACIÓN BLANCA -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="/">
-        <!-- AQUÍ ESTÁ TU NUEVO LOGO SVG -->
-        <img alt="Pakin" src="/images/p2.svg" height="45" width="45" style="object-fit: contain;">
-        <!-- Texto a juego con el logo -->
-        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
-      </a>
+      <div class="d-flex align-items-center">
+            
+            <!-- 1. Solo el logo es un enlace al Home -->
+            <a class="navbar-brand me-0" href="/">
+                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+            </a>
+            
+            <!-- 2. El texto es solo lectura (sin enlace) -->
+            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                Pakin
+            </span>
+
+        </div>
     </div>
   </nav>
 
