@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-12T15:33:39-06:00" />
+    <meta property="article:modified_time" content="2026-04-12T17:45:55-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Tris. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/tris-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-12T15:33:39-06:00",
+      "dateModified": "2026-04-12T17:45:55-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-12T15:33:39-06:00",
+        "dateModified": "2026-04-12T17:45:55-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -136,21 +136,18 @@
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
-        <!-- TÍTULOS -->
-        <div class="text-center mb-4 mt-2">
-            <h2 class="fw-bold text-dark d-inline-block pb-1"
-                style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); border-bottom: 3px solid #8B0000;">
-                Consulta por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
-            </h2>
-            <h3 class="text-secondary mt-3 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
-            <h3 class="text-secondary mt-1 fs-6 fw-light">Datos a partir del sorteo 11033 ó 2007-09-03 (formato actual
-                de Tris)</h3>
-            <h4 class="text-secondary mt-1 fs-6 fw-light">Repetidos (REPS) es siempre respecto al resultado inmediato
-                anterior</h4>
+        <!-- ========================================== -->
+        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Sin subrayado, con punto rojo -->
+            <h1 class="fw-bold text-dark d-inline-block" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
+                Chispazo: Verifica tus Jugadas<span style="color: #8B0000;">.</span>
+            </h1>
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
             <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
                 style="font-size: 0.85rem;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -163,6 +160,30 @@
             </span>
         </div>
         <!-- FIN PÍLDORA -->
+
+        <!-- ========================================== -->
+        <!-- H2: SECCIÓN DE CONSULTA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Con subrayado estilo sección -->
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Consulta por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
+            </h2>
+
+            <!-- Párrafos centrados y estilo homologado (0.9rem) -->
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos Abiertos Lotería Nacional Potencializados por Pakin
+            </p>
+            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos a partir del sorteo 11033 ó 2007-09-03 (formato actual
+                de Tris)
+            </p>
+            <p class="text-dark mt-1 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Repetidos (REPS) es siempre respecto al resultado inmediato
+                anterior.
+            </p>
+        </div>
 
         <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
         <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
