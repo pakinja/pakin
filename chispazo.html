@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-11T21:03:42-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T21:09:06-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-04-11T21:03:42-06:00",
+  "dateModified": "2026-04-11T21:09:06-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -355,23 +355,22 @@
             </table>
         </div>
 
-        <!-- Contenedor con d-grid para que los botones ocupen el ancho completo en móvil y tengan separación (gap) -->
-        <div class="d-grid gap-3 mt-4 mb-5">
+        <!-- Contenedor Responsive: 
+     En móvil usa d-grid (apilados ancho completo).
+     En desktop (md en adelante) usa flexbox y los centra. 
+     El gap-3 mantiene la separación en ambos casos. -->
+        <div class="d-grid d-md-flex justify-content-md-center gap-3 mt-4 mb-5">
 
-            <!-- 1. PRIMARIO: Verificador (Debe ser un color sólido para llamar la atención) -->
-            <!-- Nota: Asumo que tienes una clase "btn-pakin" sólida. Si no, usa "btn-primary" o la que de el color naranja -->
-            <a href="chispazo-verificador" class="btn btn-pakin shadow-sm btn-lg">
+            <a href="/chispazo/verificador" class="btn btn-pakin-outline shadow-sm">
                 Verificador de Jugadas
             </a>
 
-            <!-- 2. SECUNDARIO: Generador (Aquí usamos tu estilo exacto "outline" que me compartiste) -->
-            <a href="chispazo-generador" class="btn btn-pakin-outline shadow-sm btn-lg">
+            <a href="/chispazo/generador" class="btn btn-pakin-outline shadow-sm">
                 Generador de Jugadas
             </a>
 
-            <!-- 3. TERCIARIO: Histórico (Un enlace discreto pero fácil de tocar) -->
-            <a href="chispazo-resultados-historicos" class="btn btn-link text-decoration-none text-muted">
-                Ver histórico completo
+            <a href="/chispazo/historico" class="btn btn-pakin-outline shadow-sm">
+                Histórico Completo
             </a>
 
         </div>
