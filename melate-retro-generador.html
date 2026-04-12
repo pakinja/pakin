@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-11T17:09:01-06:00" />
+    <meta property="article:modified_time" content="2026-04-11T19:40:36-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
         "description": "Genera-Busca tus combinaciones para Melate Retro en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-retro-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-04-11T17:09:01-06:00",
+        "dateModified": "2026-04-11T19:40:36-06:00",
         "license": "https://pakin.lat/melate-retro-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -74,11 +74,19 @@
     <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="/">
+             <div class="d-flex align-items-center">
+            
+            <!-- 1. Solo el logo es un enlace al Home -->
+            <a class="navbar-brand me-0" href="/">
                 <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">M. Retro
-                    Generador</span>
             </a>
+            
+            <!-- 2. El texto es solo lectura (sin enlace) -->
+            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                M. Retro Generador
+            </span>
+
+        </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,6 +141,7 @@
         </div>
         <!-- FIN PÍLDORA -->
 
+        <!-- DIV DE RESULTADOS -->
         <div id="resultados"
             class="contenedor-tabla contenedor-tabla-historico text-center mx-auto mb-4 shadow-sm border rounded-3">
         </div>
