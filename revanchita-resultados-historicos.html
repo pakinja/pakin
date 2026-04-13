@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-12T18:56:56-06:00" />
+    <meta property="article:modified_time" content="2026-04-12T22:29:37-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Revanchita",
       "url": "https://pakin.lat/revanchita-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-12T18:56:56-06:00",
+      "dateModified": "2026-04-12T22:29:37-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -77,19 +77,19 @@
     <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-             <div class="d-flex align-items-center">
-            
-            <!-- 1. Solo el logo es un enlace al Home -->
-            <a class="navbar-brand me-0" href="/">
-                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-            </a>
-            
-            <!-- 2. El texto es solo lectura (sin enlace) -->
-            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-                Revanchita Histórico
-            </span>
+            <div class="d-flex align-items-center">
 
-        </div>
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Revanchita Histórico
+                </span>
+
+            </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -107,26 +107,18 @@
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
-        <!-- TÍTULOS -->
-        <div class="text-center mb-4 mt-2">
-            <h2 class="fw-bold text-dark d-inline-block pb-1"
-                style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); border-bottom: 3px solid #8B0000;">
-                Revanchita Histórico Potenciado<span style="color: #8B0000;">.</span>
-            </h2>
-            <h3 class="text-secondary mt-3 fs-6 fw-light">Datos Abiertos Lotería Nacional Potencializados por Pakin</h3>
-        </div>
-
-        <!-- TEXTO INTRODUCTORIO -->
-        <div class="mx-auto mb-4" style="max-width: 900px;">
-            <p class="texto-analitica mb-0 px-2 px-md-0">
-                Consulta el histórico completo de resultados de Revanchita, revisa los sorteos más recientes y descarga
-                el archivo CSV para tus propios análisis. Si quieres complementar tu revisión, también puedes usar las
-                herramientas de <a href="revanchita">analítica</a> y <a href="revanchita-verificador">verificador</a>.
-            </p>
+        <!-- ========================================== -->
+        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Sin subrayado, con punto rojo -->
+            <h1 class="fw-bold text-dark d-inline-block" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
+                Revanchita: Histórico Potenciado<span style="color: #8B0000;">.</span>
+            </h1>
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
-        <div class="text-center mb-4">
+        <div class="text-center mb-5">
             <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
                 style="font-size: 0.85rem;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -138,7 +130,25 @@
                 Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
             </span>
         </div>
+        <!-- FIN PÍLDORA -->
 
+
+
+        <!-- ========================================== -->
+        <!-- H2: SECCIÓN HISTÓRICO -->
+        <!-- ========================================== -->
+        <div class="text-center mb-3">
+            <!-- Con subrayado estilo sección -->
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Histórico de Resultados<span style="color: #8B0000;">.</span>
+            </h2>
+
+            <!-- Párrafo centrado y estilo homologado (0.9rem) -->
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos Abiertos Lotería Nacional Potencializados por Pakin
+            </p>
+        </div>
         <!-- TABLA HISTÓRICO -->
         <div id="resultados"
             class="contenedor-tabla contenedor-tabla-historico shadow-sm border rounded-3 mx-auto mb-4">
