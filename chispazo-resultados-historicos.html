@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-13T00:00:36-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T00:07:22-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-13T00:00:36-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T00:07:22-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,11 @@
 
     <!-- Estilos para el contenedor del anuncio (puedes ponerlo en tu archivo CSS) -->
     <style>
-        /* 1. Contenedor base y tamaño para MÓVIL (Por defecto) */
+        /* =========================================
+   ANUNCIO SUPERIOR INTELIGENTE (ANTI-CLS)
+========================================= */
+
+        /* 1. MÓVIL (Por defecto: 320x100) */
         .ad-top-wrapper {
             display: flex;
             flex-direction: column;
@@ -47,7 +51,7 @@
             width: 100%;
             margin: 15px 0;
             min-height: 115px;
-            /* Protege contra CLS en móvil */
+            /* 100px anuncio + 15px etiqueta */
             max-height: 115px;
             overflow: hidden;
         }
@@ -63,19 +67,27 @@
             color: #999;
             text-transform: uppercase;
             margin-bottom: 3px;
+            font-family: sans-serif;
         }
 
-        /* 2. Regla para DESKTOP (Pantallas más grandes que una tablet) */
+        /* 2. TABLETS Y LAPTOS (Pantallas medias: 728x90) */
         @media (min-width: 768px) {
             .ad-top-wrapper {
                 min-height: 105px;
-                /* Protege contra CLS en Desktop (90px + 15px de etiqueta) */
+                /* 90px anuncio + 15px etiqueta */
                 max-height: 105px;
             }
 
             .ad-inteligente {
                 width: 728px;
-                /* Tamaño clásico y bien pagado de Leaderboard en PC */
+                height: 90px;
+            }
+        }
+
+        /* 3. PANTALLAS GRANDES DE PC (Monitores anchos: 970x90) */
+        @media (min-width: 1024px) {
+            .ad-inteligente {
+                width: 970px;
                 height: 90px;
             }
         }
@@ -118,7 +130,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-13T00:00:36-06:00",
+	  "dateModified": "2026-04-13T00:07:22-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -211,18 +223,13 @@
         <!-- FIN PÍLDORA -->
 
         <div class="ad-top-wrapper">
-            <!-- Etiqueta de publicidad (Buena práctica de AdSense) -->
             <span class="ad-etiqueta">Publicidad</span>
 
-            <!-- AQUÍ VA TU CÓDIGO DE ADSENSE -->
-            <!-- Nota: Usamos tamaño fijo para garantizar que no empuje el contenido -->
-            <!-- Peque Arriba -->
-            <!-- UN SOLO ANUNCIO: AdSense leerá el CSS y enviará el tamaño correcto -->
-                <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333"
-                    data-ad-slot="6246582449" data-full-width-responsive="false"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+            <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"
+                data-full-width-responsive="false"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
         <!-- ========================================== -->
