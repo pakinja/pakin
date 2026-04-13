@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-12T22:41:04-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T00:51:53-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,62 @@
     <meta content="#000000" name="msapplication-TileColor" />
     <meta content="#000000" name="theme-color" />
 
+    <!-- Estilos para el contenedor del anuncio (puedes ponerlo en tu archivo CSS) -->
+    <style>
+        /* =========================================
+        ANUNCIO SUPERIOR INTELIGENTE (ANTI-CLS)
+        ========================================= */
+
+        /* 1. MÓVIL (Por defecto: 320x100) */
+        .ad-top-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 15px 0;
+            min-height: 115px;
+            /* 100px anuncio + 15px etiqueta */
+            max-height: 115px;
+            overflow: hidden;
+        }
+
+        .ad-inteligente {
+            display: inline-block;
+            width: 320px;
+            height: 100px;
+        }
+
+        .ad-etiqueta {
+            font-size: 10px;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            font-family: sans-serif;
+        }
+
+        /* 2. TABLETS Y LAPTOS (Pantallas medias: 728x90) */
+        @media (min-width: 768px) {
+            .ad-top-wrapper {
+                min-height: 105px;
+                /* 90px anuncio + 15px etiqueta */
+                max-height: 105px;
+            }
+
+            .ad-inteligente {
+                width: 728px;
+                height: 90px;
+            }
+        }
+
+        /* 3. PANTALLAS GRANDES DE PC (Monitores anchos: 970x90) */
+        @media (min-width: 1024px) {
+            .ad-inteligente {
+                width: 970px;
+                height: 90px;
+            }
+        }
+    </style>
+
 
     <!-- METADATOS JSON-LD INTACTOS PARA MELATE RETRO -->
     <script type="application/ld+json">
@@ -35,7 +91,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate Retro. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate-retro-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-12T22:41:04-06:00",
+      "dateModified": "2026-04-13T00:51:53-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -69,7 +125,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-12T22:41:04-06:00",
+        "dateModified": "2026-04-13T00:51:53-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -190,6 +246,13 @@
         <!-- AVISO DINÁMICO FUERA DEL CONTENEDOR CON SCROLL -->
         <div class="result-notice-wrap mx-auto" id="resultNoticeWrap">
             <div id="resultNotice" class="d-none"></div>
+        </div>
+
+        <div class="ad-top-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Peque Arriba -->
+            <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"
+                data-full-width-responsive="false"></ins>
         </div>
 
         <!-- CONTENEDOR DE RESULTADOS -->
