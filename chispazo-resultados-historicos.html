@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-12T23:39:19-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T00:00:36-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-12T23:39:19-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T00:00:36-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -21,10 +21,10 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
-    
+
     <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <title>Chispazo Histórico Pakin | Consulta o Descarga</title>
 
@@ -39,18 +39,23 @@
 
     <!-- Estilos para el contenedor del anuncio (puedes ponerlo en tu archivo CSS) -->
     <style>
+        /* 1. Contenedor base y tamaño para MÓVIL (Por defecto) */
         .ad-top-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* Centra el anuncio horizontalmente */
             width: 100%;
             margin: 15px 0;
-            /* Da un respiro entre el título y la tabla */
-
-            /* ¡ESTO ES LO QUE EVITA EL CLS! */
             min-height: 115px;
-            /* 100px del anuncio + 15px para la etiqueta de texto */
+            /* Protege contra CLS en móvil */
+            max-height: 115px;
+            overflow: hidden;
+        }
+
+        .ad-inteligente {
+            display: inline-block;
+            width: 320px;
+            height: 100px;
         }
 
         .ad-etiqueta {
@@ -58,7 +63,21 @@
             color: #999;
             text-transform: uppercase;
             margin-bottom: 3px;
-            font-family: sans-serif;
+        }
+
+        /* 2. Regla para DESKTOP (Pantallas más grandes que una tablet) */
+        @media (min-width: 768px) {
+            .ad-top-wrapper {
+                min-height: 105px;
+                /* Protege contra CLS en Desktop (90px + 15px de etiqueta) */
+                max-height: 105px;
+            }
+
+            .ad-inteligente {
+                width: 728px;
+                /* Tamaño clásico y bien pagado de Leaderboard en PC */
+                height: 90px;
+            }
         }
     </style>
 
@@ -99,7 +118,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-12T23:39:19-06:00",
+	  "dateModified": "2026-04-13T00:00:36-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -198,11 +217,12 @@
             <!-- AQUÍ VA TU CÓDIGO DE ADSENSE -->
             <!-- Nota: Usamos tamaño fijo para garantizar que no empuje el contenido -->
             <!-- Peque Arriba -->
-            <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px"
-                data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <!-- UN SOLO ANUNCIO: AdSense leerá el CSS y enviará el tamaño correcto -->
+                <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333"
+                    data-ad-slot="6246582449" data-full-width-responsive="false"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
         </div>
 
         <!-- ========================================== -->
