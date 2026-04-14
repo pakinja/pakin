@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-13T17:59:08-06:00" />
+    <meta property="article:modified_time" content="2026-04-13T18:59:41-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -26,63 +26,6 @@
     <meta content="#000000" name="theme-color" />
 
 
-    <!-- Estilos para el contenedor del anuncio (puedes ponerlo en tu archivo CSS) -->
-    <style>
-        /* =========================================
-        ANUNCIO SUPERIOR INTELIGENTE (ANTI-CLS)
-        ========================================= */
-
-        /* 1. MÓVIL (Por defecto: 320x100) */
-        .ad-top-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin: 15px 0;
-            min-height: 115px;
-            /* 100px anuncio + 15px etiqueta */
-            max-height: 115px;
-            overflow: hidden;
-        }
-
-        .ad-inteligente {
-            display: inline-block;
-            width: 320px;
-            height: 100px;
-        }
-
-        .ad-etiqueta {
-            font-size: 10px;
-            color: #999;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-            font-family: sans-serif;
-        }
-
-        /* 2. TABLETS Y LAPTOS (Pantallas medias: 728x90) */
-        @media (min-width: 768px) {
-            .ad-top-wrapper {
-                min-height: 105px;
-                /* 90px anuncio + 15px etiqueta */
-                max-height: 105px;
-            }
-
-            .ad-inteligente {
-                width: 728px;
-                height: 90px;
-            }
-        }
-
-        /* 3. PANTALLAS GRANDES DE PC (Monitores anchos: 970x90) */
-        @media (min-width: 1024px) {
-            .ad-inteligente {
-                width: 970px;
-                height: 90px;
-            }
-        }
-    </style>
-
-
     <!-- METADATOS JSON-LD INTACTOS PARA TRIS -->
     <script type="application/ld+json">
     {
@@ -92,7 +35,7 @@
       "description": "Verifica y comprueba tus jugadas de Tris. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/tris-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-04-13T17:59:08-06:00",
+      "dateModified": "2026-04-13T18:59:41-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -126,7 +69,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-04-13T17:59:08-06:00",
+        "dateModified": "2026-04-13T18:59:41-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -161,19 +104,19 @@
     <!-- NAVBAR (Sin link a la página actual) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-             <div class="d-flex align-items-center">
-            
-            <!-- 1. Solo el logo es un enlace al Home -->
-            <a class="navbar-brand me-0" href="/">
-                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-            </a>
-            
-            <!-- 2. El texto es solo lectura (sin enlace) -->
-            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-                Tris Verificador
-            </span>
+            <div class="d-flex align-items-center">
 
-        </div>
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Tris Verificador
+                </span>
+
+            </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -218,7 +161,7 @@
         </div>
         <!-- FIN PÍLDORA -->
 
-        
+
         <!-- ========================================== -->
         <!-- H2: SECCIÓN DE CONSULTA -->
         <!-- ========================================== -->
@@ -249,7 +192,7 @@
         </div>
 
 
-        <div class="ad-top-wrapper">
+        <div class="ad-wrapper ad-top-wrapper">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Peque Arriba -->
             <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"
@@ -318,7 +261,7 @@
                         POR COMBINACIÓN DE NÚMEROS
                     </label>
 
-                     <div class="numeros-grid numeros-grid-5 mb-4">
+                    <div class="numeros-grid numeros-grid-5 mb-4">
                         <input id="r1" max="9" min="0" name="R1" placeholder="R1" required type="number"
                             class="form-control input-bolita" />
                         <input id="r2" max="9" min="0" name="R2" placeholder="R2" required type="number"
@@ -339,9 +282,7 @@
 
         </div>
 
-    </section>
-
-    <!-- CTAs -->
+        <!-- CTAs -->
         <div class="d-grid d-md-flex justify-content-md-center gap-3 mt-4 mb-5">
 
             <a href="tris" class="btn btn-pakin-outline shadow-sm">
@@ -358,11 +299,15 @@
 
         </div>
 
-    <div class="reserva-anuncio" style="margin: 25px 0; text-align: center;">
-        <!-- A Pakin Analitica Contenido -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1379506914303333"
-            data-ad-slot="7501597014" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </section>
 
+
+    <div class="ad-wrapper ad-content-wrapper">
+        <span class="ad-etiqueta">Publicidad</span>
+        <!-- Formato "auto" para máxima flexibilidad en subastas de escritorio -->
+        <!-- A Pakin Analitica Contenido -->
+        <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="7501597014"
+            data-ad-format="auto" data-full-width-responsive="true"></ins>
     </div>
 
     <!-- FOOTER BLANCO (Igual que los anteriores) -->
@@ -447,7 +392,7 @@
     <script defer src="js/tris/consulta_tris_verificador?v=1.0.7.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
-    <script defer src="/js/adsense-lazy_3.js"></script>
+    <script defer src="/js/adsense-lazy_7.js"></script>
 
 </body>
 
