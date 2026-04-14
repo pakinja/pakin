@@ -25,62 +25,6 @@
   <meta name="msapplication-TileColor" content="#000000">
   <meta name="theme-color" content="#000000">
 
-  <!-- Estilos para el contenedor del anuncio (puedes ponerlo en tu archivo CSS) -->
-    <style>
-        /* =========================================
-        ANUNCIO SUPERIOR INTELIGENTE (ANTI-CLS)
-        ========================================= */
-
-        /* 1. MÓVIL (Por defecto: 320x100) */
-        .ad-top-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin: 15px 0;
-            min-height: 115px;
-            /* 100px anuncio + 15px etiqueta */
-            max-height: 115px;
-            overflow: hidden;
-        }
-
-        .ad-inteligente {
-            display: inline-block;
-            width: 320px;
-            height: 100px;
-        }
-
-        .ad-etiqueta {
-            font-size: 10px;
-            color: #999;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-            font-family: sans-serif;
-        }
-
-        /* 2. TABLETS Y LAPTOS (Pantallas medias: 728x90) */
-        @media (min-width: 768px) {
-            .ad-top-wrapper {
-                min-height: 105px;
-                /* 90px anuncio + 15px etiqueta */
-                max-height: 105px;
-            }
-
-            .ad-inteligente {
-                width: 728px;
-                height: 90px;
-            }
-        }
-
-        /* 3. PANTALLAS GRANDES DE PC (Monitores anchos: 970x90) */
-        @media (min-width: 1024px) {
-            .ad-inteligente {
-                width: 970px;
-                height: 90px;
-            }
-        }
-    </style>
-
 
   <script type="application/ld+json">
    {
@@ -201,6 +145,13 @@
       "Analiza tus números, encuentra patrones y confía en tu intuición."
     </div>
 
+
+    <div class="ad-wrapper ad-top-wrapper">
+      <span class="ad-etiqueta">Publicidad</span>
+      <!-- Peque Arriba -->
+      <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"
+        data-full-width-responsive="false"></ins>
+    </div>
 
     <!-- INICIO DE LAS TARJETAS (Cambio aquí: g-3 g-md-4) -->
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 g-md-4 justify-content-center">
@@ -480,7 +431,7 @@
   </footer>
 
   <script defer src="/js/tag_manager.js"></script>
-  <script defer src="/js/adsense-lazy_3.js"></script>
+  <script defer src="/js/adsense-lazy_7.js"></script>
 
 </body>
 
