@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta http-equiv="last-modified" content="mié, 15 abr 2026 16:35:56 CST">
+    <meta http-equiv="last-modified" content="mié, 15 abr 2026 16:46:45 CST">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="article:modified_time" content="2024-02-19T11:11:00-06:00" />
@@ -57,19 +57,19 @@
     <!-- NAVBAR BLANCA FIXED -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
         <div class="container-fluid">
-             <div class="d-flex align-items-center">
-            
-            <!-- 1. Solo el logo es un enlace al Home -->
-            <a class="navbar-brand me-0" href="/">
-                <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-            </a>
-            
-            <!-- 2. El texto es solo lectura (sin enlace) -->
-            <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-                Sorteo Mayor
-            </span>
+            <div class="d-flex align-items-center">
 
-        </div>
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Sorteo Mayor
+                </span>
+
+            </div>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -99,24 +99,54 @@
     <!-- CONTENIDO PRINCIPAL -->
     <section class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
-        <!-- 1. RESULTADOS GENERALES -->
+        <!-- ========================================== -->
+        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Sin subrayado, con punto rojo -->
+            <h1 class="fw-bold text-dark d-inline-block" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
+                Sorteo Mayor: Resultados, Estadística y Analítica<span style="color: #8B0000;">.</span>
+            </h1>
+        </div>
+
+        <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
+        <div class="text-center mb-5">
+            <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
+                style="font-size: 0.85rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16">
+                    <path
+                        d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0 .287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                </svg>
+                Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
+            </span>
+        </div>
+        <!-- FIN PÍLDORA -->
+
+
+        <!--==========================================-->
+        <!-- H2: SECCIÓN DE ÚLTIMOS RESULTADOS -->
+        <!-- ========================================== -->
         <div class="text-center mb-4">
             <h2 class="fw-bold text-dark d-inline-block pb-1"
-                style="font-size: clamp(1.5rem, 4vw, 2.2rem); border-bottom: 3px solid #8B0000;">
-                Resultados Sorteo Mayor<span style="color: #8B0000;">.</span>
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Últimos Resultados
             </h2>
-            <h3 class="text-secondary mt-2 fs-6 fw-light">Sólo Premio Mayor</h3>
+
+            <!-- Párrafo centrado y un poco más pequeño (0.9rem) -->
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos Abiertos Lotería Nacional Potencializados por Pakin
+            </p>
         </div>
 
-        <div class="text-center mb-4">
-            <a href="https://www.pakin.lat/images/SorteoMayor.pdf" target="_blank"
-                style="display: inline-block; transition: transform 0.2s ease;">
-                <img class="img-fluid rounded shadow-sm border" src="/images/smayor.png" alt="Pakin Sorteo Mayor"
-                    style="max-width: 300px;">
-            </a>
+        <div class="ad-wrapper ad-top-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Peque Arriba -->
+            <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6246582449"
+                data-full-width-responsive="false"></ins>
         </div>
 
-    
 
         <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table
@@ -168,7 +198,23 @@
             </table>
         </div>
 
-        
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Última Mascarilla
+            </h2>
+
+            <div class="text-center mb-4">
+                <a href="https://www.pakin.lat/images/SorteoMayor.pdf" target="_blank"
+                    style="display: inline-block; transition: transform 0.2s ease;">
+                    <img class="img-fluid rounded shadow-sm border" src="/images/smayor.png" alt="Pakin Sorteo Mayor"
+                        style="max-width: 300px;">
+                </a>
+            </div>
+
+        </div>
+
+
         <span id="frecuencias"></span>
 
         <!-- 2. FRECUENCIAS (Gráficos SVG) -->
@@ -187,7 +233,7 @@
         <img class="img-frecuencias mt-4" src="/images/smayor30_daff6489.webp" loading="lazy"
             alt="Pakin Sorteo Mayor Frecuencias 30">
 
-        
+
         <span id="numero-inicial"></span>
 
         <!-- 3. NÚMERO INICIAL -->
@@ -520,7 +566,7 @@
             </table>
         </div>
 
-        
+
         <span id="terminacion"></span>
 
         <!-- 4. TERMINACIÓN -->
