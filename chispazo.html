@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-17T19:03:37-06:00" />
+    <meta property="article:modified_time" content="2026-04-17T19:08:18-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-04-17T19:03:37-06:00",
+  "dateModified": "2026-04-17T19:08:18-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5065,12 +5065,10 @@
                 const response = await fetch(urlSinCache);
                 const data = await response.json();
 
-                // Buscamos cuál es el color grafito base que mandó Python
                 const colorBase = data.find(d => d.estado === "Normal").color;
-
                 const numeros = data.map(item => item.numero);
 
-                // LA MAGIA DEL GUIÑO DE COLOR:
+                // LA SOLUCIÓN DEL GUIÑO PARA MÓVILES
                 const seriesData = data.map(item => {
                     const esEspecial = item.estado !== "Normal";
                     return {
@@ -5078,10 +5076,11 @@
                         estado: item.estado,
                         itemStyle: esEspecial
                             ? {
-                                color: colorBase,
+                                color: colorBase, // El centro siempre grafito
                                 borderColor: item.color,
-                                borderWidth: 3, // <--- CÁMBIALO A 3 (o 4 si lo quieres más grueso)
-                                borderType: 'solid'
+                                borderWidth: 1.5, // Borde muy fino para no asfixiar el centro
+                                shadowBlur: 6, // EL AURA: Brillo sutil hacia afuera
+                                shadowColor: item.color // Color del brillo
                             }
                             : {
                                 color: item.color
@@ -5095,7 +5094,6 @@
                         axisPointer: { type: 'shadow' },
                         formatter: function (params) {
                             let dataPoint = params[0];
-                            // Si tiene estado especial, tomamos el color de su borde para el texto
                             let colorTexto = dataPoint.data.estado !== "Normal" ? dataPoint.data.itemStyle.borderColor : "#333";
                             let estadoTxt = dataPoint.data.estado !== "Normal"
                                 ? `<br/><strong style="color:${colorTexto};">${dataPoint.data.estado}</strong>`
@@ -5124,9 +5122,9 @@
                     },
                     series: [{
                         type: 'bar',
-                        barWidth: '65%', // Barras un poquito más gorditas, se ven mejor
+                        barWidth: '75%', // <-- Aumentamos de 65% a 75% para ganar píxeles valiosos
                         data: seriesData,
-                        animationDuration: 800 // Animación sutil
+                        animationDuration: 800
                     }]
                 };
 
