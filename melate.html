@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-16T21:05:50-06:00" />
+    <meta property="article:modified_time" content="2026-04-17T20:34:47-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
           "headline": "Melate Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-16T21:05:50-06:00",
+          "dateModified": "2026-04-17T20:34:47-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://www.pakin.lat/images/p2.webp" } },
           "description": "Melate números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -424,14 +424,31 @@
                 posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos
             anteriores.</p>
 
-        <img class="img-frecuencias" src="images/melate19_7c8d71b49e.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Melate Frecuencias 19 Sorteos">
-        <img class="img-frecuencias" src="images/melate28_df9c9016ea.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Melate Frecuencias 28 Sorteos">
-        <img class="img-frecuencias" src="images/melateadicional56_908cdcff6a.webp" fetchpriority="high"
-            decoding="async" alt="Pakin Melate Frecuencias Adicional 56 Sorteos">
+        <div class="text-center mt-4 mb-3">
+            <h3 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
+                Últimos 19 Sorteos
+            </h3>
+        </div>
+        <div id="chart_melate19" class="chart-container"></div>
 
-        
+        <div class="text-center mt-4 mb-3">
+            <h3 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
+                Últimos 28 Sorteos
+            </h3>
+        </div>
+        <div id="chart_melate28" class="chart-container"></div>
+
+        <div class="text-center mt-4 mb-3">
+            <h3 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
+                Adicional Últimos 56 Sorteos
+            </h3>
+        </div>
+        <div id="chart_melateadicional56" class="chart-container"></div>
+
+
         <span id="primos"></span>
 
         <!-- PRIMOS -->
