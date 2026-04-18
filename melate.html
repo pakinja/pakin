@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-17T23:25:00-06:00" />
+    <meta property="article:modified_time" content="2026-04-18T13:13:12-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
           "headline": "Melate Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-17T23:25:00-06:00",
+          "dateModified": "2026-04-18T13:13:12-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://www.pakin.lat/images/p2.webp" } },
           "description": "Melate números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -8912,97 +8912,10 @@
     <script defer src="/js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy_V3NE.js"></script>
-    <!-- ECharts y Script -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <script defer src="/js/barras_master.js"></script>
 
-    <script>
-        async function renderizarGrafico(contenedorId, jsonUrl) {
-            var chartDom = document.getElementById(contenedorId);
-            var myChart = echarts.init(chartDom);
-
-            const timestamp = new Date().getTime();
-            const urlSinCache = `${jsonUrl}?v=${timestamp}`;
-
-            try {
-                const response = await fetch(urlSinCache);
-                const data = await response.json();
-
-                const colorBase = data.find(d => d.estado === "Normal").color;
-                const numeros = data.map(item => item.numero);
-
-                const seriesData = data.map(item => {
-                    const esEspecial = item.estado !== "Normal";
-                    return {
-                        value: item.frecuencia,
-                        estado: item.estado,
-                        itemStyle: esEspecial
-                            ? {
-                                color: colorBase,
-                                borderColor: item.color,
-                                borderWidth: 2 // El hilo elegante de color
-                            }
-                            : {
-                                color: item.color
-                            }
-                    };
-                });
-
-                var option = {
-                    tooltip: {
-                        trigger: 'axis',
-                        axisPointer: { type: 'shadow' },
-                        formatter: function (params) {
-                            let dataPoint = params[0];
-                            let colorTexto = dataPoint.data.estado !== "Normal" ? dataPoint.data.itemStyle.borderColor : "#333";
-                            let estadoTxt = dataPoint.data.estado !== "Normal"
-                                ? `<br/><strong style="color:${colorTexto};">${dataPoint.data.estado}</strong>`
-                                : "";
-                            return `<div style="font-size:15px; font-family:sans-serif;">
-                                    <strong>Número: ${dataPoint.name}</strong><br/>
-                                    Frecuencia: ${dataPoint.value} veces
-                                    ${estadoTxt}
-                                </div>`;
-                        }
-                    },
-                    grid: { left: '2%', right: '3%', bottom: '10%', top: '5%', containLabel: true },
-                    xAxis: {
-                        type: 'category',
-                        data: numeros,
-                        axisTick: { alignWithLabel: true },
-                        axisLabel: {
-                            interval: 'auto', // Vital para 56 números en celular
-                            color: '#666',
-                            fontSize: 12
-                        }
-                    },
-                    yAxis: {
-                        type: 'value',
-                        splitLine: { lineStyle: { type: 'dashed', color: '#e4e4e7' } },
-                        minInterval: 1
-                    },
-                    series: [{
-                        type: 'bar',
-                        barWidth: '75%', // Aprovechamos bien el espacio de cada pilar
-                        data: seriesData,
-                        animationDuration: 800
-                    }]
-                };
-
-                myChart.setOption(option);
-
-                window.addEventListener('resize', function () {
-                    myChart.resize();
-                });
-
-            } catch (error) {
-                console.error("Error al cargar los datos:", error);
-            }
-        }
-
-        renderizarGrafico('chart_melate19', 'data/melate19.json');
-        renderizarGrafico('chart_melate28', 'data/melate28.json');
-        renderizarGrafico('chart_melateadicional56', 'data/melateadicional56.json');
-    </script>
+    
 
 </body>
 
