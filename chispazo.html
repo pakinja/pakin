@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-17T15:26:35-06:00" />
+    <meta property="article:modified_time" content="2026-04-17T18:27:45-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-04-17T15:26:35-06:00",
+  "dateModified": "2026-04-17T18:27:45-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -397,12 +397,19 @@
                 la
                 posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos
             anteriores.</p>
-        <img class="img-frecuencias" src="images/chispazo8_60779005eb.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Chispazo Frecuencias 8 Sorteos">
-        <img class="img-frecuencias" src="images/chispazo12_9a91f65a71.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Chispazo Frecuencias 12 Sorteos">
 
-        
+
+        <!-- <img class="img-frecuencias" src="images/chispazo8_2b5cf49105.webp" fetchpriority="high" decoding="async"
+            alt="Pakin Chispazo Frecuencias 8 Sorteos">
+        <img class="img-frecuencias" src="images/chispazo12_e554f8fb13.webp" fetchpriority="high" decoding="async"
+            alt="Pakin Chispazo Frecuencias 12 Sorteos"> -->
+
+        <div id="chart_chispazo8" style="width: 100%; max-width: 1200px; height: 400px; margin: 0 auto 40px auto;">
+        </div>
+        <div id="chart_chispazo12" style="width: 100%; max-width: 1200px; height: 400px; margin: 0 auto 40px auto;">
+        </div>
+
+
         <div class="ad-wrapper ad-content-wrapper">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Formato "auto" para máxima flexibilidad en subastas de escritorio -->
@@ -5044,6 +5051,85 @@
     <script defer src="/js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy_V3NE.js"></script>
+    <!-- 2. Importamos la librería (Esto va al final de tus gráficos, o antes de cerrar el </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+    <!-- 3. La lógica que lee los JSON y pinta las barras (Con sistema Anti-Caché) -->
+    <script>
+        async function renderizarGrafico(contenedorId, jsonUrl) {
+            var chartDom = document.getElementById(contenedorId);
+            var myChart = echarts.init(chartDom);
+
+            // Magia Anti-Caché
+            const timestamp = new Date().getTime();
+            const urlSinCache = `${jsonUrl}?v=${timestamp}`;
+
+            try {
+                const response = await fetch(urlSinCache);
+                const data = await response.json();
+
+                const numeros = data.map(item => item.numero);
+                const seriesData = data.map(item => ({
+                    value: item.frecuencia,
+                    itemStyle: { color: item.color },
+                    estado: item.estado
+                }));
+
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                        formatter: function (params) {
+                            let dataPoint = params[0];
+                            let estadoTxt = dataPoint.data.estado !== "Normal"
+                                ? `<br/><strong style="color:${dataPoint.data.itemStyle.color};">${dataPoint.data.estado}</strong>`
+                                : "";
+                            return `<div style="font-size:16px;">
+                                    <strong>Número: ${dataPoint.name}</strong><br/>
+                                    Frecuencia: ${dataPoint.value} veces
+                                    ${estadoTxt}
+                                </div>`;
+                        }
+                    },
+                    grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
+                    xAxis: {
+                        type: 'category',
+                        data: numeros,
+                        axisTick: { alignWithLabel: true },
+                        axisLabel: {
+                            interval: 'auto', // En móvil ocultará algunos números para que no se encimen
+                            color: '#666',
+                            fontSize: 14
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        splitLine: { lineStyle: { type: 'dashed', color: '#e4e4e7' } }
+                    },
+                    series: [{
+                        type: 'bar',
+                        barWidth: '60%',
+                        data: seriesData,
+                        animationDuration: 1000
+                    }]
+                };
+
+                myChart.setOption(option);
+
+                // Hacerlo responsivo
+                window.addEventListener('resize', function () {
+                    myChart.resize();
+                });
+
+            } catch (error) {
+                console.error("Error al cargar los datos del gráfico:", error);
+            }
+        }
+
+        // Ejecutamos la función apuntando a la carpeta data/
+        renderizarGrafico('chart_chispazo8', 'data/chispazo8.json');
+        renderizarGrafico('chart_chispazo12', 'data/chispazo12.json');
+    </script>
 
 
 
