@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-16T21:08:23-06:00" />
+    <meta property="article:modified_time" content="2026-04-17T20:45:33-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
           "headline": "Revancha Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-16T21:08:23-06:00",
+          "dateModified": "2026-04-17T20:45:33-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Revancha números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -392,15 +392,6 @@
 
         </div>
 
-
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Formato "auto" para máxima flexibilidad en subastas de escritorio -->
-            <!-- A Pakin Analitica Contenido -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="7501597014"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
-        </div>
-
         <span id="frecuencias"></span>
 
         <!-- FRECUENCIAS -->
@@ -412,12 +403,34 @@
                 posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos
             anteriores.</p>
 
-        <img class="img-frecuencias" src="images/revancha19_aef9d62106.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Revancha Frecuencias 19 Sorteos">
-        <img class="img-frecuencias" src="images/revancha28_5339950ea5.webp" fetchpriority="high" decoding="async"
-            alt="Pakin Revancha Frecuencias 28 Sorteos">
 
-        
+
+        <div class="text-center mt-4 mb-3">
+            <h3 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
+                Últimos 19 Sorteos
+            </h3>
+        </div>
+        <div id="chart_revancha19" class="chart-container"></div>
+
+        <div class="text-center mt-4 mb-3">
+            <h3 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
+                Últimos 28 Sorteos
+            </h3>
+        </div>
+        <div id="chart_revancha28" class="chart-container"></div>
+
+
+        <div class="ad-wrapper ad-content-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Formato "auto" para máxima flexibilidad en subastas de escritorio -->
+            <!-- A Pakin Analitica Contenido -->
+            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="7501597014"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+
+
         <span id="primos"></span>
 
         <!-- PRIMOS -->
@@ -8868,6 +8881,96 @@
     <script defer src="/js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="/js/adsense-lazy_V3NE.js"></script>
+    <!-- ECharts y Script -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+
+    <script>
+        async function renderizarGrafico(contenedorId, jsonUrl) {
+            var chartDom = document.getElementById(contenedorId);
+            var myChart = echarts.init(chartDom);
+
+            const timestamp = new Date().getTime();
+            const urlSinCache = `${jsonUrl}?v=${timestamp}`;
+
+            try {
+                const response = await fetch(urlSinCache);
+                const data = await response.json();
+
+                const colorBase = data.find(d => d.estado === "Normal").color;
+                const numeros = data.map(item => item.numero);
+
+                const seriesData = data.map(item => {
+                    const esEspecial = item.estado !== "Normal";
+                    return {
+                        value: item.frecuencia,
+                        estado: item.estado,
+                        itemStyle: esEspecial
+                            ? {
+                                color: colorBase,
+                                borderColor: item.color,
+                                borderWidth: 1 // El hilo elegante de color
+                            }
+                            : {
+                                color: item.color
+                            }
+                    };
+                });
+
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                        formatter: function (params) {
+                            let dataPoint = params[0];
+                            let colorTexto = dataPoint.data.estado !== "Normal" ? dataPoint.data.itemStyle.borderColor : "#333";
+                            let estadoTxt = dataPoint.data.estado !== "Normal"
+                                ? `<br/><strong style="color:${colorTexto};">${dataPoint.data.estado}</strong>`
+                                : "";
+                            return `<div style="font-size:15px; font-family:sans-serif;">
+                                    <strong>Número: ${dataPoint.name}</strong><br/>
+                                    Frecuencia: ${dataPoint.value} veces
+                                    ${estadoTxt}
+                                </div>`;
+                        }
+                    },
+                    grid: { left: '2%', right: '3%', bottom: '10%', top: '5%', containLabel: true },
+                    xAxis: {
+                        type: 'category',
+                        data: numeros,
+                        axisTick: { alignWithLabel: true },
+                        axisLabel: {
+                            interval: 'auto', // Vital para 56 números
+                            color: '#666',
+                            fontSize: 12
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        splitLine: { lineStyle: { type: 'dashed', color: '#e4e4e7' } },
+                        minInterval: 1
+                    },
+                    series: [{
+                        type: 'bar',
+                        barWidth: '75%',
+                        data: seriesData,
+                        animationDuration: 800
+                    }]
+                };
+
+                myChart.setOption(option);
+
+                window.addEventListener('resize', function () {
+                    myChart.resize();
+                });
+
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        }
+
+        renderizarGrafico('chart_revancha19', 'data/revancha19.json');
+        renderizarGrafico('chart_revancha28', 'data/revancha28.json');
+    </script>
 
 </body>
 
