@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-17T18:27:45-06:00" />
+    <meta property="article:modified_time" content="2026-04-17T18:47:15-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-04-17T18:27:45-06:00",
+  "dateModified": "2026-04-17T18:47:15-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -404,10 +404,9 @@
         <img class="img-frecuencias" src="images/chispazo12_e554f8fb13.webp" fetchpriority="high" decoding="async"
             alt="Pakin Chispazo Frecuencias 12 Sorteos"> -->
 
-        <div id="chart_chispazo8" style="width: 100%; max-width: 1200px; height: 400px; margin: 0 auto 40px auto;">
-        </div>
-        <div id="chart_chispazo12" style="width: 100%; max-width: 1200px; height: 400px; margin: 0 auto 40px auto;">
-        </div>
+
+        <div id="chart_chispazo8" class="chart-container"></div>
+        <div id="chart_chispazo12" class="chart-container"></div>
 
 
         <div class="ad-wrapper ad-content-wrapper">
@@ -5054,13 +5053,11 @@
     <!-- 2. Importamos la librería (Esto va al final de tus gráficos, o antes de cerrar el </body>) -->
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 
-    <!-- 3. La lógica que lee los JSON y pinta las barras (Con sistema Anti-Caché) -->
     <script>
         async function renderizarGrafico(contenedorId, jsonUrl) {
             var chartDom = document.getElementById(contenedorId);
             var myChart = echarts.init(chartDom);
 
-            // Magia Anti-Caché
             const timestamp = new Date().getTime();
             const urlSinCache = `${jsonUrl}?v=${timestamp}`;
 
@@ -5068,12 +5065,29 @@
                 const response = await fetch(urlSinCache);
                 const data = await response.json();
 
+                // Buscamos cuál es el color grafito base que mandó Python
+                const colorBase = data.find(d => d.estado === "Normal").color;
+
                 const numeros = data.map(item => item.numero);
-                const seriesData = data.map(item => ({
-                    value: item.frecuencia,
-                    itemStyle: { color: item.color },
-                    estado: item.estado
-                }));
+
+                // LA MAGIA DEL GUIÑO DE COLOR:
+                const seriesData = data.map(item => {
+                    const esEspecial = item.estado !== "Normal";
+                    return {
+                        value: item.frecuencia,
+                        estado: item.estado,
+                        itemStyle: esEspecial
+                            ? {
+                                color: colorBase, // La barra por dentro sigue siendo Grafito
+                                borderColor: item.color, // El contorno será Verde o Amarillo
+                                borderWidth: 2, // Grosor del guiño
+                                borderType: 'solid'
+                            }
+                            : {
+                                color: item.color // Las barras normales se quedan normales
+                            }
+                    };
+                });
 
                 var option = {
                     tooltip: {
@@ -5081,25 +5095,27 @@
                         axisPointer: { type: 'shadow' },
                         formatter: function (params) {
                             let dataPoint = params[0];
+                            // Si tiene estado especial, tomamos el color de su borde para el texto
+                            let colorTexto = dataPoint.data.estado !== "Normal" ? dataPoint.data.itemStyle.borderColor : "#333";
                             let estadoTxt = dataPoint.data.estado !== "Normal"
-                                ? `<br/><strong style="color:${dataPoint.data.itemStyle.color};">${dataPoint.data.estado}</strong>`
+                                ? `<br/><strong style="color:${colorTexto};">${dataPoint.data.estado}</strong>`
                                 : "";
-                            return `<div style="font-size:16px;">
+                            return `<div style="font-size:15px; font-family:sans-serif;">
                                     <strong>Número: ${dataPoint.name}</strong><br/>
                                     Frecuencia: ${dataPoint.value} veces
                                     ${estadoTxt}
                                 </div>`;
                         }
                     },
-                    grid: { left: '3%', right: '4%', bottom: '10%', containLabel: true },
+                    grid: { left: '2%', right: '3%', bottom: '10%', top: '5%', containLabel: true },
                     xAxis: {
                         type: 'category',
                         data: numeros,
                         axisTick: { alignWithLabel: true },
                         axisLabel: {
-                            interval: 'auto', // En móvil ocultará algunos números para que no se encimen
+                            interval: 'auto',
                             color: '#666',
-                            fontSize: 14
+                            fontSize: 13
                         }
                     },
                     yAxis: {
@@ -5108,25 +5124,23 @@
                     },
                     series: [{
                         type: 'bar',
-                        barWidth: '60%',
+                        barWidth: '65%', // Barras un poquito más gorditas, se ven mejor
                         data: seriesData,
-                        animationDuration: 1000
+                        animationDuration: 800 // Animación sutil
                     }]
                 };
 
                 myChart.setOption(option);
 
-                // Hacerlo responsivo
                 window.addEventListener('resize', function () {
                     myChart.resize();
                 });
 
             } catch (error) {
-                console.error("Error al cargar los datos del gráfico:", error);
+                console.error("Error al cargar los datos:", error);
             }
         }
 
-        // Ejecutamos la función apuntando a la carpeta data/
         renderizarGrafico('chart_chispazo8', 'data/chispazo8.json');
         renderizarGrafico('chart_chispazo12', 'data/chispazo12.json');
     </script>
