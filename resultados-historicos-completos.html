@@ -9,6 +9,13 @@
   <!-- Bootstrap CSS (Local) -->
   <link href="styles/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles/main_V7.css">
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+    crossorigin="anonymous"></script>
+
   <title>Resultados Históricos Completos Chispazo, Tris, Melate, Melate Retro, Revancha, Revanchita - Pakin Ciencia de Datos</title>
 
   <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -19,7 +26,6 @@
   <meta content="#000000" name="msapplication-TileColor" />
   <meta content="#000000" name="theme-color" />
 
-  <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"></script>
 
   <!-- METADATOS JSON-LD -->
   <script type="application/ld+json">
@@ -84,72 +90,42 @@
   <meta content="Consulta a diario los Resultados históricos y el más poderoso análisis de los sorteos Lotería Nacional. ¡Empodérate a diario!" property="og:description" />
   <meta content="Francisco Jaramillo A." name="author" />
 
-  <!-- LÓGICA DE DISEÑO TOMADA DEL INDEX -->
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: #f8f9fa;
-      padding-top: 85px;
-    }
-
-    /* Tarjetas estáticas (Sólidas, borde superior grafito) */
-    .card-analitica {
-      border-top: 4px solid #495057 !important;
-    }
-
-    /* Botón ultra sutil */
-    .btn-sutil {
-      background-color: transparent;
-      border: 1px solid #ced4da;
-      color: #6c757d;
-      transition: all 0.3s ease;
-    }
-
-    .btn-sutil:hover {
-      background-color: transparent;
-      border-color: #6c757d;
-      color: #212529;
-    }
-
-    /* Interacción sutil para los enlaces del footer */
-    footer a.text-secondary {
-      transition: color 0.2s ease;
-    }
-
-    footer a.text-secondary:hover {
-      color: #212529 !important;
-    }
-  </style>
-
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- NAVBAR BLANCA -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="/">
-        <img alt="Pakin" src="/images/p2.svg" height="45" width="45" style="object-fit: contain;">
-        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">PAKIN</span>
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-          <li class="nav-item"><a class="nav-link text-dark" href="chispazo">Chispazo</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="tris">Tris</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="melate-retro">Melate Retro</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="melate">Melate</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="revancha">Revancha</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="revanchita">Revanchita</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE (SIN LINK A LA PÁGINA ACTUAL) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Históricos Completos
+                </span>
+
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
+                    <li class="nav-item"><a class="nav-link text-dark" href="/generadores">Generadores</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="verificadores">Verificadores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <!-- CONTENIDO PRINCIPAL -->
-  <section class="container py-4 flex-grow-1">
+  <main class="container py-4 flex-grow-1">
 
     <!-- Título principal -->
     <h2 class="text-center fw-bold text-dark mb-4" style="font-size: clamp(1.2rem, 3vw, 2rem);">
@@ -159,9 +135,11 @@
       Consulta a diario los resultados históricos de todos los sorteos
     </h3>
 
-    <!-- Widget de Youtube Original -->
-    <div class="text-center mb-5">
-      <div class="g-ytsubscribe d-inline-block" data-channelid="UCq8uycqV1nI1eSeAcC0pveA" data-count="default" data-layout="full"></div>
+    <div class="ad-wrapper ad-top-wrapper">
+      <span class="ad-etiqueta">Publicidad</span>
+      <!-- Historicos_Top -->
+      <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6364311565"
+        data-full-width-responsive="false"></ins>
     </div>
 
     <!-- INICIO DE LAS TARJETAS (ESTILO INDEX) -->
@@ -252,7 +230,7 @@
       <!-- PAKIN23 Historicos Top -->
     </div>
 
-  </section>
+  </main>
 
   <!-- FOOTER BLANCO PREMIUM -->
   <footer class="bg-white border-top py-5 mt-auto">
@@ -309,9 +287,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
-  <script src="https://apis.google.com/js/platform.js"></script>
   <script defer src="js/tag_manager.js"></script>
+  <!-- <script defer src="/js/adsense-lazy_V3NE.js"></script> -->
+  <script defer src="/js/adsenseLazy.js"></script>
 
 </body>
 
