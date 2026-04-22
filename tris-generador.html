@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-22T13:18:08-06:00" />
+    <meta property="article:modified_time" content="2026-04-22T14:29:33-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_V7.css">
+    <link rel="stylesheet" href="styles/main_V7?V=2.css">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -51,7 +51,7 @@
         "description": "Genera-Busca tus combinaciones para Tris en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/tris-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-04-22T13:18:08-06:00",
+        "dateModified": "2026-04-22T14:29:33-06:00",
         "license": "https://pakin.lat/tris-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -165,9 +165,38 @@
         </div>
 
 
-        <!-- DIV DE RESULTADOS -->
         <div id="resultados"
             class="contenedor-tabla contenedor-tabla-historico text-center mx-auto mb-4 shadow-sm border rounded-3">
+
+            <!-- El Overlay de carga -->
+            <div class="table-loader-overlay">
+                <div class="d-flex justify-content-center align-items-center gap-2 py-5">
+                    <div class="spinner-border spinner-border-sm text-secondary" role="status" aria-hidden="true"></div>
+                    <span class="fw-semibold text-secondary">Buscando jugadas...</span>
+                </div>
+            </div>
+
+            <!-- La estructura fija de Tris (7 columnas) -->
+            <!-- Nota: Mantuve las clases exactas que tenías en tu PHP -->
+            <table
+                class="table table-borderless table-hover table-pakin tabla-tris tblres mb-0 align-middle text-center"
+                id="resultTable">
+                <thead>
+                    <tr>
+                        <th>R1</th>
+                        <th>R2</th>
+                        <th>R3</th>
+                        <th>R4</th>
+                        <th>R5</th>
+                        <th>PRIMOS</th>
+                        <th>REPS</th>
+                    </tr>
+                </thead>
+                <tbody id="resultados-body">
+                    <!-- Las filas entrarán aquí -->
+                </tbody>
+            </table>
+
         </div>
 
 
@@ -272,11 +301,10 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/tris/trisBuscador.js"></script>
+    <script defer src="js/tris/generador_tris.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
-    <!-- <script defer src="/js/adsense-lazy_V3NE.js"></script> -->
-    <!-- <script defer src="/js/adsenseLazy.js"></script> -->
+    
 
 </body>
 
