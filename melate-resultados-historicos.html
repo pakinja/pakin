@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-22T17:04:19-06:00" />
+    <meta property="article:modified_time" content="2026-04-22T19:08:17-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_V7.css">
+    <link rel="stylesheet" href="styles/main_V7?V=2.css">
 
     <!-- jQuery y Script Principal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/js/melate/hist_melateV23?v=6.js" defer></script>
+    <script src="/js/melate/historico_melate.js" defer></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -56,7 +56,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Melate",
       "url": "https://pakin.lat/melate-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-22T17:04:19-06:00",
+      "dateModified": "2026-04-22T19:08:17-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -164,11 +164,21 @@
             </p>
         </div>
 
-        <!-- TABLA HISTÓRICO -->
+        <!-- TABLA HISTÓRICO MELATE -->
         <div id="resultados"
             class="contenedor-tabla contenedor-tabla-historico shadow-sm border rounded-3 mx-auto mb-4">
+
+            <!-- NUEVO: El Overlay para la carga inicial -->
+            <div class="table-loader-overlay">
+                <div class="d-flex justify-content-center align-items-center gap-2 py-5">
+                    <div class="spinner-border spinner-border-sm text-secondary" role="status" aria-hidden="true"></div>
+                    <span class="fw-semibold text-secondary">Cargando histórico...</span>
+                </div>
+            </div>
+
+            <!-- Tabla vacía con 13 columnas -->
             <table
-                class="table table-borderless table-hover table-pakin tabla-melate idx adcnl tblres mb-0 align-middle text-center">
+                class="table table-borderless table-hover table-pakin tabla-melate idx tblres mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         <th>SORTEO</th>
@@ -186,15 +196,8 @@
                         <th>FECHA</th>
                     </tr>
                 </thead>
+                <!-- El body inicia vacío, la caja mantiene su tamaño por el style -->
                 <tbody id="historicoTableBody">
-                    <tr id="historicoLoadingRow">
-                        <td colspan="13" class="result-state-cell">
-                            <div class="table-loader d-flex justify-content-center align-items-center gap-2">
-                                <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
-                                <span>Cargando histórico...</span>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -319,8 +322,7 @@
 
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
-    <!-- <script defer src="/js/adsense-lazy_V3NE.js"></script> -->
-    <!-- <script defer src="/js/adsenseLazy.js"></script> -->
+
 
     <!-- NAVEGACIÓN FLOTANTE -->
     <div class="historico-floating-nav" aria-label="Navegación rápida del histórico">
