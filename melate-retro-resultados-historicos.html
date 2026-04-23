@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-04-22T19:27:59-06:00" />
+    <meta property="article:modified_time" content="2026-04-22T19:34:07-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-22T19:27:59-06:00" />
+    <meta property="article:modified_time" content="2026-04-22T19:34:07-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -74,7 +74,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Melate Retro",
 	  "url": "https://pakin.lat/melate-retro-resultados-historicos",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-04-22T19:27:59-06:00",
+	  "dateModified": "2026-04-22T19:34:07-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -194,11 +194,21 @@
             </p>
         </div>
 
-        <!-- TABLA HISTÓRICO -->
+        <!-- TABLA HISTÓRICO MELATE RETRO -->
         <div id="resultados"
             class="contenedor-tabla contenedor-tabla-historico shadow-sm border rounded-3 mx-auto mb-4">
+
+            <!-- NUEVO: El Overlay para la carga inicial -->
+            <div class="table-loader-overlay">
+                <div class="d-flex justify-content-center align-items-center gap-2 py-5">
+                    <div class="spinner-border spinner-border-sm text-secondary" role="status" aria-hidden="true"></div>
+                    <span class="fw-semibold text-secondary">Cargando histórico...</span>
+                </div>
+            </div>
+
+            <!-- Tabla vacía con 13 columnas -->
             <table
-                class="table table-borderless table-hover table-pakin tabla-chispazo idx tblres mb-0 align-middle text-center">
+                class="table table-borderless table-hover table-pakin tabla-retro idx adcnl tblres mb-0 align-middle text-center">
                 <thead>
                     <tr>
                         <th>SORTEO</th>
@@ -216,15 +226,8 @@
                         <th>FECHA</th>
                     </tr>
                 </thead>
+                <!-- El body inicia vacío -->
                 <tbody id="historicoTableBody">
-                    <tr id="historicoLoadingRow">
-                        <td colspan="13" class="result-state-cell">
-                            <div class="table-loader d-flex justify-content-center align-items-center gap-2">
-                                <div class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></div>
-                                <span>Cargando histórico...</span>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
