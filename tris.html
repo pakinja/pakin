@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-23T20:19:07-06:00" />
+    <meta property="article:modified_time" content="2026-04-23T22:06:53-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-23T20:19:07-06:00",
+          "dateModified": "2026-04-23T22:06:53-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -207,6 +207,28 @@
                     
                     <tr>
                         
+                        <td>35917</td>
+                        
+                        <td>5</td>
+                        
+                        <td>6</td>
+                        
+                        <td>2</td>
+                        
+                        <td>9</td>
+                        
+                        <td>7</td>
+                        
+                        <td>3</td>
+                        
+                        <td>1</td>
+                        
+                        <td>2026-04-23</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
                         <td>35916</td>
                         
                         <td>8</td>
@@ -315,28 +337,6 @@
                         
                     </tr>
                     
-                    <tr>
-                        
-                        <td>35911</td>
-                        
-                        <td>9</td>
-                        
-                        <td>6</td>
-                        
-                        <td>4</td>
-                        
-                        <td>7</td>
-                        
-                        <td>0</td>
-                        
-                        <td>1</td>
-                        
-                        <td>0</td>
-                        
-                        <td>2026-04-22</td>
-                        
-                    </tr>
-                    
                 </tbody>
             </table>
         </div>
@@ -364,17 +364,36 @@
         <!-- FRECUENCIAS -->
         <div class="text-center mt-5 mb-4">
             <h2 class="fw-bold text-dark d-inline-block pb-1"
-                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Frecuencia Números Tris
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Frecuencia Estadística de Números en Tris
             </h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">Veamos cuantas veces ha aparecido cada número <strong>sin importar la
-                posición</strong>, en verde los números del último sorteo y en amarillo los números de dos sorteos
-            anteriores.</p>
+        <p class="texto-analitica px-3 px-md-0">
+            Visualiza cuántas veces ha aparecido cada número en los últimos <strong>6 y 10 sorteos de Tris</strong>,
+            sin importar la posición. Estas ventanas se definieron alrededor del <strong>promedio histórico de cobertura
+                de los 10 números</strong>, estimado en <strong>8 sorteos</strong>, para comparar la frecuencia
+            reciente y el rezago estadístico en un periodo más amplio. <strong>Pasa el cursor o toca cada barra</strong>
+            para ver el detalle de cada número.
+        </p>
+
+        <div class="mb-4">
+            <div style="max-width: 980px; margin: 0 auto; padding: 0 12px;">
+                <div
+                    style="background: #faf7f7; border-left: 3px solid #8B0000; padding: 10px 12px; border-radius: 6px;">
+                    <span style="font-size: 0.96rem; color: #333; line-height: 1.5;">
+                        <strong>Lectura sugerida:</strong> sigue los gráficos sorteo a sorteo y detecta si aparecieron
+                        números rezagados o si los más frecuentes mantuvieron su presencia. ¿Se llenaron huecos ó
+                        crecieron más los picos?
+                    </span>
+                </div>
+            </div>
+        </div>
+
 
         <div class="text-center mt-4 mb-3">
             <h3 class="fw-bold text-dark d-inline-block pb-1"
                 style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
-                Últimos 6 Sorteos
+                Frecuencia Reciente: Últimos 6 Sorteos
             </h3>
         </div>
         <div id="chart_tris6" class="chart-container"></div>
@@ -382,9 +401,10 @@
         <div class="text-center mt-4 mb-3">
             <h3 class="fw-bold text-dark d-inline-block pb-1"
                 style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); border-bottom: 2px solid #8B0000;">
-                Últimos 10 Sorteos
+                Frecuencia Ampliada: Últimos 10 Sorteos
             </h3>
         </div>
+
         <div id="chart_tris10" class="chart-container"></div>
 
 
@@ -445,14 +465,14 @@
                         
                         
                         
-                        <td>8</td>
+                        <td>7</td>
                         
                         
                         
                         
                         <td
                             class="">
-                            0.29</td>
+                            -0.71</td>
                         
                         
                     </tr>
@@ -523,14 +543,14 @@
                         
                         
                         
-                        <td>20</td>
+                        <td>21</td>
                         
                         
                         
                         
                         <td
-                            class="azul">
-                            -3.29</td>
+                            class="">
+                            -2.29</td>
                         
                         
                     </tr>
@@ -620,11 +640,11 @@
                         
                         <td style="background-color: None; color: black;">0</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">0</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">1</td>
                         
-                        <td style="background-color: rgb(199, 133, 133); color: black;">10</td>
+                        <td style="background-color: rgb(202, 140, 140); color: black;">10</td>
                         
-                        <td style="background-color: rgb(183, 97, 97); color: black;">13</td>
+                        <td style="background-color: rgb(185, 102, 102); color: black;">13</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">21</td>
                         
@@ -638,11 +658,11 @@
                         
                         <td style="background-color: None; color: black;">1</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">1</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">2</td>
                         
-                        <td style="background-color: rgb(208, 153, 153); color: black;">3</td>
+                        <td style="background-color: rgb(226, 191, 191); color: black;">3</td>
                         
-                        <td style="background-color: rgb(185, 102, 102); color: black;">4</td>
+                        <td style="background-color: rgb(197, 127, 127); color: black;">4</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">6</td>
                         
@@ -656,7 +676,7 @@
                         
                         <td style="background-color: None; color: black;">2</td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">3</td>
+                        <td style="background-color: rgb(139, 0, 0); color: black;">4</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">2</td>
                         
@@ -674,17 +694,17 @@
                         
                         <td style="background-color: None; color: black;">3</td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: black;">8</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">0</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">3</td>
+                        <td style="background-color: rgb(197, 127, 127); color: black;">3</td>
                         
-                        <td style="background-color: rgb(231, 204, 204); color: black;">4</td>
+                        <td style="background-color: rgb(177, 85, 85); color: black;">4</td>
                         
-                        <td style="background-color: rgb(185, 102, 102); color: black;">6</td>
+                        <td style="background-color: rgb(139, 0, 0); color: black;">6</td>
                         
                         <td style="background-color: None; color: black;">37</td>
                         
-                        <td style="background-color: None; color: black;">3</td>
+                        <td style="background-color: None; color: black;">9</td>
                         
                     </tr>
                     
@@ -692,7 +712,7 @@
                         
                         <td style="background-color: None; color: black;">4</td>
                         
-                        <td style="background-color: rgb(202, 139, 139); color: black;">14</td>
+                        <td style="background-color: rgb(191, 115, 115); color: black;">15</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">9</td>
                         
@@ -710,7 +730,7 @@
                         
                         <td style="background-color: None; color: black;">5</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">71</td>
+                        <td style="background-color: rgb(253, 252, 252); color: black;">72</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">71</td>
                         
@@ -795,7 +815,7 @@
                         
                         
                         
-                        <td>34.83</td>
+                        <td>34.82</td>
                         
                         
                         
@@ -807,7 +827,7 @@
                         
                         <td
                             class="">
-                            2.17</td>
+                            2.18</td>
                         
                         
                     </tr>
@@ -948,7 +968,7 @@
                         
                         <td style="background-color: None; color: black;">0</td>
                         
-                        <td style="background-color: rgb(202, 139, 139); color: black;">14</td>
+                        <td style="background-color: rgb(191, 115, 115); color: black;">15</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">9</td>
                         
@@ -966,7 +986,7 @@
                         
                         <td style="background-color: None; color: black;">1</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">2</td>
+                        <td style="background-color: rgb(197, 127, 127); color: black;">3</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">2</td>
                         
@@ -984,17 +1004,17 @@
                         
                         <td style="background-color: None; color: black;">2</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">1</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">0</td>
                         
-                        <td style="background-color: rgb(216, 170, 170); color: black;">2</td>
+                        <td style="background-color: rgb(197, 127, 127); color: black;">2</td>
                         
-                        <td style="background-color: rgb(216, 170, 170); color: black;">2</td>
+                        <td style="background-color: rgb(197, 127, 127); color: black;">2</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">4</td>
                         
                         <td style="background-color: None; color: black;">29</td>
                         
-                        <td style="background-color: None; color: black;">3</td>
+                        <td style="background-color: None; color: black;">2</td>
                         
                     </tr>
                     
@@ -1002,11 +1022,11 @@
                         
                         <td style="background-color: None; color: black;">3</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">0</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">1</td>
                         
-                        <td style="background-color: rgb(202, 139, 139); color: black;">5</td>
+                        <td style="background-color: rgb(208, 153, 153); color: black;">5</td>
                         
-                        <td style="background-color: rgb(181, 92, 92); color: black;">7</td>
+                        <td style="background-color: rgb(185, 102, 102); color: black;">7</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">11</td>
                         
@@ -1020,11 +1040,11 @@
                         
                         <td style="background-color: None; color: black;">4</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">20</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">21</td>
                         
-                        <td style="background-color: rgb(225, 189, 189); color: black;">38</td>
+                        <td style="background-color: rgb(226, 192, 192); color: black;">38</td>
                         
-                        <td style="background-color: rgb(195, 123, 123); color: black;">56</td>
+                        <td style="background-color: rgb(196, 125, 125); color: black;">56</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">90</td>
                         
@@ -1038,7 +1058,7 @@
                         
                         <td style="background-color: None; color: black;">5</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">431</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">432</td>
                         
                         <td style="background-color: rgb(224, 188, 188); color: black;">1011</td>
                         
@@ -1123,14 +1143,14 @@
                         
                         
                         
-                        <td>10.0</td>
+                        <td>11.0</td>
                         
                         
                         
                         
                         <td
                             class="">
-                            0.1</td>
+                            1.1</td>
                         
                         
                     </tr>
@@ -1246,13 +1266,13 @@
                         
                         <td style="background-color: None; color: black;">R1</td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: black;">20</td>
+                        <td style="background-color: rgb(139, 0, 0); color: black;">21</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">7</td>
                         
-                        <td style="background-color: rgb(237, 215, 215); color: black;">9</td>
+                        <td style="background-color: rgb(238, 218, 218); color: black;">9</td>
                         
-                        <td style="background-color: rgb(183, 98, 98); color: black;">15</td>
+                        <td style="background-color: rgb(188, 109, 109); color: black;">15</td>
                         
                         <td style="background-color: None; color: black;">98</td>
                         
@@ -1264,17 +1284,17 @@
                         
                         <td style="background-color: None; color: black;">R2</td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: black;">24</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">0</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">7</td>
+                        <td style="background-color: rgb(204, 143, 143); color: black;">7</td>
                         
-                        <td style="background-color: rgb(234, 210, 210); color: black;">10</td>
+                        <td style="background-color: rgb(182, 95, 95); color: black;">10</td>
                         
-                        <td style="background-color: rgb(193, 120, 120); color: black;">16</td>
+                        <td style="background-color: rgb(139, 0, 0); color: black;">16</td>
                         
                         <td style="background-color: None; color: black;">89</td>
                         
-                        <td style="background-color: None; color: black;">19</td>
+                        <td style="background-color: None; color: black;">25</td>
                         
                     </tr>
                     
@@ -1282,11 +1302,11 @@
                         
                         <td style="background-color: None; color: black;">R3</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">1</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">2</td>
                         
-                        <td style="background-color: rgb(208, 153, 153); color: black;">7</td>
+                        <td style="background-color: rgb(213, 163, 163); color: black;">7</td>
                         
-                        <td style="background-color: rgb(185, 102, 102); color: black;">10</td>
+                        <td style="background-color: rgb(188, 109, 109); color: black;">10</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">16</td>
                         
@@ -1300,13 +1320,13 @@
                         
                         <td style="background-color: None; color: black;">R4</td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: black;">18</td>
+                        <td style="background-color: rgb(139, 0, 0); color: black;">19</td>
                         
                         <td style="background-color: rgb(255, 255, 255); color: black;">7</td>
                         
-                        <td style="background-color: rgb(233, 208, 208); color: black;">9</td>
+                        <td style="background-color: rgb(235, 212, 212); color: black;">9</td>
                         
-                        <td style="background-color: rgb(160, 46, 46); color: black;">16</td>
+                        <td style="background-color: rgb(168, 63, 63); color: black;">16</td>
                         
                         <td style="background-color: None; color: black;">77</td>
                         
@@ -1318,11 +1338,11 @@
                         
                         <td style="background-color: None; color: black;">R5</td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">4</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">5</td>
                         
-                        <td style="background-color: rgb(226, 191, 191); color: black;">7</td>
+                        <td style="background-color: rgb(233, 208, 208); color: black;">7</td>
                         
-                        <td style="background-color: rgb(197, 127, 127); color: black;">10</td>
+                        <td style="background-color: rgb(202, 139, 139); color: black;">10</td>
                         
                         <td style="background-color: rgb(139, 0, 0); color: black;">16</td>
                         
@@ -1366,6 +1386,8 @@
                         
                         <th>R3</th>
                         
+                        <th>R4</th>
+                        
                         <th>R5</th>
                         
                     </tr>
@@ -1380,11 +1402,15 @@
                         
                         <td>8</td>
                         
+                        <td>2</td>
+                        
                         <td>1</td>
                         
                     </tr>
                     
                     <tr>
+                        
+                        <td></td>
                         
                         <td></td>
                         
@@ -1404,11 +1430,15 @@
                         
                         <td></td>
                         
+                        <td></td>
+                        
                         <td>5</td>
                         
                     </tr>
                     
                     <tr>
+                        
+                        <td></td>
                         
                         <td></td>
                         
@@ -1428,20 +1458,8 @@
         <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Completez de Conjunto</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             
-            <table class="table table-borderless table-hover table-pakin mb-0 align-middle text-center">
-                <thead>
-                    <tr>
-                        <th>Números Faltantes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
-                        <td>2</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+            <p class="atract flashit text-center my-4" style="color: #8B0000; font-size: 1.1rem;">¡No se encontraron
+                alertas!</p>
             
         </div>
 
@@ -1539,10 +1557,9 @@
                             
                         
                         
-                         
                          <td
-                            class="rojo-oscuro">
-                            +9.74
+                            class="">
+                            +4.74
                             </td>
                             
                             
@@ -1564,10 +1581,9 @@
                             
                         
                         
-                         
                          <td
-                            class="rojo-oscuro">
-                            +5.04
+                            class="">
+                            +0.04
                             </td>
                             
                             
@@ -1624,7 +1640,7 @@
                         
                          <td
                             class="">
-                            -4.74
+                            +0.26
                             </td>
                             
                             
@@ -1673,7 +1689,7 @@
                         
                          <td
                             class="">
-                            +0.13
+                            -4.87
                             </td>
                             
                             
@@ -1704,10 +1720,9 @@
                             
                         
                         
-                         
                          <td
-                            class="rojo-oscuro">
-                            +5.07
+                            class="">
+                            +0.07
                             </td>
                             
                             
@@ -1753,9 +1768,9 @@
                             
                         
                         
-                           <td
-                            class="azul-claro">
-                            -5.01
+                         <td
+                            class="">
+                            -0.01
                             </td>
                             
                             
@@ -1778,10 +1793,9 @@
                             
                         
                         
-                         
                          <td
-                            class="rojo-oscuro">
-                            +5.03
+                            class="">
+                            +0.03
                             </td>
                             
                             
@@ -1814,7 +1828,7 @@
                          
                          <td
                             class="rojo-oscuro">
-                            +10.01
+                            +15.01
                             </td>
                             
                             
@@ -1886,9 +1900,10 @@
                             
                         
                         
+                         
                          <td
-                            class="">
-                            +0.13
+                            class="rojo-oscuro">
+                            +5.13
                             </td>
                             
                             
@@ -1978,7 +1993,7 @@
                         
                          <td
                             class="">
-                            -4.8
+                            +0.2
                             </td>
                             
                             
@@ -2049,35 +2064,35 @@
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            7.0
+                            6.0
                         </td>
                         
                         
                         
                         <td style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            2.0
+                            1.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            4.0
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
+                            3.0
                         </td>
                         
                         
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -1.0
+                            -2.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            6.0
+                            5.0
                         </td>
                         
                         
@@ -2096,35 +2111,35 @@
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            8.0
+                            7.0
                         </td>
                         
                         
                         
                         <td style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            1.0
+                            0.0
                         </td>
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip"
-                            title="Estado: IDX = 0">
-                            10.0
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
                         
-                        <td style="color: #FDD017" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= P80">
-                            -8.0
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -9.0
                         </td>
                         
                         
@@ -2141,37 +2156,37 @@
                         
                         
                         
-                        <td style="color: #FDD017" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= P80">
-                            -8.0
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -9.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #FF6700" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM + STD">
+                            -9.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
+                            10.0
                         </td>
                         
                         
                         
                         <td style="color: #FDD017" data-bs-toggle="tooltip"
                             title="Estado: IDX >= P80">
-                            -8.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM">
-                            -1.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                            title="Estado: IDX >= PROM">
-                            -5.0
+                            -6.0
                         </td>
                         
                         
                         
                         <td style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            3.0
+                            2.0
                         </td>
                         
                         
@@ -2190,28 +2205,21 @@
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -4.0
+                            -5.0
                         </td>
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            4.0
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
+                            3.0
                         </td>
                         
                         
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -4.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            8.0
+                            -5.0
                         </td>
                         
                         
@@ -2219,6 +2227,13 @@
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
                             7.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            6.0
                         </td>
                         
                         
@@ -2237,14 +2252,7 @@
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            8.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            6.0
+                            7.0
                         </td>
                         
                         
@@ -2256,16 +2264,23 @@
                         
                         
                         
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            4.0
+                        </td>
+                        
+                        
+                        
                         <td style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            2.0
+                            1.0
                         </td>
                         
                         
                         
                         <td style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
-                            -12.0
+                            -13.0
                         </td>
                         
                         
@@ -2282,37 +2297,37 @@
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            2.0
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
+                            10.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            6.0
+                            5.0
                         </td>
                         
                         
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -2.0
+                            -3.0
                         </td>
                         
                         
                         
                         <td style="color: #FDD017" data-bs-toggle="tooltip"
                             title="Estado: IDX >= P80">
-                            -6.0
+                            -7.0
                         </td>
                         
                         
@@ -2329,9 +2344,9 @@
                         
                         
                         
-                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                            title="Estado: IDX < PROM">
-                            4.0
+                        <td style="color: #59E817" data-bs-toggle="tooltip"
+                            title="Estado: IDX ~ PROM">
+                            3.0
                         </td>
                         
                         
@@ -2345,7 +2360,14 @@
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            8.0
                         </td>
                         
                         
@@ -2353,13 +2375,6 @@
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
                             9.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #1589FF" data-bs-toggle="tooltip"
-                            title="Estado: IDX = 0">
-                            10.0
                         </td>
                         
                         
@@ -2378,35 +2393,35 @@
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -3.0
-                        </td>
-                        
-                        
-                        
-                        <td style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            0.0
+                            -4.0
                         </td>
                         
                         
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -2.0
+                            -1.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #F1E5AC" data-bs-toggle="tooltip"
+                            title="Estado: IDX >= PROM">
+                            -3.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            7.0
+                            6.0
                         </td>
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            1.0
+                        <td style="color: #1589FF" data-bs-toggle="tooltip"
+                            title="Estado: IDX = 0">
+                            10.0
                         </td>
                         
                         
@@ -2423,37 +2438,37 @@
                         
                         
                         
-                        <td style="color: #1589FF" data-bs-toggle="tooltip"
-                            title="Estado: IDX = 0">
-                            10.0
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
                         
                         <td style="color: #59E817" data-bs-toggle="tooltip"
                             title="Estado: IDX ~ PROM">
-                            3.0
+                            2.0
                         </td>
                         
                         
                         
                         <td style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
-                            -23.0
+                            -24.0
                         </td>
                         
                         
                         
                         <td style="color: #F1E5AC" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM">
-                            -3.0
+                            -4.0
                         </td>
                         
                         
                         
                         <td style="color: #FF6700" data-bs-toggle="tooltip"
                             title="Estado: IDX >= PROM + STD">
-                            -16.0
+                            -17.0
                         </td>
                         
                         
@@ -2472,14 +2487,21 @@
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            5.0
+                            4.0
                         </td>
                         
                         
                         
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            7.0
+                            6.0
+                        </td>
+                        
+                        
+                        
+                        <td style="color: #FFFFFF" data-bs-toggle="tooltip"
+                            title="Estado: IDX < PROM">
+                            9.0
                         </td>
                         
                         
@@ -2491,16 +2513,9 @@
                         
                         
                         
-                        <td style="color: #59E817" data-bs-toggle="tooltip"
-                            title="Estado: IDX ~ PROM">
-                            3.0
-                        </td>
-                        
-                        
-                        
                         <td style="color: #FFFFFF" data-bs-toggle="tooltip"
                             title="Estado: IDX < PROM">
-                            9.0
+                            8.0
                         </td>
                         
                         
@@ -2615,7 +2630,7 @@
     <!-- <script defer src="/js/adsense-lazy_V3NE.js"></script> -->
     <!-- <script defer src="/js/adsenseLazy.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-    <script defer src="/js/barras_master.js"></script>
+    <script defer src="/js/barras_master?V=2.js"></script>
 
 
 
