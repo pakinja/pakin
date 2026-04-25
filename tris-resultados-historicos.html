@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-24T19:18:31-06:00" />
+    <meta property="article:modified_time" content="2026-04-24T20:36:24-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Tris",
       "url": "https://pakin.lat/tris-resultados-historicos",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-04-24T19:18:31-06:00",
+      "dateModified": "2026-04-24T20:36:24-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -326,14 +326,20 @@
 
     <!-- NAVEGACIÓN FLOTANTE -->
     <div class="historico-floating-nav" aria-label="Navegación rápida del histórico">
-        <button id="scrollTopBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn d-none"
-            type="button" aria-label="Subir al inicio" title="Subir">
-            ↑
+        <button id="scrollTopBtn" class="btn btn-light rounded-circle historico-float-btn d-none" type="button"
+            aria-label="Subir al inicio" title="Subir">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+            </svg>
         </button>
 
-        <button id="scrollBottomBtn" class="btn btn-light shadow-sm rounded-circle historico-float-btn" type="button"
+        <button id="scrollBottomBtn" class="btn btn-light rounded-circle historico-float-btn" type="button"
             aria-label="Bajar al final" title="Bajar">
-            ↓
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+            </svg>
         </button>
     </div>
 
