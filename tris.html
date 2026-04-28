@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-27T19:48:03-06:00" />
+    <meta property="article:modified_time" content="2026-04-27T20:35:49-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-27T19:48:03-06:00",
+          "dateModified": "2026-04-27T20:35:49-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -363,30 +363,33 @@
         <!-- FRECUENCIAS -->
         <div class="text-center mt-5 mb-4">
             <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                Frecuencia Estadística de Números en Tris
+                Frecuencia y Cobertura de Números Tris
             </h2>
         </div>
         <p class="texto-analitica px-3 px-md-0">
-            Visualiza cuántas veces ha aparecido cada número en los últimos 6 y 10 sorteos de Tris,
-            sin importar la posición. Estas ventanas se definieron alrededor del promedio histórico de cobertura
-            de los 10 números, estimado en 8 sorteos, para comparar la frecuencia
-            reciente y el rezago estadístico en un periodo más amplio. Pasa el cursor o toca cada barra
-            para ver el detalle de cada número.
+            Los gráficos muestran la frecuencia de aparición de cada número en ventanas de 3 y 6 sorteos de Chispazo,
+            sin considerar la posición.
+
+            La ventana de 6 sorteos corresponde al tiempo promedio estimado necesario para cubrir el rango completo de
+            números,
+            mientras que 3 sorteos representan aproximadamente una desviación estándar por debajo de ese promedio.
+            Esta comparación permite observar cómo evoluciona la cobertura tanto en un escenario temprano como en el
+            comportamiento medio esperado.
         </p>
 
         <div class="mb-4 texto-analitica">
             <div class="p-2 rounded" style="background:#faf7f7; border-left:1px solid #8B0000;">
-                <strong>Lectura sugerida:</strong>
-                sigue los gráficos sorteo a sorteo y detecta si aparecieron números rezagados o si los más frecuentes
-                mantuvieron su presencia.
-                ¿Se cubrieron huecos o crecieron los picos?
+                <strong>Cómo interpretarlo:</strong>
+                al realizarse repeticiones del sorteo, es natural que con el tiempo aparezcan todos los números,
+                simplemente porque cada uno tiene oportunidad de salir en cada ocasión.
+                Los gráficos muestran cómo el conjunto se va completando gradualmente.
             </div>
         </div>
 
 
         <div class="text-center mt-4 mb-3">
             <h3 class="fw-bold text-dark d-inline-block pb-1 subtitulo-seccion">
-                Frecuencia Reciente: Últimos 6 Sorteos
+                Frecuencia Reciente: Últimos 3 Sorteos
             </h3>
         </div>
 
@@ -394,7 +397,7 @@
 
         <div class="text-center mt-4 mb-3">
             <h3 class="fw-bold text-dark d-inline-block pb-1 subtitulo-seccion">
-                Frecuencia Ampliada: Últimos 10 Sorteos
+                Frecuencia Ampliada: Últimos 6 Sorteos
             </h3>
         </div>
 
@@ -1431,8 +1434,20 @@
         <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Completez de Conjunto</h3>
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             
-            <p class="atract flashit text-center my-4 texto-pequeno-11">¡No se encontraron
-                alertas!</p>
+            <table class="table table-borderless table-hover table-pakin mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th>Números Faltantes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>9</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
             
         </div>
 
