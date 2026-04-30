@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-30T15:33:50-06:00" />
+    <meta property="article:modified_time" content="2026-04-30T17:49:02-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-04-30T15:33:50-06:00",
+  "dateModified": "2026-04-30T17:49:02-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -450,15 +450,23 @@
 
         <!-- PRIMOS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">Análisis de Números Primos en
-                Chispazo</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">Estadística de Números Primos en Chispazo:
+                Frecuencia y Ciclos</h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">Analizamos estadística y dinámicamente la cantidad de números primos
-            que aparecen por sorteo: distribución y ciclos de aparición.
+        <p class="texto-analitica px-3 px-md-0">Cuántos números primos aparecen en cada sorteo Chispazo. Consulta su
+            frecuencia histórica, tendencia reciente y ciclos de repetición.
 
         </p>
 
-        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold"> Balanza de Frecuencias de Números Primos:
+            Histórico vs Reciente
+        </h3>
+        <p class="text-center text-muted small mb-3 px-3">
+            <strong>HIST</strong>Histórico = Porcentaje histórico.
+            <strong>REC</strong>RECIENTE = Porcentaje en los últimos -n- sorteos.
+            <strong>TEND</strong>Tendencia = Diferencia entre ambos.
+        </p>
+
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table
                 class="table table-borderless table-hover table-pakin chispazo-primos-bal mb-0 align-middle text-center">
@@ -638,7 +646,17 @@
         </div>
 
 
-        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold"> Cronómetro de Apariciones de
+            Primos: Ciclos de Aparición (Tiempo medido en número de sorteos).
+        </h3>
+
+        <p class="text-center text-muted small mb-3 px-3">
+            <strong>P50</strong> = Sorteos que tarda en repetirse normalmente (mediana).
+            <strong>P80</strong> = Umbral del 80% de casos (80 percentil).
+            <strong>ATRASO</strong> = Tiempo desde última aparición vs P50.
+            <strong>MAX</strong> = Máximó tiempo histórico.
+        </p>
+
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table
                 class="table table-borderless table-hover table-pakin chispazo-primos-cron mb-0 align-middle text-center">
