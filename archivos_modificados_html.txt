@@ -1,4 +1,0 @@
-tris-resultados-historicos.html
-tris-generador.html
-tris-verificador.html
-tris.html
