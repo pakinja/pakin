@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-04-29T23:09:28-06:00" />
+    <meta property="article:modified_time" content="2026-04-30T19:42:58-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
           "headline": "Revancha Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-04-29T23:09:28-06:00",
+          "dateModified": "2026-04-30T19:42:58-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Revancha números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -416,15 +416,6 @@
             comportamiento medio esperado.
         </p>
 
-        <div class="mb-4 texto-analitica">
-            <div class="p-2 rounded" style="background:#faf7f7; border-left:1px solid #8B0000;">
-                <strong>Cómo interpretarlo:</strong>
-                al realizarse repeticiones del sorteo, es natural que con el tiempo aparezcan todos los números,
-                simplemente porque cada uno tiene oportunidad de salir en cada ocasión.
-                Los gráficos muestran cómo el conjunto se va completando gradualmente.
-            </div>
-        </div>
-
 
         <div class="text-center mt-4 mb-3">
             <h3 class="fw-bold text-dark d-inline-block pb-1 subtitulo-seccion">
@@ -457,16 +448,25 @@
 
          <!-- PRIMOS -->
         <div class="text-center mt-5 mb-4">
-            <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">Cantidad de Números
-                Primos</h2>
+            <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">Estadística de Números Primos en Revancha:
+                Frecuencia y Ciclos</h2>
         </div>
-        <p class="texto-analitica px-3 px-md-0">En el sorteo Revancha, cada resultado puede tener de 0 a 6 números
-            primos entre los números 1 al 56; En el histórico Revancha Pakin puedes ver los
-            números primos de cada resultado en color azul y
-            cuando son 3 o más números primos se marca en color rojo en la columna PRIMOS.<br>A continuación la
-            estadística.</p>
+        <p class="texto-analitica px-3 px-md-0">Cuántos números primos aparecen en cada sorteo Revancha. Consulta su
+            frecuencia histórica, tendencia reciente y ciclos de repetición.
+        </p>
 
-        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold"> Balanza de Frecuencias de Números Primos:
+            Histórico vs Reciente
+        </h3>
+
+        <div class="d-flex justify-content-center mb-3">
+            <div class="text-start text-muted small px-3">
+                <div class="mb-1"><strong>HIST</strong>órico = Porcentaje histórico</div>
+                <div class="mb-1"><strong>REC</strong>iente = Porcentaje en los últimos -n- sorteos</div>
+                <div><strong>TEND</strong>encia = REC - HIST.</div>
+            </div>
+        </div>
+
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table
                 class="table table-borderless table-hover table-pakin revancha-primos-bal mb-0 align-middle text-center">
@@ -645,7 +645,23 @@
             </table>
         </div>
 
-        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <h3 class="text-center text-secondary mb-1 mt-4 fs-5 fw-semibold">
+            Cronómetro de Apariciones de Números Primos: Ciclos de Aparición
+        </h3>
+        <p class="text-center text-muted small mb-3">
+            (Tiempo medido en número de sorteos)
+        </p>
+
+        <div class="d-flex justify-content-center mb-3">
+            <div class="text-start text-muted small px-3">
+                <div class="mb-1"><strong>IDX</strong> = Índice de última aparición</div>
+                <div class="mb-1"><strong>P50</strong> = Sorteos que tarda en repetirse normalmente (mediana)</div>
+                <div class="mb-1"><strong>P80</strong> = Umbral del 80% de casos (80 percentil)</div>
+                <div class="mb-1"><strong>ATRASO</strong> = IDX - P50</div>
+                <div><strong>MAX</strong>imo = tiempo histórico.</div>
+            </div>
+        </div>
+        
         <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
             <table
                 class="table table-borderless table-hover table-pakin revancha-primos-cron mb-0 align-middle text-center">
