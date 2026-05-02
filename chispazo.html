@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-01T22:14:45-06:00" />
+    <meta property="article:modified_time" content="2026-05-02T00:44:06-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-01T22:14:45-06:00",
+  "dateModified": "2026-05-02T00:44:06-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -431,9 +431,9 @@
             <!-- Chispazo_Analitica_Medio1 -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="1959761185"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -860,7 +860,7 @@
             <h2 class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">Cantidad de Números
                 Repetidos</h2>
         </div>
-        
+
         <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Cualquier Posición</h3>
         <p class="texto-analitica px-3 px-md-0">En el sorteo Chispazo, hasta ahora en sorteos
             consecutivos se han repetido hasta 3 números sin importar que aparezcan en otra posición
@@ -1521,9 +1521,9 @@
             <!-- Chispazo_Analitica_Medio1.1 -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="5961726544"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
         <!-- ALTA BAJA -->
@@ -2144,9 +2144,9 @@
             <!-- Chispazo_Analitica_Medio2 -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8607883839"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -5194,9 +5194,9 @@
             <!-- Chispazo_Analitica_Fondo -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6987680402"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -5286,6 +5286,40 @@
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=4.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Seleccionamos SOLO los anuncios que queremos hacer lazy load
+            const lazyAds = document.querySelectorAll("ins.ad-intercalado");
+
+            if ("IntersectionObserver" in window) {
+                let adObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        // 2. Si el anuncio está a 800px o menos
+                        if (entry.isIntersecting) {
+                            // Pedimos el anuncio a Google
+                            (window.adsbygoogle = window.adsbygoogle || []).push({});
+                            // Dejamos de observarlo para que no se repita
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    // 3. La distancia mágica: 800px antes de que el usuario lo vea
+                    rootMargin: "800px 0px"
+                });
+
+                // Aplicamos el observador a cada anuncio intermedio
+                lazyAds.forEach(function (ad) {
+                    adObserver.observe(ad);
+                });
+            } else {
+                // Fallback: Si el navegador es muy antiguo, los carga normal
+                lazyAds.forEach(function () {
+                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                });
+            }
+        });
+    </script>
 
 
 </body>
