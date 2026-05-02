@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-01T00:50:40-06:00" />
+    <meta property="article:modified_time" content="2026-05-01T18:33:21-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           "headline": "Revanchita Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-01T00:50:40-06:00",
+          "dateModified": "2026-05-01T18:33:21-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Revanchita números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -631,6 +631,7 @@
         <div class="d-flex justify-content-center mb-3">
             <div class="text-start text-muted small px-3">
                 <div class="mb-1"><strong>IDX</strong> = Índice de última aparición</div>
+                <div class="mb-1"><strong>IDX</strong> = 0 (siempre es el sorteo más reciente)</div>
                 <div class="mb-1"><strong>P50</strong> = Sorteos que tarda en repetirse normalmente (mediana)</div>
                 <div class="mb-1"><strong>P80</strong> = Umbral del 80% de casos (80 percentil)</div>
                 <div class="mb-1"><strong>ATRASO</strong> = IDX - P50</div>
@@ -1283,13 +1284,11 @@
                         
                         <th>P50</th>
                         
-                        <th>PROM</th>
-                        
                         <th>P80</th>
                         
-                        <th>MAX</th>
+                        <th>ATRASO</th>
                         
-                        <th>UTA</th>
+                        <th>MAX</th>
                         
                     </tr>
                 </thead>
@@ -1297,109 +1296,169 @@
                     
                     <tr>
                         
-                        <td style="background-color: None; color: None;">F1</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F1
+                        </td>
                         
-                        <td style="background-color: rgb(230, 200, 200); color: black;">14</td>
+                        <td style="background-color: rgb(176, 82, 82); color: white;">
+                            14
+                        </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">13</td>
+                        <td style="background-color: rgb(180, 90, 90); color: white;">
+                            13
+                        </td>
                         
-                        <td style="background-color: rgb(206, 149, 149); color: black;">16</td>
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            26
+                        </td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: white;">26</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            1
+                        </td>
                         
-                        <td style="background-color: None; color: None;">95</td>
-                        
-                        <td style="background-color: None; color: None;">35</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td style="background-color: None; color: None;">F2</td>
-                        
-                        <td style="background-color: rgb(255, 255, 255); color: black;">9</td>
-                        
-                        <td style="background-color: rgb(206, 147, 147); color: black;">18</td>
-                        
-                        <td style="background-color: rgb(176, 81, 81); color: white;">29</td>
-                        
-                        <td style="background-color: rgb(139, 0, 0); color: white;">47</td>
-                        
-                        <td style="background-color: None; color: None;">129</td>
-                        
-                        <td style="background-color: None; color: None;">28</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            95
+                        </td>
                         
                     </tr>
                     
                     <tr>
                         
-                        <td style="background-color: None; color: None;">F3</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F2
+                        </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">4</td>
+                        <td style="background-color: rgb(196, 125, 125); color: black;">
+                            9
+                        </td>
                         
-                        <td style="background-color: rgb(191, 116, 116); color: black;">29</td>
+                        <td style="background-color: rgb(180, 90, 90); color: white;">
+                            18
+                        </td>
                         
-                        <td style="background-color: rgb(172, 73, 73); color: white;">43</td>
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            47
+                        </td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: white;">73</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -9
+                        </td>
                         
-                        <td style="background-color: None; color: None;">244</td>
-                        
-                        <td style="background-color: None; color: None;">81</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        <td style="background-color: None; color: None;">F4</td>
-                        
-                        <td style="background-color: rgb(148, 21, 21); color: white;">53</td>
-                        
-                        <td style="background-color: rgb(255, 255, 255); color: black;">28</td>
-                        
-                        <td style="background-color: rgb(205, 146, 146); color: black;">35</td>
-                        
-                        <td style="background-color: rgb(139, 0, 0); color: white;">57</td>
-                        
-                        <td style="background-color: None; color: None;">139</td>
-                        
-                        <td style="background-color: None; color: None;">48</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            129
+                        </td>
                         
                     </tr>
                     
                     <tr>
                         
-                        <td style="background-color: None; color: None;">F5</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F3
+                        </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">3</td>
+                        <td style="background-color: rgb(199, 132, 132); color: black;">
+                            4
+                        </td>
                         
-                        <td style="background-color: rgb(192, 118, 118); color: black;">20</td>
+                        <td style="background-color: rgb(173, 76, 76); color: white;">
+                            29
+                        </td>
                         
-                        <td style="background-color: rgb(174, 78, 78); color: white;">29</td>
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            73
+                        </td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: white;">51</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -25
+                        </td>
                         
-                        <td style="background-color: None; color: None;">121</td>
-                        
-                        <td style="background-color: None; color: None;">115</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            244
+                        </td>
                         
                     </tr>
                     
                     <tr>
                         
-                        <td style="background-color: None; color: None;">F6</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F4
+                        </td>
                         
-                        <td style="background-color: rgb(191, 116, 116); color: black;">16</td>
+                        <td style="background-color: rgb(147, 19, 19); color: white;">
+                            53
+                        </td>
                         
-                        <td style="background-color: rgb(255, 255, 255); color: black;">12</td>
+                        <td style="background-color: rgb(222, 183, 183); color: black;">
+                            28
+                        </td>
                         
-                        <td style="background-color: rgb(201, 138, 138); color: black;">15</td>
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            57
+                        </td>
                         
-                        <td style="background-color: rgb(139, 0, 0); color: white;">23</td>
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            24
+                        </td>
                         
-                        <td style="background-color: None; color: None;">86</td>
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            139
+                        </td>
                         
-                        <td style="background-color: None; color: None;">7</td>
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F5
+                        </td>
+                        
+                        <td style="background-color: rgb(199, 132, 132); color: black;">
+                            3
+                        </td>
+                        
+                        <td style="background-color: rgb(174, 78, 78); color: white;">
+                            20
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            51
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -17
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            121
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            F6
+                        </td>
+                        
+                        <td style="background-color: rgb(166, 61, 61); color: white;">
+                            16
+                        </td>
+                        
+                        <td style="background-color: rgb(185, 103, 103); color: white;">
+                            12
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            23
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            4
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            86
+                        </td>
                         
                     </tr>
                     
