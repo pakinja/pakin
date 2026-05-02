@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-02T13:42:00-06:00" />
+    <meta property="article:modified_time" content="2026-05-02T14:49:39-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-02T13:42:00-06:00",
+          "dateModified": "2026-05-02T14:49:39-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -400,9 +400,9 @@
             <!-- Tris_Analitica_Medio1 -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="1093402077"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -1694,9 +1694,9 @@
             <!-- Tris_Analitica_Medio2 -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2481445875"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
         <span id="balanza"></span>
@@ -2768,9 +2768,9 @@
             <!-- Tris_Analitica_Fondo -->
             <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="9646679514"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>
+            <!-- <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            </script> -->
         </div>
 
 
@@ -2859,12 +2859,42 @@
     <!-- <script src="/js/tris/tris_resultados.js" defer></script> -->
     <script defer src="/js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
-    <!-- <script defer src="/js/adsense-lazy_V3NE.js"></script> -->
-    <!-- <script defer src="/js/adsenseLazy.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=4.js"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Seleccionamos SOLO los anuncios que queremos hacer lazy load
+            const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
+            if ("IntersectionObserver" in window) {
+                let adObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        // 2. Si el anuncio está a 800px o menos
+                        if (entry.isIntersecting) {
+                            // Pedimos el anuncio a Google
+                            (window.adsbygoogle = window.adsbygoogle || []).push({});
+                            // Dejamos de observarlo para que no se repita
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    // 3. La distancia mágica: 800px antes de que el usuario lo vea
+                    rootMargin: "800px 0px"
+                });
+
+                // Aplicamos el observador a cada anuncio intermedio
+                lazyAds.forEach(function (ad) {
+                    adObserver.observe(ad);
+                });
+            } else {
+                // Fallback: Si el navegador es muy antiguo, los carga normal
+                lazyAds.forEach(function () {
+                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                });
+            }
+        });
+    </script>
 
 </body>
 
