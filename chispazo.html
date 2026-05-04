@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-04T10:53:13-06:00" />
+    <meta property="article:modified_time" content="2026-05-04T11:01:17-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-04T10:53:13-06:00",
+  "dateModified": "2026-05-04T11:01:17-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -89,55 +89,54 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <header class="sticky-top bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-light py-2">
-            <div class="container">
-                <div class="d-flex align-items-center">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
 
-                    <a class="navbar-brand me-0" href="/">
-                        <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
-                    </a>
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
 
-                    <span class="ms-2 fw-bold text-dark espaciado-letras-1">
-                        Chispazo Analítica
-                    </span>
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark espaciado-letras-1">
+                    Chispazo Analítica
+                </span>
 
-                </div>
-
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Secciones Analítica
-                            </a>
-                            <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                                <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                                <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                                <li><a class="dropdown-item" href="#medias">Alta-Baja</a></li>
-                                <li><a class="dropdown-item" href="#consecutivos">Consecutivos</a></li>
-                                <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                                <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                                <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="chispazo-verificador">Verificador</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Generador</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark"
-                                href="chispazo-resultados-historicos">Histórico</a></li>
-                    </ul>
-                </div>
             </div>
-        </nav>
-    </header>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones Chispazo Analítica
+                        </a>
+                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
+                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
+                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
+                            <li><a class="dropdown-item" href="#medias">Alta-Baja</a></li>
+                            <li><a class="dropdown-item" href="#consecutivos">Consecutivos</a></li>
+                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
+                            <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
+                            <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo-verificador">Chispazo
+                            Verificador</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo-generador">Chispazo Generador</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="chispazo-resultados-historicos">Histórico
+                            Completo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -1923,7 +1922,7 @@
             </div>
 
             <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
-                Ciclo de Consecutivos: Tiempos de Aparición
+               Ciclo de Consecutivos: Tiempos de Aparición
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
