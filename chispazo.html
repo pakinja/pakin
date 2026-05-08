@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T13:19:30-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T13:34:16-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T13:19:30-06:00",
+  "dateModified": "2026-05-08T13:34:16-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5334,43 +5334,27 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
+            let isNavigating = false;
+
+            // 1. Detectamos cuando el usuario usa la navegación rápida
+            document.querySelectorAll('.nav-link, .btn-scroll').forEach(link => {
+                link.addEventListener('click', () => {
+                    isNavigating = true;
+                    // Desbloqueamos después de 800ms (lo que tarda el scroll en llegar)
+                    setTimeout(() => { isNavigating = false; }, 800);
+                });
+            });
 
             if ("IntersectionObserver" in window) {
-                let adObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        const adElement = entry.target;
-                        // 1. Si ya se cargó, lo ignoramos por completo
-                        if (adElement.dataset.adLoaded === "true") return;
-
-                        const isVisible = entry.intersectionRatio > 0;
-
-                        if (entry.isIntersecting) {
-                            // Tiempos: 50ms si es visible (frena el parpadeo), 250ms si está lejos
-                            const delay = isVisible ? 50 : 250;
-
-                            const adTimeout = setTimeout(() => {
-                                // Verificación final antes de disparar
-                                if (entry.isIntersecting) {
-                                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                                    // BLOQUEO: Marcamos como cargado y dejamos de observar
-                                    adElement.dataset.adLoaded = "true";
-                                    observer.unobserve(adElement);
-                                }
-                            }, delay);
-
-                            adElement.dataset.timeoutId = adTimeout;
-                        } else {
-                            // 2. SOLO cancelamos si el anuncio NO ha llegado al punto de no retorno (push)
-                            if (adElement.dataset.adLoaded !== "true" && adElement.dataset.timeoutId) {
-                                clearTimeout(adElement.dataset.timeoutId);
-                                delete adElement.dataset.timeoutId;
-                            }
+                let adObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        // 2. Solo cargamos si NO estamos en medio de un salto de navegación
+                        if (entry.isIntersecting && !isNavigating) {
+                            (window.adsbygoogle = window.adsbygoogle || []).push({});
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, {
-                    rootMargin: "800px 0px",
-                    threshold: [0, 0.1]
-                });
+                }, { rootMargin: "800px 0px" });
 
                 lazyAds.forEach(ad => adObserver.observe(ad));
             }
