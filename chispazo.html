@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T14:08:37-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T14:17:15-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T14:08:37-06:00",
+  "dateModified": "2026-05-08T14:17:15-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5333,73 +5333,54 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // 1. Seleccionamos SOLO los anuncios que queremos hacer lazy load
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
-                        // 2. Si el anuncio está a 800px o menos
                         if (entry.isIntersecting) {
-                            // Pedimos el anuncio a Google
-                            (window.adsbygoogle = window.adsbygoogle || []).push({});
-                            // Dejamos de observarlo para que no se repita
-                            observer.unobserve(entry.target);
+                            const adElement = entry.target;
+
+                            // 1. Si ya tiene un temporizador (porque estamos pasando rápido), lo borramos
+                            if (adElement.dataset.timeoutId) {
+                                clearTimeout(adElement.dataset.timeoutId);
+                            }
+
+                            // 2. Creamos una pausa de 150ms. 
+                            // Es tiempo suficiente para ignorar un salto, pero imperceptible al ojo humano.
+                            const timeoutId = setTimeout(() => {
+                                // Verificamos que sigamos en rango antes de pedir el anuncio
+                                if (entry.isIntersecting) {
+                                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                                    observer.unobserve(adElement);
+                                    console.log("AdSense: Anuncio cargado tras pausa de estabilidad.");
+                                }
+                            }, 150);
+
+                            // Guardamos el ID para poder cancelarlo si el usuario sigue de largo
+                            adElement.dataset.timeoutId = timeoutId;
+                        } else {
+                            // 3. Si sale del rango (pasó muy rápido), cancelamos la carga pendiente
+                            const pendingTimeout = entry.target.dataset.timeoutId;
+                            if (pendingTimeout) {
+                                clearTimeout(pendingTimeout);
+                                delete entry.target.dataset.timeoutId;
+                            }
                         }
                     });
                 }, {
-                    // 3. La distancia mágica: 800px antes de que el usuario lo vea
                     rootMargin: "800px 0px"
                 });
 
-                // Aplicamos el observador a cada anuncio intermedio
-                lazyAds.forEach(function (ad) {
-                    adObserver.observe(ad);
-                });
+                lazyAds.forEach(ad => adObserver.observe(ad));
             } else {
-                // Fallback: Si el navegador es muy antiguo, los carga normal
-                lazyAds.forEach(function () {
+                // Fallback igual al original
+                lazyAds.forEach(() => {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
             }
         });
     </script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (!targetElement) return;
-
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const startPosition = window.pageYOffset;
-                const distance = targetPosition - startPosition;
-                const duration = 1500; // <--- DURACIÓN EN MILISEGUNDOS (1.5 seg)
-                let start = null;
-
-                function step(timestamp) {
-                    if (!start) start = timestamp;
-                    const progress = timestamp - start;
-                    const run = ease(progress, startPosition, distance, duration);
-                    window.scrollTo(0, run);
-                    if (progress < duration) window.requestAnimationFrame(step);
-                }
-
-                // Función de suavizado (Acelera al inicio, frena al final)
-                function ease(t, b, c, d) {
-                    t /= d / 2;
-                    if (t < 1) return c / 2 * t * t + b;
-                    t--;
-                    return -c / 2 * (t * (t - 2) - 1) + b;
-                }
-
-                window.requestAnimationFrame(step);
-            });
-        });
-    </script>
-
 
 </body>
 
