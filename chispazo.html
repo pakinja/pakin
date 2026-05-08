@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T12:45:45-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T12:58:18-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T12:45:45-06:00",
+  "dateModified": "2026-05-08T12:58:18-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5338,26 +5338,34 @@
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
+                        // Si el anuncio entra en el radar (800px)
                         if (entry.isIntersecting) {
-                            // --- LÓGICA DE ROBUSTEZ ---
-                            // Creamos un temporizador para confirmar que el usuario se quedó en la zona
-                            const adTimeout = setTimeout(() => {
-                                // Si después de 150ms sigue intersectando, cargamos el anuncio
-                                (window.adsbygoogle = window.adsbygoogle || []).push({});
-                                observer.unobserve(entry.target);
-                            }, 150);
 
-                            // Si el anuncio sale del radar antes de los 150ms (scroll rápido), cancelamos la carga
+                            // --- MEJORA DE ROBUSTEZ ---
+                            // Si el anuncio ya es visible o está MUY cerca (ej. el que está al final del salto)
+                            // lo cargamos con menos delay o prioridad.
+                            const isVeryClose = entry.intersectionRatio > 0;
+
+                            const adTimeout = setTimeout(() => {
+                                // Verificamos de nuevo si sigue ahí antes de disparar
+                                if (entry.isIntersecting) {
+                                    (window.adsbygoogle = window.adsbygoogle || []).push({});
+                                    observer.unobserve(entry.target);
+                                }
+                            }, isVeryClose ? 50 : 200); // Si ya es visible, solo espera 50ms. Si es preventivo (800px), espera 200ms.
+
                             entry.target.dataset.timeoutId = adTimeout;
                         } else {
-                            // Si el usuario "voló" sobre el anuncio, cancelamos la petición pendiente
+                            // Si el usuario pasó de largo muy rápido, limpiamos el timer
                             if (entry.target.dataset.timeoutId) {
                                 clearTimeout(entry.target.dataset.timeoutId);
+                                delete entry.target.dataset.timeoutId;
                             }
                         }
                     });
                 }, {
-                    rootMargin: "800px 0px" // Mantenemos tu distancia ideal
+                    rootMargin: "800px 0px",
+                    threshold: [0, 0.1] // Agregamos un umbral para saber si ya es visible
                 });
 
                 lazyAds.forEach(ad => adObserver.observe(ad));
