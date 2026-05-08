@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T14:41:10-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T15:06:09-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T14:41:10-06:00",
+  "dateModified": "2026-05-08T15:06:09-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5335,75 +5335,68 @@
         document.addEventListener("DOMContentLoaded", function () {
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
+            // 1. Sistema de cola para evitar saturar AdSense en saltos
+            let colaDeAds = [];
+            let cargandoAds = false;
+            let ultimoSalto = 0;
+
+            // 2. Detectar si hubo salto brusco >1500px para activar la cola
+            let lastY = window.pageYOffset;
+            window.addEventListener('scroll', () => {
+                let y = window.pageYOffset;
+                if (Math.abs(y - lastY) > 1500) {
+                    ultimoSalto = Date.now();
+                }
+                lastY = y;
+            }, { passive: true });
+
+            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
+            function procesarCola() {
+                if (cargandoAds || colaDeAds.length === 0) return;
+                cargandoAds = true;
+
+                const ad = colaDeAds.shift();
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+                setTimeout(() => {
+                    cargandoAds = false;
+                    procesarCola(); // revisa si quedan más
+                }, 300);
+            }
+
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
                             const adElement = entry.target;
+                            observer.unobserve(adElement); // solo dejamos de observar cuando lo vamos a cargar
 
-                            // 1. Si ya tiene un temporizador (porque estamos pasando rápido), lo borramos
-                            if (adElement.dataset.timeoutId) {
-                                clearTimeout(adElement.dataset.timeoutId);
-                            }
+                            // Si hubo salto en los últimos 2s = usar cola, si no = carga inmediata
+                            const huboSalto = (Date.now() - ultimoSalto) < 2000;
 
-                            // 2. Creamos una pausa de 150ms. 
-                            // Es tiempo suficiente para ignorar un salto, pero imperceptible al ojo humano.
-                            const timeoutId = setTimeout(() => {
-                                // Verificamos que sigamos en rango antes de pedir el anuncio
-                                if (entry.isIntersecting) {
-                                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                                    observer.unobserve(adElement);
-                                    console.log("AdSense: Anuncio cargado tras pausa de estabilidad.");
-                                }
-                            }, 150);
-
-                            // Guardamos el ID para poder cancelarlo si el usuario sigue de largo
-                            adElement.dataset.timeoutId = timeoutId;
-                        } else {
-                            // 3. Si sale del rango (pasó muy rápido), cancelamos la carga pendiente
-                            const pendingTimeout = entry.target.dataset.timeoutId;
-                            if (pendingTimeout) {
-                                clearTimeout(pendingTimeout);
-                                delete entry.target.dataset.timeoutId;
+                            if (huboSalto) {
+                                colaDeAds.push(adElement);
+                                procesarCola();
+                            } else {
+                                (window.adsbygoogle = window.adsbygoogle || []).push({});
                             }
                         }
                     });
                 }, {
-                    rootMargin: "800px 0px"
+                    rootMargin: "800px 0px" // carga 800px antes de que se vea
                 });
 
-                lazyAds.forEach(ad => adObserver.observe(ad));
+                lazyAds.forEach(function (ad) {
+                    adObserver.observe(ad);
+                });
             } else {
-                // Fallback igual al original
-                lazyAds.forEach(() => {
+                // Fallback para navegadores viejos
+                lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
             }
         });
     </script>
-
-    <script>
-        // Forzar scroll suave en todas las anclas internas
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const id = this.getAttribute('href');
-                    if (id.length > 1) {
-                        const target = document.querySelector(id);
-                        if (target) {
-                            e.preventDefault();
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                            history.pushState(null, null, id);
-                        }
-                    }
-                });
-            });
-        });
-    </script>
-
 
 </body>
 
