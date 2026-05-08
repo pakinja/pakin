@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T15:22:30-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T15:29:35-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T15:22:30-06:00",
+  "dateModified": "2026-05-08T15:29:35-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5359,22 +5359,22 @@
             // 1. Sistema de cola para evitar saturar AdSense en saltos
             let colaDeAds = [];
             let cargandoAds = false;
-            let ultimoSalto = 0;
 
-            // 2. Detectar si hubo salto brusco >1500px para activar la cola
+            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
             window.ultimoSalto = window.ultimoSalto || 0;
 
             // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
             function procesarCola() {
-                if (cargandoAds || colaDeAds.length === 0) return;
-                cargandoAds = true;
+                if (colaDeAds.length === 0) return;
+                if (cargandoAds) return;
 
+                cargandoAds = true;
                 const ad = colaDeAds.shift();
                 (window.adsbygoogle = window.adsbygoogle || []).push({});
 
                 setTimeout(() => {
                     cargandoAds = false;
-                    procesarCola(); // revisa si quedan más
+                    procesarCola();
                 }, 300);
             }
 
@@ -5383,28 +5383,27 @@
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
                             const adElement = entry.target;
-                            observer.unobserve(adElement); // solo dejamos de observar cuando lo vamos a cargar
+                            observer.unobserve(adElement);
 
-                            // Si hubo salto en los últimos 2s = usar cola, si no = carga inmediata
-                            const huboSalto = (Date.now() - ultimoSalto) < 2000;
+                            // Si hubo salto en los últimos 2s = usar cola
+                            const huboSalto = (Date.now() - window.ultimoSalto) < 2000;
 
                             if (huboSalto) {
                                 colaDeAds.push(adElement);
-                                procesarCola();
+                                if (!cargandoAds) procesarCola();
                             } else {
                                 (window.adsbygoogle = window.adsbygoogle || []).push({});
                             }
                         }
                     });
                 }, {
-                    rootMargin: "800px 0px" // carga 800px antes de que se vea
+                    rootMargin: "800px 0px"
                 });
 
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
-                // Fallback para navegadores viejos
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
