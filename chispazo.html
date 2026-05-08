@@ -4,7 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T15:29:35-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T15:46:41-06:00" />
+
+    <script>
+        // Scroll suave + marca salto para el lazy
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+            const id = link.getAttribute('href');
+            if (id.length <= 1) return;
+            const target = document.querySelector(id);
+            if (!target) return;
+
+            e.preventDefault();
+
+            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
+            window.ultimoSalto = Date.now();
+            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
+
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, null, id);
+        }, true);
+    </script>
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +70,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T15:29:35-06:00",
+  "dateModified": "2026-05-08T15:46:41-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -258,19 +279,37 @@
                         
                         <tr>
                             <td>
+                                <time datetime="2026-05-08">
+                                    08 may 2026
+                                </time>
+                            </td>
+                            <td>11993</td>
+                            <!-- <td></td> -->
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                            <td>nan</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
                                 <time datetime="2026-05-07">
                                     07 may 2026
                                 </time>
                             </td>
                             <td>11992</td>
                             <!-- <td></td> -->
-                            <td>5</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>15</td>
-                            <td>23</td>
-                            <td>2</td>
-                            <td>0</td>
+                            <td>5.0</td>
+                            <td>9.0</td>
+                            <td>10.0</td>
+                            <td>15.0</td>
+                            <td>23.0</td>
+                            <td>2.0</td>
+                            <td>0.0</td>
                             <td>12.4</td>
                         </tr>
                         
@@ -282,13 +321,13 @@
                             </td>
                             <td>11991</td>
                             <!-- <td></td> -->
-                            <td>13</td>
-                            <td>14</td>
-                            <td>19</td>
-                            <td>22</td>
-                            <td>24</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td>13.0</td>
+                            <td>14.0</td>
+                            <td>19.0</td>
+                            <td>22.0</td>
+                            <td>24.0</td>
+                            <td>2.0</td>
+                            <td>2.0</td>
                             <td>18.4</td>
                         </tr>
                         
@@ -300,13 +339,13 @@
                             </td>
                             <td>11990</td>
                             <!-- <td></td> -->
-                            <td>6</td>
-                            <td>13</td>
-                            <td>21</td>
-                            <td>24</td>
-                            <td>28</td>
-                            <td>1</td>
-                            <td>1</td>
+                            <td>6.0</td>
+                            <td>13.0</td>
+                            <td>21.0</td>
+                            <td>24.0</td>
+                            <td>28.0</td>
+                            <td>1.0</td>
+                            <td>1.0</td>
                             <td>18.4</td>
                         </tr>
                         
@@ -318,13 +357,13 @@
                             </td>
                             <td>11989</td>
                             <!-- <td></td> -->
-                            <td>2</td>
-                            <td>6</td>
-                            <td>8</td>
-                            <td>18</td>
-                            <td>19</td>
-                            <td>2</td>
-                            <td>2</td>
+                            <td>2.0</td>
+                            <td>6.0</td>
+                            <td>8.0</td>
+                            <td>18.0</td>
+                            <td>19.0</td>
+                            <td>2.0</td>
+                            <td>2.0</td>
                             <td>10.6</td>
                         </tr>
                         
@@ -336,32 +375,14 @@
                             </td>
                             <td>11988</td>
                             <!-- <td></td> -->
-                            <td>4</td>
-                            <td>5</td>
-                            <td>8</td>
-                            <td>14</td>
-                            <td>18</td>
-                            <td>1</td>
-                            <td>0</td>
+                            <td>4.0</td>
+                            <td>5.0</td>
+                            <td>8.0</td>
+                            <td>14.0</td>
+                            <td>18.0</td>
+                            <td>1.0</td>
+                            <td>0.0</td>
                             <td>9.8</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-05">
-                                    05 may 2026
-                                </time>
-                            </td>
-                            <td>11987</td>
-                            <!-- <td></td> -->
-                            <td>2</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>16</td>
-                            <td>24</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>12.2</td>
                         </tr>
                         
                     </tbody>
@@ -5330,27 +5351,6 @@
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=4.js"></script>
-
-    <script>
-        // Scroll suave + marca salto para el lazy
-        document.addEventListener('click', function (e) {
-            const link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            const id = link.getAttribute('href');
-            if (id.length <= 1) return;
-            const target = document.querySelector(id);
-            if (!target) return;
-
-            e.preventDefault();
-
-            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
-            window.ultimoSalto = Date.now();
-            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
-
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, null, id);
-        }, true);
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
