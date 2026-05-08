@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T13:09:49-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T13:13:43-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T13:09:49-06:00",
+  "dateModified": "2026-05-08T13:13:43-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -5339,27 +5339,30 @@
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
                         const isVisible = entry.intersectionRatio > 0;
+                        const adElement = entry.target;
 
                         if (entry.isIntersecting) {
-                            // Si ya es visible (VISTA REAL), cargamos casi de inmediato (50ms)
-                            // Si está lejos (800px), mantenemos el margen de seguridad (250ms)
+                            // Si ya se cargó este anuncio, no hacemos nada más
+                            if (adElement.dataset.adLoaded === "true") return;
+
+                            // Ajuste de tiempos: 50ms si lo ves, 250ms si está lejos
                             const delay = isVisible ? 50 : 250;
 
                             const adTimeout = setTimeout(() => {
                                 if (entry.isIntersecting) {
                                     (window.adsbygoogle = window.adsbygoogle || []).push({});
-                                    observer.unobserve(entry.target);
+                                    // Marcamos como cargado para que sea INMUNE a cancelaciones
+                                    adElement.dataset.adLoaded = "true";
+                                    observer.unobserve(adElement);
                                 }
                             }, delay);
 
-                            entry.target.dataset.timeoutId = adTimeout;
+                            adElement.dataset.timeoutId = adTimeout;
                         } else {
-                            // --- EL CAMBIO CLAVE ---
-                            // Solo cancelamos si el anuncio NO es visible. 
-                            // Si el usuario ya lo está viendo, NO permitimos que el micro-scroll lo cancele.
-                            if (!isVisible && entry.target.dataset.timeoutId) {
-                                clearTimeout(entry.target.dataset.timeoutId);
-                                delete entry.target.dataset.timeoutId;
+                            // SOLO cancelamos si el anuncio NO ha sido disparado aún
+                            if (adElement.dataset.adLoaded !== "true" && adElement.dataset.timeoutId) {
+                                clearTimeout(adElement.dataset.timeoutId);
+                                delete adElement.dataset.timeoutId;
                             }
                         }
                     });
