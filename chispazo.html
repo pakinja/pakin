@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-08T18:16:51-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T18:22:07-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -33,7 +33,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
 
-    <link rel="stylesheet" href="styles/main_pakin?V=30.css">
+    <link rel="stylesheet" href="styles/main_pakin?V=33.css">
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -70,7 +70,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-08T18:16:51-06:00",
+  "dateModified": "2026-05-08T18:22:07-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -146,10 +146,11 @@
         <div class="sub-nav-container bg-light border-bottom">
             <!-- 'no-scrollbar' oculta la barra pero permite deslizar con el dedo -->
             <div class="d-flex flex-nowrap overflow-auto py-2 px-3 no-scrollbar justify-content-lg-center">
-                <!-- ELEMENTO FIJO (Congelado a la izquierda) -->
-                <a href="#resultados" data-google-vignette="false" class="nav-link-scroll item-congelado">
-                    Inicio
-                </a>
+                <!-- EL "MURO" RECTANGULAR QUE SE QUEDA FIJO -->
+                <div class="contenedor-fijo-inicio">
+                    <!-- Tu botón normal, sin clases sticky -->
+                    <a href="#resultados" data-google-vignette="false" class="nav-link-scroll">Inicio</a>
+                </div>
                 <a href="#frecuencias" data-google-vignette="false" class="nav-link-scroll">Frecuencias</a>
                 <a href="#primos" data-google-vignette="false" class="nav-link-scroll">Primos</a>
                 <a href="#repetidos" data-google-vignette="false" class="nav-link-scroll">Repetidos</a>
