@@ -4,12 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-07T20:20:10-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T20:44:46-06:00" />
+
+    <script>
+        // Scroll suave + marca salto para el lazy
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+            const id = link.getAttribute('href');
+            if (id.length <= 1) return;
+            const target = document.querySelector(id);
+            if (!target) return;
+
+            e.preventDefault();
+
+            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
+            window.ultimoSalto = Date.now();
+            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
+
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, null, id);
+        }, true);
+    </script>
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_V11.css">
+    <link rel="stylesheet" href="styles/main_pakin?V=44.css">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -49,7 +70,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-07T20:20:10-06:00",
+          "dateModified": "2026-05-08T20:44:46-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -86,54 +107,96 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR BLANCO -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center">
+    <!-- NAVBAR PRINCIPAL -->
+    <header class="fixed-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-1">
+            <div class="container-fluid px-3 px-lg-4">
 
-                <!-- 1. Solo el logo es un enlace al Home -->
-                <a class="navbar-brand me-0" href="/">
-                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                <!-- Identidad Unificada -->
+                <a class="navbar-brand d-flex align-items-center m-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="38" height="38">
+                    <span class="ms-2 fw-bold text-dark fs-6 espaciado-letras-1">
+                        Melate Retro Analítica
+                    </span>
                 </a>
 
-                <!-- 2. El texto es solo lectura (sin enlace) -->
-                <span class="ms-2 fw-bold text-dark espaciado-letras-1">
-                    M. Retro Analítica
-                </span>
+                <!-- Hamburguesa (Solo visible en Móvil) -->
+                <button class="navbar-toggler border-0 p-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon" style="width: 1.2em; height: 1.2em;"></span>
+                </button>
 
+                <!-- Links Externos (Visibles en Desktop, Ocultos en Móvil) -->
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav ms-auto fw-semibold" style="font-size: 0.9rem;">
+                        <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-verificador">Verificador</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-generador">Generador</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark"
+                                href="melate-retro-resultados-historicos">Histórico</a></li>
+                    </ul>
+                </div>
             </div>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Melate Retro Analítica
-                        </a>
-                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#medias">Alta-Baja</a></li>
-                            <li><a class="dropdown-item" href="#consecutivos">Consecutivos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-verificador">Melate Retro
-                            Verificador</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-retro-generador">Melate Retro
-                            Generador</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark"
-                            href="melate-retro-resultados-historicos">Histórico Completo</a></li>
-                </ul>
+        </nav>
+
+        <!-- SUB-NAV DESLIZABLE (Las 8 Secciones) -->
+        <div class="sub-nav-container bg-light border-bottom">
+            <!-- 'no-scrollbar' oculta la barra pero permite deslizar con el dedo -->
+            <div class="d-flex flex-nowrap overflow-auto py-2 ps-0 pe-3 no-scrollbar align-items-center">
+                <!-- EL "MURO" RECTANGULAR QUE SE QUEDA FIJO -->
+                <div class="contenedor-fijo-inicio">
+                    <!-- Tu botón normal, sin clases sticky -->
+                    <a href="#resultados" data-google-vignette="false" class="nav-link-scroll">Inicio</a>
+                </div>
+                <a href="#frecuencias" data-google-vignette="false" class="nav-link-scroll">Frecuencias</a>
+                <a href="#primos" data-google-vignette="false" class="nav-link-scroll">Primos</a>
+                <a href="#repetidos" data-google-vignette="false" class="nav-link-scroll">Repetidos</a>
+                <a href="#medias" data-google-vignette="false" class="nav-link-scroll">Alta-Baja</a>
+                <a href="#consecutivos" data-google-vignette="false" class="nav-link-scroll">Consecutivos</a>
+                <a href="#alertas" data-google-vignette="false" class="nav-link-scroll">Alertas</a>
+                <a href="#balanza" data-google-vignette="false" class="nav-link-scroll">Balanza</a>
+                <a href="#cronometro" data-google-vignette="false" class="nav-link-scroll">Cronómetro</a>
             </div>
         </div>
-    </nav>
+    </header>
+
+    <!-- Menú Lateral (Offcanvas) para Móvil -->
+    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" style="width: 280px;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navbar-nav">
+                <li class="nav-item px-3 py-2 border-bottom bg-light text-muted small fw-bold text-uppercase">
+                    Herramientas</li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="melate-retro-verificador">Melate Retro
+                        Verificador</a></li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="melate-retro-generador">Melate Retro
+                        Generador</a></li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom"
+                        href="melate-retro-resultados-historicos">Histórico Completo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Menú Lateral (Offcanvas) para Herramientas Externas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Herramientas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom"
+                        href="melate-retro-verificador">Melate Retro Verificador</a></li>
+                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom" href="melate-retro-generador">Melate Retro
+                        Generador</a></li>
+                <li class="nav-item"><a class="nav-link text-dark py-3" href="melate-retro-resultados-historicos">Histórico
+                        Completo</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
@@ -7128,7 +7191,7 @@
 
     <!-- FOOTER BLANCO -->
     <footer class="bg-white border-top py-5 mt-auto">
-        <div class="container text-secondary texto-pequeno-09">
+        <div class="container text-dark texto-pequeno-09">
             <div class="row g-4">
                 <div class="col-md-3">
                     <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Acerca de</h6>
@@ -7176,24 +7239,35 @@
                     <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Contacto</h6>
                     <p class="mb-3">Email: contacto@pakin.lat</p>
                     <div class="d-flex gap-3">
-                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                        <!-- Enlace de Facebook -->
+                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"
+                            aria-label="Visitar nuestro perfil de Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                 class="bi bi-facebook" viewBox="0 0 16 16">
                                 <path
                                     d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                            </svg></a>
-                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            </svg>
+                        </a>
+
+                        <!-- Enlace de X (Twitter) -->
+                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"
+                            aria-label="Visitar nuestro perfil de X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-twitter-x" viewBox="0 0 16 16">
                                 <path
                                     d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
-                            </svg></a>
-                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                            </svg>
+                        </a>
+
+                        <!-- Enlace de LinkedIn -->
+                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"
+                            aria-label="Visitar perfil de LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                 class="bi bi-linkedin" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg></a>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -7212,31 +7286,56 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // 1. Seleccionamos SOLO los anuncios que queremos hacer lazy load
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
+
+            // 1. Sistema de cola para evitar saturar AdSense en saltos
+            let colaDeAds = [];
+            let cargandoAds = false;
+
+            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
+            window.ultimoSalto = window.ultimoSalto || 0;
+
+            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
+            function procesarCola() {
+                if (colaDeAds.length === 0) return;
+                if (cargandoAds) return;
+
+                cargandoAds = true;
+                const ad = colaDeAds.shift();
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+                setTimeout(() => {
+                    cargandoAds = false;
+                    procesarCola();
+                }, 300);
+            }
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
-                        // 2. Si el anuncio está a 800px o menos
                         if (entry.isIntersecting) {
-                            // Pedimos el anuncio a Google
-                            (window.adsbygoogle = window.adsbygoogle || []).push({});
-                            // Dejamos de observarlo para que no se repita
-                            observer.unobserve(entry.target);
+                            const adElement = entry.target;
+                            observer.unobserve(adElement);
+
+                            // Si hubo salto en los últimos 2s = usar cola
+                            const huboSalto = (Date.now() - window.ultimoSalto) < 2000;
+
+                            if (huboSalto) {
+                                colaDeAds.push(adElement);
+                                if (!cargandoAds) procesarCola();
+                            } else {
+                                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                            }
                         }
                     });
                 }, {
-                    // 3. La distancia mágica: 800px antes de que el usuario lo vea
                     rootMargin: "800px 0px"
                 });
 
-                // Aplicamos el observador a cada anuncio intermedio
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
-                // Fallback: Si el navegador es muy antiguo, los carga normal
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
