@@ -4,12 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-07T20:31:46-06:00" />
+    <meta property="article:modified_time" content="2026-05-08T21:36:51-06:00" />
+
+    <script>
+        // Scroll suave + marca salto para el lazy
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+            const id = link.getAttribute('href');
+            if (id.length <= 1) return;
+            const target = document.querySelector(id);
+            if (!target) return;
+
+            e.preventDefault();
+
+            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
+            window.ultimoSalto = Date.now();
+            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
+
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, null, id);
+        }, true);
+    </script>
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/main_V11.css">
+    <link rel="stylesheet" href="styles/main_pakin?V=60.css">
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
@@ -49,7 +70,7 @@
           "headline": "Revanchita Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-07T20:31:46-06:00",
+          "dateModified": "2026-05-08T21:36:51-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Revanchita números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -87,54 +108,96 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR BLANCA -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center">
+    <!-- NAVBAR PRINCIPAL -->
+    <header class="fixed-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-1">
+            <div class="container-fluid px-3 px-lg-4">
 
-                <!-- 1. Solo el logo es un enlace al Home -->
-                <a class="navbar-brand me-0" href="/">
-                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                <!-- Identidad Unificada -->
+                <a class="navbar-brand d-flex align-items-center m-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="38" height="38">
+                    <span class="ms-2 fw-bold text-dark fs-6 espaciado-letras-1">
+                        Revanchita Analítica
+                    </span>
                 </a>
 
-                <!-- 2. El texto es solo lectura (sin enlace) -->
-                <span class="ms-2 fw-bold text-dark espaciado-letras-1">
-                    Revanchita Analítica
-                </span>
+                <!-- Hamburguesa (Solo visible en Móvil) -->
+                <button class="navbar-toggler border-0 p-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon" style="width: 1.2em; height: 1.2em;"></span>
+                </button>
 
+                <!-- Links Externos (Visibles en Desktop, Ocultos en Móvil) -->
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="navbar-nav ms-auto fw-semibold" style="font-size: 0.9rem;">
+                        <li class="nav-item"><a class="nav-link text-dark" href="revanchita-verificador">Verificador</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="melate-generador">Generador</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark"
+                                href="revanchita-resultados-historicos">Histórico</a></li>
+                    </ul>
+                </div>
             </div>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Secciones Revanchita Analítica
-                        </a>
-                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias</a></li>
-                            <li><a class="dropdown-item" href="#primos">Primos</a></li>
-                            <li><a class="dropdown-item" href="#repetidos">Repetidos</a></li>
-                            <li><a class="dropdown-item" href="#medias">Alta-Baja</a></li>
-                            <li><a class="dropdown-item" href="#consecutivos">Consecutivos</a></li>
-                            <li><a class="dropdown-item" href="#alertas">Alertas</a></li>
-                            <li><a class="dropdown-item" href="#balanza">Balanza</a></li>
-                            <li><a class="dropdown-item" href="#cronometro">Cronómetro</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="revanchita-verificador">Revanchita
-                            Verificador</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="melate-generador">Revanchita Generador</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="revanchita-resultados-historicos">Histórico
-                            Completo</a></li>
-                </ul>
+        </nav>
+
+        <!-- SUB-NAV DESLIZABLE (Las 8 Secciones) -->
+        <div class="sub-nav-container bg-light border-bottom">
+            <!-- 'no-scrollbar' oculta la barra pero permite deslizar con el dedo -->
+            <div class="d-flex flex-nowrap overflow-auto py-2 ps-0 pe-3 no-scrollbar align-items-center">
+                <!-- EL "MURO" RECTANGULAR QUE SE QUEDA FIJO -->
+                <div class="contenedor-fijo-inicio">
+                    <!-- Tu botón normal, sin clases sticky -->
+                    <a href="#resultados" data-google-vignette="false" class="nav-link-scroll">Inicio</a>
+                </div>
+                <a href="#frecuencias" data-google-vignette="false" class="nav-link-scroll">Frecuencias</a>
+                <a href="#primos" data-google-vignette="false" class="nav-link-scroll">Primos</a>
+                <a href="#repetidos" data-google-vignette="false" class="nav-link-scroll">Repetidos</a>
+                <a href="#medias" data-google-vignette="false" class="nav-link-scroll">Alta-Baja</a>
+                <a href="#consecutivos" data-google-vignette="false" class="nav-link-scroll">Consecutivos</a>
+                <a href="#alertas" data-google-vignette="false" class="nav-link-scroll">Alertas</a>
+                <a href="#balanza" data-google-vignette="false" class="nav-link-scroll">Balanza</a>
+                <a href="#cronometro" data-google-vignette="false" class="nav-link-scroll">Cronómetro</a>
             </div>
         </div>
-    </nav>
+    </header>
+
+    <!-- Menú Lateral (Offcanvas) para Móvil -->
+    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" style="width: 280px;">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+            <ul class="navbar-nav">
+                <li class="nav-item px-3 py-2 border-bottom bg-light text-muted small fw-bold text-uppercase">
+                    Herramientas</li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="revanchita-verificador">Revanchita
+                        Verificador</a></li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="melate-generador">Revanchita
+                        Generador</a></li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom"
+                        href="revanchita-resultados-historicos">Histórico Completo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Menú Lateral (Offcanvas) para Herramientas Externas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold">Herramientas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom"
+                        href="revanchita-verificador">Revanchita Verificador</a></li>
+                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom" href="melate-generador">Revanchita
+                        Generador</a></li>
+                <li class="nav-item"><a class="nav-link text-dark py-3" href="revanchita-resultados-historicos">Histórico
+                        Completo</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
@@ -153,8 +216,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="titulo-resultados">
             <!-- <div class="text-center mb-4">
-                <h2 id="titulo-resultados" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="titulo-resultados" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Últimos Resultados
                 </h2>
                 <p class="text-dark mt-2 mb-0 fw-medium texto-pequeno-09">
@@ -365,8 +427,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="frecuencias">
             <div class="text-center mt-5 mb-4">
-                <h2 id="frecuencias" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="frecuencias" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Frecuencia y Cobertura de Números Revanchita
                 </h2>
             </div>
@@ -412,8 +473,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="primos">
             <div class="text-center mt-5 mb-4">
-                <h2 id="primos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="primos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Estadística de Números Primos en Revanchita: Tendencia y Ciclos
                 </h2>
             </div>
@@ -753,8 +813,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="repetidos">
             <div class="text-center mt-5 mb-4">
-                <h2 id="repetidos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="repetidos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Estadística de Números Repetidos en Revanchita: Tendencia y Ciclos
                 </h2>
             </div>
@@ -1435,8 +1494,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="medias">
             <div class="text-center mt-5 mb-4">
-                <h2 id="medias" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="medias" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Estadística de Numeración Alta-Baja en Revanchita: Tendencia y Ciclos
                 </h2>
             </div>
@@ -1675,8 +1733,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="consecutivos">
             <div class="text-center mt-5 mb-4">
-                <h2 id="consecutivos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="consecutivos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Estadística de Consecutivos en Revanchita: Tendencia y Ciclos
                 </h2>
             </div>
@@ -1989,8 +2046,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="alertas">
             <div class="text-center mt-5 mb-4">
-                <h2 id="alertas" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="alertas" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Alertas Dinámicas
                 </h2>
             </div>
@@ -2183,8 +2239,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="balanza">
             <div class="text-center mt-5 mb-4">
-                <h2 id="balanza" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="balanza" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Tendencia de Números Revanchita
                 </h2>
             </div>
@@ -5844,8 +5899,7 @@
         <!-- ========================================== -->
         <section aria-labelledby="cronometro">
             <div class="text-center mt-5 mb-4">
-                <h2 id="cronometro" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion"
-                    style="scroll-margin-top: 80px;">
+                <h2 id="cronometro" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
                     Ciclo de Números Revanchita
                 </h2>
             </div>
@@ -9133,31 +9187,56 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // 1. Seleccionamos SOLO los anuncios que queremos hacer lazy load
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
+
+            // 1. Sistema de cola para evitar saturar AdSense en saltos
+            let colaDeAds = [];
+            let cargandoAds = false;
+
+            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
+            window.ultimoSalto = window.ultimoSalto || 0;
+
+            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
+            function procesarCola() {
+                if (colaDeAds.length === 0) return;
+                if (cargandoAds) return;
+
+                cargandoAds = true;
+                const ad = colaDeAds.shift();
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+
+                setTimeout(() => {
+                    cargandoAds = false;
+                    procesarCola();
+                }, 300);
+            }
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
-                        // 2. Si el anuncio está a 800px o menos
                         if (entry.isIntersecting) {
-                            // Pedimos el anuncio a Google
-                            (window.adsbygoogle = window.adsbygoogle || []).push({});
-                            // Dejamos de observarlo para que no se repita
-                            observer.unobserve(entry.target);
+                            const adElement = entry.target;
+                            observer.unobserve(adElement);
+
+                            // Si hubo salto en los últimos 2s = usar cola
+                            const huboSalto = (Date.now() - window.ultimoSalto) < 2000;
+
+                            if (huboSalto) {
+                                colaDeAds.push(adElement);
+                                if (!cargandoAds) procesarCola();
+                            } else {
+                                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                            }
                         }
                     });
                 }, {
-                    // 3. La distancia mágica: 800px antes de que el usuario lo vea
                     rootMargin: "800px 0px"
                 });
 
-                // Aplicamos el observador a cada anuncio intermedio
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
-                // Fallback: Si el navegador es muy antiguo, los carga normal
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
