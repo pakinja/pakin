@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-10T00:41:04-06:00" />
+    <meta property="article:modified_time" content="2026-05-10T11:18:39-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo-verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-05-10T00:41:04-06:00",
+      "dateModified": "2026-05-10T11:18:39-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -203,31 +203,33 @@
         </div>
 
         <!-- CONTENEDOR DE RESULTADOS -->
-        <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-3" id="resultados">
-            <table class="table table-borderless table-hover table-pakin tblres mb-0 align-middle text-center"
-                id="resultTable">
-                <thead class="headfijos">
-                    <tr>
-                        <th>SORTEO</th>
-                        <th>R1</th>
-                        <th>R2</th>
-                        <th>R3</th>
-                        <th>R4</th>
-                        <th>R5</th>
-                        <th>PRIMOS</th>
-                        <th>REPS</th>
-                        <th>MEDIA</th>
-                        <th>FECHA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="noResultRow">
-                        <td colspan="10" class="result-state-cell result-message-empty">
-                            Realiza tu consulta para ver los resultados
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- <div class="myresult resultados contenedor-tabla shadow-sm border rounded-3 mx-auto mb-3" id="resultados"> -->
+        <div class="myresult resultados contenedor-tabla shadow border border-secondary-subtle rounded-3 mx-auto mb-3 bg-light"
+            id="resultados"></div>
+        <table class="table table-borderless table-hover table-pakin tblres mb-0 align-middle text-center"
+            id="resultTable">
+            <thead class="headfijos">
+                <tr>
+                    <th>SORTEO</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                    <th>R3</th>
+                    <th>R4</th>
+                    <th>R5</th>
+                    <th>PRIMOS</th>
+                    <th>REPS</th>
+                    <th>MEDIA</th>
+                    <th>FECHA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="noResultRow">
+                    <td colspan="10" class="result-state-cell result-message-empty">
+                        Realiza tu consulta para ver los resultados
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         </div>
 
         <div class="ad-wrapper ad-top-wrapper">
