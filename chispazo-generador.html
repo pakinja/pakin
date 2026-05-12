@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-05-11T18:01:23-06:00" />
+    <meta property="article:modified_time" content="2026-05-11T18:20:00-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-11T18:01:23-06:00" />
+    <meta property="article:modified_time" content="2026-05-11T18:20:00-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo-generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-05-11T18:01:23-06:00",
+        "dateModified": "2026-05-11T18:20:00-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -226,10 +226,23 @@
                         <th>MEDIA</th>
                     </tr>
                 </thead>
-                <!-- Aquí es donde nuestro JS inyectará los datos -->
-                <tbody id="resultados-body">
-                    <!-- Inicialmente vacío -->
+
+                <tbody id="resultados-body-top"></tbody>
+
+                <tbody id="ad-persistent-body">
+                    <tr class="ad-row-pakin">
+                        <td colspan="8">
+                            <div class="ad-wrapper ad-table-wrapper">
+                                <span class="ad-etiqueta">Publicidad</span>
+                                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid"
+                                    data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-1379506914303333"
+                                    data-ad-slot="3394071240"></ins>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
+
+                <tbody id="resultados-body-bottom"></tbody>
             </table>
 
         </div>
@@ -345,7 +358,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="js/G_master?V=1.js"></script>
+    <script defer src="js/G_master?V=2.js"></script>
     <script defer src="js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script>
 
