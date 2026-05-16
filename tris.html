@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-16T14:21:12-06:00" />
+    <meta property="article:modified_time" content="2026-05-16T14:39:17-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -70,7 +70,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-16T14:21:12-06:00",
+          "dateModified": "2026-05-16T14:39:17-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -848,12 +848,12 @@
 
             <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Intersección</h3>
 
-            <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">
+            <h3 id="titulo-tabla-interseccion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Tendencia de Números Repetidos: Histórico vs Reciente
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
+                <table aria-labelledby="titulo-tabla-interseccion-tendencia"
                     class="table table-borderless table-hover table-pakin tris-ints-bal mb-0 align-middle text-center">
                     <thead>
                         <tr>
@@ -1030,12 +1030,12 @@
                 </table>
             </div>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
+            <h3 id="titulo-tabla-interseccion-ciclos" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Repetidos: Tiempos de Aparición
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
+                <table aria-labelledby="titulo-tabla-interseccion-ciclos"
                     class="table table-borderless table-hover table-pakin tris-ints-cron mb-0 align-middle text-center">
                     <thead>
                         <tr>
@@ -1230,12 +1230,12 @@
 
             <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Posición Exacta</h3>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
+            <h3 id="titulo-tabla-posicion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Tendencia de Números Repetidos: Histórico vs Reciente [%]
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
+                <table aria-labelledby="titulo-tabla-posicion-tendencia"
                     class="table table-borderless table-hover table-pakin tris-repspos-bal mb-0 align-middle text-center">
                     <thead>
                         <tr>
@@ -1386,12 +1386,12 @@
                 </table>
             </div>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
+            <h3 id="titulo-tabla-posicion-ciclos" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Repetidos: Tiempos de Aparición
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
+                <table aria-labelledby="titulo-tabla-posicion-ciclos"
                     class="table table-borderless table-hover table-pakin tris-repspos-cron mb-0 align-middle text-center">
                     <thead>
                         <tr>
@@ -1567,7 +1567,10 @@
                     Alertas Dinámicas
                 </h2>
             </div>
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">Pares - Nones Consecutivos</h3>
+
+            <h3 id="titulo-tabla-alertas-pares-nones" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
+                Pares - Nones Consecutivos
+            </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
@@ -1576,11 +1579,14 @@
                 
             </div>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">Números Atrasados</h3>
+            <h3 id="titulo-tabla-alertas-atrasados" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
+                Números Atrasados
+            </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
-                <table class="table table-borderless table-hover table-pakin mb-0 align-middle text-center">
+                <table aria-labelledby="titulo-tabla-alertas-atrasados"
+                    class="table table-borderless table-hover table-pakin mb-0 align-middle text-center">
                     <thead>
                         <tr>
                             
@@ -1631,7 +1637,10 @@
                 
             </div>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">Completez de Conjunto</h3>
+            <h3 id="titulo-tabla-alertas-completez" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
+                Completez de Conjunto
+            </h3>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <p class="atract flashit text-center my-4 texto-pequeno-11">¡No se encontraron
