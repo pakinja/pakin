@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-15T21:52:24-06:00" />
+    <meta property="article:modified_time" content="2026-05-16T10:21:26-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -70,7 +70,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-05-15T21:52:24-06:00",
+  "dateModified": "2026-05-16T10:21:26-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -467,13 +467,17 @@
                 frecuencia histórica, tendencia reciente y ciclos de aparición.
             </p>
 
-            <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">
-                Tendencia de Números Primos: Histórico vs Reciente [%]
-            </h3>
-
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+                <!-- Añadimos 'caption-top' para asegurar que el título se renderice arriba de la tabla -->
                 <table
-                    class="table table-borderless table-hover table-pakin chispazo-primos-bal mb-0 align-middle text-center">
+                    class="table table-borderless table-hover table-pakin chispazo-primos-bal caption-top mb-0 align-middle text-center">
+
+                    <!-- El caption DEBE ser el primer hijo de <table>. 
+                 Usamos tus clases exactas del H3 más 'px-3' u 'pt-3' opcionales por si necesitas separarlo del borde del contenedor -->
+                    <caption class="text-center text-dark mb-3 fs-5 fw-semibold px-3 pt-3">
+                        Tendencia de Números Primos: Histórico vs Reciente [%]
+                    </caption>
+
                     <thead>
                         <tr>
                             
@@ -510,7 +514,8 @@
                             
                             <td
                                 class="azul">
-                                -4.29</td>
+                                -4.29
+                            </td>
                             
                             
                         </tr>
@@ -536,7 +541,8 @@
                             
                             <td
                                 class="rojo-oscuro">
-                                10.61</td>
+                                10.61
+                            </td>
                             
                             
                         </tr>
@@ -562,7 +568,8 @@
                             
                             <td
                                 class="">
-                                0.93</td>
+                                0.93
+                            </td>
                             
                             
                         </tr>
@@ -588,7 +595,8 @@
                             
                             <td
                                 class="azul-claro">
-                                -6.72</td>
+                                -6.72
+                            </td>
                             
                             
                         </tr>
@@ -614,7 +622,8 @@
                             
                             <td
                                 class="">
-                                -0.4</td>
+                                -0.4
+                            </td>
                             
                             
                         </tr>
@@ -640,7 +649,8 @@
                             
                             <td
                                 class="">
-                                -0.12</td>
+                                -0.12
+                            </td>
                             
                             
                         </tr>
@@ -648,204 +658,205 @@
                     </tbody>
                 </table>
             </div>
+        </section>
 
-            <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
-                Ciclo de Números Primos: Tiempos de Aparición
-            </h3>
+        <h3 class="text-center text-dark mb-3 mt-4 fs-5 fw-semibold">
+            Ciclo de Números Primos: Tiempos de Aparición
+        </h3>
 
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
-                    class="table table-borderless table-hover table-pakin chispazo-primos-cron mb-0 align-middle text-center">
-                    <thead>
-                        <tr>
-                            
-                            <th>PRIMOS</th>
-                            
-                            <th>IDX</th>
-                            
-                            <th>P50</th>
-                            
-                            <th>P80</th>
-                            
-                            <th>ATRASO</th>
-                            
-                            <th>MAX</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table
+                class="table table-borderless table-hover table-pakin chispazo-primos-cron mb-0 align-middle text-center">
+                <thead>
+                    <tr>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(194, 123, 123); color: black;">
-                                1
-                            </td>
-                            
-                            <td style="background-color: rgb(168, 65, 65); color: white;">
-                                6
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                13
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -5
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                58
-                            </td>
-                            
-                        </tr>
+                        <th>PRIMOS</th>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                1
-                            </td>
-                            
-                            <td style="background-color: rgb(194, 123, 123); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(164, 55, 55); color: white;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                19
-                            </td>
-                            
-                        </tr>
+                        <th>IDX</th>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                17
-                            </td>
-                            
-                        </tr>
+                        <th>P50</th>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                3
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                24
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(196, 127, 127); color: black;">
-                                11
-                            </td>
-                            
-                            <td style="background-color: rgb(158, 42, 42); color: white;">
-                                19
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                54
-                            </td>
-                            
-                        </tr>
+                        <th>P80</th>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(191, 115, 115); color: black;">
-                                10
-                            </td>
-                            
-                            <td style="background-color: rgb(168, 65, 65); color: white;">
-                                31
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                64
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -21
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                395
-                            </td>
-                            
-                        </tr>
+                        <th>ATRASO</th>
                         
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(175, 80, 80); color: white;">
-                                387
-                            </td>
-                            
-                            <td style="background-color: rgb(151, 27, 27); color: white;">
-                                875
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                1163
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -488
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                1674
-                            </td>
-                            
-                        </tr>
+                        <th>MAX</th>
                         
-                    </tbody>
-                </table>
-            </div>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            0
+                        </td>
+                        
+                        <td style="background-color: rgb(194, 123, 123); color: black;">
+                            1
+                        </td>
+                        
+                        <td style="background-color: rgb(168, 65, 65); color: white;">
+                            6
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            13
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -5
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            58
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            1
+                        </td>
+                        
+                        <td style="background-color: rgb(194, 123, 123); color: black;">
+                            0
+                        </td>
+                        
+                        <td style="background-color: rgb(164, 55, 55); color: white;">
+                            2
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            4
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -2
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            19
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            2
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            4
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            2
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            4
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            2
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            17
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            3
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            24
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            5
+                        </td>
+                        
+                        <td style="background-color: rgb(196, 127, 127); color: black;">
+                            11
+                        </td>
+                        
+                        <td style="background-color: rgb(158, 42, 42); color: white;">
+                            19
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            54
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            4
+                        </td>
+                        
+                        <td style="background-color: rgb(191, 115, 115); color: black;">
+                            10
+                        </td>
+                        
+                        <td style="background-color: rgb(168, 65, 65); color: white;">
+                            31
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            64
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -21
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            395
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            5
+                        </td>
+                        
+                        <td style="background-color: rgb(175, 80, 80); color: white;">
+                            387
+                        </td>
+                        
+                        <td style="background-color: rgb(151, 27, 27); color: white;">
+                            875
+                        </td>
+                        
+                        <td style="background-color: rgb(139, 0, 0); color: white;">
+                            1163
+                        </td>
+                        
+                        <td style="background-color: rgb(255, 255, 255); color: black;">
+                            -488
+                        </td>
+                        
+                        <td style="background-color: rgb(255,255,255); color: black;">
+                            1674
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
         </section>
 
         <!-- ========================================== -->
