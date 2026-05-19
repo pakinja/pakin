@@ -2,2934 +2,461 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-18T21:28:11-06:00" />
-
-    <script>
-        // Scroll suave + marca salto para el lazy
-        document.addEventListener('click', function (e) {
-            const link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            const id = link.getAttribute('href');
-            if (id.length <= 1) return;
-            const target = document.querySelector(id);
-            if (!target) return;
-
-            e.preventDefault();
-
-            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
-            window.ultimoSalto = Date.now();
-            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
-
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, null, id);
-        }, true);
-    </script>
-
-    <!-- Bootstrap CSS -->
-    <link href="/styles/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="/styles/main_pakin-p4.css">
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
-        defer></script>
-
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
-        crossorigin="anonymous"></script>
-
-    <title>Tris Resultados Históricos y Analítica | Pakin</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="article:modified_time" content="2024-02-19T11:11:00-06:00" />
 
 
-    <!-- METADATOS JSON-LD INTACTOS -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://pakin.lat" },
-            { "@type": "ListItem", "position": 2, "name": "Tris Resultados Históricos y Analítica", "item": "https://pakin.lat/tris" }
-          ]
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Tris Resultados de Hoy, Histórico y Analítica",
-          "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
-          "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-18T21:28:11-06:00",
-          "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
-          "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
-          "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://pakin.lat/tris" },
-          "keywords": ["tris medio día", "tris resultados hoy vespertino", "tris extra", "tris clásico", "tris", "tris resultados", "tris histórico", "números frecuentes", "números atrasados", "números repetidos", "números primos", "números calientes", "números fríos", "tiempos de aparición"],
-          "audience": [
-            { "@type": "Audience", "audienceType": "Mexicanos en México", "geographicArea": "MX" },
-            { "@type": "Audience", "audienceType": "Mexicanos en Estados Unidos", "geographicArea": "US" },
-            { "@type": "Audience", "audienceType": "Mexicanos en Canadá", "geographicArea": "CA" },
-            { "@type": "Audience", "audienceType": "Mexicanos en España", "geographicArea": "ES" }
-          ]
-        }
-    </script>
+  <!-- 1. Bootstrap CSS (Alojado por ti, súper rápido gracias a tu Cloudflare) -->
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="canonical" href="https://pakin.lat/tris/">
-    <meta name="description"
-        content="¡Cómo Ganar el Tris!, Resultados históricos y el más poderoso análisis del sorteo Tris de la Lotería Nacional. ¡Empodérate a diario!">
-    <meta property="og:title" content="Ciencia de Datos Sobre Sorteo Tris">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pakin.lat/tris">
-    <meta property="og:image" content="https://pakin.lat/images/pakin-tris1.webp">
-    <meta property="og:description"
-        content="¡Cómo Ganar el Tris!, Resultados históricos y el más completo análisis. Empodérate a diario!">
-    <meta name="author" content="Francisco Jaramillo A.">
+  <link rel="stylesheet" href="styles/main_pakin-p4.css">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+    crossorigin="anonymous"></script>
+
+  <title>
+    Pakin | Datos y Analítica Más Completa de Sorteos
+  </title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#000000">
+
+
+  <script type="application/ld+json">
+   {
+		  "@context": "https://schema.org",
+		  "@type": "Organization",
+		  "name": "Pakin",
+		  "url": "https://pakin.lat",
+		  "logo": "https://pakin.lat/images/p2.webp",
+		  "description": "Pakin es una plataforma dedicada a proporcionar análisis, datos y resultados de sorteos de lotería.",
+		  "sameAs": [
+		    "https://twitter.com/pakinlat",
+		    "https://www.facebook.com/pakinloteria",
+		    "https://twitter.com/pakinlat"
+		  ],
+		  "contactPoint": {
+		    "@type": "ContactPoint",
+		    "email": "contacto@pakin.lat",
+		    "contactType": "email"
+		  },
+		  "address": {
+		    "@type": "PostalAddress",
+		    "streetAddress": "Manuel M C",
+		    "addressLocality": "CDMX",
+		    "addressRegion": "Estado",
+		    "postalCode": "06470",
+		    "addressCountry": "México"
+		  }
+		}
+  </script>
+  <script type="application/ld+json">
+   {
+	      "@context": "https://schema.org",
+	      "@type": "webPage",
+	      "headline": "Datos, Resultados, Analítica y Herramientas Sobre los Sorteos de Lotería Nacional",
+	      "image": [
+		"https://pakin.lat/images/pakin.webp",
+		"https://pakin.lat/images/p2.svg",
+		"https://pakin.lat/images/pakin-historicos.svg"
+	       ],
+	      "datePublished": "2017-02-05T08:00:00-06:00",
+	      "dateModified": "2026-04-06T11:39:11-06:00",
+	      "keywords": ["chispazo", "tris", "melate", "melate retro", "gana gato", "revancha", "revanchita", "sorteo mayor", "powerball", "megamillions", "resultados de hoy", "verificador de jugadas", "historicos"],
+	      "author": [{
+		  "@type": "Person",
+		  "name": "Francisco Jaramillo",
+		  "url": "https://www.linkedin.com/in/fjaramilloa/"
+		}],
+		"audience": [
+	  {
+		"@type": "Audience",
+		"audienceType": "Mexicanos en México",
+		"geographicArea": "MX"
+	  },
+	  {
+		"@type": "Audience",
+		"audienceType": "Mexicanos en Estados Unidos",
+		"geographicArea": "US"
+	  },
+	 {
+    "@type": "Audience",
+    "audienceType": "Mexicanos en Canadá",
+    "geographicArea": "CA"
+  	},
+	{
+		"@type": "Audience",
+		"audienceType": "Mexicanos en España",
+		"geographicArea": "ES"
+	}	
+	]
+    }
+  </script>
+
+  <link href="https://pakin.lat" rel="canonical" />
+  <meta content="Ys2pTcKmU9Amv0nsd2mSetG51aUJ-0xLhbCoMitDB7w" name="google-site-verification" />
+  <meta content="Datos, Resultados, Analítica y Herramientas Sobre los Sorteos de Lotería Nacional"
+    name="description" />
+  <meta content="Ciencia de Datos Sobre los Sorteos de Lotería Más Populares del Mundo" property="og:title" />
+  <meta content="article" property="og:type" />
+  <meta content="https://pakin.lat" property="og:url" />
+  <meta content="https://pakin.lat/images/pakin-logo2.png" property="og:image" />
+  <meta content="Datos, Resultados, Analítica y Herramientas Sobre los Sorteos de Lotería Nacional"
+    property="og:description" />
+  <meta content="Francisco Jaramillo A." name="author" />
 
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+  <!-- 2. NUEVA BARRA DE NAVEGACIÓN BLANCA -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center">
 
-    <!-- NAVBAR PRINCIPAL -->
-    <header class="fixed-top bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid px-3 px-lg-4">
+        <!-- 1. Solo el logo es un enlace al Home -->
+        <a class="navbar-brand me-0" href="/">
+          <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+        </a>
 
-                <!-- Identidad Unificada -->
-                <a class="navbar-brand d-flex align-items-center m-0" href="/">
-                    <img src="/images/p2.svg" alt="Pakin" width="38" height="38">
-                    <span class="ms-2 fw-bold text-dark fs-5 espaciado-letras-1">
-                        Tris Analítica
-                    </span>
-                </a>
+        <!-- 2. El texto es solo lectura (sin enlace) -->
+        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+          Pakin
+        </span>
 
-                <!-- Hamburguesa (Solo visible en Móvil) -->
-                <button class="navbar-toggler border-0 p-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-label="Abrir menú de navegación">
-                    <span class="navbar-toggler-icon" style="width: 1.2em; height: 1.2em;"></span>
-                </button>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Links Externos (Visibles en Desktop, Ocultos en Móvil) -->
-                <div class="collapse navbar-collapse d-none d-lg-block">
-                    <ul class="navbar-nav ms-auto fw-semibold" style="font-size: 0.9rem;">
-                        <li class="nav-item"><a class="nav-link text-dark" href="/tris/verificador">Verificador</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="/tris/generador">Generador</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark"
-                                href="/tris/historico">Histórico</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  <main class="container py-4 flex-grow-1">
 
-        <!-- SUB-NAV DESLIZABLE (Las 8 Secciones) -->
-        <div class="sub-nav-container mt-3 mt-lg-0">
-            <!-- 'no-scrollbar' oculta la barra pero permite deslizar con el dedo -->
-            <div class="d-flex flex-nowrap overflow-auto py-2 ps-0 pe-3 no-scrollbar align-items-center">
-                <!-- EL "MURO" RECTANGULAR QUE SE QUEDA FIJO -->
-                <div class="contenedor-fijo-inicio">
-                    <!-- Tu botón normal, sin clases sticky -->
-                    <a href="#resultados" data-google-vignette="false" class="nav-link-scroll">Inicio</a>
-                </div>
-                <a href="#frecuencias" data-google-vignette="false" class="nav-link-scroll">Frecuencias</a>
-                <a href="#primos" data-google-vignette="false" class="nav-link-scroll">Primos</a>
-                <a href="#repetidos" data-google-vignette="false" class="nav-link-scroll">Repetidos</a>
-                <a href="#alertas" data-google-vignette="false" class="nav-link-scroll">Alertas</a>
-                <a href="#balanza" data-google-vignette="false" class="nav-link-scroll">Balanza</a>
-                <a href="#cronometro" data-google-vignette="false" class="nav-link-scroll">Cronómetro</a>
-            </div>
-        </div>
-    </header>
+    <!-- Título principal con el "Punto Editorial" en Rojo Vino -->
+    <h2 class="text-center fw-bold text-dark mb-4" style="font-size: clamp(1.2rem, 3vw, 2rem);">
+      Analítica, Datos y Herramientas sobre Sorteos<span style="color: #8B0000;">.</span>
+    </h2>
 
-    <!-- Menú Lateral (Offcanvas) para Móvil -->
-    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" style="width: 280px;">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title fw-bold">Menú</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <ul class="navbar-nav">
-                <li class="nav-item px-3 py-2 border-bottom bg-light text-muted small fw-bold text-uppercase">
-                    Herramientas</li>
-                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/tris/verificador">Tris
-                        Verificador</a></li>
-                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/tris/generador">Tris
-                        Generador</a></li>
-                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/tris/historicos">Histórico
-                        Completo</a></li>
-            </ul>
-        </div>
+    <div class="ad-wrapper ad-top-wrapper">
+      <span class="ad-etiqueta">Publicidad</span>
+      <!-- Index_Top -->
+      <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8987157789"
+        data-full-width-responsive="false"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
 
-    <!-- Menú Lateral (Offcanvas) para Herramientas Externas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-        <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title fw-bold">Herramientas</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom" href="/tris/verificador">Tris
-                        Verificador</a></li>
-                <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom" href="/tris/generador">Tris
-                        Generador</a></li>
-                <li class="nav-item"><a class="nav-link text-dark py-3" href="/tris/historicos">Histórico
-                        Completo</a></li>
-            </ul>
-        </div>
+
+    <!-- Frase motivacional (Letra sutilmente más grande y línea Rojo Vino) -->
+    <div class="alert bg-white text-center shadow-sm text-dark mb-5 mx-auto rounded-3"
+      style="max-width: 650px; font-size: 1.05rem; border-top: 2px solid #8B0000 !important;">
+      "Analiza tus números, encuentra patrones y confía en tu intuición."
     </div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
+    <!-- Widget de Youtube Original -->
+    <!-- <div class="text-center mb-5">
+      <div class="g-ytsubscribe d-inline-block" data-channelid="UCq8uycqV1nI1eSeAcC0pveA" data-count="default"
+        data-layout="full"></div>
+    </div> -->
 
-        <!-- ========================================== -->
-        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
-        <!-- ========================================== -->
-        <div class="text-center mb-1 mt-3 mt-lg-1 mb-lg-3">
-            <h1 class="fw-bold text-dark d-inline-block titulo-principal">
-                Tris: Resultados, Estadística y Analítica<span style="color: #8B0000;">.</span>
-            </h1>
+
+    <!-- INICIO DE LAS TARJETAS (Cambio aquí: g-3 g-md-4) -->
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 g-md-4 justify-content-center">
+
+      <!-- 1. Verificadores -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Verificadores</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="verificadores">Entrar</a>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- ========================================== -->
-        <!-- SECCIÓN: ÚLTIMOS RESULTADOS -->
-        <!-- ========================================== -->
-        <section aria-labelledby="titulo-resultados">
-            <!-- <div class="text-center mb-4">
-                <h2 id="titulo-resultados" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Últimos Resultados
-                </h2>
-                <p class="text-dark mt-2 mb-0 fw-medium texto-pequeno-09">
-                    Datos Abiertos Lotería Nacional Potencializados por Pakin
-                </p>
-            </div> -->
-
-            <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
-            <div class="text-center mb-3">
-                <span
-                    class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal texto-pequeno-085">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                        class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16" aria-hidden="true">
-                        <path
-                            d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1.589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1.979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1.45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0.287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
-                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0.252.434l3.5 2a.5.5 0 0 0.496-.868L8 8.71z" />
-                    </svg>
-                    Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
-                </span>
+      <!-- 2. Generadores -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Generadores</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Jugadas</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="generadores">Entrar</a>
             </div>
-            <!-- FIN PÍLDORA -->
-
-            <div class="ad-wrapper ad-top-wrapper">
-                <span class="ad-etiqueta">Publicidad</span>
-                <!-- Tris_Analitica_Top -->
-                <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333"
-                    data-ad-slot="4668638829" data-full-width-responsive="false"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-
-            <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table
-                    class="table table-borderless table-hover tabla-tris tblres mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>FECHA</th>
-                            
-                            <th>SORTEO</th>
-                            
-                            <th>R1</th>
-                            
-                            <th>R2</th>
-                            
-                            <th>R3</th>
-                            
-                            <th>R4</th>
-                            
-                            <th>R5</th>
-                            
-                            <th>PRIMOS</th>
-                            
-                            <th>REPS</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-18">
-                                    18 may 2026
-                                </time>
-                            </td>
-                            <td>36041</td>
-                            <!-- <td></td> -->
-                            <td>0</td>
-                            <td>3</td>
-                            <td>7</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>0</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-18">
-                                    18 may 2026
-                                </time>
-                            </td>
-                            <td>36040</td>
-                            <!-- <td></td> -->
-                            <td>1</td>
-                            <td>1</td>
-                            <td>5</td>
-                            <td>2</td>
-                            <td>6</td>
-                            <td>2</td>
-                            <td>0</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-18">
-                                    18 may 2026
-                                </time>
-                            </td>
-                            <td>36039</td>
-                            <!-- <td></td> -->
-                            <td>4</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>9</td>
-                            <td>3</td>
-                            <td>1</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-18">
-                                    18 may 2026
-                                </time>
-                            </td>
-                            <td>36038</td>
-                            <!-- <td></td> -->
-                            <td>3</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>9</td>
-                            <td>3</td>
-                            <td>0</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-17">
-                                    17 may 2026
-                                </time>
-                            </td>
-                            <td>36037</td>
-                            <!-- <td></td> -->
-                            <td>4</td>
-                            <td>4</td>
-                            <td>0</td>
-                            <td>5</td>
-                            <td>7</td>
-                            <td>2</td>
-                            <td>0</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>
-                                <time datetime="2026-05-17">
-                                    17 may 2026
-                                </time>
-                            </td>
-                            <td>36036</td>
-                            <!-- <td></td> -->
-                            <td>7</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>8</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>1</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- CTAs -->
-            <div class="d-grid d-md-flex justify-content-md-center gap-3 mt-4 mb-5">
-                <a href="/tris/historicos" class="btn btn-pakin-outline shadow-sm">
-                    Histórico Completo
-                </a>
-                <a href="/tris/verificador" class="btn btn-pakin-outline shadow-sm">
-                    Verificador de Jugadas
-                </a>
-                <a href="/tris/generador" class="btn btn-pakin-outline shadow-sm">
-                    Generador de Jugadas
-                </a>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: FRECUENCIAS -->
-        <!-- ========================================== -->
-        <section aria-labelledby="frecuencias">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="frecuencias" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Frecuencia y Cobertura de Números Tris
-                </h2>
-            </div>
-
-            <p class="texto-analitica px-3 px-md-0">
-                Los gráficos muestran la frecuencia de aparición de cada número en ventanas de 3 y 6 sorteos de Tris,
-                sin considerar la posición.
-
-                La ventana de 6 sorteos corresponde al tiempo promedio estimado necesario para cubrir el rango completo
-                de
-                números,
-                mientras que 3 sorteos representan aproximadamente una desviación estándar por debajo de ese promedio.
-                Esta comparación permite observar cómo evoluciona la cobertura tanto en un escenario temprano como en el
-                comportamiento medio esperado.
-            </p>
-
-
-            <div class="text-center mt-4 mb-3">
-                <h3 class="fw-bold text-dark d-inline-block pb-1 subtitulo-seccion">
-                    Frecuencia Reciente: Últimos 3 Sorteos
-                </h3>
-            </div>
-            <div id="chart_tris6" class="chart-container"></div>
-
-            <div class="text-center mt-4 mb-3">
-                <h3 class="fw-bold text-dark d-inline-block pb-1 subtitulo-seccion">
-                    Frecuencia Ampliada: Últimos 6 Sorteos
-                </h3>
-            </div>
-            <div id="chart_tris10" class="chart-container"></div>
-        </section>
-
-
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Tris_Analitica_Medio1 -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="1093402077"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
+          </div>
         </div>
+      </div>
 
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: PRIMOS -->
-        <!-- ========================================== -->
-        <section aria-labelledby="primos">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="primos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Estadística de Números Primos en Tris: Tendencia y Ciclos
-                </h2>
+      <!-- 3. Históricos -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Históricos</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Completos</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="resultados-historicos-completos">Entrar</a>
             </div>
-
-            <p class="texto-analitica px-3 px-md-0">
-                Cuántos números primos aparecen en cada sorteo Tris. Consulta su
-                frecuencia histórica, tendencia reciente y ciclos de aparición.
-            </p>
-
-            <h3 id="titulo-tabla-primos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Primos: Histórico vs Reciente [%]
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-primos-tendencia"
-                    class="table table-borderless table-hover tris-primos-bal mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>PRIMOS</th>
-                            
-                            <th>HIST</th>
-                            
-                            <th>REC</th>
-                            
-                            <th>TEND</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>0</td>
-                            
-                            
-                            
-                            
-                            <td>7.73</td>
-                            
-                            
-                            
-                            
-                            <td>12.0</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="naranja-oscuro">
-                                4.27</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>1</td>
-                            
-                            
-                            
-                            
-                            <td>25.74</td>
-                            
-                            
-                            
-                            
-                            <td>20.0</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="azul-claro">
-                                -5.74</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>2</td>
-                            
-                            
-                            
-                            
-                            <td>34.52</td>
-                            
-                            
-                            
-                            
-                            <td>28.8</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="azul-claro">
-                                -5.72</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>3</td>
-                            
-                            
-                            
-                            
-                            <td>23.32</td>
-                            
-                            
-                            
-                            
-                            <td>28.8</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="rojo-oscuro">
-                                5.48</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>4</td>
-                            
-                            
-                            
-                            
-                            <td>7.68</td>
-                            
-                            
-                            
-                            
-                            <td>7.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -0.48</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>5</td>
-                            
-                            
-                            
-                            
-                            <td>1.01</td>
-                            
-                            
-                            
-                            
-                            <td>3.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                2.19</td>
-                            
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 id="titulo-tabla-primos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Ciclo de Números Primos: Tiempos de Aparición
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-primos-ciclos"
-                    class="table table-borderless table-hover tris-primos-cron mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>PRIMOS</th>
-                            
-                            <th>IDX</th>
-                            
-                            <th>P50</th>
-                            
-                            <th>P80</th>
-                            
-                            <th>ATRASO</th>
-                            
-                            <th>MAX</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                21
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                9
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                21
-                            </td>
-                            
-                            <td style="background-color: rgb(204, 144, 144); color: black;">
-                                12
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                82
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                1
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                3
-                            </td>
-                            
-                            <td style="background-color: rgb(157, 40, 40); color: white;">
-                                6
-                            </td>
-                            
-                            <td style="background-color: rgb(204, 144, 144); color: black;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                31
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(188, 107, 107); color: black;">
-                                1
-                            </td>
-                            
-                            <td style="background-color: rgb(169, 67, 67); color: white;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -1
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                27
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                3
-                            </td>
-                            
-                            <td style="background-color: rgb(185, 101, 101); color: white;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(172, 72, 72); color: white;">
-                                3
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                6
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -1
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                37
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(197, 128, 128); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(167, 63, 63); color: white;">
-                                9
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                20
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -9
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                118
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(184, 100, 100); color: white;">
-                                73
-                            </td>
-                            
-                            <td style="background-color: rgb(186, 104, 104); color: black;">
-                                70
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                165
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                620
-                            </td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: REPETIDOS -->
-        <!-- ========================================== -->
-        <section aria-labelledby="repetidos">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="repetidos" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Estadística de Números Repetidos en Tris: Tendencia y Ciclos
-                </h2>
-            </div>
-
-            <p class="texto-analitica px-3 px-md-0">Cuántos números se repiten en sorteos consecutivos Tris, tanto sin
-                importar la posición (intersección de conjuntos entre sorteos consecutivos) como en su posición exacta.
-                Consulta su frecuencia histórica, tendencia reciente y ciclos de repetición.
-
-            </p>
-
-            <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Intersección</h3>
-
-            <h3 id="titulo-tabla-interseccion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-interseccion-tendencia"
-                    class="table table-borderless table-hover tris-ints-bal mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>INTS</th>
-                            
-                            <th>HIST</th>
-                            
-                            <th>REC</th>
-                            
-                            <th>TEND</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>0</td>
-                            
-                            
-                            
-                            
-                            <td>8.17</td>
-                            
-                            
-                            
-                            
-                            <td>6.4</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -1.77</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>1</td>
-                            
-                            
-                            
-                            
-                            <td>34.86</td>
-                            
-                            
-                            
-                            
-                            <td>42.4</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="rojo-oscuro">
-                                7.54</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>2</td>
-                            
-                            
-                            
-                            
-                            <td>40.0</td>
-                            
-                            
-                            
-                            
-                            <td>41.6</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                1.6</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>3</td>
-                            
-                            
-                            
-                            
-                            <td>15.19</td>
-                            
-                            
-                            
-                            
-                            <td>8.0</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="azul-claro">
-                                -7.19</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>4</td>
-                            
-                            
-                            
-                            
-                            <td>1.74</td>
-                            
-                            
-                            
-                            
-                            <td>1.6</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -0.14</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>5</td>
-                            
-                            
-                            
-                            
-                            <td>0.04</td>
-                            
-                            
-                            
-                            
-                            <td>0.0</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -0.04</td>
-                            
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 id="titulo-tabla-interseccion-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Ciclo de Números Repetidos: Tiempos de Aparición
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-interseccion-ciclos"
-                    class="table table-borderless table-hover tris-ints-cron mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>INTS</th>
-                            
-                            <th>IDX</th>
-                            
-                            <th>P50</th>
-                            
-                            <th>P80</th>
-                            
-                            <th>ATRASO</th>
-                            
-                            <th>MAX</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                22
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                9
-                            </td>
-                            
-                            <td style="background-color: rgb(150, 24, 24); color: white;">
-                                20
-                            </td>
-                            
-                            <td style="background-color: rgb(197, 129, 129); color: black;">
-                                13
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                88
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                1
-                            </td>
-                            
-                            <td style="background-color: rgb(194, 123, 123); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(164, 55, 55); color: white;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                26
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                29
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                3
-                            </td>
-                            
-                            <td style="background-color: rgb(192, 117, 117); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(172, 72, 72); color: white;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                11
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -3
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                57
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                4
-                            </td>
-                            
-                            <td style="background-color: rgb(179, 88, 88); color: white;">
-                                51
-                            </td>
-                            
-                            <td style="background-color: rgb(195, 125, 125); color: black;">
-                                38
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                90
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                13
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                510
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(210, 156, 156); color: black;">
-                                556
-                            </td>
-                            
-                            <td style="background-color: rgb(197, 127, 127); color: black;">
-                                1192
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                5183
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -636
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                8155
-                            </td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Posición Exacta</h3>
-
-            <h3 id="titulo-tabla-posicion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente [%]
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-posicion-tendencia"
-                    class="table table-borderless table-hover tris-repspos-bal mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>POS</th>
-                            
-                            <th>HIST</th>
-                            
-                            <th>REC</th>
-                            
-                            <th>TEND</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>R1</td>
-                            
-                            
-                            
-                            
-                            <td>10.14</td>
-                            
-                            
-                            
-                            
-                            <td>12.0</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                1.86</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>R2</td>
-                            
-                            
-                            
-                            
-                            <td>9.88</td>
-                            
-                            
-                            
-                            
-                            <td>7.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -2.68</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>R3</td>
-                            
-                            
-                            
-                            
-                            <td>9.77</td>
-                            
-                            
-                            
-                            
-                            <td>7.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -2.57</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>R4</td>
-                            
-                            
-                            
-                            
-                            <td>10.02</td>
-                            
-                            
-                            
-                            
-                            <td>7.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="">
-                                -2.82</td>
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            
-                            <td>R5</td>
-                            
-                            
-                            
-                            
-                            <td>9.98</td>
-                            
-                            
-                            
-                            
-                            <td>15.2</td>
-                            
-                            
-                            
-                            
-                            <td
-                                class="rojo-oscuro">
-                                5.22</td>
-                            
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 id="titulo-tabla-posicion-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Ciclo de Números Repetidos: Tiempos de Aparición
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                <table aria-labelledby="titulo-tabla-posicion-ciclos"
-                    class="table table-borderless table-hover tris-repspos-cron mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>POS</th>
-                            
-                            <th>IDX</th>
-                            
-                            <th>P50</th>
-                            
-                            <th>P80</th>
-                            
-                            <th>ATRASO</th>
-                            
-                            <th>MAX</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                R1
-                            </td>
-                            
-                            <td style="background-color: rgb(184, 99, 99); color: white;">
-                                6
-                            </td>
-                            
-                            <td style="background-color: rgb(178, 86, 86); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                15
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -1
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                98
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                R2
-                            </td>
-                            
-                            <td style="background-color: rgb(184, 99, 99); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(184, 99, 99); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                16
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                0
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                89
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                R3
-                            </td>
-                            
-                            <td style="background-color: rgb(189, 110, 110); color: black;">
-                                5
-                            </td>
-                            
-                            <td style="background-color: rgb(178, 86, 86); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                16
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -2
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                92
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                R4
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                27
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(183, 97, 97); color: white;">
-                                16
-                            </td>
-                            
-                            <td style="background-color: rgb(165, 58, 58); color: white;">
-                                20
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                77
-                            </td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                R5
-                            </td>
-                            
-                            <td style="background-color: rgb(194, 123, 123); color: black;">
-                                2
-                            </td>
-                            
-                            <td style="background-color: rgb(172, 72, 72); color: white;">
-                                7
-                            </td>
-                            
-                            <td style="background-color: rgb(139, 0, 0); color: white;">
-                                16
-                            </td>
-                            
-                            <td style="background-color: rgb(255, 255, 255); color: black;">
-                                -5
-                            </td>
-                            
-                            <td style="background-color: rgb(255,255,255); color: black;">
-                                62
-                            </td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: ALERTAS -->
-        <!-- ========================================== -->
-        <section aria-labelledby="alertas">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="alertas" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Alertas Dinámicas
-                </h2>
-            </div>
-
-            <h3 id="titulo-tabla-alertas-pares-nones" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Pares - Nones Consecutivos
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                
-                <table aria-labelledby="titulo-tabla-alertas-pares-nones"
-                    class="table table-borderless table-hover mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            <th>POS</th>
-                            <th>CANTIDAD</th>
-                            <th>TIPO</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>R2</td>
-                            <td>4</td>
-                            <td>Nones</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>R3</td>
-                            <td>4</td>
-                            <td>Nones</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-                
-            </div>
-
-            <h3 id="titulo-tabla-alertas-atrasados" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Números Atrasados
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                
-                <table aria-labelledby="titulo-tabla-alertas-atrasados"
-                    class="table table-borderless table-hover mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>R1</th>
-                            
-                            <th>R2</th>
-                            
-                            <th>R3</th>
-                            
-                            <th>R4</th>
-                            
-                            <th>R5</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            <td>6</td>
-                            
-                            <td>8</td>
-                            
-                            <td>8</td>
-                            
-                            <td>0</td>
-                            
-                            <td>1</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td>9</td>
-                            
-                            <td>9</td>
-                            
-                            <td>9</td>
-                            
-                            <td></td>
-                            
-                            <td>2</td>
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            <td></td>
-                            
-                            <td></td>
-                            
-                            <td></td>
-                            
-                            <td></td>
-                            
-                            <td>8</td>
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-                
-            </div>
-
-            <h3 id="titulo-tabla-alertas-completez" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Completez de Conjunto
-            </h3>
-
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                
-                <p class="atract flashit text-center my-4 texto-pequeno-11">¡No se encontraron
-                    alertas!</p>
-                
-            </div>
-
-            <div class="ad-wrapper ad-content-wrapper">
-                <span class="ad-etiqueta">Publicidad</span>
-                <!-- Tris_Analitica_Medio2 -->
-                <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333"
-                    data-ad-slot="2481445875" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: BALANZA -->
-        <!-- ========================================== -->
-        <section aria-labelledby="balanza">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="balanza" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Tendencia de Números Tris
-                </h2>
-            </div>
-
-            <p class="texto-analitica px-3 px-md-0">La Balanza Global Tris presenta la diferencia entre la
-                distribución
-                de los últimos -n- sorteos y la distribución histórica de cada número del conjunto Tris en cada una
-                de
-                sus posiciones posibles. Esta herramienta es ideal para quienes buscan mejorar sus probabilidades de
-                ganar
-                en el sorteo Tris de la Lotería Nacional y aspiran a volverse millonarios.<br><br> El valor de la
-                Balanza se muestra en color cyan cuando en los
-                últimos -n- sorteos el porcentaje de cada número es menor o igual a -3% y en color rojo cuando el
-                porcentaje
-                es mayor o igual a +3%
-                con
-                respecto al porcentaje histórico. Con esta información, los participantes pueden hacer ajustes
-                estratégicos
-                para aumentar sus oportunidades de ganar dinero.</p>
-
-            <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Histórico vs Reciente [%]</h3>
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                
-                <table
-                    class="table table-borderless table-hover bal-cron tabla-balanzas mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>NUM</th>
-                            
-                            <th>R1</th>
-                            
-                            <th>R2</th>
-                            
-                            <th>R3</th>
-                            
-                            <th>R4</th>
-                            
-                            <th>R5</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">0</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.08
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -5.18
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -5.34
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -10.21
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.24
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">1</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.14
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.04
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +14.84
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -4.93
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.12
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">2</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.16
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -4.87
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.24
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +4.93
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -10.14
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">3</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +4.9
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.23
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.13
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +9.96
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.1
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">4</td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.04
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.14
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -4.92
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.23
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.17
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">5</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.01
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.32
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.06
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +10.04
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.24
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">6</td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -9.67
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +4.99
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +5.03
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -4.98
-                                </td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +5.04
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">7</td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.1
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +4.79
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.33
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -5.06
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -4.9
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">8</td>
-                                
-                                
-                            
-                            
-                             
-                             <td
-                                class="rojo-oscuro">
-                                +5.04
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -9.8
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -9.87
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                -0.16
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -10.23
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                                <td class="fw-bold bg-light" style="color: #495057 !important;">9</td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -10.18
-                                </td>
-                                
-                                
-                            
-                            
-                               <td
-                                class="azul-claro">
-                                -10.2
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.28
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.2
-                                </td>
-                                
-                                
-                            
-                            
-                             <td
-                                class="">
-                                +0.32
-                                </td>
-                                
-                                
-                        </tr>
-                        
-                    </tbody>
-                </table>
-                
-            </div>
-        </section>
-
-
-        <!-- ========================================== -->
-        <!-- SECCIÓN: CRONÓMETRO -->
-        <!-- ========================================== -->
-        <section aria-labelledby="cronometro">
-            <div class="text-center mt-5 mb-4">
-                <h2 id="cronometro" class="fw-bold text-dark d-inline-block pb-1 titulo-seccion">
-                    Ciclo de Números Tris
-                </h2>
-            </div>
-
-            <p class="texto-analitica px-3 px-md-0">El Cronómetro Global Tris presenta los ciclos de tiempo entre
-                apariciones de cada número en cada una de sus posiciones posibles. Esta herramienta es esencial para
-                quienes
-                participan en el sorteo Tris de la Lotería Nacional y desean aumentar sus posibilidades de ganar grandes
-                premios y volverse millonarios.<br><br>El Cronómetro comienza con el valor del tiempo promedio de
-                aparición
-                de cada número y va disminuyendo con cada sorteo, pasando por diferentes etapas estadísticas que se
-                muestran
-                en un código de colores. Esto permite a los jugadores identificar patrones y hacer estrategias
-                informadas
-                para ganar dinero. Una vez que el número reaparece, el ciclo comienza de nuevo, proporcionando una
-                visión
-                continua y actualizada de las probabilidades.<br><br> El color de fondo de cada celda corresponde a la
-                probabilidad de cada número en cada posición que para Tris es 1/10 uniformemente.</p>
-
-            <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Tiempos de Aparición</h3>
-            <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
-                
-                <table
-                    class="table table-borderless table-hover bal-cron tabla-cronometro mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            
-                            <th>NUM</th>
-                            
-                            <th>R1</th>
-                            
-                            <th>R2</th>
-                            
-                            <th>R3</th>
-                            
-                            <th>R4</th>
-                            
-                            <th>R5</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">0</td>
-                            
-                            
-                            
-                            <td style="color: #1589FF" data-bs-toggle="tooltip"
-                                title="Estado: IDX = 0">
-                                10.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                5.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                6.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -11.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM">
-                                -2.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">1</td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                9.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                9.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                7.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                1.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FDD017" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= P80">
-                                -7.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">2</td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                1.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM">
-                                -5.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                0.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                9.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -22.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">3</td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                7.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #1589FF" data-bs-toggle="tooltip"
-                                title="Estado: IDX = 0">
-                                10.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                8.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #1589FF" data-bs-toggle="tooltip"
-                                title="Estado: IDX = 0">
-                                10.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                5.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">4</td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                8.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                6.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                1.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM">
-                                -3.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                4.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">5</td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                2.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                7.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                9.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                8.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #1589FF" data-bs-toggle="tooltip"
-                                title="Estado: IDX = 0">
-                                10.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">6</td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -10.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                3.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                2.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                0.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                9.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">7</td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                5.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                4.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #1589FF" data-bs-toggle="tooltip"
-                                title="Estado: IDX = 0">
-                                10.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                4.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                6.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">8</td>
-                            
-                            
-                            
-                            <td style="color: #F1E5AC" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM">
-                                -1.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #E41B17" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= 0.5*MAX">
-                                -39.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -20.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                5.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -11.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                        <tr>
-                            
-                            
-                            <td class="fw-bold bg-light" style="color: #495057 !important;">9</td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -11.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FF6700" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= PROM + STD">
-                                -12.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FDD017" data-bs-toggle="tooltip"
-                                title="Estado: IDX >= P80">
-                                -6.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #59E817" data-bs-toggle="tooltip"
-                                title="Estado: IDX ~ PROM">
-                                3.0
-                            </td>
-                            
-                            
-                            
-                            <td style="color: #FFFFFF" data-bs-toggle="tooltip"
-                                title="Estado: IDX < PROM">
-                                8.0
-                            </td>
-                            
-                            
-                            
-                            
-                            
-                            
-                        </tr>
-                        
-                    </tbody>
-                </table>
-                
-            </div>
-        </section>
-
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Tris_Analitica_Fondo -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="9646679514"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
+          </div>
         </div>
+      </div>
 
-    </main>
-
-
-    <!-- FOOTER BLANCO -->
-    <footer class="bg-white border-top py-5 mt-auto">
-        <div class="container text-dark texto-pequeno-09">
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Acerca de</h6>
-                    <p class="mb-0 linea-suave">Un sitio dedicado a empoderar a los participantes de
-                        sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas
-                        a partir de los datos abiertos de Lotería Nacional.</p>
-                </div>
-                <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Enlaces Rápidos
-                    </h6>
-                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores"
-                                target="_blank">Verificadores</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
-                                target="_blank">Generadores</a></li>
-                        <li><a class="text-secondary text-decoration-none"
-                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Sitios de Interés
-                    </h6>
-                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
-                        <li><a class="text-secondary text-decoration-none"
-                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
-                                Nacional</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
-                                target="_blank">Pronosports</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
-                                target="_blank">LigaMX</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/"
-                                target="_blank">Premier League</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX"
-                                target="_blank">LaLiga</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/"
-                                target="_blank">LFA</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/"
-                                target="_blank">MLS</a></li>
-                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/"
-                                target="_blank">NFL</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Contacto</h6>
-                    <p class="mb-3">Email: contacto@pakin.lat</p>
-                    <div class="d-flex gap-3">
-                        <!-- Enlace de Facebook -->
-                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"
-                            aria-label="Visitar nuestro perfil de Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                            </svg>
-                        </a>
-
-                        <!-- Enlace de X (Twitter) -->
-                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"
-                            aria-label="Visitar nuestro perfil de X (Twitter)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                <path
-                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
-                            </svg>
-                        </a>
-
-                        <!-- Enlace de LinkedIn -->
-                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"
-                            aria-label="Visitar perfil de LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+      <!-- 4. Sorteo Zodiaco -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Zodiaco</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="zodiaco">Entrar</a>
             </div>
-            <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
-            <div class="text-center">
-                <p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- Scripts -->
-    <!-- <script src="/js/tris/tris_resultados.js" defer></script> -->
-    <script defer src="/js/tag_manager.js"></script>
-    <script defer src="/js/fecha_actualizar.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-    <script defer src="/js/cobertura?V=4.js"></script>
+      <!-- 5. Tris -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Tris</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;" href="/tris/">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const lazyAds = document.querySelectorAll("ins.ad-intercalado");
+      <!-- 6. Chispazo -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Chispazo</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="/chispazo/">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // 1. Sistema de cola para evitar saturar AdSense en saltos
-            let colaDeAds = [];
-            let cargandoAds = false;
+      <!-- 7. Melate Retro -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Melate Retro</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="melate-retro">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
-            window.ultimoSalto = window.ultimoSalto || 0;
+      <!-- 8. Melate -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Melate</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="melate">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
-            function procesarCola() {
-                if (colaDeAds.length === 0) return;
-                if (cargandoAds) return;
+      <!-- 9. Revancha -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Revancha</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="revancha">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                cargandoAds = true;
-                const ad = colaDeAds.shift();
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
+      <!-- 10. Revanchita -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Revanchita</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="revanchita">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                setTimeout(() => {
-                    cargandoAds = false;
-                    procesarCola();
-                }, 300);
-            }
+      <!-- 11. Gana Gato -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Gana Gato</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">&nbsp;</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="gana-gato">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            if ("IntersectionObserver" in window) {
-                let adObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            const adElement = entry.target;
-                            observer.unobserve(adElement);
+      <!-- 12. Sorteo Superior -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Sorteo Superior</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="superior">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                            // Si hubo salto en los últimos 2s = usar cola
-                            const huboSalto = (Date.now() - window.ultimoSalto) < 2000;
+      <!-- 13. Sorteo Mayor -->
+      <div class="col">
+        <div class="card h-100 shadow-sm card-analitica rounded-4">
+          <div class="card-body d-flex flex-column justify-content-center text-center p-3">
+            <h5 class="card-title fw-bold text-dark text-uppercase mb-2"
+              style="letter-spacing: 0.5px; font-size: clamp(0.8rem, 3.5vw, 1.05rem);">Sorteo Mayor</h5>
+            <p class="card-text text-secondary mb-4" style="font-size: 0.9rem;">Analítica</p>
+            <div class="mt-auto">
+              <a class="btn btn-sutil w-100 fw-semibold rounded-pill" style="font-size: 0.85rem;"
+                href="sorteo-mayor">Entrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                            if (huboSalto) {
-                                colaDeAds.push(adElement);
-                                if (!cargandoAds) procesarCola();
-                            } else {
-                                (window.adsbygoogle = window.adsbygoogle || []).push({});
-                            }
-                        }
-                    });
-                }, {
-                    rootMargin: "800px 0px"
-                });
+    </div>
+  </main>
 
-                lazyAds.forEach(function (ad) {
-                    adObserver.observe(ad);
-                });
-            } else {
-                lazyAds.forEach(function () {
-                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                });
-            }
-        });
-    </script>
+  <!-- FOOTER BLANCO -->
+  <footer class="bg-white border-top py-5 mt-auto">
+    <div class="container text-dark texto-pequeno-09">
+      <div class="row g-4">
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Acerca de</h6>
+          <p class="mb-0 linea-suave">Un sitio dedicado a empoderar a los participantes de
+            sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas
+            a partir de los datos abiertos de Lotería Nacional.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Enlaces Rápidos
+          </h6>
+          <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+            <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores"
+                target="_blank">Verificadores</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
+                target="_blank">Generadores</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/resultados-historicos-completos"
+                target="_blank">Históricos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Sitios de Interés
+          </h6>
+          <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+            <li><a class="text-secondary text-decoration-none" href="https://www.loterianacional.gob.mx/home/index"
+                target="_blank">Lotería
+                Nacional</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
+                target="_blank">Pronosports</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/" target="_blank">LigaMX</a>
+            </li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/"
+                target="_blank">Premier League</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX"
+                target="_blank">LaLiga</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/" target="_blank">LFA</a></li>
+            <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/" target="_blank">MLS</a>
+            </li>
+            <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/"
+                target="_blank">NFL</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Contacto</h6>
+          <p class="mb-3">Email: contacto@pakin.lat</p>
+          <div class="d-flex gap-3">
+            <!-- Enlace de Facebook -->
+            <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"
+              aria-label="Visitar nuestro perfil de Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-facebook"
+                viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              </svg>
+            </a>
+
+            <!-- Enlace de X (Twitter) -->
+            <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"
+              aria-label="Visitar nuestro perfil de X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+              </svg>
+            </a>
+
+            <!-- Enlace de LinkedIn -->
+            <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"
+              aria-label="Visitar perfil de LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-linkedin"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
+      <div class="text-center">
+        <p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
+  <script defer src="/js/tag_manager.js"></script>
 
 </body>
 
