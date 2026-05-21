@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-20T19:50:16-06:00" />
+    <meta property="article:modified_time" content="2026-05-20T21:53:34-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -71,7 +71,7 @@
           "headline": "Melate Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-20T19:50:16-06:00",
+          "dateModified": "2026-05-20T21:53:34-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://www.pakin.lat/images/p2.webp" } },
           "description": "Melate números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -9263,14 +9263,14 @@
         document.addEventListener("DOMContentLoaded", function () {
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
-            // 1. Sistema de cola para evitar saturar AdSense en saltos
+            // 1. Sistema de cola para evitar saturar AdSense
             let colaDeAds = [];
             let cargandoAds = false;
 
-            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
+            // 2. Variable global para detectar saltos (anclas)
             window.ultimoSalto = window.ultimoSalto || 0;
 
-            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
+            // 3. Procesador de la cola (1 ad cada 300ms)
             function procesarCola() {
                 if (colaDeAds.length === 0) return;
                 if (cargandoAds) return;
@@ -9284,6 +9284,10 @@
                     procesarCola();
                 }, 300);
             }
+
+            // --- CAMBIO PARA EL EXPERIMENTO: Margen dinámico ---
+            // Si la pantalla es menor a 768px (móvil), usamos 1200px. Si no, 800px.
+            const margenDinamico = window.innerWidth < 768 ? "600px 0px" : "500px 0px";
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
@@ -9299,18 +9303,21 @@
                                 colaDeAds.push(adElement);
                                 if (!cargandoAds) procesarCola();
                             } else {
-                                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                                // Carga normal (pero enviada a la cola por seguridad)
+                                colaDeAds.push(adElement);
+                                if (!cargandoAds) procesarCola();
                             }
                         }
                     });
                 }, {
-                    rootMargin: "800px 0px"
+                    rootMargin: margenDinamico // Aplicación del margen del experimento
                 });
 
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
+                // Fallback para navegadores antiguos
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
