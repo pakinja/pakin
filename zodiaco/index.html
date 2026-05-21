@@ -1,0 +1,2222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="article:modified_time" content="2026-05-20T18:50:12-06:00" />
+
+    <!-- Bootstrap CSS -->
+    <link href="/styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/main_pakin-p4.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        defer></script>
+
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+        crossorigin="anonymous"></script>
+
+    <title>Sorteo Zodiaco Resultados Históricos y Analítica | Pakin</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+
+    <!-- SEO Schema.org (Adaptado para Sorteo Zodiaco) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["BreadcrumbList", "WebPage"],
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://pakin.lat" },
+        { "@type": "ListItem", "position": 2, "name": "Sorteo Zodiaco Analítica | Pakin", "item": "https://pakin.lat/zodiaco" }
+      ]
+    }
+    </script>
+
+    <link rel="canonical" href="https://pakin.lat/zodiaco/">
+    <meta name="description"
+        content="Resultados históricos, estadística, analítica, gráficos y herramientas sobre el Sorteo Zodiaco. ¡Empodérate a diario!">
+    <meta property="og:title" content="Ciencia de Datos y Herramientas Sobre Sorteo Zodiaco">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pakin.lat/zodiaco/">
+    <meta name="author" content="Francisco Jaramillo A.">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR BLANCA FIXED -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+
+                <!-- 1. Solo el logo es un enlace al Home -->
+                <a class="navbar-brand me-0" href="/">
+                    <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+                </a>
+
+                <!-- 2. El texto es solo lectura (sin enlace) -->
+                <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
+                    Sorteo Zodiaco
+                </span>
+
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Secciones Sorteo Zodiaco
+                        </a>
+                        <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#matriz">Matriz Signo-Terminación</a></li>
+                            <li><a class="dropdown-item" href="#frecuencias">Frecuencias (Gráficos)</a></li>
+                            <li><a class="dropdown-item" href="#signo-zodiacal">Estadística del Signo</a></li>
+                            <li><a class="dropdown-item" href="#terminacion">Estadística de la Terminación</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/mayor/">Sorteo Mayor</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/chispazo/">Chispazo</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/tris/">Tris</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="/melate/">Melate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
+
+        <!-- ========================================== -->
+        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <!-- Sin subrayado, con punto rojo -->
+            <h1 class="fw-bold text-dark d-inline-block" style="font-size: clamp(1.5rem, 4vw, 2.2rem);">
+                Sorteo Zodiaco: Resultados, Estadística y Analítica<span style="color: #8B0000;">.</span>
+            </h1>
+        </div>
+
+        <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
+        <div class="text-center mb-5">
+            <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
+                style="font-size: 0.85rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                    class="bi bi-clock-history me-1 mb-1" viewBox="0 0 16 16">
+                    <path
+                        d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.99.14q-.04.281-.108.552zm-.398 1.584-.96-.326a7 7 0 0 0 .287-.507l.952.315q-.16.32-.35.617zM14.2 14.2a8 8 0 0 1-11.314 0l.708-.707q.452.453.97.82l-.611.792a8 8 0 0 1-1.08-.91m-1.352-.744-.69.724a8 8 0 0 1-.91-.747l.796-.653q.368.423.804.676zM1 8c0-3.866 3.134-7 7-7v1a6 6 0 1 0 6 6h1a7 7 0 0 1-7 7z" />
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                </svg>
+                Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
+            </span>
+        </div>
+        <!-- FIN PÍLDORA -->
+
+
+        <!--==========================================-->
+        <!-- H2: SECCIÓN DE ÚLTIMOS RESULTADOS -->
+        <!-- ========================================== -->
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Últimos Resultados
+            </h2>
+
+            <!-- Párrafo centrado y un poco más pequeño (0.9rem) -->
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Datos Abiertos Lotería Nacional Potencializados por Pakin
+            </p>
+            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.9rem;">
+                Resultados al Primer Premio
+            </p>
+        </div>
+
+        <div class="ad-wrapper ad-top-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Zodiaco_Top -->
+            <ins class="adsbygoogle ad-inteligente" data-ad-client="ca-pub-1379506914303333" data-ad-slot="3743705438"
+                data-full-width-responsive="false"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+
+
+        <div id="resultados" class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table
+                class="table table-borderless table-hover table-pakin tabla-mayor tblres mb-0 align-middle text-center">
+                <thead>
+                    <tr> <th>SORTEO</th>  <th>SIGNO</th>  <th>NUMERO</th>  <th>N1</th>  <th>N2</th>  <th>N3</th>  <th>N4</th> </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr> <td>1745</td>  <td>ACUARIO</td>  <td>106</td>  <td>0</td>  <td>1</td>  <td>0</td>  <td>6</td> </tr>
+                    
+                    <tr> <td>1744</td>  <td>TAURO</td>  <td>7881</td>  <td>7</td>  <td>8</td>  <td>8</td>  <td>1</td> </tr>
+                    
+                    <tr> <td>1743</td>  <td>ESCORPION</td>  <td>3746</td>  <td>3</td>  <td>7</td>  <td>4</td>  <td>6</td> </tr>
+                    
+                    <tr> <td>1742</td>  <td>LIBRA</td>  <td>9543</td>  <td>9</td>  <td>5</td>  <td>4</td>  <td>3</td> </tr>
+                    
+                    <tr> <td>1741</td>  <td>SAGITARIO</td>  <td>1653</td>  <td>1</td>  <td>6</td>  <td>5</td>  <td>3</td> </tr>
+                    
+                    <tr> <td>1740</td>  <td>LEO</td>  <td>585</td>  <td>0</td>  <td>5</td>  <td>8</td>  <td>5</td> </tr>
+                    
+                    <tr> <td>1739</td>  <td>TAURO</td>  <td>6578</td>  <td>6</td>  <td>5</td>  <td>7</td>  <td>8</td> </tr>
+                    
+                    <tr> <td>1738</td>  <td>ARIES</td>  <td>8115</td>  <td>8</td>  <td>1</td>  <td>1</td>  <td>5</td> </tr>
+                    
+                    <tr> <td>1737</td>  <td>CANCER</td>  <td>6427</td>  <td>6</td>  <td>4</td>  <td>2</td>  <td>7</td> </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">
+                Última Mascarilla
+            </h2>
+
+            <div class="text-center mb-4">
+                <a href="https://www.pakin.lat/images/Zodiaco.pdf" target="_blank"
+                    style="display: inline-block; transition: transform 0.2s ease;">
+                    <img class="img-fluid rounded shadow-sm border" src="/images/smayor.png" alt="Pakin Sorteo Zodiaco"
+                        style="max-width: 300px;">
+                </a>
+            </div>
+
+        </div>
+
+
+        <span id="matriz"></span>
+
+        <!-- 2. LA NUEVA MATRIZ SIGNO-TERMINACIÓN -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Matriz: Signo y
+                Terminación</h2>
+        </div>
+        <p class="texto-analitica px-3 px-md-0">
+            Esta matriz cruza los 12 signos con los 10 dígitos finales. El valor dentro de cada recuadro indica la
+            <strong>frecuencia (número de veces)</strong> que ha caído esa combinación exacta en la historia del Premio
+            Mayor.<br><br>
+            El mapa de calor va del color <strong>blanco</strong> (combinaciones que nunca o casi nunca han salido) al
+            color <strong>guinda oscuro</strong> (combinaciones muy frecuentes o "calientes").
+        </p>
+
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover mb-0 align-middle text-center">
+                <thead>
+                    <tr>
+                        <th>SIGNO</th>
+                        <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ARIES</td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(169, 67, 67); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            3
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">TAURO</td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(139, 0, 0); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            5
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">GEMINIS</td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">CANCER</td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">LEO</td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(169, 67, 67); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            3
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">VIRGO</td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">LIBRA</td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ESCORPION</td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">SAGITARIO</td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">CAPRICORNIO</td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(169, 67, 67); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            3
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ACUARIO</td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(169, 67, 67); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            3
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(169, 67, 67); color: white; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            3
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">PISCIS</td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(188, 107, 107); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            2
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(255, 255, 255); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            0
+                        </td>
+                        
+                        <td
+                            style="background-color: rgb(210, 157, 157); color: black; font-weight: 600; border-bottom: 1px solid #dee2e6;">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ad-wrapper ad-content-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Zodiaco_Medio1 -->
+            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="1205158691"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <span id="frecuencias"></span>
+
+        <!-- 3. FRECUENCIAS (Gráficos Apilados) -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Frecuencias Históricas
+            </h2>
+        </div>
+        <p class="texto-analitica px-3 px-md-0">
+            A continuación analizamos la aparición reciente tanto de los <strong>Signos</strong> como de las
+            <strong>Terminaciones</strong> por separado. La barra verde representa el último sorteo, y la amarilla dos
+            sorteos anteriores.
+        </p>
+
+        <!-- Gráficos de Signos -->
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Frecuencia de Signos</h3>
+        <img class="img-frecuencias mb-4" src="/images/zodiaco_signos15_23a7b698.webp" loading="lazy" alt="Pakin Zodiaco Signos 15">
+        <img class="img-frecuencias mb-5" src="/images/zodiaco_signos30_b190c91f.webp" loading="lazy" alt="Pakin Zodiaco Signos 30">
+
+        <hr class="w-75 mx-auto my-5 border-secondary" style="opacity: 0.2;">
+
+        <!-- Gráficos de Terminación -->
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Frecuencia de Terminaciones</h3>
+        <img class="img-frecuencias mb-4" src="/images/zodiaco_n4_15_660c1fb7.webp" loading="lazy"
+            alt="Pakin Zodiaco Terminación 15">
+        <img class="img-frecuencias mb-4" src="/images/zodiaco_n4_30_2befc7be.webp" loading="lazy"
+            alt="Pakin Zodiaco Terminación 30">
+
+
+        <div class="ad-wrapper ad-content-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Zodiaco_Medio2 -->
+            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8892077025"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <span id="signo-zodiacal"></span>
+
+        <!-- 4. ESTADÍSTICA: SIGNO ZODIACAL -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Estadística: Signo
+                Zodiacal</h2>
+        </div>
+
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover tblres tblest mb-0 align-middle text-center">
+                <thead>
+                    <tr> <th>SIGNO</th>  <th>DISTRIBUCION</th>  <th>P20</th>  <th>BALANZA</th> </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ARIES</td>
+                        <td>8.57%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -3.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">TAURO</td>
+                        <td>8.57%</td>
+                        <td>10%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            1.43
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">GEMINIS</td>
+                        <td>8.57%</td>
+                        <td>15%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            6.43
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">CANCER</td>
+                        <td>8.57%</td>
+                        <td>10%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            1.43
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">LEO</td>
+                        <td>7.62%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -2.62
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">VIRGO</td>
+                        <td>8.57%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -3.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">LIBRA</td>
+                        <td>11.43%</td>
+                        <td>20%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            8.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ESCORPION</td>
+                        <td>7.62%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -2.62
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">SAGITARIO</td>
+                        <td>5.71%</td>
+                        <td>10%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            4.29
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">CAPRICORNIO</td>
+                        <td>8.57%</td>
+                        <td>0%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -8.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">ACUARIO</td>
+                        <td>10.48%</td>
+                        <td>10%</td>
+                        <td
+                            class="">
+                            -0.48
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">PISCIS</td>
+                        <td>5.71%</td>
+                        <td>5%</td>
+                        <td
+                            class="">
+                            -0.71
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover tblres tblest mb-0 align-middle text-center">
+                <thead>
+                    <tr> <th>SIGNO</th>  <th>IDX</th>  <th>50_PER</th>  <th>MEDIA</th>  <th>80_PER</th>  <th>MAX</th>  <th>UTA</th> </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            ARIES
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            7
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(204, 144, 144); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(186, 104, 104); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            19
+                        </td>
+                        
+                        <td  class="">
+                            26
+                        </td>
+                        
+                        <td  class="">
+                            16
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            TAURO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            1
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(178, 86, 86); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(168, 65, 65); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            19
+                        </td>
+                        
+                        <td  class="">
+                            26
+                        </td>
+                        
+                        <td  class="">
+                            5
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            GEMINIS
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(188, 107, 107); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            7
+                        </td>
+                        
+                        <td  class="">
+                            54
+                        </td>
+                        
+                        <td  class="">
+                            2
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            CANCER
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            15
+                        </td>
+                        
+                        <td  class="">
+                            31
+                        </td>
+                        
+                        <td  class="">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            LEO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(204, 144, 144); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(190, 113, 113); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            21
+                        </td>
+                        
+                        <td  class="">
+                            27
+                        </td>
+                        
+                        <td  class="">
+                            24
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            VIRGO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(158, 43, 43); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            16
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            20
+                        </td>
+                        
+                        <td  class="">
+                            33
+                        </td>
+                        
+                        <td  class="">
+                            6
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            LIBRA
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            3
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(185, 101, 101); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td  class="">
+                            18
+                        </td>
+                        
+                        <td  class="">
+                            10
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            ESCORPION
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            2
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(178, 86, 86); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(168, 65, 65); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            13
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            20
+                        </td>
+                        
+                        <td  class="">
+                            32
+                        </td>
+                        
+                        <td  class="">
+                            32
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            SAGITARIO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            4
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(166, 60, 60); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(159, 44, 44); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            15
+                        </td>
+                        
+                        <td  class="">
+                            16
+                        </td>
+                        
+                        <td  class="">
+                            11
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            CAPRICORNIO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            20
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td  class="">
+                            13
+                        </td>
+                        
+                        <td  class="">
+                            7
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            ACUARIO
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            0
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(174, 77, 77); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(152, 28, 28); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td  class="">
+                            38
+                        </td>
+                        
+                        <td  class="">
+                            17
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            PISCIS
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(171, 70, 70); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            4
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(157, 40, 40); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            13
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            16
+                        </td>
+                        
+                        <td  class="">
+                            48
+                        </td>
+                        
+                        <td  class="">
+                            48
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+        <span id="terminacion"></span>
+
+        <!-- 5. ESTADÍSTICA: TERMINACIÓN -->
+        <div class="text-center mt-5 mb-4">
+            <h2 class="fw-bold text-dark d-inline-block pb-1"
+                style="font-size: clamp(1.3rem, 3vw, 1.8rem); border-bottom: 3px solid #8B0000;">Estadística:
+                Terminación</h2>
+        </div>
+
+        <h3 class="text-center text-secondary mb-3 fs-5 fw-semibold">Balanza [%]</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover tblres tblest mb-0 align-middle text-center">
+                <thead>
+                    <tr> <th>NUM</th>  <th>DISTRIBUCION</th>  <th>P20</th>  <th>BALANZA</th> </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">0</td>
+                        <td>10.48%</td>
+                        <td>10%</td>
+                        <td
+                            class="">
+                            -0.48
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">1</td>
+                        <td>7.62%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -2.62
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">2</td>
+                        <td>8.57%</td>
+                        <td>0%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -8.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">3</td>
+                        <td>12.38%</td>
+                        <td>10%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -2.38
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">4</td>
+                        <td>5.71%</td>
+                        <td>5%</td>
+                        <td
+                            class="">
+                            -0.71
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">5</td>
+                        <td>11.43%</td>
+                        <td>20%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            8.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">6</td>
+                        <td>11.43%</td>
+                        <td>30%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            18.57
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">7</td>
+                        <td>10.48%</td>
+                        <td>15%</td>
+                        <td
+                            class="rojo-oscuro fw-bold">
+                            4.52
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">8</td>
+                        <td>11.43%</td>
+                        <td>5%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -6.43
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fw-bold bg-light">9</td>
+                        <td>10.48%</td>
+                        <td>0%</td>
+                        <td
+                            class="azul-claro fw-bold">
+                            -10.48
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="text-center text-secondary mb-3 mt-4 fs-5 fw-semibold">Cronómetro</h3>
+        <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
+            <table class="table table-borderless table-hover tblres tblest mb-0 align-middle text-center">
+                <thead>
+                    <tr> <th>NUM</th>  <th>IDX</th>  <th>50_PER</th>  <th>MEDIA</th>  <th>80_PER</th>  <th>MAX</th>  <th>UTA</th> </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            0
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(164, 55, 55); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            11
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            7
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            13
+                        </td>
+                        
+                        <td  class="">
+                            26
+                        </td>
+                        
+                        <td  class="">
+                            7
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            1
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            1
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(191, 114, 114); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(162, 51, 51); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            14
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            20
+                        </td>
+                        
+                        <td  class="">
+                            35
+                        </td>
+                        
+                        <td  class="">
+                            35
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            2
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            22
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(206, 147, 147); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(156, 37, 37); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            18
+                        </td>
+                        
+                        <td  class="">
+                            23
+                        </td>
+                        
+                        <td  class="">
+                            3
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            3
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            3
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(188, 107, 107); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(153, 31, 31); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            7
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td  class="">
+                            19
+                        </td>
+                        
+                        <td  class="">
+                            1
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            4
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            16
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(149, 22, 22); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            15
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            16
+                        </td>
+                        
+                        <td  class="">
+                            44
+                        </td>
+                        
+                        <td  class="">
+                            10
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            5
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(225, 190, 190); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(198, 131, 131); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            15
+                        </td>
+                        
+                        <td  class="">
+                            23
+                        </td>
+                        
+                        <td  class="">
+                            2
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            0
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(171, 70, 70); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            7
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(157, 40, 40); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td  class="">
+                            24
+                        </td>
+                        
+                        <td  class="">
+                            2
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            7
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(204, 144, 144); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td  class="">
+                            29
+                        </td>
+                        
+                        <td  class="">
+                            7
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(194, 123, 123); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            12
+                        </td>
+                        
+                        <td  class="">
+                            25
+                        </td>
+                        
+                        <td  class="">
+                            15
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td  class="fw-bold bg-light">
+                            9
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(139, 0, 0); color: white; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            35
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(231, 203, 203); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            8
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(255, 255, 255); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            6
+                        </td>
+                        
+                        <td 
+                            style="background-color: rgb(219, 177, 177); color: black; border-bottom: 1px solid #dee2e6;"
+                             class="">
+                            10
+                        </td>
+                        
+                        <td  class="">
+                            11
+                        </td>
+                        
+                        <td  class="">
+                            8
+                        </td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ad-wrapper ad-content-wrapper">
+            <span class="ad-etiqueta">Publicidad</span>
+            <!-- Zodiaco_Fondo -->
+            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2052395992"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+    </main>
+
+    <!-- FOOTER BLANCO -->
+    <footer class="bg-white border-top py-5 mt-auto">
+        <div class="container text-dark texto-pequeno-09">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Acerca de</h6>
+                    <p class="mb-0 linea-suave">Un sitio dedicado a empoderar a los participantes de
+                        sorteos con conocimiento de ciencia de datos, analítica y herramientas creadas y potencializadas
+                        a partir de los datos abiertos de Lotería Nacional.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Enlaces Rápidos
+                    </h6>
+                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/verificadores"
+                                target="_blank">Verificadores</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://pakin.lat/generadores"
+                                target="_blank">Generadores</a></li>
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://pakin.lat/resultados-historicos-completos" target="_blank">Históricos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Sitios de Interés
+                    </h6>
+                    <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+                        <li><a class="text-secondary text-decoration-none"
+                                href="https://www.loterianacional.gob.mx/home/index" target="_blank">Lotería
+                                Nacional</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.pronosports.net/"
+                                target="_blank">Pronosports</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.ligamx.net/"
+                                target="_blank">LigaMX</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.premierleague.com/en/"
+                                target="_blank">Premier League</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.laliga.com/en-MX"
+                                target="_blank">LaLiga</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://lfa.mx/"
+                                target="_blank">LFA</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://es.mlssoccer.com/"
+                                target="_blank">MLS</a></li>
+                        <li><a class="text-secondary text-decoration-none" href="https://www.nfl.com/international/"
+                                target="_blank">NFL</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-dark fw-bold text-uppercase mb-3 espaciado-letras-05">Contacto</h6>
+                    <p class="mb-3">Email: contacto@pakin.lat</p>
+                    <div class="d-flex gap-3">
+                        <!-- Enlace de Facebook -->
+                        <a class="text-secondary" href="https://www.facebook.com/pakinloteria" target="_blank"
+                            aria-label="Visitar nuestro perfil de Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+                        </a>
+
+                        <!-- Enlace de X (Twitter) -->
+                        <a class="text-secondary" href="https://x.com/pakinlat" target="_blank"
+                            aria-label="Visitar nuestro perfil de X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                            </svg>
+                        </a>
+
+                        <!-- Enlace de LinkedIn -->
+                        <a class="text-secondary" href="https://www.linkedin.com/in/fjaramilloa/" target="_blank"
+                            aria-label="Visitar perfil de LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary" style="opacity: 0.2;" />
+            <div class="text-center">
+                <p class="mb-0" style="font-size: 0.85rem;">© 2026 Pakin.lat - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script defer src="/js/tag_manager.js"></script>
+    <script defer src="/js/fecha_actualizar.js"></script>
+
+
+</body>
+
+</html>
