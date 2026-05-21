@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-20T19:51:06-06:00" />
+    <meta property="article:modified_time" content="2026-05-20T21:54:12-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -71,7 +71,7 @@
           "headline": "Revancha Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-20T19:51:06-06:00",
+          "dateModified": "2026-05-20T21:54:12-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Revancha números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -133,8 +133,7 @@
                         <li class="nav-item"><a class="nav-link text-dark" href="/revancha/verificador">Verificador</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-dark" href="/melate/generador">Generador</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark"
-                                href="/revancha/historico">Histórico</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="/revancha/historico">Histórico</a></li>
                     </ul>
                 </div>
             </div>
@@ -175,8 +174,8 @@
                         Verificador</a></li>
                 <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/melate/generador">Revancha
                         Generador</a></li>
-                <li><a class="nav-link px-3 py-3 text-dark border-bottom"
-                        href="/revancha/historico">Histórico Completo</a></li>
+                <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/revancha/historico">Histórico
+                        Completo</a></li>
             </ul>
         </div>
     </div>
@@ -1142,7 +1141,8 @@
 
                 <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Posición Exacta</h3>
 
-                <h3 id="titulo-tabla-repetidos-posicion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
+                <h3 id="titulo-tabla-repetidos-posicion-tendencia"
+                    class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                     Tendencia de Números Repetidos: Histórico vs Reciente [%]
                 </h3>
 
@@ -1324,7 +1324,8 @@
                     </table>
                 </div>
 
-                <h3 id="titulo-tabla-repetidos-posicion-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
+                <h3 id="titulo-tabla-repetidos-posicion-ciclos"
+                    class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                     Ciclo de Números Repetidos: Tiempos de Aparición
                 </h3>
 
@@ -2100,7 +2101,7 @@
                         Alertas Dinámicas
                     </h2>
                 </div>
-                
+
                 <h3 id="titulo-tabla-alertas-pares-nones" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                     Pares - Nones Consecutivos
                 </h3>
@@ -2132,7 +2133,7 @@
                 <h3 id="titulo-tabla-alertas-atrasados" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                     Números Atrasados
                 </h3>
-                
+
                 <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                     
                     <table aria-labelledby="titulo-tabla-alertas-atrasados"
@@ -9265,14 +9266,14 @@
         document.addEventListener("DOMContentLoaded", function () {
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
-            // 1. Sistema de cola para evitar saturar AdSense en saltos
+            // 1. Sistema de cola para evitar saturar AdSense
             let colaDeAds = [];
             let cargandoAds = false;
 
-            // 2. Usamos el ultimoSalto global que marca el script de scroll suave
+            // 2. Variable global para detectar saltos (anclas)
             window.ultimoSalto = window.ultimoSalto || 0;
 
-            // 3. Procesa la cola: 1 ad cada 300ms para no romper AdSense
+            // 3. Procesador de la cola (1 ad cada 300ms)
             function procesarCola() {
                 if (colaDeAds.length === 0) return;
                 if (cargandoAds) return;
@@ -9286,6 +9287,10 @@
                     procesarCola();
                 }, 300);
             }
+
+            // --- CAMBIO PARA EL EXPERIMENTO: Margen dinámico ---
+            // Si la pantalla es menor a 768px (móvil), usamos 1200px. Si no, 800px.
+            const margenDinamico = window.innerWidth < 768 ? "600px 0px" : "500px 0px";
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
@@ -9301,18 +9306,21 @@
                                 colaDeAds.push(adElement);
                                 if (!cargandoAds) procesarCola();
                             } else {
-                                (window.adsbygoogle = window.adsbygoogle || []).push({});
+                                // Carga normal (pero enviada a la cola por seguridad)
+                                colaDeAds.push(adElement);
+                                if (!cargandoAds) procesarCola();
                             }
                         }
                     });
                 }, {
-                    rootMargin: "800px 0px"
+                    rootMargin: margenDinamico // Aplicación del margen del experimento
                 });
 
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
+                // Fallback para navegadores antiguos
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
