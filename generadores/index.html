@@ -7,9 +7,9 @@
   <meta http-equiv="last-modified" content="Mon, 24 Mar 2025 09:30:00 CST">
 
   <!-- Bootstrap CSS (Local) -->
-  <link href="styles/bootstrap.min.css" rel="stylesheet">
+  <link href="/styles/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/main_pakin-p4.css">
+  <link rel="stylesheet" href="/styles/main_pakin-p4.css">
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
   <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
 
@@ -49,13 +49,13 @@
    }
   </script>
 
-  <link href="https://www.pakin.lat/generadores" rel="canonical" />
+  <link href="https://www.pakin.lat/generadores/" rel="canonical" />
   <meta
     content="Busca tus jugadas de los sorteos de Lotería Nacional a partir de la base de datos de combinaciones que nunca han resultado ganadoras."
     name="description" />
   <meta content="Ciencia de Datos y Herramientas Sobre Sorteos de Lotería Nacional" property="og:title" />
   <meta content="website" property="og:type" />
-  <meta content="https://www.pakin.lat/generadores" property="og:url" />
+  <meta content="https://www.pakin.lat/generadores/" property="og:url" />
   <meta content="https://www.pakin.lat/images/pakin-buscadores.webp" property="og:image" />
   <meta
     content="¡Cómo Ganar los sorteos de Lotería Nacional!, Resultados históricos y análisis de los sorteos Melate, Revancha, Revanchita, Melate Retro, Chispazo, Tris, Sorteo Mayor y Más. ¡Empodérate a diario!"
@@ -65,44 +65,47 @@
 
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="no-nav d-flex flex-column min-vh-100">
 
-  <!-- NAVBAR LIMPIO Y SIN DESPLEGABLE (SIN LINK A LA PÁGINA ACTUAL) -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center">
+  <!-- NAVBAR PRINCIPAL -->
+  <header class="fixed-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid px-3 px-lg-4">
 
-        <!-- 1. Solo el logo es un enlace al Home -->
-        <a class="navbar-brand me-0" href="/">
-          <img src="/images/p2.svg" alt="Pakin" width="45" height="45" style="object-fit: contain;">
+        <!-- Identidad Unificada -->
+        <a class="navbar-brand d-flex align-items-center m-0" href="/">
+          <img src="/images/p2.svg" alt="Pakin" width="38" height="38">
+          <span class="ms-2 fw-bold text-dark fs-5 espaciado-letras-1">
+            Generadores
+          </span>
         </a>
 
-        <!-- 2. El texto es solo lectura (sin enlace) -->
-        <span class="ms-2 fw-bold text-dark" style="letter-spacing: 1px; font-size: 1.3rem;">
-          Generadores
-        </span>
+        <!-- Hamburguesa (Solo visible en Móvil) -->
+        <button class="navbar-toggler border-0 p-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon" style="width: 1.2em; height: 1.2em;"></span>
+        </button>
 
+        <!-- Links Externos (Visibles en Desktop, Ocultos en Móvil) -->
+        <div class="collapse navbar-collapse d-none d-lg-block">
+          <ul class="navbar-nav ms-auto fw-semibold" style="font-size: 0.9rem;">
+            <li class="nav-item"><a class="nav-link text-dark" href="/verificadores/">Verificadores</a>
+            </li>
+            <!-- <li class="nav-item"><a class="nav-link text-dark" href="/chispazo/generador">Generador</a></li> -->
+            <li class="nav-item"><a class="nav-link text-dark" href="/historicos/">Historicos</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold" style="font-size: 0.95rem;">
-          <li class="nav-item"><a class="nav-link text-dark" href="/verificadores">Verificadores</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="/resultados-historicos-completos">Históricos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container py-4 flex-grow-1">
 
     <!-- Título principal -->
     <h2 class="text-center fw-bold text-dark mb-4" style="font-size: clamp(1.2rem, 3vw, 2rem);">
-      Busca Tus Jugadas<span style="color: #8B0000;">.</span>
+      Busca Tus Combinaciones<span style="color: #8B0000;">.</span>
     </h2>
 
     <div class="ad-wrapper ad-top-wrapper">
