@@ -9,6 +9,9 @@
   <!-- Bootstrap CSS (Local) -->
   <link href="/styles/bootstrap.min.css" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+    defer></script>
+
   <link rel="stylesheet" href="/styles/main_pakin-p4.css">
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
   <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -68,7 +71,7 @@
 <body class="no-nav d-flex flex-column min-vh-100">
 
   <!-- NAVBAR PRINCIPAL -->
-  <header class="fixed-top bg-white shadow-sm">
+  <header class="fixed-top bg-white">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-3 px-lg-4">
 
@@ -91,14 +94,45 @@
           <ul class="navbar-nav ms-auto fw-semibold" style="font-size: 0.9rem;">
             <li class="nav-item"><a class="nav-link text-dark" href="/verificadores/">Verificadores</a>
             </li>
-            <!-- <li class="nav-item"><a class="nav-link text-dark" href="/chispazo/generador">Generador</a></li> -->
-            <li class="nav-item"><a class="nav-link text-dark" href="/historicos/">Historicos</a>
-            </li>
+            <li class="nav-item"><a class="nav-link text-dark" href="/historicos/">Históricos</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+
+  <!-- Menú Lateral (Offcanvas) para Móvil -->
+  <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" style="width: 280px;">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold">Menú</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <ul class="navbar-nav">
+        <li class="nav-item px-3 py-2 border-bottom bg-light text-muted small fw-bold text-uppercase">
+          Herramientas</li>
+        <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/verificadores/">Verificadores
+          </a></li>
+        <li><a class="nav-link px-3 py-3 text-dark border-bottom" href="/historicos/">Históricos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Menú Lateral (Offcanvas) para Herramientas Externas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold">Herramientas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item"><a class="nav-link text-dark py-3 border-bottom" href="/verificadores/">Verificadores
+          </a></li>
+        <li class="nav-item"><a class="nav-link text-dark py-3" href="/historicos/">Históricos
+            Completo</a></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container py-4 flex-grow-1">
