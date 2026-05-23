@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-21T15:05:53-06:00" />
+    <meta property="article:modified_time" content="2026-05-22T21:16:47-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -70,7 +70,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-21T15:05:53-06:00",
+          "dateModified": "2026-05-22T21:16:47-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1620,13 +1620,6 @@
             </div>
         </section>
 
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Melate_Retro_Analitica_Medio1.1 -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8686813453"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
-        </div>
-
         <!-- ========================================== -->
         <!-- SECCIÓN: ALTA-BAJA -->
         <!-- ========================================== -->
@@ -2346,13 +2339,6 @@
                 
             </div>
         </section>
-
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Melate_Retro_Analitica_Medio2 -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="4320390129"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
-        </div>
 
         <!-- ========================================== -->
         <!-- SECCIÓN: BALANZA -->
@@ -7188,13 +7174,6 @@
             </div>
         </section>
 
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
-            <!-- Melate_Retro_Analitica_Fondo -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="6665670256"
-                data-ad-format="auto" data-full-width-responsive="true"></ins>
-        </div>
-
     </main>
 
     <!-- FOOTER BLANCO -->
@@ -7294,63 +7273,48 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Usa querySelectorAll para agarrar TODOS los bloques intercalados que existan
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
-            // 1. Sistema de cola para evitar saturar AdSense
-            let colaDeAds = [];
-            let cargandoAds = false;
+            if (lazyAds.length === 0) return; // Si no hay ninguno, sale limpiamente
 
-            // 2. Variable global para detectar saltos (anclas)
             window.ultimoSalto = window.ultimoSalto || 0;
-
-            // 3. Procesador de la cola (1 ad cada 300ms)
-            function procesarCola() {
-                if (colaDeAds.length === 0) return;
-                if (cargandoAds) return;
-
-                cargandoAds = true;
-                const ad = colaDeAds.shift();
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
-
-                setTimeout(() => {
-                    cargandoAds = false;
-                    procesarCola();
-                }, 300);
-            }
-
-            // --- CAMBIO PARA EL EXPERIMENTO: Margen dinámico ---
-            // Si la pantalla es menor a 768px (móvil), usamos 1200px. Si no, 800px.
-            const margenDinamico = window.innerWidth < 768 ? "600px 0px" : "500px 0px";
+            const margenEstricto = window.innerWidth < 768 ? "150px 0px" : "200px 0px";
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
                             const adElement = entry.target;
-                            observer.unobserve(adElement);
 
-                            // Si hubo salto en los últimos 2s = usar cola
-                            const huboSalto = (Date.now() - window.ultimoSalto) < 2000;
+                            // ESCUDO DE SALTOS
+                            const tiempoDesdeSalto = Date.now() - window.ultimoSalto;
+                            const huboSalto = tiempoDesdeSalto < 2000;
 
                             if (huboSalto) {
-                                colaDeAds.push(adElement);
-                                if (!cargandoAds) procesarCola();
-                            } else {
-                                // Carga normal (pero enviada a la cola por seguridad)
-                                colaDeAds.push(adElement);
-                                if (!cargandoAds) procesarCola();
+                                console.log('%c⏳ LAZY EVITADO: Usuario pasó de largo en salto.', 'background:#ffa000; color:#000');
+                                return;
                             }
+
+                            console.log('%c🎯 ANUNCIO EN VISTA: Cargando de forma legítima.', 'background:#00c853; color:#fff');
+
+                            // Deja de observar ESTE bloque específico que ya entró en pantalla
+                            observer.unobserve(adElement);
+
+                            // Carga el anuncio correspondiente
+                            (window.adsbygoogle = window.adsbygoogle || []).push({});
                         }
                     });
                 }, {
-                    rootMargin: margenDinamico // Aplicación del margen del experimento
+                    rootMargin: margenEstricto
                 });
 
+                // Vigila de forma independiente cada bloque que encuentre, sean los que sean
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
-                // Fallback para navegadores antiguos
+                // Fallback antiguo
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
