@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-22T21:16:47-06:00" />
+    <meta property="article:modified_time" content="2026-05-22T21:33:37-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -70,7 +70,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-22T21:16:47-06:00",
+          "dateModified": "2026-05-22T21:33:37-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7273,13 +7273,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Usa querySelectorAll para agarrar TODOS los bloques intercalados que existan
+            // Selecciona todos los bloques intercalados (habitualmente quedará solo MEDIO1)
             const lazyAds = document.querySelectorAll("ins.ad-intercalado");
 
             if (lazyAds.length === 0) return; // Si no hay ninguno, sale limpiamente
 
             window.ultimoSalto = window.ultimoSalto || 0;
-            const margenEstricto = window.innerWidth < 768 ? "150px 0px" : "200px 0px";
+
+            // MARGEN SEGURO PARA REDES LENTAS: 300px en móvil y 400px en desktop
+            // Le da al anuncio una pantalla de ventaja para renderizarse con calma
+            const margenSeguro = window.innerWidth < 768 ? "300px 0px" : "400px 0px";
 
             if ("IntersectionObserver" in window) {
                 let adObserver = new IntersectionObserver(function (entries, observer) {
@@ -7287,7 +7290,7 @@
                         if (entry.isIntersecting) {
                             const adElement = entry.target;
 
-                            // ESCUDO DE SALTOS
+                            // ESCUDO DE SALTOS: Mantenemos la ventana de resguardo de 2 segundos
                             const tiempoDesdeSalto = Date.now() - window.ultimoSalto;
                             const huboSalto = tiempoDesdeSalto < 2000;
 
@@ -7296,25 +7299,24 @@
                                 return;
                             }
 
-                            console.log('%c🎯 ANUNCIO EN VISTA: Cargando de forma legítima.', 'background:#00c853; color:#fff');
+                            console.log('%c🎯 ANUNCIO EN VISTA: Cargando de forma legítima con margen seguro.', 'background:#00c853; color:#fff');
 
-                            // Deja de observar ESTE bloque específico que ya entró en pantalla
+                            // Deja de observar este bloque específico porque ya inició su carga
                             observer.unobserve(adElement);
 
-                            // Carga el anuncio correspondiente
+                            // Petición oficial a AdSense
                             (window.adsbygoogle = window.adsbygoogle || []).push({});
                         }
                     });
                 }, {
-                    rootMargin: margenEstricto
+                    rootMargin: margenSeguro // Aplicación del margen de protección para redes
                 });
 
-                // Vigila de forma independiente cada bloque que encuentre, sean los que sean
                 lazyAds.forEach(function (ad) {
                     adObserver.observe(ad);
                 });
             } else {
-                // Fallback antiguo
+                // Fallback para navegadores antiguos
                 lazyAds.forEach(function () {
                     (window.adsbygoogle = window.adsbygoogle || []).push({});
                 });
