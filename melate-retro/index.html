@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-05-26T22:25:03-06:00" />
+    <meta property="article:modified_time" content="2026-05-29T11:52:20-06:00" />
 
     <script>
         // Scroll suave + marca salto para el lazy
@@ -70,7 +70,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-05-26T22:25:03-06:00",
+          "dateModified": "2026-05-29T11:52:20-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -484,12 +484,12 @@
         </section>
 
 
-        <div class="ad-wrapper ad-content-wrapper">
-            <span class="ad-etiqueta">Publicidad</span>
+        <!-- <div class="ad-wrapper ad-content-wrapper">
+            <span class="ad-etiqueta">Publicidad</span> -->
             <!-- Melate_Retro_Analitica_Medio1 -->
-            <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2261202997"
+            <!-- <ins class="adsbygoogle ad-intercalado" data-ad-client="ca-pub-1379506914303333" data-ad-slot="2261202997"
                 data-ad-format="auto" data-full-width-responsive="true"></ins>
-        </div>
+        </div> -->
 
 
         <!-- ========================================== -->
@@ -7277,59 +7277,6 @@
     <script defer src="/js/fecha_actualizar.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=5.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Selecciona todos los bloques intercalados (habitualmente quedará solo MEDIO1)
-            const lazyAds = document.querySelectorAll("ins.ad-intercalado");
-
-            if (lazyAds.length === 0) return; // Si no hay ninguno, sale limpiamente
-
-            window.ultimoSalto = window.ultimoSalto || 0;
-
-            // MARGEN SEGURO PARA REDES LENTAS: 300px en móvil y 400px en desktop
-            // Le da al anuncio una pantalla de ventaja para renderizarse con calma
-            const margenSeguro = window.innerWidth < 768 ? "500px 0px" : "600px 0px";
-
-            if ("IntersectionObserver" in window) {
-                let adObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            const adElement = entry.target;
-
-                            // ESCUDO DE SALTOS: Mantenemos la ventana de resguardo de 2 segundos
-                            const tiempoDesdeSalto = Date.now() - window.ultimoSalto;
-                            const huboSalto = tiempoDesdeSalto < 2000;
-
-                            if (huboSalto) {
-                                console.log('%c⏳ LAZY EVITADO: Usuario pasó de largo en salto.', 'background:#ffa000; color:#000');
-                                return;
-                            }
-
-                            console.log('%c🎯 ANUNCIO EN VISTA: Cargando de forma legítima con margen seguro.', 'background:#00c853; color:#fff');
-
-                            // Deja de observar este bloque específico porque ya inició su carga
-                            observer.unobserve(adElement);
-
-                            // Petición oficial a AdSense
-                            (window.adsbygoogle = window.adsbygoogle || []).push({});
-                        }
-                    });
-                }, {
-                    rootMargin: margenSeguro // Aplicación del margen de protección para redes
-                });
-
-                lazyAds.forEach(function (ad) {
-                    adObserver.observe(ad);
-                });
-            } else {
-                // Fallback para navegadores antiguos
-                lazyAds.forEach(function () {
-                    (window.adsbygoogle = window.adsbygoogle || []).push({});
-                });
-            }
-        });
-    </script>
 
 
 </body>
