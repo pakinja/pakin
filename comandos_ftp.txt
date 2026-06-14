@@ -1,0 +1,19 @@
+user pak@pakin.lat Z@87912151
+binary
+lcd /home/pakin/Documents/pakin
+cd /public_html
+put generador.html generador.html.tmp
+rename generador.html.tmp generador.html
+! sleep 1
+put index.html index.html.tmp
+rename index.html.tmp index.html
+! sleep 1
+put verificador.html verificador.html.tmp
+rename verificador.html.tmp verificador.html
+! sleep 1
+put historico.html historico.html.tmp
+rename historico.html.tmp historico.html
+! sleep 1
+lcd /home/pakin/Documents/pakin/images
+cd /public_html/images
+bye
