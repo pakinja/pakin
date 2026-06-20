@@ -4,28 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-06-20T16:48:01-06:00" />
-
-    <script>
-        // Scroll suave + marca salto para el lazy
-        document.addEventListener('click', function (e) {
-            const link = e.target.closest('a[href^="#"]');
-            if (!link) return;
-            const id = link.getAttribute('href');
-            if (id.length <= 1) return;
-            const target = document.querySelector(id);
-            if (!target) return;
-
-            e.preventDefault();
-
-            // ESTA ES LA LÍNEA CLAVE: le avisa al lazy que viene salto
-            window.ultimoSalto = Date.now();
-            console.log('%c🚀 SALTO: Click en ancla', 'background:#d50000; color:#fff');
-
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, null, id);
-        }, true);
-    </script>
+    <meta property="article:modified_time" content="2026-06-20T16:53:04-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
@@ -71,11 +50,11 @@
           "headline": "Melate Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-06-20T16:48:01-06:00",
+          "dateModified": "2026-06-20T16:53:04-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://www.pakin.lat/images/p2.webp" } },
           "description": "Melate números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pakin.lat/melate" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.pakin.lat/melate/" },
           "articleBody": "",
           "keywords": ["melate", "melate resultados", "melate histórico", "números frecuentes", "números atrasados", "números repetidos", "números primos", "números calientes", "números fríos", "tiempos de aparición"],
           "audience": [
@@ -206,7 +185,7 @@
         <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
         <!-- ========================================== -->
         <div class="text-center mb-1 mt-3 mt-lg-1 mb-lg-3">
-            <h1 class="fw-bold text-dark d-inline-block titulo-principal">
+            <h1 id="resultados" class="fw-bold text-dark d-inline-block titulo-principal">
                 Melate: Resultados, Estadística y Analítica<span style="color: #8B0000;">.</span>
             </h1>
         </div>
@@ -1023,7 +1002,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 0
                             </td>
                             
@@ -1043,7 +1022,7 @@
                                 4
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 53
                             </td>
                             
@@ -1051,7 +1030,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 1
                             </td>
                             
@@ -1071,7 +1050,7 @@
                                 2
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 16
                             </td>
                             
@@ -1079,7 +1058,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 2
                             </td>
                             
@@ -1099,7 +1078,7 @@
                                 -1
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 19
                             </td>
                             
@@ -1107,7 +1086,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 3
                             </td>
                             
@@ -1127,7 +1106,7 @@
                                 -4
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 37
                             </td>
                             
@@ -1135,7 +1114,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 4
                             </td>
                             
@@ -1155,7 +1134,7 @@
                                 -13
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 113
                             </td>
                             
@@ -1163,7 +1142,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 5
                             </td>
                             
@@ -1183,7 +1162,7 @@
                                 -102
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 503
                             </td>
                             
@@ -1372,7 +1351,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 0
                             </td>
                             
@@ -1392,7 +1371,7 @@
                                 2
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 11
                             </td>
                             
@@ -1400,7 +1379,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 1
                             </td>
                             
@@ -1420,7 +1399,7 @@
                                 -2
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 16
                             </td>
                             
@@ -1428,7 +1407,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 2
                             </td>
                             
@@ -1448,7 +1427,7 @@
                                 0
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 58
                             </td>
                             
@@ -1456,7 +1435,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 3
                             </td>
                             
@@ -1476,7 +1455,7 @@
                                 203
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 214
                             </td>
                             
@@ -1699,7 +1678,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R1
                             </td>
                             
@@ -1719,7 +1698,7 @@
                                 -9
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 78
                             </td>
                             
@@ -1727,7 +1706,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R2
                             </td>
                             
@@ -1747,7 +1726,7 @@
                                 -14
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 270
                             </td>
                             
@@ -1755,7 +1734,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R3
                             </td>
                             
@@ -1775,7 +1754,7 @@
                                 53
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 183
                             </td>
                             
@@ -1783,7 +1762,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R4
                             </td>
                             
@@ -1803,7 +1782,7 @@
                                 -11
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 152
                             </td>
                             
@@ -1811,7 +1790,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R5
                             </td>
                             
@@ -1831,7 +1810,7 @@
                                 -6
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 127
                             </td>
                             
@@ -1839,7 +1818,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 R6
                             </td>
                             
@@ -1859,7 +1838,7 @@
                                 -1
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 54
                             </td>
                             
@@ -2022,7 +2001,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 BAJA (MEDIA <= 20.4)
                             </td>
                             
@@ -2042,7 +2021,7 @@
                                 -6
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 90
                             </td>
                             
@@ -2050,7 +2029,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 NORMAL
                             </td>
                             
@@ -2070,7 +2049,7 @@
                                 -1
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 8
                             </td>
                             
@@ -2078,7 +2057,7 @@
                         
                         <tr>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 ALTA (MEDIA >= 36.6)
                             </td>
                             
@@ -2098,7 +2077,7 @@
                                 -4
                             </td>
                             
-                            <td style="background-color: rgb(255,255,255); color: black;">
+                            <td style="background-color: #ffffff; color: black;">
                                 44
                             </td>
                             
@@ -2284,7 +2263,7 @@
                             
                             <tr>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     0
                                 </td>
@@ -2309,7 +2288,7 @@
                                     -1
                                 </td>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     12
                                 </td>
@@ -2318,7 +2297,7 @@
                             
                             <tr>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     1
                                 </td>
@@ -2343,7 +2322,7 @@
                                     1
                                 </td>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     19
                                 </td>
@@ -2352,7 +2331,7 @@
                             
                             <tr>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     2
                                 </td>
@@ -2377,7 +2356,7 @@
                                     0
                                 </td>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     61
                                 </td>
@@ -2386,7 +2365,7 @@
                             
                             <tr>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     3
                                 </td>
@@ -2411,7 +2390,7 @@
                                     82
                                 </td>
                                 
-                                <td style="background-color: rgb(255,255,255); color: black;">
+                                <td style="background-color: #ffffff; color: black;">
                                     
                                     631
                                 </td>
