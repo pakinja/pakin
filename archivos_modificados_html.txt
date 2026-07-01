@@ -1,4 +1,0 @@
-generador.html
-index.html
-verificador.html
-historico.html
