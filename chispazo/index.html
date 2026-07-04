@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-03T21:46:43-06:00" />
+    <meta property="article:modified_time" content="2026-07-04T13:56:55-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
 
-    <link rel="stylesheet" href="/styles/main_pakin-p11.css">
+    <link rel="stylesheet" href="/styles/main_pakin-p11.css?V=1">
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-03T21:46:43-06:00",
+  "dateModified": "2026-07-04T13:56:55-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -769,7 +769,45 @@
                 <table aria-labelledby="titulo-tabla-primos-tendencia"
                     class="table table-hover chispazo-primos-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PRIMOS</th><th>HIST</th><th>REC</th><th>TEND</th><th>VAR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PRIMOS
+                                
+                                <button class="th-info" popovertarget="tt-chis-primos"
+                                    aria-label="Qué es PRIMOS">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                HIST
+                                
+                                <button class="th-info" popovertarget="tt-chis-hist" aria-label="Qué es HIST">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button class="th-info" popovertarget="tt-chis-rec" aria-label="Qué es REC">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button class="th-info" popovertarget="tt-chis-tend" aria-label="Qué es TEND">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                VAR
+                                
+                                <button class="th-info" popovertarget="tt-chis-var" aria-label="Qué es VAR">i</button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -1051,6 +1089,25 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <div id="tt-chis-primos" popover="auto" class="tip">
+                    <strong>PRIMOS</strong> — Cantidad de números primos en el sorteo. En Chispazo va de 0 a 5.
+                </div>
+                <div id="tt-chis-hist" popover="auto" class="tip">
+                    <strong>HIST</strong> — Frecuencia histórica. Porcentaje de sorteos con este valor en toda la base.
+                </div>
+                <div id="tt-chis-rec" popover="auto" class="tip">
+                    <strong>REC</strong> — Frecuencia reciente. Porcentaje en los últimos 100 sorteos.
+                </div>
+                <div id="tt-chis-tend" popover="auto" class="tip">
+                    <strong>TEND</strong> — Diferencia REC menos HIST. Más significa que sale más ahora, menos que sale
+                    menos.
+                </div>
+                <div id="tt-chis-var" popover="auto" class="tip">
+                    <strong>VAR</strong> — Cambio relativo en porcentaje. Morado mayor a +25 por ciento es caliente,
+                    azul menor a -25 por ciento es frío.
+                </div>
             </div>
 
             <h3 id="titulo-tabla-primos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
