@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-05T16:01:27-06:00" />
+    <meta property="article:modified_time" content="2026-07-05T16:53:27-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-05T16:01:27-06:00",
+  "dateModified": "2026-07-05T16:53:27-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1089,7 +1089,7 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <!-- Popovers Primos Tendencia -->
                 <div id="tt-chis-primos" popover="auto" class="tip">
                     <strong>PRIMOS</strong> -- Cantidad de números primos.<br>
                     <br>En Chispazo puede haber de 0 a 5 números primos en una combinación.<br>
@@ -1564,15 +1564,15 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers Ciclos Primos -->
+                <!-- Popovers Primos Ciclos -->
                 <div id="tt-cron-primos" popover="auto" class="tip">
                     <strong>PRIMOS</strong> -- Cantidad de números primos.<br>
                     <br>En Chispazo puede haber de 0 a 5 números primos en una combinación.<br>
                     <br>
                     <p>Analizar los ciclos de tiempo de aparición de la cantidad de números primos te permite
                         saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el tiempo
-                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o cuánto tiempo ya
-                        se pasó.
+                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto tiempo ya
+                        rebasó el mismo.
                     </p>
                 </div>
 
@@ -1931,7 +1931,7 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <!-- Popovers Repetidos Tendencia -->
                 <div id="tt-chis-reps" popover="auto" class="tip">
                     <strong>REPS</strong> -- Cantidad de números repetidos.<br>
                     <br>En Chispazo hasta ahora se han repetido hasta 4 números en <strong>sorteos consecutivos</strong>
@@ -2346,7 +2346,7 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers Ciclos Repetidos -->
+                <!-- Popovers Repetidos Ciclos -->
                 <div id="tt-cron-reps" popover="auto" class="tip">
                     <strong>REPS</strong> -- Cantidad de números repetidos.<br>
                     <br>En Chispazo hasta ahora se han repetido hasta 4 números en <strong>sorteos consecutivos</strong>
@@ -2354,8 +2354,8 @@
                     <br>
                     <p>Analizar los ciclos de tiempo de aparición de la cantidad de números repetidos te permite
                         saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el tiempo
-                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o cuánto tiempo ya
-                        se pasó.
+                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto tiempo ya
+                        rebasó el mismo.
                     </p>
                 </div>
 
@@ -2697,7 +2697,7 @@
                 </table>
 
 
-                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <!-- Popovers Repetidos por Posición Tendencia -->
                 <div id="tt-chis-repspos" popover="auto" class="tip">
                     <strong>POS</strong> -- Posición o columna.<br>
                     <br>En Chispazo cada combinación tiene 5 números del 1 al 28 que no se repiten,
@@ -3114,7 +3114,7 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers Ciclos Retidos -->
+                <!-- Popovers Repetidos por posción Ciclos -->
                 <div id="tt-cron-pos" popover="auto" class="tip">
                     <strong>POS</strong> -- Posición o columna.<br>
                     <br>En Chispazo cada combinación tiene 5 números del 1 al 28 que no se repiten,
@@ -3124,9 +3124,8 @@
                     <p>Analizar los ciclos de tiempo de aparición de la cantidad de números repetidos en su posición
                         exacta te permite saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes
                         cuál es
-                        el tiempo que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o cuánto
-                        tiempo ya
-                        se pasó.
+                        el tiempo que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto
+                        tiempo ya rebasó el mismo.
                     </p>
                 </div>
 
@@ -3396,7 +3395,7 @@
                     </tbody>
                 </table>
 
-                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <!-- Popovers Medias Tendencia -->
                 <div id="tt-chis-medias" popover="auto" class="tip">
                     <strong>MEDIA</strong> -- Clase de la combinación.<br>
                     <br>Es una medida de qué tan altos o bajos son los números de una combinación y es
@@ -3407,7 +3406,7 @@
                         <strong>ALTA</strong>: Media >= 19<br>
                         <br>
                         <p>Analizar la media de los números te indica su probabilidad, te permite saber si hay
-                            alguna tendencia reciente y te ayuda a decidir qué tipo de combinación juegas
+                            alguna tendencia reciente y te ayuda a decidir qué clase de combinación juegas
                             en cada sorteo.</p>
                 </div>
                 <div id="tt-chis-hist" popover="auto" class="tip">
@@ -3691,7 +3690,7 @@
                 </table>
 
 
-                <!-- Popovers Ciclos Medias -->
+                <!-- Popovers Medias Ciclos -->
                 <div id="tt-cron-media" popover="auto" class="tip">
                     <strong>MEDIA</strong> -- Clase de la combinación.<br>
                     <br>Es una medida de qué tan altos o bajos son los números de una combinación y es
@@ -3703,8 +3702,8 @@
                         <br>
                         <p>Analizar los ciclos de tiempo de aparición de la cantidad de números primos te permite
                             saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el
-                            tiempo que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o cuánto
-                            tiempo ya se pasó.
+                            tiempo que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto
+                            tiempo ya rebasó el mismo.
                         </p>
                 </div>
 
@@ -3769,7 +3768,6 @@
             </h3>
             <!-- Leyenda Balanza -->
             <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
                 <div class="barra">
                     <span class="var-b-m3" title="≤ -60%">≤-60%</span>
                     <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
@@ -3786,7 +3784,45 @@
                 <table aria-labelledby="titulo-tabla-consecutivos-tendencia"
                     class="table table-hover chispazo-hcons-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>HIST</th><th>REC</th><th>TEND</th><th>VAR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                
+                                <button class="th-info" popovertarget="tt-chis-primos"
+                                    aria-label="Qué es PCONS">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                HIST
+                                
+                                <button class="th-info" popovertarget="tt-chis-hist" aria-label="Qué es HIST">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button class="th-info" popovertarget="tt-chis-rec" aria-label="Qué es REC">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button class="th-info" popovertarget="tt-chis-tend" aria-label="Qué es TEND">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                VAR
+                                
+                                <button class="th-info" popovertarget="tt-chis-var" aria-label="Qué es VAR">i</button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -4022,6 +4058,38 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Consecutivos Tendencia -->
+                <div id="tt-chis-pcons" popover="auto" class="tip">
+                    <strong>PCONS</strong> -- Posiciones consecutivas.<br>
+                    <br>Una posición es consecutiva cuando hay un par de números consecutivos. En Chispazo
+                    podemos tener hasta 4 de estas posiciones cuando los 5 números de la combinación son consecutivos.<br>
+                    <br>
+                    <p>Analizar la cantidad de posiciones consecutivas te indica su probabilidad, te permite saber si hay alguna
+                        tendencia reciente y te ayuda a decidir qué cantidad de posiciones juegas en cada
+                        combinación.
+                    </p>
+                </div>
+                <div id="tt-chis-hist" popover="auto" class="tip">
+                    <strong>HIST</strong> — Histórico<br>
+                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                </div>
+                <div id="tt-chis-rec" popover="auto" class="tip">
+                    <strong>REC</strong> — Reciente<br>
+                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-tend" popover="auto" class="tip">
+                    <strong>TEND</strong> — Tendencia<br>
+                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-var" popover="auto" class="tip">
+                    <strong>VAR</strong> — Variación<br>
+                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
+                    <br>
+                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
+                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                </div>
+
             </div>
 
             <h3 id="titulo-tabla-consecutivos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
@@ -4029,7 +4097,6 @@
             </h3>
             <!-- Leyenda Ciclos -->
             <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
                 <div class="barra">
                     <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
                     <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
@@ -4046,7 +4113,51 @@
                 <table aria-labelledby="titulo-tabla-consecutivos-ciclos"
                     class="chispazo-hcons-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                <button class="th-info" popovertarget="tt-cron-pcons"
+                                    aria-label="Qué es PCONS">i</button>
+                            </th>
+                            
+                            <th>
+                                IDX
+                                <button class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX">i</button>
+                            </th>
+                            
+                            <th>
+                                P50
+                                <button class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50">i</button>
+                            </th>
+                            
+                            <th>
+                                P80
+                                <button class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80">i</button>
+                            </th>
+                            
+                            <th>
+                                MAX
+                                <button class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX">i</button>
+                            </th>
+                            
+                            <th>
+                                ATR
+                                <button class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR">i</button>
+                            </th>
+                            
+                            <th>
+                                xATR
+                                <button class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR">i</button>
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -4105,7 +4216,8 @@
                             
 
                             
-                            <td>0</td>
+                            <td class="var-c-m3">0.00</td>
+
                             
 
                             
@@ -4166,7 +4278,8 @@
                             
 
                             
-                            <td>1.5</td>
+                            <td class="var-c-p2">1.50</td>
+
                             
 
                             
@@ -4227,7 +4340,8 @@
                             
 
                             
-                            <td>1.17</td>
+                            <td class="var-c-p1">1.17</td>
+
                             
 
                             
@@ -4288,7 +4402,8 @@
                             
 
                             
-                            <td>0.06</td>
+                            <td class="var-c-m3">0.06</td>
+
                             
 
                             
@@ -4349,7 +4464,8 @@
                             
 
                             
-                            <td>1.24</td>
+                            <td class="var-c-p1">1.24</td>
+
                             
 
                             
@@ -4357,6 +4473,59 @@
                         
                     </tbody>
                 </table>
+
+
+                <!-- Popovers Consecutivos Ciclos -->
+                <div id="tt-cron-pcons" popover="auto" class="tip">
+                    <strong>PCONS</strong> -- Posiciones consecutivas.<br>
+                    <br>Una posición es consecutiva cuando hay un par de números consecutivos. En Chispazo
+                    podemos tener hasta 4 de estas posiciones cuando los 5 números de la combinación son consecutivos.<br>
+                    <br>
+                    <p>Analizar los ciclos de tiempo de aparición de la cantidad de posiciones consecutivas te permite
+                        saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el tiempo
+                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto tiempo ya
+                        rebasó el mismo.
+                    </p>
+                </div>
+
+                <div id="tt-cron-idx" popover="auto" class="tip">
+                    <strong>IDX</strong> -- Índice de tiempo.<br>
+                    <br> Es el "tiempo" medido en número de sorteos.<br>
+                    <br>Es un consecutivo que comienza desde cero (sorteo más reciente) e indica
+                    en qué momento fue la aparición más reciente de la variable en cuestión.<br>
+                    <br><strong>IDX te ayuda a ubicar una variable en el histórico Pakin.</strong>
+
+                </div>
+
+                <div id="tt-cron-p50" popover="auto" class="tip">
+                    <strong>P50</strong> -- Mediana de tiempo.<br>
+                    <br>El 50% de las veces aparece antes o en este número de sorteos (tiempo entre apariciones).
+                </div>
+
+                <div id="tt-cron-p80" popover="auto" class="tip">
+                    <strong>P80</strong> -- 80 Percentil de tiempo.<br>
+                    <br>El 80% de las veces aparece antes o en este número de sorteos (tiempo entre apariciones).
+                </div>
+
+                <div id="tt-cron-max" popover="auto" class="tip">
+                    <strong>MAX</strong> -- Máximo tiempo.<br>
+                    <br>Tiempo máximo histórico que ha tardado en aparecer (tiempo entre apariciones).
+                </div>
+
+                <div id="tt-cron-atr" popover="auto" class="tip">
+                    <strong>ATR</strong> -- Atraso.<br>
+                    <br>Diferencia entre IDX y P50.<br>
+                    <br>Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+                </div>
+
+                <div id="tt-cron-xatr" popover="auto" class="tip">
+                    <strong>xATR</strong> -- xAtraso.<br>
+                    <br>Tiempo de atraso en cantidad de veces el tiempo típico (P50).<br>
+                    <br>La escala de color muestra desde azules (tiempo de aparición reciente),
+                    verde (tiempo cerca del típico) y naranja-púrpura (tiempo arriba del típico).
+                </div>
+
+
             </div>
 
         </section>
