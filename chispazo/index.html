@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-04T20:41:23-06:00" />
+    <meta property="article:modified_time" content="2026-07-04T21:11:23-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-04T20:41:23-06:00",
+  "dateModified": "2026-07-04T21:11:23-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1113,7 +1113,7 @@
                 </div>
                 <div id="tt-chis-var" popover="auto" class="tip">
                     <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Que tanto está variando recientemente.<br>
+                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
                     <br>
                     La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
                     similares) hasta naranja-púrpura (porcentajes actuales altos).
@@ -1955,7 +1955,7 @@
                 </div>
                 <div id="tt-chis-var" popover="auto" class="tip">
                     <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Que tanto está variando recientemente.<br>
+                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
                     <br>
                     La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
                     similares) hasta naranja-púrpura (porcentajes actuales altos).
@@ -2403,7 +2403,6 @@
             </h3>
             <!-- Leyenda Balanza -->
             <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
                 <div class="barra">
                     <span class="var-b-m3" title="≤ -60%">≤-60%</span>
                     <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
@@ -2420,7 +2419,45 @@
                 <table aria-labelledby="titulo-tabla-repetidos-posicion-tendencia"
                     class="table table-hover chispazo-repspos-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>POS</th><th>HIST</th><th>REC</th><th>TEND</th><th>VAR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                POS
+                                
+                                <button class="th-info" popovertarget="tt-chis-repspos"
+                                    aria-label="Qué es POS">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                HIST
+                                
+                                <button class="th-info" popovertarget="tt-chis-hist" aria-label="Qué es HIST">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button class="th-info" popovertarget="tt-chis-rec" aria-label="Qué es REC">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button class="th-info" popovertarget="tt-chis-tend" aria-label="Qué es TEND">i</button>
+                                
+                            </th>
+                            
+                            <th>
+                                VAR
+                                
+                                <button class="th-info" popovertarget="tt-chis-var" aria-label="Qué es VAR">i</button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -2656,6 +2693,39 @@
                         
                     </tbody>
                 </table>
+
+
+                <!-- Popovers (fuera de la tabla para que no se muevan con scroll) -->
+                <div id="tt-chis-repspos" popover="auto" class="tip">
+                    <strong>POS</strong> -- Posición o columna.<br>
+                    <br>En Chispazo cada combinación tiene 5 números del 1 al 28 que no se pueden repetir y
+                    cada sorteo se ordenan de forma ascendente nombrándose cada columna R1, R2,..., R5.<br>
+                    <br>
+                    <p>Analizar la cantidad de números repetidos en su posición exacta te indica su probabilidad,
+                        te permite saber si hay alguna tendencia reciente y te ayuda a decidir que cantidad de
+                        números repetidos en su posición exacta juegas en cada combinación.
+                    </p>
+                </div>
+                <div id="tt-chis-pos" popover="auto" class="tip">
+                    <strong>HIST</strong> — Histórico<br>
+                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                </div>
+                <div id="tt-chis-rec" popover="auto" class="tip">
+                    <strong>REC</strong> — Reciente<br>
+                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-tend" popover="auto" class="tip">
+                    <strong>TEND</strong> — Tendencia<br>
+                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-var" popover="auto" class="tip">
+                    <strong>VAR</strong> — Variación<br>
+                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
+                    <br>
+                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
+                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                </div>
+
             </div>
 
             <h3 id="titulo-tabla-repetidos-posicion-ciclos"
