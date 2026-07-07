@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-06T22:21:30-06:00" />
+    <meta property="article:modified_time" content="2026-07-06T22:54:03-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-06T22:21:30-06:00",
+  "dateModified": "2026-07-06T22:54:03-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1686,18 +1686,15 @@
                             </th>
                             
                             <th>
-                                TEND
-                                
-                                <button class="th-info" popovertarget="tt-chis-tend"
-                                    aria-label="Qué es TEND"><i>i</i></button>
+                                DIF
                                 
                             </th>
                             
                             <th>
-                                VAR
+                                TEND
                                 
-                                <button class="th-info" popovertarget="tt-chis-var"
-                                    aria-label="Qué es VAR"><i>i</i></button>
+                                <button class="th-info" popovertarget="tt-chis-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
                                 
                             </th>
                             
@@ -1735,8 +1732,7 @@
                             
 
                             
-                            <td>+5.95</td>
-
+                            <td>5.95</td>
                             
 
                             
@@ -1744,7 +1740,7 @@
                             
 
                             
-                            <td class="var-b-p1">+17.2</td>
+                            <td>+17.2</td>
 
                             
 
@@ -1782,7 +1778,6 @@
 
                             
                             <td>-5.3</td>
-
                             
 
                             
@@ -1790,7 +1785,7 @@
                             
 
                             
-                            <td class="var-b-m1">-11.9</td>
+                            <td>-11.9</td>
 
                             
 
@@ -1827,8 +1822,7 @@
                             
 
                             
-                            <td>+2.06</td>
-
+                            <td>2.06</td>
                             
 
                             
@@ -1836,7 +1830,7 @@
                             
 
                             
-                            <td class="var-b-p1">+11.3</td>
+                            <td>+11.3</td>
 
                             
 
@@ -1874,7 +1868,6 @@
 
                             
                             <td>-2.66</td>
-
                             
 
                             
@@ -1882,7 +1875,7 @@
                             
 
                             
-                            <td class="var-b-m3">-100.0</td>
+                            <td>-100.0</td>
 
                             
 
@@ -1920,7 +1913,6 @@
 
                             
                             <td>-0.05</td>
-
                             
 
                             
@@ -1928,7 +1920,7 @@
                             
 
                             
-                            <td class="var-b-m3">-100.0</td>
+                            <td>-100.0</td>
 
                             
 
@@ -1940,33 +1932,29 @@
 
                 <!-- Popovers Repetidos Tendencia -->
                 <div id="tt-chis-reps" popover="auto" class="tip" lang="es">
-                    <strong>REPS</strong> -- Cantidad de números repetidos.<br>
-                    <br>En Chispazo hasta ahora se han repetido hasta 4 números en <strong>sorteos consecutivos</strong>
-                    sin importar en qué posición.<br>
+                    <strong>REPETIDOS</strong>
                     <br>
                     <p>Analizar la cantidad de números repetidos te indica su probabilidad, te permite saber si hay
-                        alguna tendencia reciente y te ayuda a decidir qué cantidad de números repetidos juegas en cada
+                        alguna
+                        tendencia reciente y te ayuda a decidir qué cantidad de números primos juegas en cada
                         combinación.
                     </p>
                 </div>
                 <div id="tt-chis-hist" popover="auto" class="tip" lang="es">
-                    <strong>HIST</strong> — Histórico<br>
-                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                    <strong>HISTÓRICO [%]</strong>
+                    <br>Distribución histórica, también llamada probabilidad empírica.
                 </div>
                 <div id="tt-chis-rec" popover="auto" class="tip" lang="es">
-                    <strong>REC</strong> — Reciente<br>
-                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                    <strong>RECIENTE [%]</strong>
+                    <br>Distribución en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-dif" popover="auto" class="tip" lang="es">
+                    <strong>DIFERENCIA [%]</strong>
+                    <br>Diferencia entre distribución reciente e histórica.
                 </div>
                 <div id="tt-chis-tend" popover="auto" class="tip" lang="es">
-                    <strong>TEND</strong> — Tendencia<br>
-                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
-                </div>
-                <div id="tt-chis-var" popover="auto" class="tip" lang="es">
-                    <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
-                    <br>
-                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
-                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                    <strong>TENDENCIA [%]</strong>
+                    <br>Tendencia en los últimos -n- sorteos.
                 </div>
 
             </div>
@@ -2456,18 +2444,15 @@
                             </th>
                             
                             <th>
-                                TEND
-                                
-                                <button class="th-info" popovertarget="tt-chis-tend"
-                                    aria-label="Qué es TEND"><i>i</i></button>
+                                DIF
                                 
                             </th>
                             
                             <th>
-                                VAR
+                                TEND
                                 
-                                <button class="th-info" popovertarget="tt-chis-var"
-                                    aria-label="Qué es VAR"><i>i</i></button>
+                                <button class="th-info" popovertarget="tt-chis-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
                                 
                             </th>
                             
@@ -2506,7 +2491,6 @@
 
                             
                             <td>-5.81</td>
-
                             
 
                             
@@ -2514,7 +2498,7 @@
                             
 
                             
-                            <td class="var-b-m2">-55.0</td>
+                            <td>-55.0</td>
 
                             
 
@@ -2551,8 +2535,7 @@
                             
 
                             
-                            <td>+2.14</td>
-
+                            <td>2.14</td>
                             
 
                             
@@ -2560,7 +2543,7 @@
                             
 
                             
-                            <td class="var-b-p2">+34.5</td>
+                            <td>+34.5</td>
 
                             
 
@@ -2598,7 +2581,6 @@
 
                             
                             <td>-3.12</td>
-
                             
 
                             
@@ -2606,7 +2588,7 @@
                             
 
                             
-                            <td class="var-b-m2">-56.7</td>
+                            <td>-56.7</td>
 
                             
 
@@ -2643,8 +2625,7 @@
                             
 
                             
-                            <td>+0.86</td>
-
+                            <td>0.86</td>
                             
 
                             
@@ -2652,7 +2633,7 @@
                             
 
                             
-                            <td class="var-b-p1">+13.8</td>
+                            <td>+13.8</td>
 
                             
 
@@ -2690,7 +2671,6 @@
 
                             
                             <td>-3.25</td>
-
                             
 
                             
@@ -2698,7 +2678,7 @@
                             
 
                             
-                            <td class="var-b-m2">-31.3</td>
+                            <td>-31.3</td>
 
                             
 
@@ -2711,34 +2691,28 @@
 
                 <!-- Popovers Repetidos por Posición Tendencia -->
                 <div id="tt-chis-repspos" popover="auto" class="tip" lang="es">
-                    <strong>POS</strong> -- Posición o columna.<br>
-                    <br>En Chispazo cada combinación tiene 5 números del 1 al 28 que no se repiten,
-                    en cada sorteo se ordenan de forma ascendente nombrándose cada columna R1, R2,..., R5
-                    respectivamente.<br>
+                    <strong>REPETIDOS POR POSICIÓN</strong>
                     <br>
-                    <p>Analizar la cantidad de números repetidos en su posición exacta te indica su probabilidad,
-                        te permite saber si hay alguna tendencia reciente y te ayuda a decidir qué cantidad de
-                        números repetidos en su posición exacta juegas en cada combinación.
+                    <p>Analizar la cantidad de números repetidos por posición te indica su probabilidad, te permite
+                        saber si hay alguna tendencia reciente y te ayuda a decidir qué cantidad de números primos
+                        juegas en cada combinación.
                     </p>
                 </div>
-                <div id="tt-chis-pos" popover="auto" class="tip" lang="es">
-                    <strong>HIST</strong> — Histórico<br>
-                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                <div id="tt-chis-hist" popover="auto" class="tip" lang="es">
+                    <strong>HISTÓRICO [%]</strong>
+                    <br>Distribución histórica, también llamada probabilidad empírica.
                 </div>
                 <div id="tt-chis-rec" popover="auto" class="tip" lang="es">
-                    <strong>REC</strong> — Reciente<br>
-                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                    <strong>RECIENTE [%]</strong>
+                    <br>Distribución en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-dif" popover="auto" class="tip" lang="es">
+                    <strong>DIFERENCIA [%]</strong>
+                    <br>Diferencia entre distribución reciente e histórica.
                 </div>
                 <div id="tt-chis-tend" popover="auto" class="tip" lang="es">
-                    <strong>TEND</strong> — Tendencia<br>
-                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
-                </div>
-                <div id="tt-chis-var" popover="auto" class="tip" lang="es">
-                    <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
-                    <br>
-                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
-                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                    <strong>TENDENCIA [%]</strong>
+                    <br>Tendencia en los últimos -n- sorteos.
                 </div>
 
             </div>
@@ -3252,18 +3226,15 @@
                             </th>
                             
                             <th>
-                                TEND
-                                
-                                <button class="th-info" popovertarget="tt-chis-tend"
-                                    aria-label="Qué es TEND"><i>i</i></button>
+                                DIF
                                 
                             </th>
                             
                             <th>
-                                VAR
+                                TEND
                                 
-                                <button class="th-info" popovertarget="tt-chis-var"
-                                    aria-label="Qué es VAR"><i>i</i></button>
+                                <button class="th-info" popovertarget="tt-chis-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
                                 
                             </th>
                             
@@ -3302,7 +3273,6 @@
 
                             
                             <td>-1.26</td>
-
                             
 
                             
@@ -3310,7 +3280,7 @@
                             
 
                             
-                            <td class="var-b-m1">-13.1</td>
+                            <td>-13.1</td>
 
                             
 
@@ -3348,7 +3318,6 @@
 
                             
                             <td>-0.65</td>
-
                             
 
                             
@@ -3356,7 +3325,7 @@
                             
 
                             
-                            <td class="var-b-0">-0.8</td>
+                            <td>-0.8</td>
 
                             
 
@@ -3393,8 +3362,7 @@
                             
 
                             
-                            <td>+1.9</td>
-
+                            <td>1.9</td>
                             
 
                             
@@ -3402,7 +3370,7 @@
                             
 
                             
-                            <td class="var-b-p1">+19.0</td>
+                            <td>+19.0</td>
 
                             
 
@@ -3414,36 +3382,28 @@
 
                 <!-- Popovers Medias Tendencia -->
                 <div id="tt-chis-medias" popover="auto" class="tip" lang="es">
-                    <strong>MEDIA</strong> -- Clase de la combinación.<br>
-                    <br>Es una medida de qué tan altos o bajos son los números de una combinación y es
-                    determinada con la media aritmética de los mismos.<br>
-                    <br>En Chispazo clasificamos las combinaciones como:<br>
-                    <strong>BAJA</strong>: Media <= 10<br>
-                        <strong>NORMAL</strong>: Media entre 10 y 19<br>
-                        <strong>ALTA</strong>: Media >= 19<br>
-                        <br>
-                        <p>Analizar la media de los números te indica su probabilidad, te permite saber si hay
-                            alguna tendencia reciente y te ayuda a decidir qué clase de combinación juegas
-                            en cada sorteo.</p>
+                    <strong>MEDIA</strong>
+                    <br>
+                    <p>Analizar la media una combinación te indica su probabilidad, te permite saber si hay alguna
+                        tendencia reciente y te ayuda a decidir qué cantidad de números primos juegas en cada
+                        combinación.
+                    </p>
                 </div>
                 <div id="tt-chis-hist" popover="auto" class="tip" lang="es">
-                    <strong>HIST</strong> — Histórico<br>
-                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                    <strong>HISTÓRICO [%]</strong>
+                    <br>Distribución histórica, también llamada probabilidad empírica.
                 </div>
                 <div id="tt-chis-rec" popover="auto" class="tip" lang="es">
-                    <strong>REC</strong> — Reciente<br>
-                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                    <strong>RECIENTE [%]</strong>
+                    <br>Distribución en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-dif" popover="auto" class="tip" lang="es">
+                    <strong>DIFERENCIA [%]</strong>
+                    <br>Diferencia entre distribución reciente e histórica.
                 </div>
                 <div id="tt-chis-tend" popover="auto" class="tip" lang="es">
-                    <strong>TEND</strong> — Tendencia<br>
-                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
-                </div>
-                <div id="tt-chis-var" popover="auto" class="tip" lang="es">
-                    <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
-                    <br>
-                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
-                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                    <strong>TENDENCIA [%]</strong>
+                    <br>Tendencia en los últimos -n- sorteos.
                 </div>
 
             </div>
@@ -3829,18 +3789,15 @@
                             </th>
                             
                             <th>
-                                TEND
-                                
-                                <button class="th-info" popovertarget="tt-chis-tend"
-                                    aria-label="Qué es TEND"><i>i</i></button>
+                                DIF
                                 
                             </th>
                             
                             <th>
-                                VAR
+                                TEND
                                 
-                                <button class="th-info" popovertarget="tt-chis-var"
-                                    aria-label="Qué es VAR"><i>i</i></button>
+                                <button class="th-info" popovertarget="tt-chis-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
                                 
                             </th>
                             
@@ -3878,8 +3835,7 @@
                             
 
                             
-                            <td>+7.55</td>
-
+                            <td>7.55</td>
                             
 
                             
@@ -3887,7 +3843,7 @@
                             
 
                             
-                            <td class="var-b-p1">+17.3</td>
+                            <td>+17.3</td>
 
                             
 
@@ -3925,7 +3881,6 @@
 
                             
                             <td>-3.31</td>
-
                             
 
                             
@@ -3933,7 +3888,7 @@
                             
 
                             
-                            <td class="var-b-m1">-7.8</td>
+                            <td>-7.8</td>
 
                             
 
@@ -3971,7 +3926,6 @@
 
                             
                             <td>-4.38</td>
-
                             
 
                             
@@ -3979,7 +3933,7 @@
                             
 
                             
-                            <td class="var-b-m2">-34.5</td>
+                            <td>-34.5</td>
 
                             
 
@@ -4016,8 +3970,7 @@
                             
 
                             
-                            <td>+0.17</td>
-
+                            <td>0.17</td>
                             
 
                             
@@ -4025,7 +3978,7 @@
                             
 
                             
-                            <td class="var-b-p1">+16.3</td>
+                            <td>+16.3</td>
 
                             
 
@@ -4063,7 +4016,6 @@
 
                             
                             <td>-0.03</td>
-
                             
 
                             
@@ -4071,7 +4023,7 @@
                             
 
                             
-                            <td class="var-b-m3">-100.0</td>
+                            <td>-100.0</td>
 
                             
 
@@ -4083,35 +4035,28 @@
 
                 <!-- Popovers Consecutivos Tendencia -->
                 <div id="tt-chis-pcons" popover="auto" class="tip" lang="es">
-                    <strong>PCONS</strong> -- Posiciones consecutivas.<br>
-                    <br>Una posición es consecutiva cuando hay un par de números consecutivos. En Chispazo
-                    podemos tener hasta 4 de estas posiciones cuando los 5 números de la combinación son
-                    consecutivos.<br>
+                    <strong>POSICIONES CONSECUTIVAS</strong>
                     <br>
-                    <p>Analizar la cantidad de posiciones consecutivas te indica su probabilidad, te permite saber si
-                        hay alguna
-                        tendencia reciente y te ayuda a decidir qué cantidad de posiciones juegas en cada
+                    <p>Analizar las posiciones consecutivas te indica su probabilidad, te permite saber si hay alguna
+                        tendencia reciente y te ayuda a decidir qué cantidad de números primos juegas en cada
                         combinación.
                     </p>
                 </div>
                 <div id="tt-chis-hist" popover="auto" class="tip" lang="es">
-                    <strong>HIST</strong> — Histórico<br>
-                    <br>Distribución porcentual histórica o empírica, también llamada probabilidad empírica.
+                    <strong>HISTÓRICO [%]</strong>
+                    <br>Distribución histórica, también llamada probabilidad empírica.
                 </div>
                 <div id="tt-chis-rec" popover="auto" class="tip" lang="es">
-                    <strong>REC</strong> — Reciente<br>
-                    <br>Distribución porcentual reciente en los últimos -n- sorteos.
+                    <strong>RECIENTE [%]</strong>
+                    <br>Distribución en los últimos -n- sorteos.
+                </div>
+                <div id="tt-chis-dif" popover="auto" class="tip" lang="es">
+                    <strong>DIFERENCIA [%]</strong>
+                    <br>Diferencia entre distribución reciente e histórica.
                 </div>
                 <div id="tt-chis-tend" popover="auto" class="tip" lang="es">
-                    <strong>TEND</strong> — Tendencia<br>
-                    <br>Diferencia entre REC e HIST, es la tendencia porcentual actual en los últimos -n- sorteos.
-                </div>
-                <div id="tt-chis-var" popover="auto" class="tip" lang="es">
-                    <strong>VAR</strong> — Variación<br>
-                    <br>Cambio relativo porcentual. Qué tanto está variando recientemente.<br>
-                    <br>
-                    La escala de color muestra desde azules (porcentajes actuales bajos), gris (porcentajes actuales
-                    similares) hasta naranja-púrpura (porcentajes actuales altos).
+                    <strong>TENDENCIA [%]</strong>
+                    <br>Tendencia en los últimos -n- sorteos.
                 </div>
 
             </div>
