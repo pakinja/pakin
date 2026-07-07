@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-07T14:46:53-06:00" />
+    <meta property="article:modified_time" content="2026-07-07T15:00:11-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
 
-    <link rel="stylesheet" href="/styles/main_pakin-p11.css?V=21">
+    <link rel="stylesheet" href="/styles/main_pakin-p11.css?V=22">
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-07T14:46:53-06:00",
+  "dateModified": "2026-07-07T15:00:11-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7806,28 +7806,30 @@
             document.querySelectorAll('[popover]:popover-open').forEach(p => p.hidePopover());
         };
 
-        // 1) ya lo tenías: cierra al hacer scroll
+        // cierra al scroll (ya lo tenías)
         document.addEventListener('scroll', closePopovers, { passive: true, capture: true });
 
-        // 2) nuevo: cierra cuando AdSense inserta la viñeta
-        const observer = new MutationObserver((mutations) => {
-            for (const m of mutations) {
-                for (const node of m.addedNodes) {
-                    if (node.nodeType === 1) {
-                        // AdSense usa ids/clases con "google", "vignette", o inserta <ins class="adsbygoogle">
-                        const isAd = node.id?.includes('google')
-                            || node.className?.toString().includes('vignette')
-                            || node.querySelector?.('ins.adsbygoogle');
-                        if (isAd) {
-                            closePopovers();
-                            return;
-                        }
+        // cierra cuando aparece CUALQUIER capa fija grande (viñeta, interstitial, etc)
+        const observer = new MutationObserver((muts) => {
+            for (const m of muts) {
+                for (const n of m.addedNodes) {
+                    if (n.nodeType !== 1) continue;
+                    const el = n;
+                    const s = window.getComputedStyle(el);
+                    const esOverlay = s.position === 'fixed' && el.offsetHeight > 200 && (parseInt(s.zIndex) || 0) > 900;
+                    const esAd = el.querySelector?.('iframe[src*="google"], iframe[src*="doubleclick"], ins.adsbygoogle');
+
+                    if (esOverlay || esAd) {
+                        closePopovers();
+                        return;
                     }
                 }
             }
         });
-
         observer.observe(document.body, { childList: true, subtree: true });
+
+        // extra: si la ventana pierde foco (abre interstitial), cierra
+        window.addEventListener('blur', closePopovers);
     </script>
 
 </body>
