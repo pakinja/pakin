@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-06T21:57:36-06:00" />
+    <meta property="article:modified_time" content="2026-07-06T22:21:30-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-06T21:57:36-06:00",
+  "dateModified": "2026-07-06T22:21:30-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1610,7 +1610,7 @@
                 </div>
 
                 <div id="tt-cron-xatr" popover="auto" class="tip" lang="es">
-                    <strong>xATRASO</strong> 
+                    <strong>xATRASO</strong>
                     <br>
                     Atraso en cantidad de veces el tiempo típico (P50).
                 </div>
@@ -7819,9 +7819,32 @@
     <script defer src="/js/cobertura?V=5.js"></script>
 
     <script>
-        document.addEventListener('scroll', () => {
+        const closePopovers = () => {
             document.querySelectorAll('[popover]:popover-open').forEach(p => p.hidePopover());
-        }, { passive: true, capture: true });
+        };
+
+        // 1) ya lo tenías: cierra al hacer scroll
+        document.addEventListener('scroll', closePopovers, { passive: true, capture: true });
+
+        // 2) nuevo: cierra cuando AdSense inserta la viñeta
+        const observer = new MutationObserver((mutations) => {
+            for (const m of mutations) {
+                for (const node of m.addedNodes) {
+                    if (node.nodeType === 1) {
+                        // AdSense usa ids/clases con "google", "vignette", o inserta <ins class="adsbygoogle">
+                        const isAd = node.id?.includes('google')
+                            || node.className?.toString().includes('vignette')
+                            || node.querySelector?.('ins.adsbygoogle');
+                        if (isAd) {
+                            closePopovers();
+                            return;
+                        }
+                    }
+                }
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
 
 </body>
