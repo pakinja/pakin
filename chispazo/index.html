@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-07T17:21:19-06:00" />
+    <meta property="article:modified_time" content="2026-07-07T18:22:14-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-07T17:21:19-06:00",
+  "dateModified": "2026-07-07T18:22:14-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -743,8 +743,9 @@
             </div>
 
             <p class="texto-analitica px-3 px-md-0">
-                Cuántos números primos aparecen en cada sorteo Chispazo. Consulta su
-                frecuencia histórica, tendencia reciente y ciclos de aparición.
+                En Chispazo en cada combinación pueden aparecer de 0 a 5 números primos.
+                En esta sección puedes consultar su frecuencia o distribución histórica, tendencia reciente
+                y ciclos de aparición.
             </p>
 
             <h3 id="titulo-tabla-primos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
@@ -1082,7 +1083,7 @@
                 </table>
 
                 <!-- Popovers Primos Tendencia -->
-                <div id="tt-chis-primos" popover="auto" class="tip" lang="es">
+                <div id="tt-chis-primos" class="tip tip-js" lang="es">
                     <strong>PRIMOS</strong>
                     <br>
                     <p>Analizar la cantidad de números primos te indica su probabilidad, te permite saber si hay alguna
@@ -1090,19 +1091,19 @@
                         combinación.
                     </p>
                 </div>
-                <div id="tt-chis-hist" popover="auto" class="tip" lang="es">
+                <div id="tt-chis-hist" class="tip tip-js" lang="es">
                     <strong>HISTÓRICO [%]</strong>
                     <br>Distribución histórica, también llamada probabilidad empírica.
                 </div>
-                <div id="tt-chis-rec" popover="auto" class="tip" lang="es">
+                <div id="tt-chis-rec" class="tip tip-js" lang="es">
                     <strong>RECIENTE [%]</strong>
                     <br>Distribución en los últimos -n- sorteos.
                 </div>
-                <div id="tt-chis-dif" popover="auto" class="tip" lang="es">
+                <div id="tt-chis-dif" class="tip tip-js" lang="es">
                     <strong>DIFERENCIA [%]</strong>
                     <br>Diferencia entre distribución reciente e histórica.
                 </div>
-                <div id="tt-chis-tend" popover="auto" class="tip" lang="es">
+                <div id="tt-chis-tend" class="tip tip-js" lang="es">
                     <strong>TENDENCIA [%]</strong>
                     <br>Tendencia en los últimos -n- sorteos.
 
@@ -7817,34 +7818,26 @@
     <script defer src="/js/cobertura?V=5.js"></script>
 
     <script>
-        const closePopovers = () => {
-            document.querySelectorAll('[popover]:popover-open').forEach(p => p.hidePopover());
-        };
+        const tips = document.querySelectorAll('.tip-js');
+        const closeAll = () => tips.forEach(t => t.classList.remove('open'));
 
-        // cierra al scroll (ya lo tenías)
-        document.addEventListener('scroll', closePopovers, { passive: true, capture: true });
-
-        // cierra cuando aparece CUALQUIER capa fija grande (viñeta, interstitial, etc)
-        const observer = new MutationObserver((muts) => {
-            for (const m of muts) {
-                for (const n of m.addedNodes) {
-                    if (n.nodeType !== 1) continue;
-                    const el = n;
-                    const s = window.getComputedStyle(el);
-                    const esOverlay = s.position === 'fixed' && el.offsetHeight > 200 && (parseInt(s.zIndex) || 0) > 900;
-                    const esAd = el.querySelector?.('iframe[src*="google"], iframe[src*="doubleclick"], ins.adsbygoogle');
-
-                    if (esOverlay || esAd) {
-                        closePopovers();
-                        return;
-                    }
+        document.querySelectorAll('[popovertarget]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('popovertarget');
+                const tip = document.getElementById(id);
+                const wasOpen = tip.classList.contains('open');
+                closeAll();
+                if (!wasOpen) {
+                    tip.classList.add('open');
+                    setTimeout(closeAll, 4000); // autocierre
                 }
-            }
+            });
         });
-        observer.observe(document.body, { childList: true, subtree: true });
 
-        // extra: si la ventana pierde foco (abre interstitial), cierra
-        window.addEventListener('blur', closePopovers);
+        // cierra al hacer scroll, tap fuera, blur
+        document.addEventListener('scroll', closeAll, { passive: true, capture: true });
+        document.addEventListener('click', e => { if (!e.target.closest('.tip-js, [popovertarget]')) closeAll(); });
+        window.addEventListener('blur', closeAll);
     </script>
 
 </body>
