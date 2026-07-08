@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-07T18:30:19-06:00" />
+    <meta property="article:modified_time" content="2026-07-07T18:39:35-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
 
-    <link rel="stylesheet" href="/styles/main_pakin-p11.css?V=32">
+    <link rel="stylesheet" href="/styles/main_pakin-p11.css?V=34">
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-07T18:30:19-06:00",
+  "dateModified": "2026-07-07T18:39:35-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7818,26 +7818,37 @@
     <script defer src="/js/cobertura?V=5.js"></script>
 
     <script>
+        let tipTimer = null;
         const tips = document.querySelectorAll('.tip-js');
-        const closeAll = () => tips.forEach(t => t.classList.remove('open'));
+        const closeAll = () => {
+            tips.forEach(t => t.classList.remove('open'));
+            clearTimeout(tipTimer);
+        };
 
         document.querySelectorAll('[popovertarget]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const id = btn.getAttribute('popovertarget');
-                const tip = document.getElementById(id);
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const tip = document.getElementById(btn.getAttribute('popovertarget'));
                 const wasOpen = tip.classList.contains('open');
                 closeAll();
                 if (!wasOpen) {
                     tip.classList.add('open');
-                    setTimeout(closeAll, 10000); // autocierre
+                    tipTimer = setTimeout(closeAll, 10000); // ahora sí 10s reales
                 }
             });
         });
 
-        // cierra al hacer scroll, tap fuera, blur
-        document.addEventListener('scroll', closeAll, { passive: true, capture: true });
-        document.addEventListener('click', e => { if (!e.target.closest('.tip-js, [popovertarget]')) closeAll(); });
-        window.addEventListener('blur', closeAll);
+        // cierra solo con scroll real (>10px), no con micro-movimiento
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if (Math.abs(window.scrollY - lastY) > 10) closeAll();
+            lastY = window.scrollY;
+        }, { passive: true });
+
+        // tap fuera
+        document.addEventListener('click', e => {
+            if (!e.target.closest('.tip-js, [popovertarget]')) closeAll();
+        });
     </script>
 
 </body>
