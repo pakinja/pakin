@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-08T16:39:29-06:00" />
+    <meta property="article:modified_time" content="2026-07-08T17:15:48-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-08T16:39:29-06:00",
+  "dateModified": "2026-07-08T17:15:48-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1084,7 +1084,8 @@
 
                 <!-- Popovers Primos Tendencia -->
                 <div id="tt-chis-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>PRIMOS</strong>
+                    <button class="tip-close" aria-label="Cerrar">×</button>
+                    <p><strong>PRIMOS</strong></p>
                     <br>
                     <p>Analizar la probabilidad y tendencia de números primos te permite decidir cuántos números
                         primos juegas en cada combinación y en cada sorteo.
@@ -1099,7 +1100,7 @@
                             recientes - momentum.</li>
                         <li><strong>Baja prob. + Tendencia baja:</strong> poco frecuente y frío.</li>
                     </ul>
-                </p>
+                    </p>
                 </div>
                 <div id="tt-chis-hist" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
                     <strong>HISTÓRICO [%]</strong>
@@ -7857,52 +7858,46 @@
     <script defer src="/js/cobertura?V=5.js"></script>
 
     <script>
-        // --- Tooltip manual para reemplazar popover ---
         let tipTimer = null;
         const tips = document.querySelectorAll('.tip-js');
-
         const closeAll = () => {
             tips.forEach(t => t.classList.remove('open'));
             clearTimeout(tipTimer);
             tipTimer = null;
         };
 
-        // Abrir/cerrar al tocar la "i"
         document.querySelectorAll('[popovertarget]').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const tip = document.getElementById(btn.getAttribute('popovertarget'));
+                if (!tip) return;
                 const wasOpen = tip.classList.contains('open');
-
-                closeAll(); // cierra cualquier otro
-
+                closeAll();
                 if (!wasOpen) {
                     tip.classList.add('open');
-                    tipTimer = setTimeout(closeAll, 10000); // autocierre 10s
+                    tipTimer = setTimeout(closeAll, 10000);
                 }
             });
         });
 
-        // Cierra con scroll real (>10px, evita micro-movimientos)
+        // Cierre por X interna
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.tip-close')) closeAll();
+        });
+
+        // Tap fuera
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tip-js, [popovertarget]')) closeAll();
+        });
+
+        // Scroll real de la página (no el del tip)
         let lastY = window.scrollY;
         window.addEventListener('scroll', () => {
-            if (Math.abs(window.scrollY - lastY) > 25) closeAll();
+            if (Math.abs(window.scrollY - lastY) > 10) closeAll();
             lastY = window.scrollY;
         }, { passive: true });
 
-        // Cierra con tap fuera del tip
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.tip-js, [popovertarget]')) {
-                closeAll();
-            }
-        });
-
-        // Cierra con tecla ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeAll();
-        });
-
-        // Cierra si cambias de pestaña o app
+        document.addEventListener('keydown', e => e.key === 'Escape' && closeAll());
         window.addEventListener('blur', closeAll);
     </script>
 
