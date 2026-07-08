@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-07T19:11:29-06:00" />
+    <meta property="article:modified_time" content="2026-07-07T19:17:25-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-07T19:11:29-06:00",
+  "dateModified": "2026-07-07T19:17:25-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7818,37 +7818,53 @@
     <script defer src="/js/cobertura?V=5.js"></script>
 
     <script>
+        // --- Tooltip manual para reemplazar popover ---
         let tipTimer = null;
         const tips = document.querySelectorAll('.tip-js');
+
         const closeAll = () => {
             tips.forEach(t => t.classList.remove('open'));
             clearTimeout(tipTimer);
+            tipTimer = null;
         };
 
+        // Abrir/cerrar al tocar la "i"
         document.querySelectorAll('[popovertarget]').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const tip = document.getElementById(btn.getAttribute('popovertarget'));
                 const wasOpen = tip.classList.contains('open');
-                closeAll();
+
+                closeAll(); // cierra cualquier otro
+
                 if (!wasOpen) {
                     tip.classList.add('open');
-                    tipTimer = setTimeout(closeAll, 10000); // ahora sí 10s reales
+                    tipTimer = setTimeout(closeAll, 10000); // autocierre 10s
                 }
             });
         });
 
-        // cierra solo con scroll real (>10px), no con micro-movimiento
+        // Cierra con scroll real (>10px, evita micro-movimientos)
         let lastY = window.scrollY;
         window.addEventListener('scroll', () => {
             if (Math.abs(window.scrollY - lastY) > 10) closeAll();
             lastY = window.scrollY;
         }, { passive: true });
 
-        // tap fuera
-        document.addEventListener('click', e => {
-            if (!e.target.closest('.tip-js, [popovertarget]')) closeAll();
+        // Cierra con tap fuera del tip
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tip-js, [popovertarget]')) {
+                closeAll();
+            }
         });
+
+        // Cierra con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAll();
+        });
+
+        // Cierra si cambias de pestaña o app
+        window.addEventListener('blur', closeAll);
     </script>
 
 </body>
