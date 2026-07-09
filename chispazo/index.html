@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-08T20:00:29-06:00" />
+    <meta property="article:modified_time" content="2026-07-08T20:03:44-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-08T20:00:29-06:00",
+  "dateModified": "2026-07-08T20:03:44-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7895,7 +7895,7 @@
 
                 if (!wasOpen) {
                     tip.classList.add('open');
-                    tipTimer = setTimeout(closeAll, 25000); // autocierre 10s
+                    tipTimer = setTimeout(closeAll, 25000); // autocierre 25s
                 }
             });
         });
@@ -7903,7 +7903,7 @@
         // Cierra con scroll real (>10px, evita micro-movimientos)
         let lastY = window.scrollY;
         window.addEventListener('scroll', () => {
-            if (Math.abs(window.scrollY - lastY) > 10) closeAll();
+            if (Math.abs(window.scrollY - lastY) > 8) closeAll();
             lastY = window.scrollY;
         }, { passive: true });
 
