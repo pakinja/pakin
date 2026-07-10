@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-09T18:33:52-06:00" />
+    <meta property="article:modified_time" content="2026-07-09T18:58:16-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-09T18:33:52-06:00",
+  "dateModified": "2026-07-09T18:58:16-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1720,7 +1720,7 @@
 
 
             <h3 id="titulo-tabla-repetidos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente
+                Probabilidad y Tendencia de Números Repetidos: Histórico vs Reciente
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
@@ -2565,7 +2565,7 @@
             <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Posición Exacta</h3>
 
             <h3 id="titulo-tabla-repetidos-posicion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente [%]
+                Tendencia de Números Repetidos (posición exacta): Histórico vs Reciente [%]
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
@@ -2855,29 +2855,58 @@
 
                 <!-- Popovers Repetidos por Posición Tendencia -->
                 <div id="tt-chis-repspos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>REPETIDOS POR POSICIÓN</strong>
-                    <br>
-                    <p>Analizar la cantidad de números repetidos por posición te indica su probabilidad, te permite
-                        saber si hay alguna tendencia reciente y te ayuda a decidir qué cantidad de números primos
-                        juegas en cada combinación.
+                    <p>
+                        <strong>POSICIÓN [Probabilidad y Tendencia]</strong>
+                    </p>
+                    <p>
+                        Decide qué posición se repite (o no).
+                    </p>
+                    <p>
+                        Esto te puede ayudar:
+                    <ul>
+                        <li><strong>Prob. alta + Tendencia alta:</strong> sólido y en buen momento.</li>
+                        <li><strong>Prob. alta + Tendencia baja:</strong> sólido históricamente, pero frío ahora -
+                            algunos lo juegan esperando retorno.</li>
+                        <li><strong>Prob. baja + Tendencia alta:</strong> poco habitual, pero caliente en sorteos
+                            recientes - momentum.</li>
+                        <li><strong>Prob. baja + Tendencia baja:</strong> poco frecuente y frío.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong>Cruza probabilidad/tendencia con ciclos/tiempos.
                     </p>
                 </div>
                 <div id="tt-chis-hist" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>HISTÓRICO [%]</strong>
-                    <br>Distribución histórica, también llamada probabilidad empírica.
+                    <p>
+                        <strong>HISTÓRICO [%]</strong>
+                    </p>
+                    <p>
+                        Distribución histórica, también llamada probabilidad empírica.
+                    </p>
                 </div>
                 <div id="tt-chis-rec" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>RECIENTE [%]</strong>
-                    <br>Distribución en los últimos -n- sorteos.
+                    <p>
+                        <strong>RECIENTE [%]</strong>
+                    </p>
+                    <p>
+                        Distribución en los últimos -n- sorteos.
+                    </p>
                 </div>
                 <div id="tt-chis-dif" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>DIFERENCIA [%]</strong>
-                    <br>Diferencia entre distribución reciente e histórica.
+                    <p>
+                        <strong>DIFERENCIA [%]</strong>
+                    </p>
+                    <p>
+                        Diferencia entre distribución reciente e histórica.
+                    </p>
                 </div>
                 <div id="tt-chis-tend" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>TENDENCIA [%]</strong>
-                    <br>Tendencia en los últimos -n- sorteos.
-
+                    <p>
+                        <strong>TENDENCIA [%]</strong>
+                    </p>
+                    <p>
+                        Tendencia en los últimos -n- sorteos.
+                    </p>
                     <!-- Leyenda Balanza -->
                     <div class="leyenda">
                         <div class="barra">
@@ -2898,7 +2927,7 @@
 
             <h3 id="titulo-tabla-repetidos-posicion-ciclos"
                 class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
-                Ciclo de Números Repetidos: Tiempos de Aparición
+                Ciclo de Números Repetidos (posición exacta): Tiempos de Aparición
             </h3>
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
@@ -3268,54 +3297,98 @@
                 </table>
 
                 <!-- Popovers Repetidos por posción Ciclos -->
-                <div id="tt-cron-pos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>REPETIDOS POR POSICIÓN</strong>
-                    <br>
-                    <p>Analizar los ciclos de tiempo de aparición de la cantidad de números repetidos por posición te
-                        permite saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el
-                        tiempo que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto
-                        tiempo ya rebasó el mismo.
+                <div id="tt-cron-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>POSICIÓN [Ciclos de Aparición]</strong>
                     </p>
+                    <p>
+                        Decide en qué momento jugar qué posición se repite.
+                    </p>
+                    <p>
+                        Esto te puede ayudar:
+                    <ul>
+                        <li><strong>Anticipado</strong>antes de llegar a su tiempo típico (azul).
+                        </li>
+                        <li><strong>En tiempo</strong> alrededor de su tiempo típico (verde).</li>
+                        <li><strong>Atrasados</strong>rebasó su tiempo típico (rojo).
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+
                 </div>
 
                 <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>IDX</strong>
-                    <br>
-                    Índice de tiempo medido en número de sorteos.
-                    <br>
-                    <br>
-                    <strong>IDX te ayuda a ubicar un resultado en el histórico Pakin.</strong>
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        Es un conteo (en número de sorteos) comenzando desde el sorteo más actual.
+                    </p>
+                    <p>
+                        Esto te puede ayudar a ubicar un resultado:
+                    <ul>
+                        <li><strong>IDX = 0</strong>Apareció en el sorteo más reciente.</li>
+                        <li><strong>IDX = 1</strong>Apareció en el penúltimo sorteo.</li>
+                        <li><strong>IDX = 33</strong>Apareció hace 34 sorteos (contando IDX = 0, el sorteo más
+                            reciente).</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        Busca un IDX en el <a href="https://pakin.lat/chispazo/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Chispazo.
+                        </a>
+                    </p>
 
                 </div>
 
                 <div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>P50</strong>
-                    <br>
-                    50 percentil o mediana de tiempo entre apariciones.
+                    <p>
+                        <strong>P50</strong>
+                    </p>
+                    <p>
+                        50 percentil o mediana de tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>P80</strong>
-                    <br>
-                    80 percentil de tiempo entre apariciones.
+                    <p>
+                        <strong>P80</strong>
+                    </p>
+                    <p>
+                        80 percentil de tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>MÁXIMO</strong>
-                    <br>
-                    Máximo tiempo entre apariciones.
+                    <p>
+                        <strong>MÁXIMO</strong>
+                    </p>
+                    <p>
+                        Máximo tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>ATRASO</strong>
-                    <br>
-                    Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+                    <p>
+                        <strong>ATRASO</strong>
+                    </p>
+                    <p>
+                        Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+                    </p>
                 </div>
 
                 <div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>xATRASO</strong>
-                    <br>
-                    Atraso en cantidad de veces el tiempo típico (P50).
+                    <p>
+                        <strong>xATRASO</strong>
+                    </p>
+                    <p>
+                        Atraso en cantidad de veces el tiempo típico (P50).
+                    </p>
 
                     <!-- Leyenda Ciclos -->
                     <div class="leyenda">
