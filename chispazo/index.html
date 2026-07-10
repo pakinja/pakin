@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-09T18:12:12-06:00" />
+    <meta property="article:modified_time" content="2026-07-09T18:33:52-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-09T18:12:12-06:00",
+  "dateModified": "2026-07-09T18:33:52-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1709,7 +1709,8 @@
             </div>
 
             <p class="texto-analitica px-3 px-md-0">
-                En Chispazo hasta ahora en <strong>sorteos consecutivos</strong> se han repetido hasta 4 números.
+                En Chispazo podemos medir cuántos números se repiten en <strong>sorteos consecutivos</strong>
+                tanto sin importar en que posición como en su posición exacta.
                 En esta sección puedes consultar su distribución o probabilidad histórica, la tendencia reciente
                 y los ciclos o tiempos de aparición.
             </p>
@@ -2451,53 +2452,97 @@
 
                 <!-- Popovers Repetidos Ciclos -->
                 <div id="tt-cron-reps" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>REPETIDOS</strong>
-                    <br>
-                    <p>Analizar los ciclos de tiempo de aparición de la cantidad de números repetidos te permite
-                        saber cuál es el tiempo típico de aparición de cada valor, mediante IDX sabes cuál es el tiempo
-                        que lleva sin aparecer, cuánto tiempo falta para llegar a su tiempo típico o por cuánto tiempo
-                        ya rebasó el mismo.
+                    <p>
+                        <strong>REPETIDOS [Ciclos de Aparición]</strong>
                     </p>
+                    <p>
+                        Decide en qué momento jugar qué cantidad de números repetidos.
+                    </p>
+                    <p>
+                        Esto te puede ayudar:
+                    <ul>
+                        <li><strong>Anticipado</strong>antes de llegar a su tiempo típico (azul).
+                        </li>
+                        <li><strong>En tiempo</strong> alrededor de su tiempo típico (verde).</li>
+                        <li><strong>Atrasados</strong>rebasó su tiempo típico (rojo).
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+
                 </div>
 
                 <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>IDX</strong>
-                    <br>
-                    Índice de tiempo medido en número de sorteos.
-                    <br>
-                    <br>
-                    <strong>IDX te ayuda a ubicar un resultado en el histórico Pakin.</strong>
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        Es un conteo (en número de sorteos) comenzando desde el sorteo más actual.
+                    </p>
+                    <p>
+                        Esto te puede ayudar a ubicar un resultado:
+                    <ul>
+                        <li><strong>IDX = 0</strong>Apareció en el sorteo más reciente.</li>
+                        <li><strong>IDX = 1</strong>Apareció en el penúltimo sorteo.</li>
+                        <li><strong>IDX = 33</strong>Apareció hace 34 sorteos (contando IDX = 0, el sorteo más
+                            reciente).</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        Busca un IDX en el <a href="https://pakin.lat/chispazo/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Chispazo.
+                        </a>
+                    </p>
 
                 </div>
 
                 <div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>P50</strong>
-                    <br>
-                    50 percentil o mediana de tiempo entre apariciones.
+                    <p>
+                        <strong>P50</strong>
+                    </p>
+                    <p>
+                        50 percentil o mediana de tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>P80</strong>
-                    <br>
-                    80 percentil de tiempo entre apariciones.
+                    <p>
+                        <strong>P80</strong>
+                    </p>
+                    <p>
+                        80 percentil de tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>MÁXIMO</strong>
-                    <br>
-                    Máximo tiempo entre apariciones.
+                    <p>
+                        <strong>MÁXIMO</strong>
+                    </p>
+                    <p>
+                        Máximo tiempo entre apariciones.
+                    </p>
                 </div>
 
                 <div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>ATRASO</strong>
-                    <br>
-                    Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+                    <p>
+                        <strong>ATRASO</strong>
+                    </p>
+                    <p>
+                        Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+                    </p>
                 </div>
 
                 <div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <strong>xATRASO</strong>
-                    <br>
-                    Atraso en cantidad de veces el tiempo típico (P50).
+                    <p>
+                        <strong>xATRASO</strong>
+                    </p>
+                    <p>
+                        Atraso en cantidad de veces el tiempo típico (P50).
+                    </p>
 
                     <!-- Leyenda Ciclos -->
                     <div class="leyenda">
