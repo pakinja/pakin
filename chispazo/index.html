@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-10T17:55:24-06:00" />
+    <meta property="article:modified_time" content="2026-07-10T18:11:57-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-10T17:55:24-06:00",
+  "dateModified": "2026-07-10T18:11:57-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7555,141 +7555,139 @@
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=5.js"></script>
 
-    
-<-- TENDENCIA-->
+    <!-- TENDENCIA -->
 <div id="tt-tend-hist" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>HISTÓRICO [%]</strong>
-                    </p>
-                    <p>
-                        Distribución histórica, también llamada probabilidad empírica.
-                    </p>
-                </div>
-                <div id="tt-tend-rec" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>RECIENTE [%]</strong>
-                    </p>
-                    <p>
-                        Distribución en los últimos -n- sorteos.
-                    </p>
-                </div>
-                <div id="tt-tend-dif" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>DIFERENCIA [%]</strong>
-                    </p>
-                    <p>
-                        Diferencia entre distribución reciente e histórica.
-                    </p>
-                </div>
-                <div id="tt-tend-tend" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>TENDENCIA [%]</strong>
-                    </p>
-                    <p>
-                        Tendencia en los últimos -n- sorteos.
-                    </p>
-                    <!-- Leyenda Balanza -->
-                    <div class="leyenda">
-                        <div class="barra">
-                            <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                            <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                            <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                            <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                            <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                            <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                            <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                            <span class="var-b-p4" title="> 120%">>120%</span>
-                        </div>
-                    </div>
+    <p>
+        <strong>HISTÓRICO [%]</strong>
+    </p>
+    <p>
+        Distribución histórica, también llamada probabilidad empírica.
+    </p>
+</div>
+<div id="tt-tend-rec" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>RECIENTE [%]</strong>
+    </p>
+    <p>
+        Distribución en los últimos -n- sorteos.
+    </p>
+</div>
+<div id="tt-tend-dif" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>DIFERENCIA [%]</strong>
+    </p>
+    <p>
+        Diferencia entre distribución reciente e histórica.
+    </p>
+</div>
+<div id="tt-tend-tend" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>TENDENCIA [%]</strong>
+    </p>
+    <p>
+        Tendencia en los últimos -n- sorteos.
+    </p>
+    <!-- Leyenda Balanza -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-b-m3" title="≤ -60%">≤-60%</span>
+            <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
+            <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
+            <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
+            <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
+            <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
+            <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
+            <span class="var-b-p4" title="> 120%">>120%</span>
+        </div>
+    </div>
 
-                </div>
-                
-                <-- CICLOS-->
-                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>IDX [Índice de tiempo]</strong>
-                    </p>
-                    <p>
-                        Es un conteo (en número de sorteos) comenzando desde el sorteo más actual.
-                    </p>
-                    <p>
-                        Esto te puede ayudar a ubicar un resultado:
-                    <ul>
-                        <li><strong>IDX = 0</strong>Apareció en el sorteo más reciente.</li>
-                        <li><strong>IDX = 1</strong>Apareció en el penúltimo sorteo.</li>
-                        <li><strong>IDX = 33</strong>Apareció hace 34 sorteos (contando IDX = 0, el sorteo más
-                            reciente).</li>
-                    </ul>
-                    </p>
+</div>
 
-                    <p>
-                        Busca un IDX en el <a href="https://pakin.lat/chispazo/historico" target="_blank"
-                            rel="noopener noreferrer">
-                            histórico Chispazo.
-                        </a>
-                    </p>
+<!-- CICLOS -->
+<div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>IDX [Índice de tiempo]</strong>
+    </p>
+    <p>
+        Es un conteo de tiempo (en número de sorteos) comenzando desde el sorteo más actual.
+    </p>
+    <p>
+        Esto te puede ayudar a ubicar un resultado:
+    <ul>
+        <li><strong>IDX = 0</strong>Apareció en el sorteo más reciente.</li>
+        <li><strong>IDX = 1</strong>Apareció en el penúltimo sorteo.</li>
+        <li><strong>IDX = 33</strong>Apareció hace 34 sorteos (contando IDX = 0, el sorteo más
+            reciente).</li>
+    </ul>
+    </p>
 
-                </div>
+    <p>
+        Busca un IDX en el <a href="https://pakin.lat/chispazo/historico" target="_blank" rel="noopener noreferrer">
+            histórico Chispazo.
+        </a>
+    </p>
 
-                <div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>P50</strong>
-                    </p>
-                    <p>
-                        50 percentil o mediana de tiempo entre apariciones.
-                    </p>
-                </div>
+</div>
 
-                <div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>P80</strong>
-                    </p>
-                    <p>
-                        80 percentil de tiempo entre apariciones.
-                    </p>
-                </div>
+<div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P50</strong>
+    </p>
+    <p>
+        50 percentil o mediana de tiempo entre apariciones.
+    </p>
+</div>
 
-                <div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>MÁXIMO</strong>
-                    </p>
-                    <p>
-                        Máximo tiempo entre apariciones.
-                    </p>
-                </div>
+<div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P80</strong>
+    </p>
+    <p>
+        80 percentil de tiempo entre apariciones.
+    </p>
+</div>
 
-                <div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>ATRASO</strong>
-                    </p>
-                    <p>
-                        Atraso en el tiempo de aparición respecto al tiempo típico (P50).
-                    </p>
-                </div>
+<div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>MÁXIMO</strong>
+    </p>
+    <p>
+        Máximo tiempo entre apariciones.
+    </p>
+</div>
 
-                <div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
-                    <p>
-                        <strong>xATRASO</strong>
-                    </p>
-                    <p>
-                        Atraso en cantidad de veces el tiempo típico (P50).
-                    </p>
+<div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>ATRASO</strong>
+    </p>
+    <p>
+        Atraso en el tiempo de aparición respecto al tiempo típico (P50).
+    </p>
+</div>
 
-                    <!-- Leyenda Ciclos -->
-                    <div class="leyenda">
-                        <div class="barra">
-                            <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                            <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                            <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                            <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                            <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                            <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                            <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                            <span class="var-c-p4" title="> 2.5">>2.5</span>
-                        </div>
-                    </div>
+<div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>xATRASO</strong>
+    </p>
+    <p>
+        Atraso en x veces el tiempo típico (P50).
+    </p>
 
-                </div>
+    <!-- Leyenda Ciclos -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
+            <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
+            <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
+            <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
+            <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
+            <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
+            <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
+            <span class="var-c-p4" title="> 2.5">>2.5</span>
+        </div>
+    </div>
+
+</div>
     <script>
         // --- Tooltip manual para reemplazar popover ---
         let tipTimer = null;
