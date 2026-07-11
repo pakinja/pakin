@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-10T18:59:18-06:00" />
+    <meta property="article:modified_time" content="2026-07-10T19:57:05-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-07-10T18:59:18-06:00",
+  "dateModified": "2026-07-10T19:57:05-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7706,7 +7706,20 @@
         document.querySelectorAll('[popovertarget]').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const tip = document.getElementById(btn.getAttribute('popovertarget'));
+
+                const targetId = btn.getAttribute('popovertarget');
+                const ariaLabel = btn.getAttribute('aria-label') || '';
+
+                // --- INYECCIÓN PARA GOOGLE TAG MANAGER ---
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'interaccion_popover',      // Nombre del evento personalizado
+                    'popover_id': targetId,              // Ej: "tt-tend-primos" o "tt-cron-idx"
+                    'columna_nombre': ariaLabel          // Ej: "Qué es TEND" o "Qué es IDX"
+                });
+                // -----------------------------------------
+
+                const tip = document.getElementById(targetId);
                 const wasOpen = tip.classList.contains('open');
 
                 closeAll(); // cierra cualquier otro
