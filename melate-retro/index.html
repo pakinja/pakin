@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-11T11:48:49-06:00" />
+    <meta property="article:modified_time" content="2026-07-11T12:12:32-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-07-11T11:48:49-06:00",
+          "dateModified": "2026-07-11T12:12:32-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -3835,37 +3835,67 @@
                     Estadística de Consecutivos en Melate Retro: Tendencia y Ciclos
                 </h2>
             </div>
-            <p class="texto-analitica px-3 px-md-0">En el sorteo Melate Retro consideramos las posiciones
-                consecutivas
-                en un
-                resultado a aquellas que contienen números sucesivos, por ejemplo, en la combinación [3,12,13,25,26]
-                hay
-                dos
-                posiciones con números consecutivos 12-13 y 25-26, a continuación la estadística.</p>
+            <p class="texto-analitica px-3 px-md-0">
+                En Melate Retro una posición consecutiva en una combinación corresponde a un par de números
+                consecutivos,
+                por lo que podemos tener hasta 5 de estas posiciones cuando todos los números de la combinación son
+                de esta forma.
+                En esta sección puedes consultar su distribución o probabilidad histórica, la tendencia reciente
+                y los ciclos o tiempos de aparición.
+            </p>
 
             <h3 id="titulo-tabla-consecutivos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Consecutivos: Histórico vs Reciente [%]
+                Probabilidad y Tendencia de Consecutivos: Histórico vs Reciente [%]
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-consecutivos-tendencia"
                     class="table table-hover retro-hcons-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-pcons"
+                                    aria-label="Qué es PCONS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                HIST
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-hist"
+                                    aria-label="Qué es HIST"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -4101,31 +4131,96 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Consecutivos Tendencia -->
+                <div id="tt-tend-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>Posiciones Consecutivas [Probabilidad y Tendencia]</strong>
+                    </p>
+                    <p>
+                        Decide cuántas posiciones consecutivas.
+                    <ul>
+                        <li><strong>Prob. alta + Tendencia alta:</strong> sólido y en buen momento.</li>
+                        <li><strong>Prob. alta + Tendencia baja:</strong> sólido pero frío.</li>
+                        <li><strong>Prob. baja + Tendencia alta:</strong> poco habitual pero caliente.</li>
+                        <li><strong>Prob. baja + Tendencia baja:</strong> poco frecuente y frío.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong>Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+                </div>
+
             </div>
 
             <h3 id="titulo-tabla-consecutivos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Consecutivos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-consecutivos-ciclos"
                     class="retro-hcons-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-pcons"
+                                    aria-label="Qué es PCONS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -4184,7 +4279,8 @@
                             
 
                             
-                            <td>0</td>
+                            <td class="var-c-m3">0.00</td>
+
                             
 
                             
@@ -4245,7 +4341,8 @@
                             
 
                             
-                            <td>0.5</td>
+                            <td class="var-c-m2">0.50</td>
+
                             
 
                             
@@ -4306,7 +4403,8 @@
                             
 
                             
-                            <td>0.4</td>
+                            <td class="var-c-m2">0.40</td>
+
                             
 
                             
@@ -4367,7 +4465,8 @@
                             
 
                             
-                            <td>0.44</td>
+                            <td class="var-c-m2">0.44</td>
+
                             
 
                             
@@ -4428,7 +4527,8 @@
                             
 
                             
-                            <td>nan</td>
+                            <td class="">nan</td>
+
                             
 
                             
@@ -4436,6 +4536,52 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Consecutivos Ciclos -->
+                <div id="tt-cron-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>Posiciones Consecutivas [Ciclos de Aparición]</strong>
+                    </p>
+                    <p>
+                        Decide en qué momento jugar cuántas posiciones consecutivas.
+                    <ul>
+                        <li><strong>Anticipado</strong>antes de llegar a su tiempo típico (azul).
+                        </li>
+                        <li><strong>En tiempo</strong> alrededor de su tiempo típico (verde).</li>
+                        <li><strong>Atrasados</strong>rebasó su tiempo típico (rojo).
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+                </div>
+
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        Es un conteo de tiempo (en número de sorteos) comenzando desde el sorteo más actual.
+                    </p>
+                    <p>
+                        Esto te puede ayudar a ubicar un resultado:
+                    <ul>
+                        <li><strong>IDX = 0</strong>Apareció en el sorteo más reciente.</li>
+                        <li><strong>IDX = 1</strong>Apareció en el penúltimo sorteo.</li>
+                        <li><strong>IDX = 33</strong>Apareció hace 34 sorteos (contando IDX = 0, el sorteo más
+                            reciente).</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        Busca un IDX en el <a href="https://pakin.lat/melate-retro/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate Retro.
+                        </a>
+                    </p>
+                </div>
             </div>
         </section>
 
