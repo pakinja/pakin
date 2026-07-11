@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-11T10:57:25-06:00" />
+    <meta property="article:modified_time" content="2026-07-11T11:00:25-06:00" />
 
 
     <!-- Bootstrap CSS -->
@@ -50,7 +50,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-07-11T10:57:25-06:00",
+          "dateModified": "2026-07-11T11:00:25-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -1164,26 +1164,71 @@
             <h3 id="titulo-tabla-primos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Primos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-primos-ciclos"
                     class="retro-primos-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PRIMOS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PRIMOS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-primos"
+                                    aria-label="Qué es PRIMOS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -1555,6 +1600,26 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Primos Ciclos -->
+                <div id="tt-cron-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>PRIMOS [Ciclos de Aparición]</strong>
+                    </p>
+                    <p>
+                        Decide en qué momento jugar qué cantidad de números primos.
+                    <ul>
+                        <li><strong>Anticipado</strong>antes de llegar a su tiempo típico (azul).
+                        </li>
+                        <li><strong>En tiempo</strong> alrededor de su tiempo típico (verde).</li>
+                        <li><strong>Atrasados</strong>rebasó su tiempo típico (rojo).
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+                </div>
             </div>
         </section>
 
