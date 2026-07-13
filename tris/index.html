@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-12T19:19:00-06:00" />
+    <meta property="article:modified_time" content="2026-07-12T19:22:06-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-07-12T19:19:00-06:00",
+          "dateModified": "2026-07-12T19:22:06-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -4207,7 +4207,338 @@
     <!-- <script defer src="/js/tris/tris_resultados?V=2.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=5.js"></script>
+    <!-- TENDENCIA PRIMERA COLUMNA -->
 
+<!-- Primos Tendencia -->
+<div id="tt-tend-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PRIMOS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos Tendencia -->
+<div id="tt-tend-reps" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>REPETIDOS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+
+<!-- Repetidos por Posición Tendencia -->
+<div id="tt-tend-repspos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIÓN [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+
+<!-- Consecutivos Tendencia -->
+<div id="tt-tend-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIONES CONSECUTIVAS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- CICLOS PRIMERA COLUMNA -->
+<!-- Primos Ciclos -->
+<div id="tt-cron-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PRIMOS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+<!-- Repetidos Ciclos -->
+<div id="tt-cron-reps" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>REPETIDOS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos por posción Ciclos -->
+<div id="tt-cron-repspos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIÓN [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos por posción Ciclos -->
+<div id="tt-cron-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIONES CONSECUTIVAS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- TENDENCIA COLUMNAS -->
+<div id="tt-tend-prob" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PROBABILIDAD [%]</strong>
+    </p>
+    <p>
+        Distribución histórica, también llamada <strong>probabilidad empírica</strong>.
+    </p>
+</div>
+<div id="tt-tend-rec" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>RECIENTE [%]</strong>
+    </p>
+    <p>
+        Distribución en los últimos -n- sorteos.
+    </p>
+</div>
+<div id="tt-tend-dif" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>DIFERENCIA [%]</strong>
+    </p>
+    <p>
+        <strong>[REC - PROB]</strong>: Diferencia entre distribución reciente y probabilidad.
+    </p>
+</div>
+<div id="tt-tend-tend" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>TENDENCIA [%]</strong>
+    </p>
+    <p>
+        <strong>[(REC / PROB - 1) * 100]</strong>: Tendencia en los últimos -n- sorteos.
+    </p>
+    <!-- Leyenda Balanza -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-b-m3" title="≤ -60%">≤-60%</span>
+            <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
+            <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
+            <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
+            <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
+            <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
+            <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
+            <span class="var-b-p4" title="> 120%">>120%</span>
+        </div>
+    </div>
+
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- CICLOS COLUMNAS -->
+<div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P50</strong>
+    </p>
+    <p>
+        50 percentil o mediana de tiempo entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P80</strong>
+    </p>
+    <p>
+        80 percentil de tiempo entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>MÁXIMO</strong>
+    </p>
+    <p>
+        Máximo tiempo histórico entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>ATRASO</strong>
+    </p>
+    <p>
+        <strong>[IDX - P50]</strong>: Atraso en el tiempo de aparición.
+    </p>
+</div>
+
+<div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>xATRASO</strong>
+    </p>
+    <p>
+        <strong>[IDX / P50]</strong>: Atraso en x veces el tiempo típico.
+    </p>
+
+    <!-- Leyenda Ciclos -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
+            <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
+            <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
+            <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
+            <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
+            <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
+            <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
+            <span class="var-c-p4" title="> 2.5">>2.5</span>
+        </div>
+    </div>
+
+</div>
+    <script>
+        // --- Tooltip manual para reemplazar popover ---
+        let tipTimer = null;
+        const tips = document.querySelectorAll('.tip-js');
+
+        const closeAll = () => {
+            tips.forEach(t => t.classList.remove('open'));
+            clearTimeout(tipTimer);
+            tipTimer = null;
+        };
+
+        // Abrir/cerrar al tocar la "i"
+        document.querySelectorAll('[popovertarget]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                const targetId = btn.getAttribute('popovertarget');
+                const ariaLabel = btn.getAttribute('aria-label') || '';
+
+                // --- INYECCIÓN PARA GOOGLE TAG MANAGER ---
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'interaccion_popover',      // Nombre del evento personalizado
+                    'popover_id': targetId,              // Ej: "tt-tend-primos" o "tt-cron-idx"
+                    'columna_nombre': ariaLabel          // Ej: "Qué es TEND" o "Qué es IDX"
+                });
+                // -----------------------------------------
+
+                const tip = document.getElementById(targetId);
+                const wasOpen = tip.classList.contains('open');
+
+                closeAll(); // cierra cualquier otro
+
+                if (!wasOpen) {
+                    tip.classList.add('open');
+                    tipTimer = setTimeout(closeAll, 25000); // autocierre 25s
+                }
+            });
+        });
+
+        // Cierra con scroll real (>10px, evita micro-movimientos)
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if (Math.abs(window.scrollY - lastY) > 8) closeAll();
+            lastY = window.scrollY;
+        }, { passive: true });
+
+        // Cierra con tap fuera del tip
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tip-js, [popovertarget]')) {
+                closeAll();
+            }
+        });
+
+        // Cierra con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAll();
+        });
+
+        // Cierra si cambias de pestaña o app
+        window.addEventListener('blur', closeAll);
+    </script>
 
 </body>
 
