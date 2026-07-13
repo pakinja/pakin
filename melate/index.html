@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-07-10T23:24:22-06:00" />
+    <meta property="article:modified_time" content="2026-07-12T20:17:44-06:00" />
 
     <!-- Bootstrap CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
           "headline": "Melate Resultados de Hoy, Histórico y Analítica",
           "image": "https://www.pakin.lat/images/pakin-melate-revancha-revanchita-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-07-10T23:24:22-06:00",
+          "dateModified": "2026-07-12T20:17:44-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://www.pakin.lat/images/p2.webp" } },
           "description": "Melate números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -788,33 +788,65 @@
                     Estadística de Números Primos en Melate: Tendencia y Ciclos
                 </h2>
             </div>
-            <p class="texto-analitica px-3 px-md-0">Cuántos números primos aparecen en cada sorteo Melate. Consulta su
-                frecuencia histórica, tendencia reciente y ciclos de aparición.
+            <p class="texto-analitica px-3 px-md-0">
+                En Melate cada combinación puede contener entre 0 y 6 números primos.
+                En esta sección puedes consultar su probabilidad histórica, la tendencia reciente y sus ciclos de
+                aparición para identificar qué casos tienen alta o baja probabilidad, cuáles son los tiempos
+                típicos de aparición así como su estado temporal actual.
             </p>
 
             <h3 id="titulo-tabla-primos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Tendencia de Números Primos: Histórico vs Reciente [%]
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-primos-tendencia"
                     class="table table-hover melate-primos-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PRIMOS</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PRIMOS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-primos"
+                                    aria-label="Qué es PRIMOS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                PROB
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-prob"
+                                    aria-label="Qué es PROB"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -848,7 +880,8 @@
                             
 
                             
-                            <td>2.7</td>
+                            <td>+2.7</td>
+
                             
 
                             
@@ -856,7 +889,7 @@
                             
 
                             
-                            <td>+21.3</td>
+                            <td class="var-b-p1">+21.27</td>
 
                             
 
@@ -894,6 +927,7 @@
 
                             
                             <td>-10.44</td>
+
                             
 
                             
@@ -901,7 +935,7 @@
                             
 
                             
-                            <td>-33.7</td>
+                            <td class="var-b-m2">-33.72</td>
 
                             
 
@@ -938,7 +972,8 @@
                             
 
                             
-                            <td>3.42</td>
+                            <td>+3.42</td>
+
                             
 
                             
@@ -946,7 +981,7 @@
                             
 
                             
-                            <td>+9.8</td>
+                            <td class="var-b-p1">+9.77</td>
 
                             
 
@@ -983,7 +1018,8 @@
                             
 
                             
-                            <td>6.12</td>
+                            <td>+6.12</td>
+
                             
 
                             
@@ -991,7 +1027,7 @@
                             
 
                             
-                            <td>+36.1</td>
+                            <td class="var-b-p2">+36.06</td>
 
                             
 
@@ -1029,6 +1065,7 @@
 
                             
                             <td>-1.11</td>
+
                             
 
                             
@@ -1036,7 +1073,7 @@
                             
 
                             
-                            <td>-30.2</td>
+                            <td class="var-b-m2">-30.15</td>
 
                             
 
@@ -1074,6 +1111,7 @@
 
                             
                             <td>-0.6</td>
+
                             
 
                             
@@ -1081,7 +1119,7 @@
                             
 
                             
-                            <td>-100.0</td>
+                            <td class="var-b-m3">-100.0</td>
 
                             
 
@@ -1095,26 +1133,71 @@
             <h3 id="titulo-tabla-primos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Primos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-primos-ciclos"
                     class="melate-primos-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PRIMOS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PRIMOS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-primos"
+                                    aria-label="Qué es PRIMOS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -1173,7 +1256,8 @@
                             
 
                             
-                            <td>3.6</td>
+                            <td class="var-c-p4">3.60</td>
+
                             
 
                             
@@ -1234,7 +1318,8 @@
                             
 
                             
-                            <td>0</td>
+                            <td class="var-c-m3">0.00</td>
+
                             
 
                             
@@ -1295,7 +1380,8 @@
                             
 
                             
-                            <td>1.5</td>
+                            <td class="var-c-p2">1.50</td>
+
                             
 
                             
@@ -1356,7 +1442,8 @@
                             
 
                             
-                            <td>0.5</td>
+                            <td class="var-c-m2">0.50</td>
+
                             
 
                             
@@ -1417,7 +1504,8 @@
                             
 
                             
-                            <td>0.76</td>
+                            <td class="var-c-m1">0.76</td>
+
                             
 
                             
@@ -1478,7 +1566,8 @@
                             
 
                             
-                            <td>0.37</td>
+                            <td class="var-c-m2">0.37</td>
+
                             
 
                             
@@ -1486,6 +1575,20 @@
                         
                     </tbody>
                 </table>
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        IDX responde a la pregunta: "<strong>¿hace cuántos sorteos apareció este resultado?</strong>"
+                        <br>
+                        <br>Ubica un IDX en el <a href="https://pakin.lat/melate/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate.</a>
+                    </p>
+                </div>
+
             </div>
         </section>
 
@@ -1499,39 +1602,68 @@
                 </h2>
             </div>
 
-            <p class="texto-analitica px-3 px-md-0">En el sorteo Melate, hasta ahora en sorteos
-                consecutivos se han repetido hasta 3 números sin importar que aparezcan en otra posición
-                respecto al resultado inmediato anterior, en el histórico Melate
-                Pakin cuando un resultado tiene 2 o más números repetidos se marcan en color rojo en la columna
-                REPS.<br>A continuación la
-                estadística.</p>
+            <p class="texto-analitica px-3 px-md-0">
+                En Melate podemos medir cuántos números se repiten en <strong>sorteos consecutivos</strong>
+                tanto sin importar en que posición como en su posición exacta.
+                En esta sección puedes consultar su distribución o probabilidad histórica, la tendencia reciente
+                y los ciclos o tiempos de aparición.
+            </p>
 
             <h3 class="text-center text-dark mb-3 fs-5 fw-semibold">Cualquier Posición</h3>
 
 
             <h3 id="titulo-tabla-repetidos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente
+                Probabilidad y Tendencia de Números Repetidos: Histórico vs Reciente
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] · 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-repetidos-tendencia"
                     class="table table-hover melate-reps-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>REPS</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                REPS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-reps"
+                                    aria-label="Qué es REPS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                PROB
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-prob"
+                                    aria-label="Qué es PROB"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -1566,6 +1698,7 @@
 
                             
                             <td>-3.1</td>
+
                             
 
                             
@@ -1573,7 +1706,7 @@
                             
 
                             
-                            <td>-6.3</td>
+                            <td class="var-b-m1">-6.3</td>
 
                             
 
@@ -1611,6 +1744,7 @@
 
                             
                             <td>-4.03</td>
+
                             
 
                             
@@ -1618,7 +1752,7 @@
                             
 
                             
-                            <td>-10.8</td>
+                            <td class="var-b-m1">-10.78</td>
 
                             
 
@@ -1655,7 +1789,8 @@
                             
 
                             
-                            <td>8.48</td>
+                            <td>+8.48</td>
+
                             
 
                             
@@ -1663,7 +1798,7 @@
                             
 
                             
-                            <td>+70.4</td>
+                            <td class="var-b-p3">+70.44</td>
 
                             
 
@@ -1701,6 +1836,7 @@
 
                             
                             <td>-1.35</td>
+
                             
 
                             
@@ -1708,7 +1844,7 @@
                             
 
                             
-                            <td>-100.0</td>
+                            <td class="var-b-m3">-100.0</td>
 
                             
 
@@ -1722,302 +1858,394 @@
             <h3 id="titulo-tabla-repetidos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Repetidos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-repetidos-ciclos"
                     class="melate-reps-cron mb-0 align-middle text-center text-nowrap">
-                <thead>
-                    <tr><th>REPS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
-                </thead>
-                <tbody>
-                    
-                    <tr>
+                    <thead>
+                        <tr>
+                            
+                            <th>
+                                REPS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-reps"
+                                    aria-label="Qué es REPS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
                         
-                        
-                        
+                        <tr>
+                            
+                            
+                            
 
-                        
-                        <td>0</td>
-                        
+                            
+                            <td>0</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>0</td>
-                        
+                            
+                            <td>0</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>2</td>
-                        
+                            
+                            <td>2</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>3</td>
-                        
+                            
+                            <td>3</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>11</td>
-                        
+                            
+                            <td>11</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>-2</td>
+                            
+                            <td>-2</td>
 
-                        
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>0</td>
-                        
+                            
+                            <td class="var-c-m3">0.00</td>
 
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        
-                        
+                            
 
+                            
+                        </tr>
                         
-                        <td>1</td>
-                        
+                        <tr>
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>1</td>
+                            
 
-                        
-                        <td>1</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>1</td>
+                            
 
-                        
-                        <td>2</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>2</td>
+                            
 
-                        
-                        <td>4</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>4</td>
+                            
 
-                        
-                        <td>16</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>16</td>
+                            
 
-                        
-                        <td>-1</td>
+                            
+                            
+                            
 
-                        
+                            
+                            <td>-1</td>
 
-                        
-                        
-                        
+                            
 
-                        
-                        <td>0.5</td>
-                        
+                            
+                            
+                            
 
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        
-                        
+                            
+                            <td class="var-c-m2">0.50</td>
 
-                        
-                        <td>2</td>
-                        
+                            
 
+                            
+                        </tr>
                         
-                        
-                        
+                        <tr>
+                            
+                            
+                            
 
-                        
-                        <td>8</td>
-                        
+                            
+                            <td>2</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>6</td>
-                        
+                            
+                            <td>8</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>13</td>
-                        
+                            
+                            <td>6</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>58</td>
-                        
+                            
+                            <td>13</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>+2</td>
+                            
+                            <td>58</td>
+                            
 
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>+2</td>
 
-                        
-                        <td>1.33</td>
-                        
+                            
 
-                        
-                    </tr>
-                    
-                    <tr>
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>3</td>
-                        
+                            
+                            <td class="var-c-p2">1.33</td>
 
-                        
-                        
-                        
+                            
 
+                            
+                        </tr>
                         
-                        <td>258</td>
-                        
+                        <tr>
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>3</td>
+                            
 
-                        
-                        <td>46</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>258</td>
+                            
 
-                        
-                        <td>114</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>46</td>
+                            
 
-                        
-                        <td>214</td>
-                        
+                            
+                            
+                            
 
-                        
-                        
-                        
+                            
+                            <td>114</td>
+                            
 
-                        
-                        <td>+212</td>
+                            
+                            
+                            
 
-                        
+                            
+                            <td>214</td>
+                            
 
-                        
-                        
-                        
+                            
+                            
+                            
 
-                        
-                        <td>5.61</td>
-                        
+                            
+                            <td>+212</td>
 
+                            
+
+                            
+                            
+                            
+
+                            
+                            <td class="var-c-p4">5.61</td>
+
+                            
+
+                            
+                        </tr>
                         
-                    </tr>
-                    
-                </tbody>
+                    </tbody>
                 </table>
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        IDX responde a la pregunta: "<strong>¿hace cuántos sorteos apareció este resultado?</strong>"
+                        <br>
+                        <br>Ubica un IDX en el <a href="https://pakin.lat/melate/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate.</a>
+                    </p>
+                </div>
+
             </div>
 
             <h3 class="text-center text-dark mb-3 mt-5 fs-5 fw-semibold">Posición Exacta</h3>
 
             <h3 id="titulo-tabla-repetidos-posicion-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Números Repetidos: Histórico vs Reciente [%]
+                Probabilidad y Tendencia de Números Repetidos: Histórico vs Reciente [%]
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-repetidos-posicion-tendencia"
                     class="table table-hover melate-repspos-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>POS</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                POS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-repspos"
+                                    aria-label="Qué es POS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                PROB
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-prob"
+                                    aria-label="Qué es PROB"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -2051,7 +2279,8 @@
                             
 
                             
-                            <td>1.09</td>
+                            <td>+1.09</td>
+
                             
 
                             
@@ -2059,7 +2288,7 @@
                             
 
                             
-                            <td>+16.6</td>
+                            <td class="var-b-p1">+16.58</td>
 
                             
 
@@ -2096,7 +2325,8 @@
                             
 
                             
-                            <td>6.72</td>
+                            <td>+6.72</td>
+
                             
 
                             
@@ -2104,7 +2334,7 @@
                             
 
                             
-                            <td>+190.4</td>
+                            <td class="var-b-p4">+190.42</td>
 
                             
 
@@ -2142,6 +2372,7 @@
 
                             
                             <td>-2.79</td>
+
                             
 
                             
@@ -2149,7 +2380,7 @@
                             
 
                             
-                            <td>-100.0</td>
+                            <td class="var-b-m3">-100.0</td>
 
                             
 
@@ -2187,6 +2418,7 @@
 
                             
                             <td>-0.55</td>
+
                             
 
                             
@@ -2194,7 +2426,7 @@
                             
 
                             
-                            <td>-17.6</td>
+                            <td class="var-b-m1">-17.64</td>
 
                             
 
@@ -2231,7 +2463,8 @@
                             
 
                             
-                            <td>0.99</td>
+                            <td>+0.99</td>
+
                             
 
                             
@@ -2239,7 +2472,7 @@
                             
 
                             
-                            <td>+24.0</td>
+                            <td class="var-b-p1">+24.0</td>
 
                             
 
@@ -2276,7 +2509,8 @@
                             
 
                             
-                            <td>0.68</td>
+                            <td>+0.68</td>
+
                             
 
                             
@@ -2284,7 +2518,7 @@
                             
 
                             
-                            <td>+9.6</td>
+                            <td class="var-b-p1">+9.63</td>
 
                             
 
@@ -2299,26 +2533,71 @@
                 class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Números Repetidos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-repetidos-posicion-ciclos"
                     class="melate-repspos-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>POS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                POS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-repspos"
+                                    aria-label="Qué es POS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -2377,7 +2656,8 @@
                             
 
                             
-                            <td>1.0</td> 
+                            <td class="var-c-0">1.00</td>
+
                             
 
                             
@@ -2438,7 +2718,8 @@
                             
 
                             
-                            <td>0.5</td> 
+                            <td class="var-c-m2">0.50</td>
+
                             
 
                             
@@ -2499,7 +2780,8 @@
                             
 
                             
-                            <td>4.26</td> 
+                            <td class="var-c-p4">4.26</td>
+
                             
 
                             
@@ -2560,7 +2842,8 @@
                             
 
                             
-                            <td>0.89</td> 
+                            <td class="var-c-m1">0.89</td>
+
                             
 
                             
@@ -2621,7 +2904,8 @@
                             
 
                             
-                            <td>0.39</td> 
+                            <td class="var-c-m2">0.39</td>
+
                             
 
                             
@@ -2682,7 +2966,8 @@
                             
 
                             
-                            <td>1.8</td> 
+                            <td class="var-c-p2">1.80</td>
+
                             
 
                             
@@ -2690,6 +2975,20 @@
                         
                     </tbody>
                 </table>
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        IDX responde a la pregunta: "<strong>¿hace cuántos sorteos apareció este resultado?</strong>"
+                        <br>
+                        <br>Ubica un IDX en el <a href="https://pakin.lat/melate/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate.</a>
+                    </p>
+                </div>
+
             </div>
         </section>
 
@@ -2702,40 +3001,66 @@
                     Estadística de Numeración Alta-Baja en Melate: Tendencia y Ciclos
                 </h2>
             </div>
-            <p class="texto-analitica px-3 px-md-0">En el sorteo Melate, los resultados los podemos dividir en 3
-                clases
-                con base en la media o promedio de la combinación, es decir la suma de los seis números divida entre
-                seis,
-                con esto podemos obtener resultados con numeraciones bajas, normales y altas, en el histórico Melate
-                Pakin los resultados con numeraciones bajas se marcan en color
-                verde y con numeraciones altas se marcan en color
-                rojo en la columna MEDIA.<br>A continuación la
-                estadística.
+            <p class="texto-analitica px-3 px-md-0">
+                En Melate podemos medir que tan alta o baja es la numeración de cada combinación, esto lo hacemos
+                calculando la media aritmética de los números de la combinación y las clasificamos como Baja, Normal
+                o Alta.<br>
+                En esta sección puedes consultar su distribución o probabilidad histórica, la tendencia reciente
+                y los ciclos o tiempos de aparición.
             </p>
 
             <h3 id="titulo-tabla-medias-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
-                Tendencia de Medias: Histórico vs Reciente [%]
+                Probabilidad y Tendencia de Medias: Histórico vs Reciente [%]
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-medias-tendencia"
                     class="table table-hover melate-medias-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>MEDIA</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                MEDIA
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-medias"
+                                    aria-label="Qué es MEDIA"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                PROB
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-prob"
+                                    aria-label="Qué es PROB"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -2769,7 +3094,8 @@
                             
 
                             
-                            <td>5.3</td>
+                            <td>+5.3</td>
+
                             
 
                             
@@ -2777,7 +3103,7 @@
                             
 
                             
-                            <td>+52.6</td>
+                            <td class="var-b-p2">+52.57</td>
 
                             
 
@@ -2815,6 +3141,7 @@
 
                             
                             <td>-7.76</td>
+
                             
 
                             
@@ -2822,7 +3149,7 @@
                             
 
                             
-                            <td>-9.8</td>
+                            <td class="var-b-m1">-9.75</td>
 
                             
 
@@ -2859,7 +3186,8 @@
                             
 
                             
-                            <td>2.46</td>
+                            <td>+2.46</td>
+
                             
 
                             
@@ -2867,7 +3195,7 @@
                             
 
                             
-                            <td>+23.7</td>
+                            <td class="var-b-p1">+23.72</td>
 
                             
 
@@ -2876,31 +3204,102 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Medias Tendencia -->
+                <div id="tt-tend-medias" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>MEDIA [Probabilidad y Tendencia]</strong>
+                    </p>
+                    <p>
+                        Decide qué tipo de combinación jugar.
+
+                    <ul>
+                        <li>Media Baja: menor o igual a 20.4</li>
+                        <li>Media Normal: mayor a 20.4 y menor a 36.6 </li>
+                        <li>Media Alta: mayor o igual a 36.6</li>
+                    </ul>
+                    <ul>
+                        <li>Prob. alta + Tend. alta</li>
+                        <li>Prob. alta + Tend. baja</li>
+                        <li>Prob. baja + Tend. alta</li>
+                        <li>Prob. baja + Tend. baja</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+                </div>
+
             </div>
 
             <h3 id="titulo-tabla-medias-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Medias: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-medias-ciclos"
                     class="melate-medias-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>MEDIA</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                MEDIA
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-medias"
+                                    aria-label="Qué es MEDIA"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -2959,7 +3358,8 @@
                             
 
                             
-                            <td>0.57</td> 
+                            <td class="var-c-m2">0.57</td>
+
                             
 
                             
@@ -3020,7 +3420,8 @@
                             
 
                             
-                            <td>0.0</td> 
+                            <td class="var-c-m3">0.00</td>
+
                             
 
                             
@@ -3081,7 +3482,8 @@
                             
 
                             
-                            <td>0.15</td> 
+                            <td class="var-c-m3">0.15</td>
+
                             
 
                             
@@ -3089,6 +3491,44 @@
                         
                     </tbody>
                 </table>
+
+                <!-- Popovers Medias Ciclos -->
+                <div id="tt-cron-medias" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>MEDIA [Ciclos de Aparición]</strong>
+                    </p>
+                    <p>
+                        Decide en qué momento qué tipo de combinación jugar.
+
+                    <ul>
+                        <li>Media Baja: menor o igual a 20.4</li>
+                        <li>Media Normal: mayor a 20.4 y menor a 36.6 </li>
+                        <li>Media Alta: mayor o igual a 36.6</li>
+                    </ul>
+                    <ul>
+                        <li> xATR Anticipado</li>
+                        <li> xATR En tiempo</li>
+                        <li> xATR Atrasado</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Hint</strong> Cruza probabilidad/tendencia con ciclos/tiempos.
+                    </p>
+                </div>
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        IDX responde a la pregunta: "<strong>¿hace cuántos sorteos apareció este resultado?</strong>"
+                        <br>
+                        <br>Ubica un IDX en el <a href="https://pakin.lat/melate/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate.</a>
+                    </p>
+                </div>
+
             </div>
         </section>
 
@@ -3102,36 +3542,66 @@
                 </h2>
             </div>
 
-            <p class="texto-analitica px-3 px-md-0">En el sorteo Melate consideramos las posiciones consecutivas en
-                un
-                resultado a aquellas que contienen números sucesivos, por ejemplo, en la combinación
-                [3,12,13,25,32,33]
-                hay
-                dos posiciones con números consecutivos 12-13 y 32-33, a continuación la estadística.</p>
+            <p class="texto-analitica px-3 px-md-0">
+                En Melate una posición consecutiva en una combinación corresponde a un par de números consecutivos,
+                por lo que podemos tener hasta 4 de estas posiciones cuando todos los números de la combinación son
+                de esta forma.
+                En esta sección puedes consultar su distribución o probabilidad histórica, la tendencia reciente
+                y los ciclos o tiempos de aparición.
+            </p>
 
             <h3 id="titulo-tabla-consecutivos-tendencia" class="text-center text-dark mb-3 fs-6 fw-semibold px-3">
                 Tendencia de Consecutivos: Histórico vs Reciente [%]
             </h3>
-            <!-- Leyenda Balanza -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [%] | 0 = sin cambio</div>
-                <div class="barra">
-                    <span class="var-b-m3" title="≤ -60%">≤-60%</span>
-                    <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
-                    <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
-                    <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
-                    <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
-                    <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
-                    <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
-                    <span class="var-b-p4" title="> 120%">>120%</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-consecutivos-tendencia"
                     class="table table-hover melate-hcons-bal mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>HIST</th><th>REC</th><th>DIF</th><th>TEND</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-pcons"
+                                    aria-label="Qué es PCONS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                PROB
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-prob"
+                                    aria-label="Qué es PROB"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                REC
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-rec"
+                                    aria-label="Qué es REC"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                DIF
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-dif"
+                                    aria-label="Qué es DIF"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                TEND
+                                
+                                <button type="button" class="th-info" popovertarget="tt-tend-tend"
+                                    aria-label="Qué es TEND"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -3166,6 +3636,7 @@
 
                             
                             <td>-3.88</td>
+
                             
 
                             
@@ -3173,7 +3644,7 @@
                             
 
                             
-                            <td>-7.0</td>
+                            <td class="var-b-m1">-7.03</td>
 
                             
 
@@ -3210,7 +3681,8 @@
                             
 
                             
-                            <td>3.94</td>
+                            <td>+3.94</td>
+
                             
 
                             
@@ -3218,7 +3690,7 @@
                             
 
                             
-                            <td>+10.6</td>
+                            <td class="var-b-p1">+10.64</td>
 
                             
 
@@ -3255,7 +3727,8 @@
                             
 
                             
-                            <td>0.54</td>
+                            <td>+0.54</td>
+
                             
 
                             
@@ -3263,7 +3736,7 @@
                             
 
                             
-                            <td>+7.5</td>
+                            <td class="var-b-p1">+7.49</td>
 
                             
 
@@ -3301,6 +3774,7 @@
 
                             
                             <td>-0.6</td>
+
                             
 
                             
@@ -3308,7 +3782,7 @@
                             
 
                             
-                            <td>-100.0</td>
+                            <td class="var-b-m3">-100.0</td>
 
                             
 
@@ -3323,26 +3797,71 @@
             <h3 id="titulo-tabla-consecutivos-ciclos" class="text-center text-dark mt-5 mb-3 fs-6 fw-semibold px-3">
                 Ciclo de Consecutivos: Tiempos de Aparición
             </h3>
-            <!-- Leyenda Ciclos -->
-            <div class="leyenda">
-                <div class="leyenda-titulo">VARIACIÓN [x veces tiempo] | 1.0 = típico (P50)</div>
-                <div class="barra">
-                    <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
-                    <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
-                    <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
-                    <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
-                    <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
-                    <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
-                    <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
-                    <span class="var-c-p4" title="> 2.5">>2.5</span>
-                </div>
-            </div>
+
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
                 <table aria-labelledby="titulo-tabla-consecutivos-ciclos"
                     class="table table-hover melate-hcons-cron mb-0 align-middle text-center text-nowrap">
                     <thead>
-                        <tr><th>PCONS</th><th>IDX</th><th>P50</th><th>P80</th><th>MAX</th><th>ATR</th><th>xATR</th></tr>
+                        <tr>
+                            
+                            <th>
+                                PCONS
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-pcons"
+                                    aria-label="Qué es PCONS"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                IDX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-idx"
+                                    aria-label="Qué es IDX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P50
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p50"
+                                    aria-label="Qué es P50"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                P80
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-p80"
+                                    aria-label="Qué es P80"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                MAX
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-max"
+                                    aria-label="Qué es MAX"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                ATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-atr"
+                                    aria-label="Qué es ATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                            <th>
+                                xATR
+                                
+                                <button type="button" class="th-info" popovertarget="tt-cron-xatr"
+                                    aria-label="Qué es xATR"><i>i</i></button>
+                                
+                            </th>
+                            
+                        </tr>
                     </thead>
                     <tbody>
                         
@@ -3401,7 +3920,8 @@
                             
 
                             
-                            <td>2</td>
+                            <td class="var-c-p3">2.00</td>
+
                             
 
                             
@@ -3462,7 +3982,8 @@
                             
 
                             
-                            <td>0</td>
+                            <td class="var-c-m3">0.00</td>
+
                             
 
                             
@@ -3523,7 +4044,8 @@
                             
 
                             
-                            <td>0.09</td>
+                            <td class="var-c-m3">0.09</td>
+
                             
 
                             
@@ -3584,7 +4106,8 @@
                             
 
                             
-                            <td>1.73</td>
+                            <td class="var-c-p2">1.73</td>
+
                             
 
                             
@@ -3592,6 +4115,20 @@
                         
                     </tbody>
                 </table>
+
+                <div id="tt-cron-idx" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+                    <p>
+                        <strong>IDX [Índice de tiempo]</strong>
+                    </p>
+                    <p>
+                        IDX responde a la pregunta: "<strong>¿hace cuántos sorteos apareció este resultado?</strong>"
+                        <br>
+                        <br>Ubica un IDX en el <a href="https://pakin.lat/melate/historico" target="_blank"
+                            rel="noopener noreferrer">
+                            histórico Melate.</a>
+                    </p>
+                </div>
+
             </div>
         </section>
 
@@ -10779,7 +11316,338 @@
     <!-- <script defer src="/js/melate/melate_resultados?V=2.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=7.js"></script>
+    <!-- TENDENCIA PRIMERA COLUMNA -->
 
+<!-- Primos Tendencia -->
+<div id="tt-tend-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PRIMOS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos Tendencia -->
+<div id="tt-tend-reps" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>REPETIDOS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+
+<!-- Repetidos por Posición Tendencia -->
+<div id="tt-tend-repspos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIÓN [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+
+<!-- Consecutivos Tendencia -->
+<div id="tt-tend-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIONES CONSECUTIVAS [Probabilidad y Tendencia]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li>Prob. alta + Tend. alta</li>
+        <li>Prob. alta + Tend. baja</li>
+        <li>Prob. baja + Tend. alta</li>
+        <li>Prob. baja + Tend. baja</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- CICLOS PRIMERA COLUMNA -->
+<!-- Primos Ciclos -->
+<div id="tt-cron-primos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PRIMOS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+<!-- Repetidos Ciclos -->
+<div id="tt-cron-reps" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>REPETIDOS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos por posción Ciclos -->
+<div id="tt-cron-repspos" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIÓN [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!-- Repetidos por posción Ciclos -->
+<div id="tt-cron-pcons" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>POSICIONES CONSECUTIVAS [Ciclos de Aparición]</strong>
+    </p>
+    <p>
+        Identifica y decide sobre los casos posibles:
+    <ul>
+        <li> xATR Anticipado</li>
+        <li> xATR En tiempo</li>
+        <li> xATR Atrasado</li>
+    </ul>
+    </p>
+    <p>
+        <strong>Hint</strong>: Cruza probabilidad/tendencia con ciclos/tiempos.
+    </p>
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- TENDENCIA COLUMNAS -->
+<div id="tt-tend-prob" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>PROBABILIDAD [%]</strong>
+    </p>
+    <p>
+        Distribución histórica, también llamada <strong>probabilidad empírica</strong>.
+    </p>
+</div>
+<div id="tt-tend-rec" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>RECIENTE [%]</strong>
+    </p>
+    <p>
+        Distribución en los últimos -n- sorteos.
+    </p>
+</div>
+<div id="tt-tend-dif" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>DIFERENCIA [%]</strong>
+    </p>
+    <p>
+        <strong>[REC - PROB]</strong>: Diferencia entre distribución reciente y probabilidad.
+    </p>
+</div>
+<div id="tt-tend-tend" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>TENDENCIA [%]</strong>
+    </p>
+    <p>
+        <strong>[(REC / PROB - 1) * 100]</strong>: Tendencia en los últimos -n- sorteos.
+    </p>
+    <!-- Leyenda Balanza -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-b-m3" title="≤ -60%">≤-60%</span>
+            <span class="var-b-m2" title="-60% a -25%">-60 | -25</span>
+            <span class="var-b-m1" title="-25% a -5%">-25 | -5</span>
+            <span class="var-b-0" title="-5% a +5%">-5 | +5</span>
+            <span class="var-b-p1" title="+5% a +25%">+5 | +25</span>
+            <span class="var-b-p2" title="+25% a +60%">+25 | +60</span>
+            <span class="var-b-p3" title="+60% a +120%">+60 | +120</span>
+            <span class="var-b-p4" title="> 120%">>120%</span>
+        </div>
+    </div>
+
+</div>
+
+<!--------------------------------------------------------------------------------------------------->
+
+<!-- CICLOS COLUMNAS -->
+<div id="tt-cron-p50" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P50</strong>
+    </p>
+    <p>
+        50 percentil o mediana de tiempo entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-p80" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>P80</strong>
+    </p>
+    <p>
+        80 percentil de tiempo entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-max" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>MÁXIMO</strong>
+    </p>
+    <p>
+        Máximo tiempo histórico entre apariciones.
+    </p>
+</div>
+
+<div id="tt-cron-atr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>ATRASO</strong>
+    </p>
+    <p>
+        <strong>[IDX - P50]</strong>: Atraso en el tiempo de aparición.
+    </p>
+</div>
+
+<div id="tt-cron-xatr" class="tip tip-js" role="dialog" aria-modal="false" lang="es">
+    <p>
+        <strong>xATRASO</strong>
+    </p>
+    <p>
+        <strong>[IDX / P50]</strong>: Atraso en x veces el tiempo típico.
+    </p>
+
+    <!-- Leyenda Ciclos -->
+    <div class="leyenda">
+        <div class="barra">
+            <span class="var-c-m3" title="≤ 0.3">≤0.3</span>
+            <span class="var-c-m2" title="0.3 a 0.7">0.3 - 0.7</span>
+            <span class="var-c-m1" title="0.7 a 0.9">0.7 - 0.9</span>
+            <span class="var-c-0" title="0.9 a 1.0">0.9 - 1</span>
+            <span class="var-c-p1" title="1.0 a 1.3">1 - 1.3</span>
+            <span class="var-c-p2" title="1.3 a 1.8">1.3 - 1.8</span>
+            <span class="var-c-p3" title="1.8 a 2.5">1.8 - 2.5</span>
+            <span class="var-c-p4" title="> 2.5">>2.5</span>
+        </div>
+    </div>
+
+</div>
+    <script>
+        // --- Tooltip manual para reemplazar popover ---
+        let tipTimer = null;
+        const tips = document.querySelectorAll('.tip-js');
+
+        const closeAll = () => {
+            tips.forEach(t => t.classList.remove('open'));
+            clearTimeout(tipTimer);
+            tipTimer = null;
+        };
+
+        // Abrir/cerrar al tocar la "i"
+        document.querySelectorAll('[popovertarget]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                const targetId = btn.getAttribute('popovertarget');
+                const ariaLabel = btn.getAttribute('aria-label') || '';
+
+                // --- INYECCIÓN PARA GOOGLE TAG MANAGER ---
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'interaccion_popover',      // Nombre del evento personalizado
+                    'popover_id': targetId,              // Ej: "tt-tend-primos" o "tt-cron-idx"
+                    'columna_nombre': ariaLabel          // Ej: "Qué es TEND" o "Qué es IDX"
+                });
+                // -----------------------------------------
+
+                const tip = document.getElementById(targetId);
+                const wasOpen = tip.classList.contains('open');
+
+                closeAll(); // cierra cualquier otro
+
+                if (!wasOpen) {
+                    tip.classList.add('open');
+                    tipTimer = setTimeout(closeAll, 25000); // autocierre 25s
+                }
+            });
+        });
+
+        // Cierra con scroll real (>10px, evita micro-movimientos)
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            if (Math.abs(window.scrollY - lastY) > 8) closeAll();
+            lastY = window.scrollY;
+        }, { passive: true });
+
+        // Cierra con tap fuera del tip
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.tip-js, [popovertarget]')) {
+                closeAll();
+            }
+        });
+
+        // Cierra con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAll();
+        });
+
+        // Cierra si cambias de pestaña o app
+        window.addEventListener('blur', closeAll);
+    </script>
 
 </body>
 
