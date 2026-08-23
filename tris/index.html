@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-08-23T15:22:35-06:00" />
+    <meta property="article:modified_time" content="2026-08-23T16:54:13-06:00" />
 
     <link rel="preload" href="/styles/bootstrap.min.css" as="style">
     <link rel="preload" href="/styles/main_pakin-p14.css" as="style">
@@ -51,7 +51,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-08-23T15:22:35-06:00",
+          "dateModified": "2026-08-23T16:54:13-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -4206,6 +4206,7 @@
     <!-- <script defer src="/js/tris/tris_resultados?V=2.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <script defer src="/js/cobertura?V=5.js"></script>
+
     <!-- TENDENCIA PRIMERA COLUMNA -->
 
 <!-- Primos Tendencia -->
@@ -4477,66 +4478,75 @@
 
 </div>
     <script>
-        // --- Tooltip manual para reemplazar popover ---
-        let tipTimer = null;
-        const tips = document.querySelectorAll('.tip-js');
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Tooltip manual para reemplazar popover ---
+            let tipTimer = null;
+            const tips = document.querySelectorAll('.tip-js');
 
-        const closeAll = () => {
-            tips.forEach(t => t.classList.remove('open'));
-            clearTimeout(tipTimer);
-            tipTimer = null;
-        };
+            const closeAll = () => {
+                tips.forEach(t => t.classList.remove('open'));
+                if (tipTimer) {
+                    clearTimeout(tipTimer);
+                    tipTimer = null;
+                }
+            };
 
-        // Abrir/cerrar al tocar la "i"
-        document.querySelectorAll('[popovertarget]').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
+            // Abrir/cerrar al tocar la "i"
+            document.querySelectorAll('[popovertarget]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
 
-                const targetId = btn.getAttribute('popovertarget');
-                const ariaLabel = btn.getAttribute('aria-label') || '';
+                    const targetId = btn.getAttribute('popovertarget');
+                    const ariaLabel = btn.getAttribute('aria-label') || '';
 
-                // --- INYECCIÓN PARA GOOGLE TAG MANAGER ---
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'interaccion_popover',      // Nombre del evento personalizado
-                    'popover_id': targetId,              // Ej: "tt-tend-primos" o "tt-cron-idx"
-                    'columna_nombre': ariaLabel          // Ej: "Qué es TEND" o "Qué es IDX"
+                    // --- INYECCIÓN PARA GOOGLE TAG MANAGER ---
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'interaccion_popover',
+                        'popover_id': targetId,
+                        'columna_nombre': ariaLabel
+                    });
+                    // -----------------------------------------
+
+                    const tip = document.getElementById(targetId);
+                    if (!tip) return;
+
+                    const wasOpen = tip.classList.contains('open');
+
+                    closeAll(); // cierra cualquier otro
+
+                    if (!wasOpen) {
+                        tip.classList.add('open');
+                        tipTimer = setTimeout(closeAll, 25000); // autocierre 25s
+                    }
                 });
-                // -----------------------------------------
+            });
 
-                const tip = document.getElementById(targetId);
-                const wasOpen = tip.classList.contains('open');
+            // Cierra con scroll real (evita consultar window.scrollY al cargar)
+            let lastY = 0;
+            window.addEventListener('scroll', () => {
+                const currentY = window.scrollY;
+                if (lastY !== 0 && Math.abs(currentY - lastY) > 8) {
+                    closeAll();
+                }
+                lastY = currentY;
+            }, { passive: true });
 
-                closeAll(); // cierra cualquier otro
-
-                if (!wasOpen) {
-                    tip.classList.add('open');
-                    tipTimer = setTimeout(closeAll, 25000); // autocierre 25s
+            // Cierra con tap fuera del tip
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.tip-js, [popovertarget]')) {
+                    closeAll();
                 }
             });
+
+            // Cierra con tecla ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeAll();
+            });
+
+            // Cierra si cambias de pestaña o app
+            window.addEventListener('blur', closeAll);
         });
-
-        // Cierra con scroll real (>10px, evita micro-movimientos)
-        let lastY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            if (Math.abs(window.scrollY - lastY) > 8) closeAll();
-            lastY = window.scrollY;
-        }, { passive: true });
-
-        // Cierra con tap fuera del tip
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.tip-js, [popovertarget]')) {
-                closeAll();
-            }
-        });
-
-        // Cierra con tecla ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeAll();
-        });
-
-        // Cierra si cambias de pestaña o app
-        window.addEventListener('blur', closeAll);
     </script>
 
 </body>
