@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-01T13:15:11-06:00" />
+    <meta property="article:modified_time" content="2026-09-01T13:21:03-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-01T13:15:11-06:00",
+  "dateModified": "2026-09-01T13:21:03-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7510,7 +7510,7 @@
     <script defer fetchpriority="low" src="/js/tag_manager.js"></script>
     <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
     <!-- <script defer fetchpriority="low" src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script> -->
-    <script defer fetchpriority="low" src="/js/cobertura?V=5.js"></script>
+    <!-- <script defer fetchpriority="low" src="/js/cobertura?V=5.js"></script> -->
 
     <!-- TENDENCIA PRIMERA COLUMNA -->
 
@@ -7856,40 +7856,26 @@
 
     <script>
         (function () {
-            const cont = document.getElementById('grafica-chispazo'); // <- pon tu ID real
-            if (!cont) return;
-            let cargado = false, adsOk = false, cerca = false;
-
-            function cargar() {
-                if (cargado || !adsOk || !cerca) return;
-                cargado = true;
-                const s = document.createElement('script');
-                s.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
-                s.onload = () => {
-                    Promise.all([
-                        fetch('/data/chispazo8.json').then(r => r.json()),
-                        fetch('/data/chispazo12.json').then(r => r.json())
-                    ]).then(([d8, d12]) => {
-                        // aquí va tu código que ya tienes para pintar el chart
-                        // initChart(d8,d12);
-                    });
+            const c1 = document.getElementById('chart_chispazo8');
+            if (!c1) return;
+            let listo = false, ads = false, cerca = false;
+            function go() {
+                if (listo || !ads || !cerca) return;
+                listo = true;
+                const ech = document.createElement('script');
+                ech.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
+                ech.onload = () => {
+                    const cob = document.createElement('script');
+                    cob.src = '/js/cobertura?V=5.js';
+                    document.body.appendChild(cob);
                 };
-                document.body.appendChild(s);
+                document.body.appendChild(ech);
             }
-
-            // 1. Ads terminaron?
-            new MutationObserver((_, obs) => {
-                const ad = document.querySelector('ins.adsbygoogle[data-ad-status]');
-                if (ad) { adsOk = true; cargar(); obs.disconnect(); }
+            new MutationObserver((_, o) => {
+                if (document.querySelector('ins.adsbygoogle[data-ad-status]')) { ads = true; go(); o.disconnect(); }
             }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-ad-status'] });
-
-            // 2. Usuario cerca de la gráfica?
-            new IntersectionObserver((e, o) => {
-                if (e[0].isIntersecting) { cerca = true; cargar(); o.disconnect(); }
-            }, { rootMargin: '600px' }).observe(cont);
-
-            // Fallback 4s
-            setTimeout(() => { adsOk = true; cargar(); }, 4000);
+            new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { cerca = true; go(); o.disconnect(); } }, { rootMargin: '600px' }).observe(c1);
+            setTimeout(() => { ads = true; go(); }, 4000);
         })();
     </script>
 
