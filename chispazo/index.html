@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-01T13:21:03-06:00" />
+    <meta property="article:modified_time" content="2026-09-01T15:14:55-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-01T13:21:03-06:00",
+  "dateModified": "2026-09-01T15:14:55-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -4231,31 +4231,9 @@
 
             <div class="contenedor-tabla shadow-sm border rounded-3 mx-auto">
                 
-                <table aria-labelledby="titulo-tabla-alertas-pares-nones"
-                    class="table table-hover mb-0 align-middle text-center text-nowrap">
-                    <thead>
-                        <tr>
-                            <th>POS</th>
-                            <th>CANTIDAD</th>
-                            <th>TIPO</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>R2</td>
-                            <td>4</td>
-                            <td>Pares</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>R3</td>
-                            <td>4</td>
-                            <td>Nones</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                <p class="atract flashit text-center my-4 texto-pequeno-11">¡No se
+                    encontraron
+                    alertas!</p>
                 
             </div>
 
@@ -7856,12 +7834,9 @@
 
     <script>
         (function () {
-            const c1 = document.getElementById('chart_chispazo8');
-            if (!c1) return;
-            let listo = false, ads = false, cerca = false;
-            function go() {
-                if (listo || !ads || !cerca) return;
-                listo = true;
+            let listo = false;
+            function cargaGraficas() {
+                if (listo) return; listo = true;
                 const ech = document.createElement('script');
                 ech.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
                 ech.onload = () => {
@@ -7871,11 +7846,16 @@
                 };
                 document.body.appendChild(ech);
             }
+
+            // Cuando el primer ad se pinta, dispara gráficas
             new MutationObserver((_, o) => {
-                if (document.querySelector('ins.adsbygoogle[data-ad-status]')) { ads = true; go(); o.disconnect(); }
+                if (document.querySelector('ins.adsbygoogle[data-ad-status]')) {
+                    cargaGraficas(); o.disconnect();
+                }
             }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-ad-status'] });
-            new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { cerca = true; go(); o.disconnect(); } }, { rootMargin: '600px' }).observe(c1);
-            setTimeout(() => { ads = true; go(); }, 4000);
+
+            // Fallback por si el ad no llena en 3s, carga gráficas igual
+            setTimeout(cargaGraficas, 3000);
         })();
     </script>
 
