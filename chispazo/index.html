@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-01T16:46:33-06:00" />
+    <meta property="article:modified_time" content="2026-09-01T16:59:25-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-01T16:46:33-06:00",
+  "dateModified": "2026-09-01T16:59:25-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7502,36 +7502,12 @@
 
     <!-- Scripts -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
-        defer></script>
+        defer></script> -->
     <script defer fetchpriority="low" src="/js/tag_manager.js"></script>
-    <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script> -->
+    <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
     <!-- <script defer fetchpriority="low" src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script> -->
     <!-- <script defer fetchpriority="low" src="/js/cobertura?V=5.js"></script> -->
 
-
-    <script>
-        (function () {
-            let listo = false;
-            function cargaTodo() {
-                if (listo) return; listo = true;
-                const add = s => { let j = document.createElement('script'); j.src = s; j.defer = true; document.body.appendChild(j); };
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
-                add('/js/tag_manager.js');
-                add('/js/fecha_actualizar.js');
-                // gráficas
-                let ech = document.createElement('script');
-                ech.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
-                ech.onload = () => { let cob = document.createElement('script'); cob.src = '/js/cobertura?V=5.js'; document.body.appendChild(cob); };
-                document.body.appendChild(ech);
-            }
-            const atf = document.querySelector('ins[data-ad-slot="3272842859"]');
-            if (!atf) return;
-            new MutationObserver((_, o) => {
-                if (atf.getAttribute('data-ad-status')) { cargaTodo(); o.disconnect(); }
-            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
-            setTimeout(cargaTodo, 2500); // si el ATF no llena en 2.5s, carga todo igual
-        })();
-    </script>
 
     <!-- TENDENCIA PRIMERA COLUMNA -->
 
@@ -7878,29 +7854,26 @@
     <script>
         (function () {
             let listo = false;
-            function cargaGraficas() {
+            function cargaPesado() {
                 if (listo) return; listo = true;
-                const ech = document.createElement('script');
+                let b = document.createElement('script');
+                b.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
+                b.crossOrigin = 'anonymous';
+                document.body.appendChild(b);
+                let ech = document.createElement('script');
                 ech.src = 'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js';
-                ech.onload = () => {
-                    const cob = document.createElement('script');
-                    cob.src = '/js/cobertura?V=5.js';
-                    document.body.appendChild(cob);
-                };
+                ech.onload = () => { let c = document.createElement('script'); c.src = '/js/cobertura?V=5.js'; document.body.appendChild(c); };
                 document.body.appendChild(ech);
             }
-
-            // Cuando el primer ad se pinta, dispara gráficas
+            const atf = document.querySelector('ins[data-ad-slot="3272842859"]');
+            if (!atf) { setTimeout(cargaPesado, 1500); return; }
             new MutationObserver((_, o) => {
-                if (document.querySelector('ins.adsbygoogle[data-ad-status]')) {
-                    cargaGraficas(); o.disconnect();
-                }
-            }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-ad-status'] });
-
-            // Fallback por si el ad no llena en 3s, carga gráficas igual
-            setTimeout(cargaGraficas, 3000);
+                if (atf.getAttribute('data-ad-status')) { cargaPesado(); o.disconnect(); }
+            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            setTimeout(cargaPesado, 2500);
         })();
     </script>
+
 
 </body>
 
