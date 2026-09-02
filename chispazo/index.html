@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-01T21:41:08-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T12:56:54-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-01T21:41:08-06:00",
+  "dateModified": "2026-09-02T12:56:54-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7863,23 +7863,31 @@
     <script>
         (function () {
             let listo = false;
-            const add = s => { let j = document.createElement('script'); j.src = s; document.body.appendChild(j); return j; };
+            const add = (s, delay, cb) => {
+                setTimeout(() => {
+                    let j = document.createElement('script');
+                    j.src = s; j.async = true;
+                    if (cb) j.onload = cb;
+                    document.body.appendChild(j);
+                }, delay);
+            };
             function cargaPesado() {
                 if (listo) return; listo = true;
-                // 1. Bootstrap UI
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js');
-                // 2. GTM - esto es lo que te estaba costando 1351ms en línea 10
-                add('/js/tag_manager.js');
-                // 3. Gráficas
-                let ech = add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js');
-                ech.onload = () => { add('/js/cobertura?V=5.js'); };
+                // 0ms - menú
+                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
+                // 500ms después - GTM
+                add('/js/tag_manager.js', 500);
+                // 1100ms después - gráficas, lo más pesado al final
+                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', 1100, () => {
+                    add('/js/cobertura?V=5.js', 0);
+                });
             }
             const atf = document.querySelector('ins[data-ad-slot="3272842859"]');
             if (!atf) { setTimeout(cargaPesado, 1500); return; }
             new MutationObserver((_, o) => {
                 if (atf.getAttribute('data-ad-status')) { cargaPesado(); o.disconnect(); }
             }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
-            setTimeout(cargaPesado, 3000); // fallback si no llena
+            setTimeout(cargaPesado, 3000);
         })();
     </script>
 
