@@ -2,20 +2,23 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-09-02T18:32:07-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T18:35:46-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-02T18:32:07-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T18:35:46-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
 
+
+    <!-- Bootstrap - Main CSS  -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main_pakin-p14.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
+        defer></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
         crossorigin="anonymous"></script>
@@ -51,7 +54,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-09-02T18:32:07-06:00",
+        "dateModified": "2026-09-02T18:35:46-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -190,8 +193,8 @@
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Chispazo_Generador_Top -->
-            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
-                data-ad-slot="7391005080" data-full-width-responsive="false"></ins>
+            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333" data-ad-slot="7391005080"
+                data-full-width-responsive="false"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -348,43 +351,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <!-- <script defer src="/js/Gen_Master?V=2.js"></script> -->
-    <!-- <script defer src="/js/tag_manager.js"></script> -->
-    <!-- <script defer src="/js/fecha_actualizar.js"></script> -->
-
-
-    <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
-
-    <script>
-        (function () {
-            let listo = false;
-            const add = (s, delay, cb) => {
-                setTimeout(() => {
-                    let j = document.createElement('script'); j.src = s; j.async = true;
-                    if (cb) j.onload = cb; document.body.appendChild(j);
-                }, delay);
-            };
-            function cargaPesado() {
-                if (listo) return; listo = true;
-                // 1. TABLA - lo más rápido posible después del ATF
-                add('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', 0, () => {
-                    add('/js/Histmaster-estls?V=10.js', 0);
-                    add('/js/Gen_Master?V=2.js', 80); // este dispara el /obtener_datos_chisp
-                });
-                // 2. UI menú
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 400);
-                // 3. Medición al final
-                add('/js/tag_manager.js', 900);
-            }
-            const atf = document.querySelector('ins[data-ad-slot="7391005080"]');
-            if (!atf) { setTimeout(cargaPesado, 1500); return; }
-            new MutationObserver((_, o) => {
-                if (atf.getAttribute('data-ad-status')) { cargaPesado(); o.disconnect(); }
-            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
-            setTimeout(cargaPesado, 3000);
-        })();
-    </script>
+    <!-- Scripts Intactos -->
+    <script defer src="/js/Gen_Master?V=2.js"></script>
+    <script defer src="/js/tag_manager.js"></script>
+    <script defer src="/js/fecha_actualizar.js"></script>
 
 </body>
 
