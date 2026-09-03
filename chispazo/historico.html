@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-09-02T19:11:43-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T19:44:06-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-02T19:11:43-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T19:44:06-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -68,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo/historico",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-09-02T19:11:43-06:00",
+	  "dateModified": "2026-09-02T19:44:06-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -187,7 +187,7 @@
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
-        <div class="text-center">
+        <!-- <div class="text-center">
             <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
                 style="font-size: 0.85rem;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -198,18 +198,20 @@
                 </svg>
                 Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
             </span>
-        </div>
+        </div> -->
         <!-- FIN PÍLDORA -->
 
         <!-- ========================================== -->
         <!-- H2: SECCIÓN HISTÓRICO -->
         <!-- ========================================== -->
-        <div class="text-center">
+        <!-- <div class="text-center"> -->
             <!-- Párrafo centrado y estilo homologado (0.9rem) -->
-            <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.7rem;">
+            <!-- <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.7rem;">
                 Datos Abiertos Lotería Nacional Potencializados por Pakin
             </p>
-        </div>
+        </div> -->
+
+        <div id="pakin-ticker-silo" data-silo="chispazo"></div>
 
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
@@ -374,10 +376,10 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="/js/pakin-ticker-silo.js?v=8" defer></script> 
     <!-- <script defer src="/js/tag_manager.js"></script>
     <script defer src="/js/fecha_actualizar.js"></script> -->
-
-    <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
+    <!-- <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script> -->
 
     <script>
         (function () {
@@ -403,7 +405,7 @@
                 add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
                 add('/js/tag_manager.js', 500);
             }
-            const atf = document.querySelector('ins[data-ad-slot="7391005080"]');
+            const atf = document.querySelector('ins[data-ad-slot="9785220825"]');
             if (!atf) { setTimeout(cargaUI, 1500); return; }
             new MutationObserver((_, o) => {
                 if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
