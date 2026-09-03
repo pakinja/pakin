@@ -4,23 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-02T17:51:36-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T20:59:12-06:00" />
 
-    <!-- Preconnect -->
+    <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-    <link href="/styles/main_pakin-p14.css" rel="stylesheet">
-
-    <!-- JS - todo con defer respeta el orden -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
-    <script src="/js/Histmaster-estls?V=10.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
-        defer></script>
+    <link rel="stylesheet" href="/styles/main_pakin-p14.css">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
         crossorigin="anonymous"></script>
@@ -57,7 +52,7 @@
       "description": "Consulta, revisa y descarga el histórico completo de Melate",
       "url": "https://pakin.lat/melate/historico",
       "datePublished": "2017-02-05T08:00:00-06:00",
-      "dateModified": "2026-09-02T17:51:36-06:00",
+      "dateModified": "2026-09-02T20:59:12-06:00",
       "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
       "publisher": { "@type": "Organization", "name": "Pakin" },
       "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -165,7 +160,7 @@
         </div>
 
         <!-- PÍLDORA DE ACTUALIZACIÓN CENTRADA -->
-        <div class="text-center">
+        <!-- <div class="text-center">
             <span class="badge bg-white border text-secondary shadow-sm rounded-pill py-2 px-3 fw-normal"
                 style="font-size: 0.85rem;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
@@ -176,24 +171,26 @@
                 </svg>
                 Última actualización: <span id="fecha-ui" class="fw-semibold text-dark">Calculando...</span>
             </span>
-        </div>
+        </div> -->
         <!-- FIN PÍLDORA -->
 
 
         <!-- ========================================== -->
         <!-- H2: SECCIÓN HISTÓRICO -->
         <!-- ========================================== -->
-        <div class="text-center">
+        <!-- <div class="text-center">
             <p class="text-dark mt-2 mb-0 fw-medium" style="font-size: 0.7rem;">
                 Datos Abiertos Lotería Nacional Potencializados por Pakin
             </p>
-        </div>
+        </div> -->
+
+        <div id="pakin-ticker-silo" data-silo="melate"></div>
 
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Melate_Historico_Top -->
-            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333" data-ad-slot="8344994104"
-                data-full-width-responsive="false"></ins>
+            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
+                data-ad-slot="8344994104" data-full-width-responsive="false"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
@@ -356,8 +353,41 @@
         </div>
     </footer>
 
-    <script defer src="/js/tag_manager.js"></script>
-    <script defer src="/js/fecha_actualizar.js"></script>
+    <!-- Scripts -->
+    <script src="/js/pakin-ticker-silo.js?v=8" defer></script>
+    <!-- <script defer src="/js/tag_manager.js"></script>
+    <script defer src="/js/fecha_actualizar.js"></script> -->
+    <!-- <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script> -->
+
+    <script>
+        (function () {
+            const add = (s, delay, cb) => {
+                setTimeout(() => {
+                    let j = document.createElement('script'); j.src = s; j.async = true;
+                    if (cb) j.onload = cb; document.body.appendChild(j);
+                }, delay);
+            };
+
+            // FLUJO 1: TABLA INMEDIATA - sin delay
+            add('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', 0, () => {
+                add('/js/Histmaster-estls?V=10.js', 0);
+            });
+
+            // FLUJO 2: UI + GTM después del ATF
+            let listoUI = false;
+            function cargaUI() {
+                if (listoUI) return; listoUI = true;
+                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
+                add('/js/tag_manager.js', 500);
+            }
+            const atf = document.querySelector('ins[data-ad-slot="8344994104"]');
+            if (!atf) { setTimeout(cargaUI, 1500); return; }
+            new MutationObserver((_, o) => {
+                if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
+            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            setTimeout(cargaUI, 3000);
+        })();
+    </script>
 
 
     <!-- NAVEGACIÓN FLOTANTE -->
