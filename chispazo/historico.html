@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-09-02T19:06:02-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T19:11:43-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-02T19:06:02-06:00" />
+    <meta property="article:modified_time" content="2026-09-02T19:11:43-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -68,7 +68,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo/historico",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-09-02T19:06:02-06:00",
+	  "dateModified": "2026-09-02T19:11:43-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -379,8 +379,6 @@
 
     <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
 
-    <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script>
-
     <script>
         (function () {
             const add = (s, delay, cb) => {
@@ -390,16 +388,15 @@
                 }, delay);
             };
 
-            // FLUJO 1: TABLA - prioridad contenido, con escalonado interno
+            // FLUJO 1: TABLA
             function cargaTabla() {
                 add('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', 0, () => {
                     add('/js/Histmaster-estls?V=10.js', 0);
-                    add('/js/Gen_Master?V=2.js', 80);
                 });
             }
-            setTimeout(cargaTabla, 300); // 300ms de respiro para que ATF arranque solo
+            setTimeout(cargaTabla, 300);
 
-            // FLUJO 2: UI + GTM - espera al ATF y escalonado para no trabar la viñeta
+            // FLUJO 2: UI + GTM escalonado
             let listoUI = false;
             function cargaUI() {
                 if (listoUI) return; listoUI = true;
