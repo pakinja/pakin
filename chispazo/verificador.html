@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-03T18:33:09-06:00" />
+    <meta property="article:modified_time" content="2026-09-03T18:40:38-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -40,7 +40,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo/verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-09-03T18:33:09-06:00",
+      "dateModified": "2026-09-03T18:40:38-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -164,7 +164,7 @@
         <!-- ========================================== -->
         <!-- H2: SECCIÓN DE CONSULTA -->
         <!-- ========================================== -->
-        
+
         <div id="pakin-ticker-silo" data-silo="chispazo"></div>
 
         <div class="ad-wrapper ad-top-wrapper-generador">
@@ -378,7 +378,7 @@
 
     <!-- Scripts -->
     <script src="/js/pakin-ticker-silo.js?v=10" defer></script>
-    <!-- <script defer src="/js/chispazo/consulta_chispazo_verificador?v=2.0.9.js"></script> -->
+    <script defer src="/js/chispazo/consulta_chispazo_verificador?v=2.0.9.js"></script>
     <!-- <script defer src="/js/tag_manager.js"></script> -->
     <!-- <script defer src="/js/fecha_actualizar.js"></script> -->
 
@@ -390,11 +390,7 @@
                     if (cb) j.onload = cb; document.body.appendChild(j);
                 }, delay);
             };
-
-            // FLUJO 1: CRITICO - verificador inmediato
-            add('/js/chispazo/consulta_chispazo_verificador?v=2.0.9.js', 0);
-
-            // FLUJO 2: UI + GTM después del ATF
+            // Solo UI + GTM después del ATF
             let listoUI = false;
             function cargaUI() {
                 if (listoUI) return; listoUI = true;
