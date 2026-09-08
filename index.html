@@ -162,14 +162,17 @@
     <!-- <div id="pakin-live" data-google-vignette="false" data-google-interstitial="false" style="margin:12px 16px;"></div> -->
 
     <div id="pakin-live" data-google-vignette="false" data-google-interstitial="false"
-      style="margin: 12px auto; max-width: 760px; min-height: 422px;">
-      <!-- Skeleton Loader (Espacio reservado animado) -->
+      style="margin: 12px auto; max-width: 760px; min-height: 422px; contain: layout;">
+      <!-- Skeleton Loader -->
       <div
-        style="animation: pakin-pulse 1.5s infinite ease-in-out; display: flex; flex-direction: column; gap: 10px; width: 100%;">
-        <!-- Placeholder del Ticker -->
-        <div style="background: #111; border-radius: 8px; height: 32px; width: 100%;"></div>
-        <!-- Placeholder de la Tarjeta Principal -->
-        <div style="background: #fff; border: 1px solid #e5e5e5; border-radius: 16px; height: 380px; width: 100%;">
+        style="animation: pakin-pulse 1.5s infinite ease-in-out; display: flex; flex-direction: column; gap: 10px; width: 100%; contain: layout;">
+        <!-- Placeholder del Ticker AISLADO -->
+        <div
+          style="background: #111; border-radius: 8px; height: 32px; width: 100%; contain: layout paint style; isolation: isolate; overflow: hidden;">
+        </div>
+        <!-- Placeholder de la Tarjeta AISLADA -->
+        <div
+          style="background: #fff; border: 1px solid #e5e5e5; border-radius: 16px; height: 380px; width: 100%; contain: layout paint style;">
         </div>
       </div>
 
@@ -488,7 +491,7 @@
 
   <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
   <script defer src="/js/tag_manager.js"></script>
-  <script src="/js/pakin-live-v01.js?v=1528"></script>
+  <script src="/js/pakin-live-v01.js?v=1530"></script>
 
 </body>
 
