@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-08T21:58:42-06:00" />
+    <meta property="article:modified_time" content="2026-09-09T20:30:28-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-09-08T21:58:42-06:00",
+          "dateModified": "2026-09-09T20:30:28-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -9462,7 +9462,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/pakin-ticker-silo.js?v=20" defer></script> 
+    <script src="/js/pakin-ticker-silo.js?v=20" defer></script>
     <!-- <script defer fetchpriority="low" src="/js/fecha_actualizar.js"></script> -->
     <!-- <script defer fetchpriority="low" src="/js/tag_manager.js"></script>
     <script defer fetchpriority="low" src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
@@ -9812,32 +9812,62 @@
 
     <script>
         (function () {
-            let listo = false;
+            let listoUI = false, listoEcharts = false, listoChart = false;
             const add = (s, delay, cb) => {
                 setTimeout(() => {
-                    let j = document.createElement('script');
-                    j.src = s; j.async = true;
-                    if (cb) j.onload = cb;
-                    document.body.appendChild(j);
+                    let j = document.createElement('script'); j.src = s; j.async = true;
+                    if (cb) j.onload = cb; document.body.appendChild(j);
                 }, delay);
             };
-            function cargaPesado() {
-                if (listo) return; listo = true;
-                // 0ms - menú
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
-                // 500ms después - GTM
-                add('/js/tag_manager.js', 500);
-                // 1100ms después - gráficas, lo más pesado al final
-                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', 1100, () => {
-                    add('/js/cobertura?V=5.js', 0);
-                });
+
+            function cargaEcharts(cb) {
+                if (listoEcharts) { cb && cb(); return; }
+                listoEcharts = true;
+                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', 0, () => { cb && cb(); });
             }
-            const atf = document.querySelector('ins[data-ad-slot="3272842859"]');
-            if (!atf) { setTimeout(cargaPesado, 1500); return; }
+
+            function cargaChart() {
+                if (listoChart) return; listoChart = true;
+                const runCobertura = () => add('/js/cobertura?V=5.js', 0);
+                if (window.echarts || document.querySelector('script[src*="echarts"]')) {
+                    runCobertura();
+                } else {
+                    cargaEcharts(runCobertura);
+                }
+            }
+
+            function setupChartObserver() {
+                // tu cobertura está en la sección "Frecuencia y Cobertura" - usa un selector más amplio
+                const el = document.querySelector('#cobertura, [id*="cobertura"], [id*="chart"], [id*="frecuencia"], .chart, canvas');
+                if (!el) { setTimeout(cargaChart, 2000); return; }
+
+                if ('IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries, o) => {
+                        entries.forEach(e => { if (e.isIntersecting) { cargaChart(); o.disconnect(); } });
+                    }, { rootMargin: '500px' });
+                    io.observe(el);
+                } else {
+                    setTimeout(cargaChart, 1500);
+                }
+            }
+
+            function cargaUI() {
+                if (listoUI) return; listoUI = true;
+                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
+                add('/js/tag_manager.js', 500);
+                setupChartObserver();
+                // precarga echarts 1s después del ad, sin ejecutar cobertura aún
+                setTimeout(() => { cargaEcharts(); }, 1000);
+                // fallback si nunca scrollea
+                setTimeout(() => { if (!listoChart) cargaChart(); }, 5000);
+            }
+
+            const atf = document.querySelector('ins[data-ad-slot="6946553461"]');
+            if (!atf) { setTimeout(cargaUI, 1500); return; }
             new MutationObserver((_, o) => {
-                if (atf.getAttribute('data-ad-status')) { cargaPesado(); o.disconnect(); }
+                if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
             }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
-            setTimeout(cargaPesado, 3000);
+            setTimeout(cargaUI, 3000);
         })();
     </script>
 
