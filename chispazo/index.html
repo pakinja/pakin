@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-09T19:57:12-06:00" />
+    <meta property="article:modified_time" content="2026-09-09T20:07:24-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-09T19:57:12-06:00",
+  "dateModified": "2026-09-09T20:07:24-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7806,7 +7806,7 @@
 
     <script>
         (function () {
-            let listoUI = false, listoChart = false;
+            let listoUI = false, listoEcharts = false, listoChart = false;
             const add = (s, delay, cb) => {
                 setTimeout(() => {
                     let j = document.createElement('script'); j.src = s; j.async = true;
@@ -7814,29 +7814,35 @@
                 }, delay);
             };
 
+            function cargaEcharts(cb) {
+                if (listoEcharts) { cb && cb(); return; }
+                listoEcharts = true;
+                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', 0, () => { cb && cb(); });
+            }
+
             function cargaChart() {
                 if (listoChart) return; listoChart = true;
-                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', 0, () => {
-                    add('/js/cobertura?V=5.js', 0);
-                });
+                const runCobertura = () => add('/js/cobertura?V=5.js', 0);
+                if (window.echarts || document.querySelector('script[src*="echarts"]')) {
+                    runCobertura();
+                } else {
+                    cargaEcharts(runCobertura);
+                }
             }
 
             function setupChartObserver() {
-                const el = document.querySelector('#cobertura, [id*="cobertura"], .chart-echarts, [data-echarts]');
+                // tu cobertura está en la sección "Frecuencia y Cobertura" - usa un selector más amplio
+                const el = document.querySelector('#cobertura, [id*="cobertura"], [id*="chart"], [id*="frecuencia"], .chart, canvas');
                 if (!el) { setTimeout(cargaChart, 2000); return; }
 
                 if ('IntersectionObserver' in window) {
                     const io = new IntersectionObserver((entries, o) => {
-                        entries.forEach(e => {
-                            if (e.isIntersecting) { cargaChart(); o.disconnect(); }
-                        });
-                    }, { rootMargin: '400px' }); // precarga 400px antes de llegar
+                        entries.forEach(e => { if (e.isIntersecting) { cargaChart(); o.disconnect(); } });
+                    }, { rootMargin: '500px' });
                     io.observe(el);
                 } else {
                     setTimeout(cargaChart, 1500);
                 }
-                // fallback si nunca hace scroll
-                setTimeout(() => { if (!listoChart) cargaChart(); }, 5000);
             }
 
             function cargaUI() {
@@ -7844,6 +7850,10 @@
                 add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
                 add('/js/tag_manager.js', 500);
                 setupChartObserver();
+                // precarga echarts 1s después del ad, sin ejecutar cobertura aún
+                setTimeout(() => { cargaEcharts(); }, 1000);
+                // fallback si nunca scrollea
+                setTimeout(() => { if (!listoChart) cargaChart(); }, 7000);
             }
 
             const atf = document.querySelector('ins[data-ad-slot="3272842859"]');
