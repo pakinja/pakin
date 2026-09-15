@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-11T23:14:27-06:00" />
+    <meta property="article:modified_time" content="2026-09-14T18:59:45-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -13,7 +13,7 @@
 
     <!-- CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main_pakin-p14.css">
+    <link rel="stylesheet" href="/styles/main_pakin-p14.min.css?v=7">
 
     <!-- Ad -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
@@ -39,7 +39,7 @@
       "description": "Verifica y comprueba tus jugadas de Melate. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/melate/verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-09-11T23:14:27-06:00",
+      "dateModified": "2026-09-14T18:59:45-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -73,7 +73,7 @@
           "logo": "https://pakin.lat/images/pakin-tris1-mobile.webp"
         },
         "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
-        "dateModified": "2026-09-11T23:14:27-06:00",
+        "dateModified": "2026-09-14T18:59:45-06:00",
         "distribution": {
           "@type": "DataDownload",
           "encodingFormat": "text/csv",
@@ -101,6 +101,22 @@
         property="og:description" />
     <meta content="Francisco Jaramillo A." name="author" />
 
+    <style>
+        #pakin-ticker-silo {
+            min-height: 32px;
+            /* en Bootstrap border-box = 32px, si no usa 44px */
+            max-width: 760px;
+            margin: 0 auto 1rem auto;
+            display: block;
+            contain: layout;
+        }
+
+        #pakin-ticker-silo:empty {
+            background: #111;
+            border-radius: 8px;
+        }
+    </style>
+
 </head>
 
 <body class="no-nav d-flex flex-column min-vh-100">
@@ -111,12 +127,22 @@
             <div class="container-fluid px-3 px-lg-4">
 
                 <!-- Identidad Unificada -->
-                <a class="navbar-brand d-flex align-items-center m-0" href="/">
+                <!-- <a class="navbar-brand d-flex align-items-center m-0" href="/">
                     <img src="/images/p2.svg" alt="Pakin" width="38" height="38">
                     <span class="ms-2 fw-bold text-dark fs-5 espaciado-letras-1">
                         Melate Verificador
                     </span>
-                </a>
+                </a> -->
+
+                <h1 class="navbar-brand d-flex align-items-center m-0"
+                    style="font-size: inherit; line-height: inherit;">
+                    <a href="/" class="d-flex align-items-center text-decoration-none">
+                        <img src="/images/p2.svg" alt="Melate: Verifica por Fecha, Sorteo o Números" width="38" height="38">
+                        <span class="ms-2 fw-bold text-dark fs-5 espaciado-letras-1">
+                            Melate Verificador<span style="color: #8B0000;">.</span>
+                        </span>
+                    </a>
+                </h1>
 
                 <!-- Hamburguesa (Solo visible en Móvil) -->
                 <button class="navbar-toggler border-0 p-1 d-lg-none" type="button" data-bs-toggle="offcanvas"
@@ -180,20 +206,19 @@
     <main class="container py-4 flex-grow-1" style="position: relative; z-index: 1;">
 
         <!-- ========================================== -->
-        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
+        <!-- TICKER -->
         <!-- ========================================== -->
-        <div class="text-center">
-            <!-- Sin subrayado, con punto rojo -->
+        <!-- <div class="text-center">
             <h1 id="resultados" class="fw-bold text-dark d-inline-block titulo-principal">
                 Verifica por Fecha, Sorteo o Números<span style="color: #8B0000;">.</span>
             </h1>
-        </div>
+        </div> -->
+
+        <div id="pakin-ticker-silo" data-silo="melate"></div>
 
         <!-- ========================================== -->
         <!-- H2: SECCIÓN DE CONSULTA -->
         <!-- ========================================== -->
-
-        <div id="pakin-ticker-silo" data-silo="melate"></div>
 
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
@@ -410,7 +435,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script src="/js/pakin-ticker-silo.js?v=20" defer></script>
+    <script src="/js/pakin-ticker-silo.js?v=22" defer></script>
     <script defer src="/js/melate/consulta_melate_verificador?v=2.0.9.js"></script>
 
     <script>
