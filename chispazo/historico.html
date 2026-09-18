@@ -2,21 +2,19 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-09-17T18:02:42-06:00" />
+    <meta property="article:modified_time" content="2026-09-17T18:21:15-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-17T18:02:42-06:00" />
+    <meta property="article:modified_time" content="2026-09-17T18:21:15-06:00" />
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
     <link rel="preconnect" href="https://tpc.googlesyndication.com" crossorigin>
-
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main_pakin-p14.min.css?v=7">
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
         crossorigin="anonymous"></script>
     <script src="/js/pakin-ticker-silo.js?v=22" defer></script>
@@ -69,7 +67,7 @@
 	  "description": "Consulta, revisa y descarga el histórico completo de Chispazo",
 	  "url": "https://pakin.lat/chispazo/historico",
 	  "datePublished": "2017-02-05T08:00:00-06:00",
-	  "dateModified": "2026-09-17T18:02:42-06:00",
+	  "dateModified": "2026-09-17T18:21:15-06:00",
 	  "license": "https://www.loterianacional.gob.mx/DatosAbiertos/DatosAbiertos",
 	  "publisher": {
 	    "@type": "Organization",
@@ -230,17 +228,16 @@
         </div>
 
         <!-- TABLA HISTÓRICO -->
-        <div id="resultados" data-sorteo="chispazo" class="contenedor-tabla shadow-sm border rounded-3 mx-auto mb-4"
-            style="min-height:360px; position:relative;">
-
+        <div id="resultados" data-sorteo="chispazo"
+            class="contenedor-tabla shadow-sm border rounded-3 mx-auto mb-4 is-loading"
+            style="min-height:320px; position:relative;">
             <div class="table-loader-overlay"
-                style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.9); z-index:2;">
-                <div class="d-flex justify-content-center align-items-center gap-2">
-                    <div class="spinner-border spinner-border-sm text-secondary" role="status"></div>
-                    <span class="fw-semibold text-secondary">Cargando histórico...</span>
+                style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.92); z-index:2;">
+                <div class="d-flex gap-2 align-items-center">
+                    <div class="spinner-border spinner-border-sm"></div><span class="fw-semibold">Cargando
+                        histórico...</span>
                 </div>
             </div>
-
             <table class="tabla-sticky-idx table-hover mb-0 align-middle text-center text-nowrap">
                 <thead>
                     <tr>
@@ -260,14 +257,13 @@
                 <tbody id="historicoTableBody"></tbody>
             </table>
         </div>
-
         <style>
             #resultados.is-loading table {
-                visibility: hidden;
+                visibility: hidden
             }
 
             #resultados:not(.is-loading) .table-loader-overlay {
-                display: none !important;
+                display: none !important
             }
         </style>
 
@@ -400,20 +396,18 @@
         (function () {
             const add = (src, prio, cb) => { const s = document.createElement('script'); s.src = src; s.async = true; if (prio) s.fetchPriority = prio; if (cb) s.onload = cb; document.body.appendChild(s); };
             let t = false, u = false, g = false;
-            function cargaTabla() { if (t) return; t = true; add('/js/jquery-3.7.1.min.js', null, () => { add('/js/Histmaster-estls?V=10.js', 'low'); }); }
+            function cargaTabla() { if (t) return; t = true; add('/js/jquery-3.7.1.min.js', null, () => add('/js/Histmaster-estls?V=10.js', 'low')); }
             function cargaUI() { if (u) return; u = true; add('/js/bootstrap.bundle-5.3.3.min.js', 'low'); }
             function cargaGTM() { if (g) return; g = true; add('/js/tag_manager.js', 'low'); }
-
-            ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(ev => { window.addEventListener(ev, cargaGTM, { once: true, passive: true }); });
+            ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, cargaGTM, { once: true, passive: true }));
             setTimeout(cargaGTM, 5000);
-
             const atf = document.querySelector('ins[data-ad-slot="9785220825"]');
             if (!atf) { setTimeout(() => { cargaTabla(); cargaUI(); }, 1500); return; }
-
             new MutationObserver((_, o) => { if (atf.getAttribute('data-ad-status')) { cargaTabla(); cargaUI(); o.disconnect(); } }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
             setTimeout(() => { cargaTabla(); cargaUI(); }, 3500);
         })();
     </script>
+
 </body>
 
 
