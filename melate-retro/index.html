@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-18T20:34:12-06:00" />
+    <meta property="article:modified_time" content="2026-09-19T14:34:33-06:00" />
 
     <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -55,7 +55,7 @@
           "headline": "Melate Retro Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-melate-retro-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-09-18T20:34:12-06:00",
+          "dateModified": "2026-09-19T14:34:33-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Melate Retro números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -10000,7 +10000,8 @@
                 if (listoEcharts) { cb && cb(); return; }
                 listoEcharts = true;
                 // Si lo self-hosteas cambia a /js/echarts.min.js
-                add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', cb, 'low');
+                // add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', cb, 'low');
+                add('/js/echarts.min.js?v=1', cb, 'low');
             }
 
             function cargaChart() {
@@ -10035,7 +10036,8 @@
                 if (listoUI) return;
                 listoUI = true;
                 // Bootstrap self-hosteado ideal, low priority
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', null, 'low');
+                // add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', null, 'low');
+                add('/js/bootstrap.bundle-5.3.3.min.js?v=1', null, 'low');
                 setupChartObserver();
 
                 // Preload tibio de ECharts 1s después del ad, pero en idle + low
