@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-20T18:15:44-06:00" />
+    <meta property="article:modified_time" content="2026-09-20T19:03:42-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -40,7 +40,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo/verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-09-20T18:15:44-06:00",
+      "dateModified": "2026-09-20T19:03:42-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -404,7 +404,7 @@
 
     <!-- Scripts -->
     <script src="/js/pakin-ticker-silo.js?v=22" defer></script>
-    <script defer src="/js/chispazo/consulta_chispazo_verificador?v=2.0.9.js"></script>
+    <script defer src="/js/chispazo/consulta_chispazo_verificador.js?v=2.0.9"></script>
     <!-- <script defer src="/js/tag_manager.js"></script> -->
     <!-- <script defer src="/js/fecha_actualizar.js"></script> -->
 
@@ -421,7 +421,12 @@
             function cargaUI() {
                 if (listoUI) return; listoUI = true;
                 add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
-                add('/js/tag_manager.js', 500);
+
+                setTimeout(() => {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                    add('https://www.googletagmanager.com/gtm.js?id=GTM-NCPVXPH', 0);
+                }, 500);
             }
             const atf = document.querySelector('ins[data-ad-slot="9039128673"]');
             if (!atf) { setTimeout(cargaUI, 1500); return; }
