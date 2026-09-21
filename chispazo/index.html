@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-21T15:32:14-06:00" />
+    <meta property="article:modified_time" content="2026-09-21T15:46:52-06:00" />
 
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
@@ -54,7 +54,7 @@
   "headline": "Chispazo Resultados de Hoy, Histórico y Analítica",
   "image": "https://pakin.lat/images/pakin-chispazo-mobile.webp",
   "datePublished": "2017-01-01T11:11:00-06:00",
-  "dateModified": "2026-09-21T15:32:14-06:00",
+  "dateModified": "2026-09-21T15:46:52-06:00",
   "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
   "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
   "description": "Chispazo números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -7932,9 +7932,14 @@
             // === ATF: dispara cargaUI cuando resuelve (igual que antes) ===
             if (!atf) { setTimeout(cargaUI, 1500); return; }
 
-            new MutationObserver((_, o) => {
-                if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
-            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            if (atf.getAttribute('data-ad-status')) {
+                // El ad ya resolvió antes de llegar aquí (caso repeat view con AdSense cacheado)
+                cargaUI();
+            } else {
+                new MutationObserver((_, o) => {
+                    if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
+                }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            }
 
             setTimeout(cargaUI, 3000); // fallback si el ad no carga
         })();
