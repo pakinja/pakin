@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-21T17:33:11-06:00" />
+    <meta property="article:modified_time" content="2026-09-21T17:52:57-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -42,7 +42,7 @@
       "description": "Verifica y comprueba tus jugadas de Chispazo. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/chispazo/verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-09-21T17:33:11-06:00",
+      "dateModified": "2026-09-21T17:52:57-06:00",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -245,7 +245,7 @@
             <!-- 1. Formulario Fecha -->
             <div class="col-12 mb-3">
                 <form id="form2" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR FECHA</label>
+                    <label for="fecha" class="form-label fw-bold text-dark mb-3 espaciado-letras">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin btn-w-250 ChecadorChispazoF" disabled type="submit">
@@ -257,7 +257,7 @@
             <!-- 2. Formulario Sorteo -->
             <div class="col-12 mb-3">
                 <form id="form1" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR SORTEO</label>
+                    <label for="concurso" class="form-label fw-bold text-dark mb-3 espaciado-letras">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin btn-w-250 ChecadorChispazoS" disabled type="submit">
@@ -265,9 +265,7 @@
                     </button>
                 </form>
             </div>
-        </div>
 
-        <div class="row justify-content-center mx-auto wrap-650">
             <!-- 3. Formulario Números -->
             <div class="col-12 mb-3">
                 <form id="form" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
@@ -277,15 +275,15 @@
 
                     <div class="numeros-grid numeros-grid-5 mb-3">
                         <input id="r1" max="28" min="1" name="R1" placeholder="R1" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Primer número" />
                         <input id="r2" max="28" min="1" name="R2" placeholder="R2" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Segundo número" />
                         <input id="r3" max="28" min="1" name="R3" placeholder="R3" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Tercer número" />
                         <input id="r4" max="28" min="1" name="R4" placeholder="R4" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Cuarto número" />
                         <input id="r5" max="28" min="1" name="R5" placeholder="R5" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Quinto número" />
                     </div>
 
                     <button class="btn btn-pakin btn-w-250 ChecadorChispazo" disabled type="submit">
@@ -293,6 +291,7 @@
                     </button>
                 </form>
             </div>
+
         </div>
 
         <!-- CTAs -->
