@@ -160,21 +160,21 @@
       </div>
 
 
-    <style>
-      @keyframes pakin-pulse {
-        0% {
-          opacity: 0.7;
-        }
+      <style>
+        @keyframes pakin-pulse {
+          0% {
+            opacity: 0.7;
+          }
 
-        50% {
-          opacity: 0.2;
-        }
+          50% {
+            opacity: 0.2;
+          }
 
-        100% {
-          opacity: 0.7;
+          100% {
+            opacity: 0.7;
+          }
         }
-      }
-    </style>
+      </style>
     </div>
 
     <!-- Widget de Youtube Original -->
@@ -474,7 +474,18 @@
   </footer>
 
   <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
-  <script defer src="/js/tag_manager.js"></script>
+  <!-- <script defer src="/js/tag_manager.js"></script> -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+      j.fetchPriority = 'low'; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NCPVXPH');
+  </script>
   <script src="/js/pakin-live-v01.js?v=1544"></script>
 
 </body>
