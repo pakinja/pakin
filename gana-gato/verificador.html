@@ -4,19 +4,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-20T19:07:12-06:00" />
+    <meta property="article:modified_time" content="2026-09-21T20:41:40-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://tpc.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main_pakin-p15.min.css">
 
     <!-- Ad -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+    <script async fetchpriority="high"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
         crossorigin="anonymous"></script>
 
     <title>Gana Gato Verificador de Combinaciones | Pakin</title>
@@ -40,7 +42,7 @@
       "description": "Verifica y comprueba tus jugadas de Gana Gato. Revisa si ha resultado ganadora y obtén diferentes parámetros sobre ellas.",
       "url": "https://pakin.lat/gana-gato/verificador",
       "datePublished": "2017-01-01T11:11:00-06:00",
-      "dateModified": "2026-09-20T19:07:12-06:00",
+      "dateModified": "2026-09-21T20:41:40-06:00",
       "inLanguage": "es",
       "isAccessibleForFree": true,
       "publisher": {
@@ -198,7 +200,7 @@
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Gana_Gato_Verificador_Top -->
-            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
+            <ins class="adsbygoogle atf-manual ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="7410422045" data-full-width-responsive="false"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
@@ -244,7 +246,7 @@
             <!-- 1. Formulario Fecha -->
             <div class="col-12 mb-3">
                 <form id="form2" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR FECHA</label>
+                    <label for="fecha" class="form-label fw-bold text-dark mb-3 espaciado-letras">POR FECHA</label>
                     <input id="fecha" name="FECHA" required type="date"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin btn-w-250 ChecadorGanaGatoF" disabled type="submit">
@@ -256,7 +258,7 @@
             <!-- 2. Formulario Sorteo -->
             <div class="col-12 mb-3">
                 <form id="form1" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
-                    <label class="form-label fw-bold text-dark mb-3 espaciado-letras">POR SORTEO</label>
+                    <label for="concurso" class="form-label fw-bold text-dark mb-3 espaciado-letras">POR SORTEO</label>
                     <input id="concurso" min="1" name="CONCURSO" placeholder="No. Sorteo" required type="number"
                         class="form-control text-center mb-3 input-ancho" />
                     <button class="btn btn-pakin btn-w-250 ChecadorGanaGatoS" disabled type="submit">
@@ -264,9 +266,7 @@
                     </button>
                 </form>
             </div>
-        </div>
 
-        <div class="row justify-content-center mx-auto wrap-650">
             <!-- 3. Formulario Números -->
             <div class="col-12 mb-3">
                 <form id="form" class="bg-white p-3 border rounded-3 shadow-sm d-flex flex-column align-items-center">
@@ -276,25 +276,25 @@
 
                     <div class="gato-grid mb-3">
                         <input id="f1" max="5" min="1" name="F1" placeholder="F1" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Primer número" />
                         <input id="f2" max="5" min="1" name="F2" placeholder="F2" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Segundo número" />
                         <input id="f3" max="5" min="1" name="F3" placeholder="F3" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Tercer número" />
 
                         <input id="f4" max="5" min="1" name="F4" placeholder="F4" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Cuarto número" />
                         <input id="campo-dummy" name="campo-dummy" readonly type="text" value="GG"
-                            class="form-control input-bolita gato-centro" tabindex="-1" />
+                            class="form-control input-bolita gato-centro" tabindex="-1" aria-hidden="true" />
                         <input id="f5" max="5" min="1" name="F5" placeholder="F5" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Quinto número" />
 
                         <input id="f6" max="5" min="1" name="F6" placeholder="F6" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Sexto número" />
                         <input id="f7" max="5" min="1" name="F7" placeholder="F7" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Séptimo número" />
                         <input id="f8" max="5" min="1" name="F8" placeholder="F8" required type="number"
-                            class="form-control input-bolita" />
+                            class="form-control input-bolita" aria-label="Octavo número" />
                     </div>
 
                     <button class="btn btn-pakin btn-w-250 ChecadorGanaGato" disabled type="submit">
@@ -403,29 +403,44 @@
 
     <script>
         (function () {
-            const add = (s, delay, cb) => {
+            const add = (s, delay, cb, prio) => {
                 setTimeout(() => {
-                    let j = document.createElement('script'); j.src = s; j.async = true;
-                    if (cb) j.onload = cb; document.body.appendChild(j);
+                    const j = document.createElement('script');
+                    j.src = s;
+                    j.async = true;
+                    if (prio) j.fetchPriority = prio;
+                    if (cb) j.onload = cb;
+                    document.body.appendChild(j);
                 }, delay);
             };
-            // Solo UI + GTM después del ATF
+
+            // UI + GTM después del ATF
             let listoUI = false;
             function cargaUI() {
-                if (listoUI) return; listoUI = true;
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
+                if (listoUI) return;
+                listoUI = true;
+
+                add('/js/bootstrap.bundle-5.3.3.min.js?v=1', 0, null, 'low');
 
                 setTimeout(() => {
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-                    add('https://www.googletagmanager.com/gtm.js?id=GTM-NCPVXPH', 0);
+                    const goGTM = () => add('https://www.googletagmanager.com/gtm.js?id=GTM-NCPVXPH', 0, null, 'low');
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(goGTM, { timeout: 4000 });
+                    } else {
+                        goGTM();
+                    }
                 }, 500);
             }
-            const atf = document.querySelector('ins[data-ad-slot="7410422045"]');
+
+            const atf = document.querySelector('ins.atf-manual');
             if (!atf) { setTimeout(cargaUI, 1500); return; }
+
             new MutationObserver((_, o) => {
                 if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
             }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+
             setTimeout(cargaUI, 3000);
         })();
     </script>
