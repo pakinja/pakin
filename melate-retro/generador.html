@@ -4,20 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-20T19:05:07-06:00" />
+    <meta property="article:modified_time" content="2026-09-21T19:57:00-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://tpc.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main_pakin-p15.min.css">
 
     <!-- Ad -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
+    <script async fetchpriority="high"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1379506914303333"
         crossorigin="anonymous"></script>
+
+    <style>
+        #resultados {
+            min-height: 950px;
+        }
+
+        @media (min-width: 768px) {
+            #resultados {
+                min-height: 1380px;
+            }
+        }
+    </style>
 
     <title>Melate Retro Generador de Jugadas | Pakin</title>
 
@@ -50,7 +64,7 @@
         "description": "Genera-Busca tus combinaciones para Melate Retro en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-retro/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-09-20T19:05:07-06:00",
+        "dateModified": "2026-09-21T19:57:00-06:00",
         "license": "https://pakin.lat/melate-retro-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -194,11 +208,11 @@
         <!-- ========================================== -->
         <!-- H2: SECCIÓN HISTÓRICO -->
         <!-- ========================================== -->
-        
+
         <div class="ad-wrapper ad-top-wrapper-generador">
             <span class="ad-etiqueta">Publicidad</span>
             <!-- Melate_Retro_Generador_Top -->
-            <ins class="adsbygoogle ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
+            <ins class="adsbygoogle atf-manual ad-inteligente-generador" data-ad-client="ca-pub-1379506914303333"
                 data-ad-slot="7764811110" data-full-width-responsive="false"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
@@ -361,33 +375,48 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/Gen_Master?V=2.js"></script>
+    <script defer src="/js/Gen_Master.js?V=3"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=22"></script>
 
     <script>
         (function () {
-            const add = (s, delay, cb) => {
+            const add = (s, delay, cb, prio) => {
                 setTimeout(() => {
-                    let j = document.createElement('script'); j.src = s; j.async = true;
-                    if (cb) j.onload = cb; document.body.appendChild(j);
+                    const j = document.createElement('script');
+                    j.src = s;
+                    j.async = true;
+                    if (prio) j.fetchPriority = prio;
+                    if (cb) j.onload = cb;
+                    document.body.appendChild(j);
                 }, delay);
             };
+
             let listoUI = false;
             function cargaUI() {
-                if (listoUI) return; listoUI = true;
-                add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', 0);
+                if (listoUI) return;
+                listoUI = true;
+
+                add('/js/bootstrap.bundle-5.3.3.min.js?v=1', 0, null, 'low');
 
                 setTimeout(() => {
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-                    add('https://www.googletagmanager.com/gtm.js?id=GTM-NCPVXPH', 0);
+                    const goGTM = () => add('https://www.googletagmanager.com/gtm.js?id=GTM-NCPVXPH', 0, null, 'low');
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(goGTM, { timeout: 4000 });
+                    } else {
+                        goGTM();
+                    }
                 }, 500);
             }
-            const atf = document.querySelector('ins[data-ad-slot="7764811110"]');
+
+            const atf = document.querySelector('ins.atf-manual');
             if (!atf) { setTimeout(cargaUI, 1500); return; }
+
             new MutationObserver((_, o) => {
                 if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
             }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+
             setTimeout(cargaUI, 3000);
         })();
     </script>
