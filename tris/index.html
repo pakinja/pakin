@@ -4,17 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-09-21T19:16:42-06:00" />
+    <meta property="article:modified_time" content="2026-09-21T19:42:21-06:00" />
 
-    <!-- Preconnect  -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
     <link rel="preconnect" href="https://tpc.googlesyndication.com" crossorigin>
 
     <!-- dns-prefetch para lo no ATF -->
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- <link rel="dns-prefetch" href="https://cdn.jsdelivr.net"> -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <!-- <link rel="dns-prefetch" href="https://fonts.gstatic.com"> -->
 
     <!-- CSS -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +54,7 @@
           "headline": "Tris Resultados de Hoy, Histórico y Analítica",
           "image": "https://pakin.lat/images/pakin-tris-mobile.webp",
           "datePublished": "2017-01-01T11:11:00-06:00",
-          "dateModified": "2026-09-21T19:16:42-06:00",
+          "dateModified": "2026-09-21T19:42:21-06:00",
           "author": { "@type": "Person", "name": "Francisco Jaramillo", "url": "https://www.linkedin.com/in/fjaramilloa/" },
           "publisher": { "@type": "Organization", "name": "Pakin", "logo": { "@type": "ImageObject", "url": "https://pakin.lat/images/p2.webp" } },
           "description": "Tris números frecuentes, estadística de números primos, repetidos, alertas y tiempos de aparición. Actualización 30 minutos después de cada sorteo.",
@@ -4603,7 +4602,7 @@
 
     <script>
         (function () {
-            let listoUI = false, listoEcharts = false, listoChart = false, gtmCargado = false;
+            let listoUI = false, listoChart = false, gtmCargado = false;
 
             // add con soporte para fetchPriority
             const add = (src, cb, prio) => {
@@ -4615,12 +4614,23 @@
                 document.body.appendChild(j);
             };
 
+            // Cola de callbacks: varios consumidores pueden pedir ECharts
+            // y todos se ejecutan cuando esté listo, sin race conditions.
+            let echartsLoading = false;
+            let echartsCallbacks = [];
+
             function cargaEcharts(cb) {
-                if (listoEcharts) { cb && cb(); return; }
-                listoEcharts = true;
+                if (window.echarts) { cb && cb(); return; }
+                if (cb) echartsCallbacks.push(cb);
+                if (echartsLoading) return;
+                echartsLoading = true;
                 // Si lo self-hosteas cambia a /js/echarts.min.js
                 // add('https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js', cb, 'low');
-                add('/js/echarts.min.js?v=2', cb, 'low');
+                add('/js/echarts.min.js?v=2', () => {
+                    const cbs = echartsCallbacks;
+                    echartsCallbacks = [];
+                    cbs.forEach(fn => fn());
+                }, 'low');
             }
 
             function cargaChart() {
@@ -4637,7 +4647,7 @@
             function setupChartObserver() {
                 // OBSERVA EL WRAPPER, no el chart, para no medir 0x0
                 const wrapper = document.querySelector('#seccion-cobertura');
-                if (!wrapper) { setTimeout(cargaChart, 2000); return; }
+                if (!wrapper) return;
 
                 if ('IntersectionObserver' in window) {
                     const io = new IntersectionObserver((entries, o) => {
@@ -4658,19 +4668,6 @@
                 // add('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', null, 'low');
                 add('/js/bootstrap.bundle-5.3.3.min.js?v=1', null, 'low');
                 setupChartObserver();
-
-                // Preload tibio de ECharts 1s después del ad, pero en idle + low
-                const preload = () => {
-                    if ('requestIdleCallback' in window) {
-                        requestIdleCallback(() => cargaEcharts(), { timeout: 5000 });
-                    } else {
-                        setTimeout(() => cargaEcharts(), 2000);
-                    }
-                };
-                setTimeout(preload, 1000);
-
-                // Fallback si nunca scrollea a graficos
-                setTimeout(() => { if (!listoChart) cargaChart(); }, 5000);
             }
 
             // === GTM: espera a que el ATF resuelva antes de cargar ===
@@ -4721,9 +4718,14 @@
             // === ATF: dispara cargaUI cuando resuelve (igual que antes) ===
             if (!atf) { setTimeout(cargaUI, 1500); return; }
 
-            new MutationObserver((_, o) => {
-                if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
-            }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            if (atf.getAttribute('data-ad-status')) {
+                // El ad ya resolvió antes de llegar aquí (caso repeat view con AdSense cacheado)
+                cargaUI();
+            } else {
+                new MutationObserver((_, o) => {
+                    if (atf.getAttribute('data-ad-status')) { cargaUI(); o.disconnect(); }
+                }).observe(atf, { attributes: true, attributeFilter: ['data-ad-status'] });
+            }
 
             setTimeout(cargaUI, 3000); // fallback si el ad no carga
         })();
