@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-16T15:43:27-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T17:30:50-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T15:43:27-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T17:30:50-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -51,23 +51,11 @@
         }
 
         /* Filtros, esto es lo nuevo que corrige lo descuadrado */
-        .filtro-head {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .filtro-head .filtro-titulo {
-            grid-column: 2;
+        .filtro-titulo {
             text-align: center;
             font-weight: 600;
             font-size: .9rem;
-        }
-
-        .filtro-head .todos-pill {
-            grid-column: 3;
-            justify-self: end;
+            margin-bottom: 8px;
         }
 
         .filtro-chips {
@@ -91,16 +79,16 @@
             border-color: #212529;
         }
 
-        .todos-pill {
+        .limpiar-filtros-btn {
             border: 1px solid #dee2e6;
             border-radius: 999px;
-            padding: 2px 12px;
-            font-size: 0.8rem;
+            padding: 4px 16px;
+            font-size: .85rem;
             background: #fff;
             color: #212529;
         }
 
-        .todos-pill:hover {
+        .limpiar-filtros-btn:hover {
             background: #f8f9fa;
         }
     </style>
@@ -136,7 +124,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T15:43:27-06:00",
+        "dateModified": "2026-11-16T17:30:50-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -311,8 +299,7 @@
 
         <div id="filtros-generador" class="mx-auto mb-3 wrap-650">
             <div class="mb-3" data-grupo="primos">
-                <div class="filtro-head"><span></span><span class="filtro-titulo">Primos</span><button type="button"
-                        class="btn btn-sm todos-pill" data-todos-para="primos">Todos</button></div>
+                <div class="filtro-titulo">Primos</div>
                 <div class="filtro-chips">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="primos" data-valor="0">0</button>
@@ -329,8 +316,7 @@
                 </div>
             </div>
             <div class="mb-3" data-grupo="media">
-                <div class="filtro-head"><span></span><span class="filtro-titulo">Media</span><button type="button"
-                        class="btn btn-sm todos-pill" data-todos-para="media">Todas</button></div>
+                <div class="filtro-titulo">Media</div>
                 <div class="filtro-chips">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="media" data-valor="baja">BAJA</button>
@@ -341,8 +327,7 @@
                 </div>
             </div>
             <div class="mb-3" data-grupo="reps">
-                <div class="filtro-head"><span></span><span class="filtro-titulo">Repetidos</span><button type="button"
-                        class="btn btn-sm todos-pill" data-todos-para="reps">Todos</button></div>
+                <div class="filtro-titulo">Repetidos</div>
                 <div class="filtro-chips">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="reps" data-valor="0">0</button>
@@ -358,6 +343,10 @@
                         aria-pressed="true" data-grupo="reps" data-valor="5">5</button>
                 </div>
             </div>
+            <div class="text-center mt-3">
+                <button type="button" class="limpiar-filtros-btn" id="limpiar-filtros">Limpiar filtros</button>
+            </div>
+        </div>
         </div>
 
         <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-650">
