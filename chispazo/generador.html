@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-16T14:21:05-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T15:08:48-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T14:21:05-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T15:08:48-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -24,12 +24,12 @@
 
     <style>
         #resultados {
-            min-height: 560px;
+            min-height: 1100px;
         }
 
         @media (min-width: 768px) {
             #resultados {
-                min-height: 640px;
+                min-height: 1250px;
             }
         }
 
@@ -42,6 +42,13 @@
             color: transparent;
         }
 
+        .mensaje-tabla td {
+            text-align: center;
+            font-weight: 600;
+            color: #495057;
+            padding: 16px 8px;
+        }
+
         #filtros-generador .filtro-chip {
             min-width: 38px;
         }
@@ -50,6 +57,19 @@
             background-color: #212529;
             color: #fff;
             border-color: #212529;
+        }
+
+        .todos-pill {
+            border: 1px solid #dee2e6;
+            border-radius: 999px;
+            padding: 2px 12px;
+            font-size: 0.8rem;
+            background: #fff;
+            color: #212529;
+        }
+
+        .todos-pill:hover {
+            background: #f8f9fa;
         }
     </style>
 
@@ -84,7 +104,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T14:21:05-06:00",
+        "dateModified": "2026-11-16T15:08:48-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -227,17 +247,15 @@
             </script>
         </div>
 
-        <div id="resultados" data-sorteo="chispazo" data-endpoint="/php/chispazo/gnrdr_chispazo.php" data-limit="12"
+        <div id="resultados" data-sorteo="chispazo" data-endpoint="/php/chispazo/gnrdr_chispazo.php" data-limit="27"
             data-primos-max="5" data-reps-max="5"
             class="contenedor-tabla text-center mx-auto mb-4 shadow-sm border rounded-3">
-
             <div class="table-loader-overlay">
                 <div class="d-flex justify-content-center align-items-center gap-2 py-5">
                     <div class="spinner-border spinner-border-sm text-secondary" role="status" aria-hidden="true"></div>
                     <span class="fw-semibold text-secondary">Buscando jugadas...</span>
                 </div>
             </div>
-
             <table class="table table-borderless table-hover tabla-chispazo tblres mb-0 align-middle text-center"
                 id="resultTable">
                 <thead>
@@ -256,17 +274,14 @@
             </table>
         </div>
 
-        <!-- FILTROS GENERADOR: abajo de la tabla para dejar limpio el ATF -->
         <div id="generador-status" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
             style="min-height:24px"></div>
 
         <div id="filtros-generador" class="mx-auto mb-3 wrap-650">
             <div class="mb-3" data-grupo="primos">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="fw-semibold small text-dark">Primos</span>
-                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
-                        data-todos-para="primos">Todos</button>
-                </div>
+                <div class="d-flex align-items-center mb-2"><span
+                        class="flex-grow-1 text-center fw-semibold small text-dark">Primos</span><button type="button"
+                        class="btn btn-sm todos-pill" data-todos-para="primos">Todos</button></div>
                 <div class="d-flex flex-wrap gap-2 justify-content-center">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="primos" data-valor="0">0</button>
@@ -283,11 +298,9 @@
                 </div>
             </div>
             <div class="mb-3" data-grupo="media">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="fw-semibold small text-dark">Media</span>
-                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
-                        data-todos-para="media">Todas</button>
-                </div>
+                <div class="d-flex align-items-center mb-2"><span
+                        class="flex-grow-1 text-center fw-semibold small text-dark">Media</span><button type="button"
+                        class="btn btn-sm todos-pill" data-todos-para="media">Todas</button></div>
                 <div class="d-flex flex-wrap gap-2 justify-content-center">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="media" data-valor="baja">BAJA</button>
@@ -298,11 +311,9 @@
                 </div>
             </div>
             <div class="mb-3" data-grupo="reps">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="fw-semibold small text-dark">Repetidos</span>
-                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
-                        data-todos-para="reps">Todos</button>
-                </div>
+                <div class="d-flex align-items-center mb-2"><span
+                        class="flex-grow-1 text-center fw-semibold small text-dark">Repetidos</span><button
+                        type="button" class="btn btn-sm todos-pill" data-todos-para="reps">Todos</button></div>
                 <div class="d-flex flex-wrap gap-2 justify-content-center">
                     <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
                         aria-pressed="true" data-grupo="reps" data-valor="0">0</button>
@@ -320,12 +331,9 @@
             </div>
         </div>
 
-        <!-- BOTÓN GENERADOR -->
         <div id="historicoActions" class="mx-auto my-4 historico-actions wrap-650">
             <div class="d-flex justify-content-center mb-3">
-                <button class="btn btn-pakin shadow-sm" id="displayb" type="button">
-                    Generar Jugadas
-                </button>
+                <button class="btn btn-pakin shadow-sm" id="displayb" type="button">Generar Jugadas</button>
             </div>
         </div>
 
@@ -431,7 +439,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/Gen_Master_Chispazo.js"></script>
+    <script defer src="/js/MasterGen.js?V=1"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=31"></script>
 
     <script>
