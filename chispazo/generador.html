@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-15T21:43:17-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T14:21:05-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-15T21:43:17-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T14:21:05-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -24,13 +24,32 @@
 
     <style>
         #resultados {
-            min-height: 950px;
+            min-height: 560px;
         }
 
         @media (min-width: 768px) {
             #resultados {
-                min-height: 1380px;
+                min-height: 640px;
             }
+        }
+
+        #generador-status {
+            min-height: 24px;
+        }
+
+        .fila-fantasma td {
+            height: 41px;
+            color: transparent;
+        }
+
+        #filtros-generador .filtro-chip {
+            min-width: 38px;
+        }
+
+        #filtros-generador .filtro-chip.active {
+            background-color: #212529;
+            color: #fff;
+            border-color: #212529;
         }
     </style>
 
@@ -65,7 +84,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-15T21:43:17-06:00",
+        "dateModified": "2026-11-16T14:21:05-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -192,15 +211,6 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container py-3 py-md-2 py-lg-3 flex-grow-1" style="position: relative; z-index: 1;">
 
-        <!-- ========================================== -->
-        <!-- H1: TÍTULO PRINCIPAL DE LA PÁGINA -->
-        <!-- ========================================== -->
-        <!-- <div class="text-center">
-            <h1 class="fw-bold text-dark d-inline-block titulo-principal">
-                Chispazo: Busca Tus Combinaciones<span style="color: #8B0000;">.</span>
-            </h1>
-        </div> -->
-
         <div id="pakin-ticker-silo" data-silo="chispazo"></div>
 
         <!-- ========================================== -->
@@ -217,10 +227,10 @@
             </script>
         </div>
 
-        <div id="resultados" data-sorteo="chispazo" data-endpoint="/php/chispazo/gnrdr_chispazo.php"
+        <div id="resultados" data-sorteo="chispazo" data-endpoint="/php/chispazo/gnrdr_chispazo.php" data-limit="12"
+            data-primos-max="5" data-reps-max="5"
             class="contenedor-tabla text-center mx-auto mb-4 shadow-sm border rounded-3">
 
-            <!-- NUEVO: El Overlay (Capa de carga que configuramos en el CSS) -->
             <div class="table-loader-overlay">
                 <div class="d-flex justify-content-center align-items-center gap-2 py-5">
                     <div class="spinner-border spinner-border-sm text-secondary" role="status" aria-hidden="true"></div>
@@ -228,10 +238,8 @@
                 </div>
             </div>
 
-            <!-- NUEVO: La estructura fija de la tabla (Nunca se borra) -->
             <table class="table table-borderless table-hover tabla-chispazo tblres mb-0 align-middle text-center"
                 id="resultTable">
-
                 <thead>
                     <tr>
                         <th>R1</th>
@@ -244,28 +252,72 @@
                         <th>MEDIA</th>
                     </tr>
                 </thead>
-
                 <tbody id="resultados-body-top"></tbody>
-
-                <tbody id="ad-persistent-body">
-
-                    <tr class="header-lote header-intermedio-pakin">
-                        <th>R1</th>
-                        <th>R2</th>
-                        <th>R3</th>
-                        <th>R4</th>
-                        <th>R5</th>
-                        <th>PRIMOS</th>
-                        <th>REPS</th>
-                        <th>MEDIA</th>
-                    </tr>
-
-                </tbody>
-
-                <tbody id="resultados-body-bottom"></tbody>
-
             </table>
+        </div>
 
+        <!-- FILTROS GENERADOR: abajo de la tabla para dejar limpio el ATF -->
+        <div id="generador-status" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
+            style="min-height:24px"></div>
+
+        <div id="filtros-generador" class="mx-auto mb-3 wrap-650">
+            <div class="mb-3" data-grupo="primos">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold small text-dark">Primos</span>
+                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
+                        data-todos-para="primos">Todos</button>
+                </div>
+                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="0">0</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="1">1</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="2">2</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="3">3</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="4">4</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="5">5</button>
+                </div>
+            </div>
+            <div class="mb-3" data-grupo="media">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold small text-dark">Media</span>
+                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
+                        data-todos-para="media">Todas</button>
+                </div>
+                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="baja">BAJA</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="normal">NORMAL</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="alta">ALTA</button>
+                </div>
+            </div>
+            <div class="mb-3" data-grupo="reps">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold small text-dark">Repetidos</span>
+                    <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none"
+                        data-todos-para="reps">Todos</button>
+                </div>
+                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="0">0</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="1">1</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="2">2</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="3">3</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="4">4</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="5">5</button>
+                </div>
+            </div>
         </div>
 
         <!-- BOTÓN GENERADOR -->
@@ -379,7 +431,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/Gen_Master.js?V=3"></script>
+    <script defer src="/js/Gen_Master_Chispazo.js"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=31"></script>
 
     <script>
