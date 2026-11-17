@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-16T21:06:07-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T21:13:34-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T21:06:07-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T21:13:34-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -25,15 +25,36 @@
 
     <style>
         #resultados {
-            min-height: 840px;
+            min-height: 0;
+        }
+
+        #resultados.is-loading {
+            min-height: 900px;
+        }
+
+        @media (min-width: 768px) {
+            #resultados.is-loading {
+                min-height: 1050px;
+            }
         }
 
         #generador-status {
             min-height: 24px;
         }
 
+        /* Conteo: es info importante, no texto chiquito gris */
         #generador-conteo {
             min-height: 24px;
+            display: table;
+            margin: 0 auto 12px auto;
+            padding: 6px 16px;
+            background: #f1f3f5;
+            border: 1px solid #dee2e6;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .92rem;
+            color: #212529;
+            text-align: center;
         }
 
         .fila-fantasma td {
@@ -41,8 +62,33 @@
             color: transparent;
         }
 
-        #filtros-generador .filtro-chip {
-            min-width: 38px;
+        .mensaje-tabla td {
+            text-align: center;
+            font-weight: 600;
+            color: #495057;
+            padding: 16px 8px;
+        }
+
+        .filtro-titulo {
+            text-align: center;
+            font-weight: 600;
+            font-size: .9rem;
+            margin-bottom: 8px;
+        }
+
+        .filtro-chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .filtro-chips .filtro-chip {
+            min-width: 42px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #filtros-generador .filtro-chip.active {
@@ -51,10 +97,17 @@
             border-color: #212529;
         }
 
-        @media (min-width: 768px) {
-            #resultados {
-                min-height: 960px;
-            }
+        .limpiar-filtros-btn {
+            border: 1px solid #dee2e6;
+            border-radius: 999px;
+            padding: 4px 16px;
+            font-size: .85rem;
+            background: #fff;
+            color: #212529;
+        }
+
+        .limpiar-filtros-btn:hover {
+            background: #f8f9fa;
         }
     </style>
 
@@ -89,7 +142,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T21:06:07-06:00",
+        "dateModified": "2026-11-16T21:13:34-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -260,8 +313,7 @@
         </div>
 
         <!-- CONTEO EXACTO: debajo de la tabla, arriba de los filtros -->
-        <div id="generador-conteo" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
-            style="min-height:24px"></div>
+        <div id="generador-conteo" aria-live="polite"></div>
 
         <!-- FILTROS GENERADOR: abajo de la tabla para dejar limpio el ATF -->
         <div id="generador-status" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
