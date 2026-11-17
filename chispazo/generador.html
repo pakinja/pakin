@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-16T23:46:36-06:00" />
+    <meta property="article:modified_time" content="2026-11-17T11:02:47-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T23:46:36-06:00" />
+    <meta property="article:modified_time" content="2026-11-17T11:02:47-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -109,6 +109,28 @@
         .limpiar-filtros-btn:hover {
             background: #f8f9fa;
         }
+
+        /* MEDIA: para TODOS los sorteos - sin salto de línea, número más chico */
+        .contenedor-tabla {
+            overflow-x: auto;
+        }
+
+        #resultados table {
+            white-space: nowrap;
+        }
+
+        .media-celda {
+            white-space: nowrap;
+        }
+
+        .media-celda .media-etiqueta {
+            font-weight: 600;
+        }
+
+        .media-celda .media-num {
+            font-size: .82em;
+            color: #495057;
+        }
     </style>
 
     <title>Chispazo Generador de Jugadas | Pakin</title>
@@ -142,7 +164,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T23:46:36-06:00",
+        "dateModified": "2026-11-17T11:02:47-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -480,7 +502,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/MasterGen.js?V=13"></script>
+    <script defer src="/js/MasterGen.js?V=15"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=31"></script>
 
     <script>
