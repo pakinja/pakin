@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T23:08:31-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T23:16:05-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -139,7 +139,7 @@
         "description": "Genera-Busca tus combinaciones para Melate Retro en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-retro/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T23:08:31-06:00",
+        "dateModified": "2026-11-16T23:16:05-06:00",
         "license": "https://pakin.lat/melate-retro-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -331,7 +331,59 @@
 
         <!-- FILTROS GENERADOR: abajo de la tabla para dejar limpio el ATF -->
         <div id="filtros-generador" class="mx-auto mb-3 wrap-650">
-            <!-- tus chips de Primos / Media / Reps aquí -->
+
+            <div class="mb-3" data-grupo="primos">
+                <div class="filtro-titulo">Primos</div>
+                <div class="filtro-chips">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="0">0</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="1">1</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="2">2</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="3">3</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="4">4</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="primos" data-valor="5">5</button>
+                </div>
+            </div>
+
+            <div class="mb-3" data-grupo="media">
+                <div class="filtro-titulo">Media</div>
+                <div class="filtro-chips">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="baja">BAJA</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="normal">NORMAL</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="media" data-valor="alta">ALTA</button>
+                </div>
+            </div>
+
+            <div class="mb-3" data-grupo="reps">
+                <div class="filtro-titulo">Repetidos</div>
+                <div class="filtro-chips">
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="0">0</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="1">1</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="2">2</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="3">3</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="4">4</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary filtro-chip active"
+                        aria-pressed="true" data-grupo="reps" data-valor="5">5</button>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button type="button" id="limpiar-filtros" class="limpiar-filtros-btn">Limpiar filtros</button>
+            </div>
+
         </div>
 
         <!-- BOTÓN GENERADOR -->
