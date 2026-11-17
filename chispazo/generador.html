@@ -2,10 +2,10 @@
 <html lang="es">
 
 <head>
-    <meta property="article:modified_time" content="2026-11-16T19:46:32-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T21:06:07-06:00" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-16T19:46:32-06:00" />
+    <meta property="article:modified_time" content="2026-11-16T21:06:07-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -25,20 +25,14 @@
 
     <style>
         #resultados {
-            min-height: 0;
-        }
-
-        #resultados.is-loading {
-            min-height: 900px;
-        }
-
-        @media (min-width: 768px) {
-            #resultados.is-loading {
-                min-height: 1050px;
-            }
+            min-height: 840px;
         }
 
         #generador-status {
+            min-height: 24px;
+        }
+
+        #generador-conteo {
             min-height: 24px;
         }
 
@@ -47,33 +41,8 @@
             color: transparent;
         }
 
-        .mensaje-tabla td {
-            text-align: center;
-            font-weight: 600;
-            color: #495057;
-            padding: 16px 8px;
-        }
-
-        .filtro-titulo {
-            text-align: center;
-            font-weight: 600;
-            font-size: .9rem;
-            margin-bottom: 8px;
-        }
-
-        .filtro-chips {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .filtro-chips .filtro-chip {
-            min-width: 42px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        #filtros-generador .filtro-chip {
+            min-width: 38px;
         }
 
         #filtros-generador .filtro-chip.active {
@@ -82,17 +51,10 @@
             border-color: #212529;
         }
 
-        .limpiar-filtros-btn {
-            border: 1px solid #dee2e6;
-            border-radius: 999px;
-            padding: 4px 16px;
-            font-size: .85rem;
-            background: #fff;
-            color: #212529;
-        }
-
-        .limpiar-filtros-btn:hover {
-            background: #f8f9fa;
+        @media (min-width: 768px) {
+            #resultados {
+                min-height: 960px;
+            }
         }
     </style>
 
@@ -127,7 +89,7 @@
         "description": "Genera-Busca tus combinaciones para Chispazo en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/chispazo/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-16T19:46:32-06:00",
+        "dateModified": "2026-11-16T21:06:07-06:00",
         "license": "https://pakin.lat/chispazo-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -271,7 +233,7 @@
         </div>
 
         <div id="resultados" data-sorteo="chispazo" data-sorteo-label="Chispazo" data-total="98280"
-            data-endpoint="/php/chispazo/gnrdr_chispazo.php" data-limit="27" data-primos-max="5" data-reps-max="5"
+            data-endpoint="/php/chispazo/gnrdr_chispazo.php" data-limit="18" data-primos-max="5" data-reps-max="5"
             class="contenedor-tabla text-center mx-auto mb-4 shadow-sm border rounded-3">
             <div class="table-loader-overlay">
                 <div class="d-flex justify-content-center align-items-center gap-2 py-5">
@@ -297,8 +259,14 @@
             </table>
         </div>
 
+        <!-- CONTEO EXACTO: debajo de la tabla, arriba de los filtros -->
+        <div id="generador-conteo" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
+            style="min-height:24px"></div>
+
+        <!-- FILTROS GENERADOR: abajo de la tabla para dejar limpio el ATF -->
         <div id="generador-status" class="text-center small text-secondary mx-auto mb-2" aria-live="polite"
             style="min-height:24px"></div>
+
 
         <div id="filtros-generador" class="mx-auto mb-3 wrap-650">
             <div class="mb-3" data-grupo="primos">
@@ -460,7 +428,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/MasterGen.js?V=8"></script>
+    <script defer src="/js/MasterGen.js?V=9"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=31"></script>
 
     <script>
