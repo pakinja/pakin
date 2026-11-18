@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="article:modified_time" content="2026-11-17T22:32:32-06:00" />
+    <meta property="article:modified_time" content="2026-11-18T14:09:15-06:00" />
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
@@ -24,16 +24,12 @@
     <style>
         #resultados {
             min-height: 0;
+            position: relative;
         }
 
-        #resultados.is-loading {
-            min-height: 900px;
-        }
-
-        @media (min-width: 768px) {
-            #resultados.is-loading {
-                min-height: 1050px;
-            }
+        #resultados.is-loading .table-loader-overlay {
+            opacity: 1;
+            visibility: visible;
         }
 
         #generador-status {
@@ -129,6 +125,29 @@
             font-size: .82em;
             color: #495057;
         }
+
+        /* Preloader: texto arriba, spinner debajo, ambos más grandes */
+        #resultados .table-loader-overlay>div {
+            flex-direction: column-reverse;
+            gap: 12px;
+        }
+
+        #resultados .table-loader-overlay span {
+            font-size: 1.2rem;
+            line-height: 1.35;
+        }
+
+        #resultados .table-loader-overlay .spinner-border {
+            width: 1.75rem;
+            height: 1.75rem;
+            border-width: 0.25em;
+        }
+
+        /* Preloader un poco más arriba (el scroll al top deja la vista en la parte alta) */
+        #resultados .table-loader-overlay {
+            align-items: flex-start;
+            padding-top: 120px;
+        }
     </style>
 
     <title>Melate Retro Generador de Jugadas | Pakin</title>
@@ -162,7 +181,7 @@
         "description": "Genera-Busca tus combinaciones para Melate Retro en la base de datos con todas las combinaciones",
         "url": "https://pakin.lat/melate-retro/generador",
         "datePublished": "2017-02-05T08:00:00-06:00",
-        "dateModified": "2026-11-17T22:32:32-06:00",
+        "dateModified": "2026-11-18T14:09:15-06:00",
         "license": "https://pakin.lat/melate-retro-generador",
         "publisher": { "@type": "Organization", "name": "Pakin" },
         "creator": { "@type": "Person", "name": "Francisco Jaramillo" },
@@ -524,7 +543,7 @@
     </footer>
 
     <!-- Scripts Intactos -->
-    <script defer src="/js/MasterGen.js?V=17"></script>
+    <script defer src="/js/MasterGen.js?V=21"></script>
     <script defer fetchpriority="low" src="/js/pakin-ticker-silo.js?v=31"></script>
 
     <script>
